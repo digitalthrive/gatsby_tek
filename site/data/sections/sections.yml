@@ -1,0 +1,79 @@
+# Page Sections
+
+## Home Page Sections
+
+- text: TEK ROOFING
+  text2: MOST DURABLE METAL ROOF IN THE INDUSTRY.
+  text3: Lorem ipsum dolor amet master cleanse art party paleo PBR&B schlitz mixtape whatever yr migas messenger bag single-origin coffee.
+  text4: ''
+  text5: ''
+  buttonText: MORE
+  buttonText2: ''
+  sidetext: ''
+  videoSrcURL: ''
+  image: ../images/hometop.jpg
+  image2: ''
+  page: home
+  section: 1
+
+- text: WHAT IS THE HURRICANE EFFECT
+  text2: The Most exceptional metal roof in the industry.
+  text3: The last roof you'll ever have to buy
+  text4: ''
+  text5: ''
+  buttonText: MORE
+  buttonText2: ''
+  sidetext: ''
+  videoSrcURL: ''
+  image: ../images/hometop.jpg
+  image2: ''
+  page: home
+  section: 1
+
+## About Page Sections
+
+- text: Tek Roofing
+  text2: null
+  text3: null
+  text4: null
+  text5: null
+  buttonText: About Us
+  buttonText2: null
+  sidetext: ABOUT US
+  videoSrcURL: null
+  image: null
+  image2: null
+  page: about
+  section: 1
+
+## Contact Page Sections
+
+- text: null
+  text2: null
+  text3: null
+  text4: null
+  text5: null
+  buttonText: null
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: null
+  image2: null
+  page: contact
+  section: 1
+
+## Products Page
+
+- text: null
+  text2: null
+  text3: null
+  text4: null
+  text5: null
+  buttonText:
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: null
+  image2: null
+  page: products
+  section: 1
