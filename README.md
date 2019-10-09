@@ -1,4 +1,4 @@
-# gatsby_foam
+# gatsby_tek
 WD Jam Theme - Full Site - Tek
 
 
