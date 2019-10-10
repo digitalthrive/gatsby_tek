@@ -104,6 +104,8 @@ const menubar = () => {
             height: `200px`,
             display: `grid`,
             gridTemplateColumns: `33% 33% 33%`,
+            position: 'relative',
+            transform: `translate(0, -50%)`,
           }}
         >
           {selectors}

@@ -3,6 +3,7 @@ import React from 'react'
 import { Layout as ThemeLayout, Header, Main, jsx } from 'theme-ui'
 import { Global } from '@emotion/core'
 import MenuBar from '../components/menubar'
+import Footer from '../components/footer'
 // import './layout.css'
 
 const Layout = ({ children }) => {
@@ -20,7 +21,7 @@ const Layout = ({ children }) => {
         <MenuBar />
       </Header>
       <Main>{children}</Main>
-      <p>Footer</p>
+      <Footer />
     </ThemeLayout>
   )
 }

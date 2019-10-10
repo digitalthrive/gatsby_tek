@@ -7,6 +7,7 @@ import BackImg from 'gatsby-background-image'
 import { Container } from 'theme-ui'
 import Img from 'gatsby-image'
 import HomeScroller from '../components/homescroller'
+import GalleryPreview from '../components/gallerypreview'
 import Layout from '../components/layout'
 import Section from '../components/section'
 import Button from '../components/button'
@@ -40,46 +41,88 @@ const homepage = ({ data }) => {
     <Layout>
       <HomeScroller />
       {sectionTwo.length > 0 ? (
-        <Section
-          sideline={sectionTwo[0].node.sidetext}
-          key={sectionTwo[0].node.id}
-          leftside={true}
-        >
-          <div
-            sx={{
-              display: ['block', 'block', 'grid'],
-              gridTemplateColumns: `1fr 1fr`,
-              margin: `0 auto`,
-            }}
-          >
-            <div sx={{ padding: [0, 0, 4] }}>
-              <div sx={{ width: `100%` }}>å</div>
-              <Styled.p>{sectionTwo[0].node.text3}</Styled.p>
-            </div>
-            <div
-              sx={{
-                paddingTop: [0, 0, 0],
-                paddingLeft: [0, 0, 4],
-                paddingRight: [0, 0, 4],
-                marginTop: [0, 0, 0],
-              }}
-            >
-              <Styled.h3
-                sx={{
-                  fontSize: [0, 0, 1],
-                  paddingBottom: [0, 0, 4],
-                }}
-              >
-                {sectionTwo[0].node.text}
-              </Styled.h3>
-
-              <Link to="/products">
-                <Styled.p sx={{ color: `accent`, marginTop: 4 }}>
-                  {sectionTwo[0].node.buttonText}
-                </Styled.p>
-              </Link>
-            </div>
-          </div>
+        <Section key={sectionTwo[0].node.id}>
+          <Styled.h1>{sectionTwo[0].node.text}</Styled.h1>
+          <Styled.h3>{sectionTwo[0].node.text2}</Styled.h3>
+          <Styled.h3>{sectionTwo[0].node.text3}</Styled.h3>
+          <Styled.h2>{sectionTwo[0].node.text4}</Styled.h2>
+          <Img
+            sx={{ height: `200px`, width: `200px` }}
+            fluid={sectionTwo[0].node.image.childImageSharp.fluid}
+          />
+          <Img
+            sx={{ height: `200px`, width: `200px` }}
+            fluid={sectionTwo[0].node.image2.childImageSharp.fluid}
+          />
+          <p sx={{ color: `grey` }}>{sectionTwo[0].node.text5}</p>
+          <Button
+            buttonText={sectionTwo[0].node.buttonText}
+            destination="/products"
+          />
+        </Section>
+      ) : null}
+      {sectionThree.length > 0 ? (
+        <div sx={{ height: `200px`, backgroundColor: `darkgrey` }}>
+          <p sx={{ display: `inline`, margin: `20px` }}>
+            {sectionThree[0].node.text}
+          </p>
+          <p sx={{ display: `inline`, margin: `20px` }}>
+            {sectionThree[0].node.text2}
+          </p>
+          <p sx={{ display: `inline`, margin: `20px` }}>
+            {sectionThree[0].node.text3}
+          </p>
+          <Img
+            sx={{ height: `25%`, width: `100px`, display: `inline-block` }}
+            fluid={sectionThree[0].node.image.childImageSharp.fluid}
+          />
+        </div>
+      ) : null}
+      {sectionFour.length > 0 ? (
+        <Section key={sectionFour[0].node.id}>
+          <Styled.h2>{sectionFour[0].node.text}</Styled.h2>
+          <Styled.h3>{sectionFour[0].node.text2}</Styled.h3>
+          <Img
+            sx={{ height: `200px`, width: `200px` }}
+            fluid={sectionFour[0].node.image.childImageSharp.fluid}
+          />
+          <Img
+            sx={{ height: `200px`, width: `200px` }}
+            fluid={sectionFour[0].node.image2.childImageSharp.fluid}
+          />
+          <p sx={{ color: `grey` }}>{sectionTwo[0].node.text4}</p>
+          <Button
+            buttonText={sectionFour[0].node.buttonText}
+            destination="/products"
+          />
+        </Section>
+      ) : null}
+      {sectionFive.length > 0 ? (
+        <Section key={sectionFive[0].node.id}>
+          <Styled.h2>{sectionFive[0].node.text}</Styled.h2>
+          <Button
+            buttonText={sectionFive[0].node.buttonText}
+            destination="/gallery"
+          />
+          <GalleryPreview />
+        </Section>
+      ) : null}
+      <div sx={{ height: `600px`, backgroundColor: `darkgrey` }}>
+        <Styled.h2>Testimonial Scroller Placeholder</Styled.h2>
+      </div>
+      {sectionSix.length > 0 ? (
+        <Section key={sectionSix[0].node.id}>
+          <Styled.h2>{sectionSix[0].node.text}</Styled.h2>
+          <Img
+            sx={{ height: `200px`, width: `200px` }}
+            fluid={sectionSix[0].node.image.childImageSharp.fluid}
+          />
+          <Styled.h3>{sectionSix[0].node.text2}</Styled.h3>
+          <Styled.h3>{sectionSix[0].node.text3}</Styled.h3>
+          <Button
+            buttonText={sectionSix[0].node.buttonText}
+            destination="/dealers"
+          />
         </Section>
       ) : null}
     </Layout>
@@ -94,9 +137,16 @@ export const query = graphql`
           text2
           text3
           text4
-          sidetext
+          text5
           buttonText
           image {
+            childImageSharp {
+              fluid(maxHeight: 800, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          image2 {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp

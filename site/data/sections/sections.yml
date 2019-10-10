@@ -12,23 +12,79 @@
   sidetext: ''
   videoSrcURL: ''
   image: ../images/hometop.jpg
-  image2: ''
+  image2: ../images/hometop.jpg
   page: home
   section: 1
 
 - text: WHAT IS THE HURRICANE EFFECT
   text2: The Most exceptional metal roof in the industry.
   text3: The last roof you'll ever have to buy
+  text4: THE BEST ROOFING FOR SEVERE WEATHER
+  text5: Lorem ipsum dolor amet master cleanse art party paleo PBR&B schlitz mixtape whatever yr migas messenger bag single-origin coffee.
+  buttonText: MORE
+  buttonText2: ''
+  sidetext: ''
+  videoSrcURL: ''
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
+  page: home
+  section: 2
+
+- text: BEAUTIFUL
+  text2: DURABLE
+  text3: EFFICIENT
+  text4: Lorem ipsum dolor amet master cleanse art party paleo PBR&B schlitz mixtape whatever yr migas messenger bag single-origin coffee.
+  text5: ''
+  buttonText: MORE
+  buttonText2: ''
+  sidetext: ''
+  videoSrcURL: ''
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
+  page: home
+  section: 3
+
+- text: THE ORIGINAL HURRICANE METAL SHAKE WITH ADDED INTERLOCKING TECHNOLOGY
+  text2: The Most exceptional metal roof in the industry.
+  text3: The last roof you'll ever have to buy
+  text4: Lorem ipsum dolor amet master cleanse art party paleo PBR&B schlitz mixtape whatever yr migas messenger bag single-origin coffee.
+  text5: ''
+  buttonText: MORE
+  buttonText2: ''
+  sidetext: ''
+  videoSrcURL: ''
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
+  page: home
+  section: 4
+
+- text: TEK HURRICANE METAL SHAKE
+  text2: ''
+  text3: ''
+  text4: ''
+  text5: ''
+  buttonText: VIEW GALLERY
+  buttonText2: ''
+  sidetext: ''
+  videoSrcURL: ''
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
+  page: home
+  section: 5
+
+- text: BECOME A TEK INDUSTRIES DEALER
+  text2: Logo and div header here
+  text3: When TEK Industries brings a new roofing company into our family of partners and clients, we want everyone to succeed and progress.  That's why we're helping companies that have traditionally focused on fixing roofs now expand their vision and diversify their profit-making.
   text4: ''
   text5: ''
   buttonText: MORE
   buttonText2: ''
   sidetext: ''
   videoSrcURL: ''
-  image: ../images/hometop.jpg
-  image2: ''
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
   page: home
-  section: 1
+  section: 6
 
 ## About Page Sections
 

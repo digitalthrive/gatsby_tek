@@ -61,6 +61,20 @@ module.exports = ({ contentPath = 'data', basePath = '/' }) => ({
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `gallery1images`,
+        path: `${contentPath}/images/gallery/gallery1`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `gallery2images`,
+        path: `${contentPath}/images/gallery/gallery2`,
+      },
+    },
+    {
       resolve: 'gatsby-transformer-yaml',
       options: {
         typeName: 'Section',
