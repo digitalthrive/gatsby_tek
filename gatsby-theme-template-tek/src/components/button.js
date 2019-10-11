@@ -8,21 +8,21 @@ const button = props => {
       <div
         sx={{
           color: 'text',
-          bg: 'rgba(0,0,0,0.4)',
+          bg: 'primary',
+          fontFamily: 'heading',
+          fontSize: 1,
+          letterSpacing: 1,
           width: `fit-content`,
           margin: `auto`,
-          marginTop: [0, 0, 4],
-          marginBottom: [5, 4, 0],
           textAlign: `center`,
-          padding: 3,
-          borderRadius: `default`,
+          padding: 0,
           lineHeight: `header`,
           border: `none`,
           borderColor: `primary`,
           boxShadow: `0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)`,
         }}
       >
-        {props.buttonText}
+        <p>{props.buttonText}</p>
       </div>
     </Link>
   )

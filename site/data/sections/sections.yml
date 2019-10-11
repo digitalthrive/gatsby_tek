@@ -120,16 +120,129 @@
 
 ## Products Page
 
-- text: null
+- text: THE BEST ROOFING FOR SEVERE WEATHER
+  text2: TEK HIDDEN FASTENER TECHNOLOGY
+  text3: HURRICANE METAL SHAKE
+  text4: HURRICANE XT METAL SHAKE
+  text5: null
+  buttonText:
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
+  page: products
+  section: 1
+
+- text: UNLEASH THE BEAST! - HURRICANE METAL SHAKE
   text2: null
-  text3: null
+  text3: The HURRICANE Metal Shake iz good
   text4: null
   text5: null
   buttonText:
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: null
-  image2: null
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
   page: products
+  section: 2
+
+- text: THE ORIGINAL HURRICANE METAL SHAKE WITH ADDED INTERLOCKING TECHNOLOGY
+  text2: null
+  text3: For severe weather regions, HURRICANE Metal Shake is the perfect solution. It has additional fasteners per panel....
+  text4: null
+  text5: null
+  buttonText:
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
+  page: products
+  section: 3
+
+- text: THE BEST ROOFING FOR SEVERE WEATHER
+  text2: null
+  text3: For severe weather regions, HURRICANE Metal Shake is the perfect solution. It has additional fasteners per panel....
+  text4: null
+  text5: null
+  buttonText: VIEW PRODUCT COMPARISON CHART
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
+  page: products
+  section: 4
+
+- text: THE BEST ROOFING FOR SEVERE WEATHER
+  text2: null
+  text3: For severe weather regions, HURRICANE Metal Shake is the perfect solution. It has additional fasteners per panel....
+  text4: null
+  text5: null
+  buttonText: VIEW PRODUCT COMPARISON CHART
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
+  page: products
+  section: 5
+
+- text: HURRICANE SHAKE UPLIFT GRAPH
+  text2: The Hurricane Shake windspeed and pressure test withstood over 140mph winds.
+  text3: null
+  text4: null
+  text5: null
+  buttonText: null
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
+  page: products
+  section: 6
+
+- text: HURRICANE SHAKE UPLIFT GRAPH
+  text2: The Hurricane Shake windspeed and pressure test withstood over 140mph winds.
+  text3: null
+  text4: null
+  text5: null
+  buttonText: VIEW PRODUCT SPECS
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
+  page: products
+  section: 7
+
+- text: SOMETHING TO BE EXCITED ABOUT
+  text2: null
+  text3: As you'd expect, interest in TEK roofing products is skyrocketing and more homeowners are taking advantage of this.....
+  text4: null
+  text5: null
+  buttonText: null
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/placeholder.png
+  image2: ../images/placeholder.png
+  page: products
+  section: 8
+
+  ## Gallery Page
+- text: TEK GALLERY
+  text2: SUBHEAD PROJECT GALLERY
+  text3: HURRICANE METAL SHAKE PROJECTS
+  text4: HURRICANE METAL SHAKE XT PROJECTS
+  text5: null
+  buttonText: null
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/gallerytop.jpg
+  image2: ../images/placeholder.png
+  page: gallery
   section: 1

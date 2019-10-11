@@ -15,7 +15,10 @@ const menubar = () => {
   }
   const data = useStaticQuery(graphql`
     query HomeScrollerQuery {
-      allMdx(sort: { fields: frontmatter___order }) {
+      allMdx(
+        sort: { fields: frontmatter___order }
+        filter: { fileAbsolutePath: { regex: "/homescroller/" } }
+      ) {
         edges {
           node {
             id

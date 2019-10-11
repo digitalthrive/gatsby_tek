@@ -33,7 +33,7 @@ const menubar = () => {
       sx={{
         width: `100vw`,
         display: `grid`,
-        gridTemplateColumns: `100px 1fr 1fr 150px`,
+        gridTemplateColumns: `100px 1fr 1fr 250px`,
         zIndex: `100`,
       }}
     >
