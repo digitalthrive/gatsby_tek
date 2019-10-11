@@ -49,33 +49,30 @@ const products = ({ data }) => {
           gridTemplateColumns: `1fr 1fr`,
         }}
       >
-        <div
-          sx={{
-            border: `2px solid`,
-            borderColor: `primary`,
-            borderCollapse: `collapse`,
-            bg: `primary`,
-          }}
-          onClick={() => setFirstSection(0)}
-        >
-          <Styled.h3
-            sx={{ margin: `auto`, width: `fit-content`, color: `text` }}
-          >
-            {sectionOne[0].node.text3}
-          </Styled.h3>
-        </div>
-        <div
-          sx={{
-            border: `2px solid`,
-            borderColor: `primary`,
-            borderCollapse: `collapse`,
-          }}
-          onClick={() => setFirstSection(1)}
-        >
-          <Styled.h3 sx={{ margin: `auto`, width: `fit-content` }}>
-            {sectionOne[0].node.text4}
-          </Styled.h3>
-        </div>
+        {[sectionOne[0].node.text3, sectionOne[0].node.text4].map(
+          (el, index) => (
+            <div
+              key={el + index}
+              sx={{
+                border: `2px solid`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                bg: index === firstSection ? `primary` : null,
+              }}
+              onClick={() => setFirstSection(index)}
+            >
+              <Styled.h3
+                sx={{
+                  margin: `auto`,
+                  width: `fit-content`,
+                  color: index === firstSection ? `text` : `primary`,
+                }}
+              >
+                {el}
+              </Styled.h3>
+            </div>
+          )
+        )}
       </div>
     )
   }
