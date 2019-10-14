@@ -105,35 +105,35 @@ exports.createResolvers = ({ createResolvers }, options) => {
   // {...}
 }
 
-// exports.createPages = async ({ actions, graphql, reporter }, options) => {
-//   const basePath = options.basePath || '/'
-//   const { createPage } = actions
+exports.createPages = async ({ actions, graphql, reporter }, options) => {
+  const basePath = options.basePath || '/'
+  const { createPage } = actions
 
-//   const result = await graphql(`
-//     query {
-//       allMdx(filter: { fileAbsolutePath: { regex: "/items/" } }) {
-//         edges {
-//           node {
-//             id
-//             fields {
-//               slug
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
-//   if (result.errors) {
-//     reporter.panic('🚨  ERROR: Loading "createPages" query', result.errors)
-//   }
+  const result = await graphql(`
+    query {
+      allMdx(filter: { fileAbsolutePath: { regex: "/items/" } }) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+  if (result.errors) {
+    reporter.panic('🚨  ERROR: Loading "createPages" query', result.errors)
+  }
 
-//   const posts = result.data.allMdx.edges
+  const posts = result.data.allMdx.edges
 
-//   posts.forEach(({ node }, index) => {
-//     createPage({
-//       path: node.fields.slug,
-//       component: require.resolve(`./src/templates/product.js`),
-//       context: { slug: node.fields.slug },
-//     })
-//   })
-// }
+  posts.forEach(({ node }, index) => {
+    createPage({
+      path: node.fields.slug,
+      component: require.resolve(`./src/templates/tools.js`),
+      context: { slug: node.fields.slug },
+    })
+  })
+}

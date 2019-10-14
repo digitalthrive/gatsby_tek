@@ -246,3 +246,47 @@
   image2: ../images/placeholder.png
   page: gallery
   section: 1
+
+
+  ## Dealers Page
+- text: TEK DEALER TOOLS
+  text2: '& TECHNICAL RESOURCES'
+  text3: When Tek Industries brings a new roofing company into our family of partners and clients, we want everyone to succeed and progress.
+  text4: HURRICANE METAL SHAKE XT PROJECTS
+  text5: null
+  buttonText: Become A Dealer
+  buttonText2: Install Methods
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/gallerytop.jpg
+  image2: ../images/placeholder.png
+  page: dealers
+  section: 1
+
+- text: WHY ROOFING COMPANIES SHOULD PARTNER WITH TEK INDUSTRIES AND EXPAND TO A DEALER ROLE
+  text2: An exclusive opportunity is on hand, provided by TEK Industries for roofing materials dealers across the nation.  This new event .....
+  text3: When Tek Industries brings a new roofing company into our family of partners and clients, we want everyone to succeed and progress.
+  text4: null
+  text5: null
+  buttonText: Become A Dealer
+  buttonText2: Install Methods
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/placeholder.jpg
+  image2: ../images/placeholder.png
+  page: dealers
+  section: 2
+
+- text: INSTALLATION METHODS
+  text2: Step by step install methods for Metal Pro-X Hip Cap and hip flashing installation.
+  text3: null
+  text4: null
+  text5: null
+  buttonText: VIEW
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/placeholder.jpg
+  image2: ../images/placeholder.png
+  page: dealers
+  section: 3
