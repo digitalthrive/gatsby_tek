@@ -242,15 +242,14 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/gallerytop.jpg
+  image: ../images/placeholder.png
   image2: ../images/placeholder.png
   page: gallery
   section: 1
 
-
   ## Dealers Page
 - text: TEK DEALER TOOLS
-  text2: '& TECHNICAL RESOURCES'
+  text2: AND TECHNICAL RESOURCES
   text3: When Tek Industries brings a new roofing company into our family of partners and clients, we want everyone to succeed and progress.
   text4: HURRICANE METAL SHAKE XT PROJECTS
   text5: null
@@ -258,7 +257,7 @@
   buttonText2: Install Methods
   sidetext: null
   videoSrcURL: null
-  image: ../images/gallerytop.jpg
+  image: ../images/placeholder.png
   image2: ../images/placeholder.png
   page: dealers
   section: 1
@@ -272,7 +271,7 @@
   buttonText2: Install Methods
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.jpg
+  image: ../images/placeholder.png
   image2: ../images/placeholder.png
   page: dealers
   section: 2
@@ -286,7 +285,7 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.jpg
+  image: ../images/placeholder.png
   image2: ../images/placeholder.png
   page: dealers
   section: 3
