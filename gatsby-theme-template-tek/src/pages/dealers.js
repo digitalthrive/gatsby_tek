@@ -8,6 +8,7 @@ import { css } from '@emotion/core'
 import Layout from '../components/layout'
 import Section from '../components/section'
 import Button from '../components/button'
+import ContactForm from '../components/contact'
 
 const dealers = ({ data }) => {
   const sections = data.allSection.edges
@@ -136,6 +137,7 @@ const dealers = ({ data }) => {
         <SectionChooser />
         <Styled.h2>Additional charts here</Styled.h2>
       </Section>
+      <ContactForm />
     </Layout>
   )
 }
