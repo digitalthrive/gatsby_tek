@@ -67,12 +67,16 @@ const dealers = ({ data }) => {
 
   let selections = data.allMdx.edges.map(item => {
     return (
-      <div sx={{ bg: `primary`, height: `200px`, width: `100%` }}>
+      <div
+        sx={{ bg: `rgba(210, 58, 0, 0.75)`, height: `200px`, width: `100%` }}
+      >
         <Link
           to={item.node.fields.slug}
           sx={{
             color: `text`,
             textDecoration: `none`,
+            fontFamily: `futura pt`,
+            fontWeight: `bold`,
           }}
         >
           {item.node.frontmatter.title}

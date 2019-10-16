@@ -27,15 +27,12 @@ const gallery = ({ data }) => {
 
   return (
     <Layout>
-      <BackImg fluid={sectionOne[0].node.image.childImageSharp.fluid}>
+      <BackImg
+        sx={{ backgroundSize: `contain`, backgroundPosition: `top` }}
+        fluid={sectionOne[0].node.image.childImageSharp.fluid}
+      >
         <Section>
-          <div
-            key={sectionOne[0].node.id}
-            sx={{
-              width: `100%`,
-              height: `800px`,
-            }}
-          >
+          <div key={sectionOne[0].node.id}>
             <Gallery
               toptext={sectionOne[0].node.text}
               subtext={sectionOne[0].node.text2}

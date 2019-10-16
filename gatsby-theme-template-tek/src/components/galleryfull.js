@@ -15,8 +15,8 @@ const gallerypreview = props => {
         edges {
           node {
             childImageSharp {
-              fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+              fixed(height: 400, width: 400, quality: 100) {
+                ...GatsbyImageSharpFixed_withWebp
               }
             }
           }
@@ -28,8 +28,8 @@ const gallerypreview = props => {
         edges {
           node {
             childImageSharp {
-              fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+              fixed(height: 400, width: 400, quality: 100) {
+                ...GatsbyImageSharpFixed_withWebp
               }
             }
           }
@@ -41,7 +41,7 @@ const gallerypreview = props => {
     return (
       <Img
         sx={{ height: `100%`, width: `100%` }}
-        fluid={image.node.childImageSharp.fluid}
+        fixed={image.node.childImageSharp.fixed}
       />
     )
   })
@@ -49,7 +49,7 @@ const gallerypreview = props => {
     return (
       <Img
         sx={{ height: `100%`, width: `100%` }}
-        fluid={image.node.childImageSharp.fluid}
+        fixed={image.node.childImageSharp.fixed}
       />
     )
   })
