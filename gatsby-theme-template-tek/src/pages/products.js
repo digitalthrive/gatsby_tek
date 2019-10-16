@@ -4,6 +4,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
+import BeforeAfterSlider from 'react-before-after-slider'
 import Layout from '../components/layout'
 import Section from '../components/section'
 import Button from '../components/button'
@@ -39,6 +40,9 @@ const products = ({ data }) => {
   let sectionEight = sections.filter(obj => {
     return obj.node.section === 8
   })
+
+  const before = 'https://picsum.photos/id/1005/1600/400'
+  const after = 'https://picsum.photos/id/10/1600/400'
 
   let SectionChooser = () => {
     return (
@@ -114,8 +118,13 @@ const products = ({ data }) => {
           </>
         )}
       </Section>
-      <div sx={{ backgroundColor: `darkgrey`, height: `400px` }}>
-        <Styled.h2>Image Before/After Placeholder</Styled.h2>
+      <div>
+        <BeforeAfterSlider
+          before={before}
+          after={after}
+          width={1600}
+          height={400}
+        />
       </div>
       <div sx={{ backgroundColor: `white`, height: `400px` }}>
         <Styled.h2>Layer Graphic Placeholder</Styled.h2>
