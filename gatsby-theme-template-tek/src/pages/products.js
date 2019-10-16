@@ -118,14 +118,14 @@ const products = ({ data }) => {
           </>
         )}
       </Section>
-      <div>
+      <Section>
         <BeforeAfterSlider
           before={before}
           after={after}
           width={1600}
           height={400}
         />
-      </div>
+      </Section>
       <div sx={{ backgroundColor: `white`, height: `400px` }}>
         <Styled.h2>Layer Graphic Placeholder</Styled.h2>
       </div>
