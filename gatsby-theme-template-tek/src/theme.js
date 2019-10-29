@@ -5,7 +5,7 @@ export const theme = {
     body: 'Kannada Sangam MN, system-ui, sans-serif',
     heading: `Bebas Neue, system-ui, sans-serif`,
   },
-  fontSizes: [19, 27, 93, 120, 173],
+  fontSizes: [19, 25, 45, 72, 93, 120, 173],
   lineHeights: {
     body: 1.45,
     heading: 0.9,
@@ -15,11 +15,11 @@ export const theme = {
     text: '#fff',
     background: '#fff',
     primary: '#d23a00',
-    secondary: 'grey',
+    secondary: '#565656',
     muted: '#f6f6f6',
     highlight: '#efeffe', // '#ffffcc',
     gray: '#777',
-    accent: '#609',
+    accent: '#8E8D8E',
     overlay: 'hsla(240, 85%, 57%, 50%)',
     modes: {
       // dark: {
@@ -112,11 +112,14 @@ export const theme = {
     ul: {
       listStyle: 'none',
       padding: 0,
+      margin: 0,
     },
     li: {
-      padding: 1,
-      '&:focus-within,&:hover': {
-        backgroundColor: 'gray.0',
+      '&:not(:last-child):after': {
+        content: '"|"',
+        color: 'primary',
+        paddingLeft: 4,
+        paddingRight: 4,
       },
     },
   },

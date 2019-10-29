@@ -4,7 +4,7 @@ import { Layout as ThemeLayout, Header, Main, jsx } from 'theme-ui'
 import { Global } from '@emotion/core'
 import MenuBar from '../components/menubar'
 import Footer from '../components/footer'
-// import './layout.css'
+import './layout.css'
 
 const Layout = ({ children }) => {
   return (
@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
       <Global
         sx={{
           body: {
-            margin: 0,
+            margin: `0`,
             padding: 0,
           },
         }}

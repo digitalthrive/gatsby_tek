@@ -1,25 +1,16 @@
 - links:
     - link: /products
-      linktext: Products
-    - link: /news
-      linktext: Resources
-    - link: /news
-      linktext: News
-    - link: /about
-      linktext: About
-    - link: /contact
-      linktext: Join Mailing List
-    - link: /portal
-      linktext: Customer Portal
-    - link: /locator
-      linktext: Where to Buy
-    - link: /about
-      linktext: Careers
-    - link: /contact
-      linktext: Contact
+      linktext: PRODUCTS
+    - link: /dealers
+      linktext: DEALER TOOLS
+    - link: /gallery
+      linktext: GALLERY
   sociallinks:
     facebook: https://facebook.com
     twitter: https://twitter.com
     insta: https://instagram.com
     linkedin: https://linkedin.com
+  text: THE
+  text2: MOST DURABLE
+  text3: METAL ROOF IN THE INDUSTRY.
   page: footer
