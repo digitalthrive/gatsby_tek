@@ -82,7 +82,6 @@ export const theme = {
       lineHeight: 'heading',
       fontFamily: 'heading',
       paddingBottom: 4,
-      width: `mid`,
     },
     h2: {
       color: 'secondary',
@@ -91,16 +90,14 @@ export const theme = {
       lineHeight: 'heading',
       fontFamily: 'heading',
       paddingBottom: 4,
-      width: `mid`,
     },
     h3: {
       color: 'grey',
       fontSize: 1,
       fontWeight: 'bold',
       lineHeight: 'body',
-      fontFamily: 'heading',
+      fontFamily: 'body',
       paddingBottom: 4,
-      width: `mid`,
     },
     p: {
       color: 'text',

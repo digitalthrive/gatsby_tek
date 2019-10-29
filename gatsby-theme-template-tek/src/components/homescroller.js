@@ -6,6 +6,7 @@ import Img from 'gatsby-image'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import Section from '../components/section'
 import Button from '../components/button'
+import ButtonV2 from '../components/button-v2'
 
 const menubar = () => {
   const [slide, setSlide] = useState(0)
@@ -34,7 +35,16 @@ const menubar = () => {
                   }
                 }
               }
-              header
+              tabImage {
+                childImageSharp {
+                  fluid(quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              headerTopLine
+              headerLargeWord
+              headerBottomLine
               detail
               order
             }
@@ -53,6 +63,22 @@ const menubar = () => {
             sx={{
               width: `100%`,
               height: `600px`,
+              position: `relative`,
+              ":after": {
+                content: `""`,
+                position: `absolute`,
+                zIndex: `-1`,
+                bottom: `0`,
+                left: `0`,
+                right: `0`,
+                width: `100%`,
+                height: `100%`,
+                margin: `0 auto`,
+                display: `block`,
+                background: `-moz-linear-gradient(left,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%)`,
+                background: `-webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)`,
+                background: `linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)`
+              }
             }}
           >
             <div
@@ -63,26 +89,30 @@ const menubar = () => {
             >
               <Styled.h1
                 sx={{
-                  margin: '0 auto',
+                  margin: '0',
                   paddingTop: [5, 4, 3],
-                  paddingBottom: [4, 4, 3],
-                  textAlign: `center`,
-                  fontSize: [2, 2, 2],
+                  paddingBottom: 0,
+                  textAlign: `left`,
+                  fontSize: [2, 2, 3],
+                  width: [`100%`, `100%`, `40%`],
+                  color: 'background'
                 }}
               >
-                {node.node.frontmatter.header}
+                {node.node.frontmatter.headerTopLine}<span sx={{color: 'primary', fontSize: 5, paddingLeft: 2}}>{node.node.frontmatter.headerLargeWord}</span><span sx={{display: `block`}}>{node.node.frontmatter.headerBottomLine}</span>
               </Styled.h1>
               <Styled.h3
                 sx={{
-                  margin: '0 auto',
-                  textAlign: `center`,
+                  margin: '0',
+                  textAlign: `left`,
                   fontSize: [0, 0, 1],
                   color: 'text',
+                  fontFamily: `body`,
+                  width: [`100%`, `100%`, `40%`]
                 }}
               >
                 {node.node.frontmatter.detail}
               </Styled.h3>
-              <Button destination="/" buttonText="MORE" />
+              <ButtonV2 destination="/" buttonText="MORE" borderColor="background" />
             </div>
           </div>
         </BackImg>
@@ -93,7 +123,46 @@ const menubar = () => {
   let selectors = data.allMdx.edges.map((node, index) => {
     return (
       <div onClick={() => slideHandler(index)}>
-        <Styled.h2>{node.node.frontmatter.name}</Styled.h2>
+        <BackImg
+          fluid={node.node.frontmatter.tabImage.childImageSharp.fluid}
+          sx={{
+            height: `100%`
+          }}
+        >
+          <div
+            sx={{
+              position: `relative`,
+              display: `flex`,
+              alignItems: `center`,
+              justifyContent: `flex-start`,
+              height: `100%`,
+              cursor: `pointer`,
+              ":after": {
+                content: `""`,
+                position: `absolute`,
+                zIndex: `-1`,
+                bottom: `0`,
+                left: `0`,
+                right: `0`,
+                width: `100%`,
+                height: `100%`,
+                margin: `0 auto`,
+                display: `block`,
+                backgroundColor: `rgba(0,0,0,0.5)`,
+              }
+            }}
+          >
+            <Styled.h2
+              sx={{
+                padding: `0 0 0 10%`,
+                width: `50%`,
+                color: 'background'
+              }}
+            >
+              {node.node.frontmatter.name}
+            </Styled.h2>
+          </div>
+        </BackImg>
       </div>
     )
   })
@@ -106,7 +175,7 @@ const menubar = () => {
             backgroundColor: `black`,
             height: `200px`,
             display: `grid`,
-            gridTemplateColumns: `33% 33% 33%`,
+            gridTemplateColumns: `33.33% 33.33% 33.33%`,
             position: 'relative',
             transform: `translate(0, -50%)`,
           }}

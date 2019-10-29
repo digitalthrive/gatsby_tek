@@ -42,23 +42,37 @@ const homepage = ({ data }) => {
       <HomeScroller />
       {sectionTwo.length > 0 ? (
         <Section key={sectionTwo[0].node.id}>
-          <Styled.h1>{sectionTwo[0].node.text}</Styled.h1>
-          <Styled.h3>{sectionTwo[0].node.text2}</Styled.h3>
-          <Styled.h3>{sectionTwo[0].node.text3}</Styled.h3>
-          <Styled.h2>{sectionTwo[0].node.text4}</Styled.h2>
-          <Img
-            sx={{ height: `200px`, width: `200px` }}
-            fluid={sectionTwo[0].node.image.childImageSharp.fluid}
-          />
-          <Img
-            sx={{ height: `200px`, width: `200px` }}
-            fluid={sectionTwo[0].node.image2.childImageSharp.fluid}
-          />
-          <p sx={{ color: `grey` }}>{sectionTwo[0].node.text5}</p>
-          <Button
-            buttonText={sectionTwo[0].node.buttonText}
-            destination="/products"
-          />
+          <div sx={{ textAlign: `center` }}>
+            <Styled.h1
+              sx={{
+                margin: `auto`,
+                textAlign: `center`,
+                paddingBottom: 0
+              }}
+            >{sectionTwo[0].node.text}</Styled.h1>
+            <Styled.h3 sx={{ margin: 0, padding: 0 }}>{sectionTwo[0].node.text2}</Styled.h3>
+            <Styled.h3 sx={{ margin: 0, padding: 0 }}>{sectionTwo[0].node.text3}</Styled.h3>
+          </div>
+          <div sx={{ display: `flex` }}>
+              <div sx={{ width: `50%` }}>
+                <Styled.h2>{sectionTwo[0].node.text4}</Styled.h2>
+              </div>
+              <div sx={{ width: `50%`, alignSelf: `center` }}>
+                <Img
+                  sx={{ height: `200px`, width: `200px` }}
+                  fluid={sectionTwo[0].node.image.childImageSharp.fluid}
+                />
+                <Img
+                  sx={{ height: `200px`, width: `200px` }}
+                  fluid={sectionTwo[0].node.image2.childImageSharp.fluid}
+                />
+                <p sx={{ color: `grey` }}>{sectionTwo[0].node.text5}</p>
+                <Button
+                  buttonText={sectionTwo[0].node.buttonText}
+                  destination="/products"
+                />
+              </div>
+          </div>
         </Section>
       ) : null}
       {sectionThree.length > 0 ? (
