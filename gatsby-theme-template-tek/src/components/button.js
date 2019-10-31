@@ -15,7 +15,7 @@ const button = props => {
           color: 'text',
           bg: 'primary',
           fontFamily: 'heading',
-          fontSize: 1,
+          fontSize: `2` + "5px",
           letterSpacing: 1,
           width: `fit-content`,
           margin: `auto`,

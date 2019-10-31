@@ -84,7 +84,7 @@ const menubar = () => {
             <div
               sx={{
                 height: `fit-content`,
-                padding: [0, 0, 5],
+                padding: [0, 0, 12],
               }}
             >
               <Styled.h1
@@ -93,18 +93,18 @@ const menubar = () => {
                   paddingTop: [5, 4, 3],
                   paddingBottom: 0,
                   textAlign: `left`,
-                  fontSize: [2, 2, 3],
+                  fontSize: [4, 4, 6],
                   width: [`100%`, `100%`, `40%`],
                   color: 'background'
                 }}
               >
-                {node.node.frontmatter.headerTopLine}<span sx={{color: 'primary', fontSize: 5, paddingLeft: 2}}>{node.node.frontmatter.headerLargeWord}</span><span sx={{display: `block`}}>{node.node.frontmatter.headerBottomLine}</span>
+                {node.node.frontmatter.headerTopLine}<span sx={{color: 'primary', fontSize: 10, paddingLeft: 2}}>{node.node.frontmatter.headerLargeWord}</span><span sx={{display: `block`}}>{node.node.frontmatter.headerBottomLine}</span>
               </Styled.h1>
               <Styled.h3
                 sx={{
                   margin: '0',
                   textAlign: `left`,
-                  fontSize: [0, 0, 1],
+                  fontSize: [0, 0, 2],
                   color: 'text',
                   fontFamily: `body`,
                   width: [`100%`, `100%`, `40%`]
@@ -112,7 +112,7 @@ const menubar = () => {
               >
                 {node.node.frontmatter.detail}
               </Styled.h3>
-              <ButtonV2 destination="/" buttonText="MORE" borderColor="background" />
+              <ButtonV2 destination="/" buttonText="MORE" borderColor="background" color="text" />
             </div>
           </div>
         </BackImg>
@@ -156,7 +156,10 @@ const menubar = () => {
               sx={{
                 padding: `0 0 0 10%`,
                 width: `50%`,
-                color: 'background'
+                color: 'background',
+                ":after": {
+                  display: `none`
+                }
               }}
             >
               {node.node.frontmatter.name}

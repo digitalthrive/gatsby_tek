@@ -12,10 +12,10 @@ const button = props => {
     >
       <div
         sx={{
-          color: 'text',
+          color: `${props.color}`,
           bg: 'none',
           fontFamily: 'heading',
-          fontSize: 1,
+          fontSize: `2` + "5px",
           letterSpacing: 1,
           width: `fit-content`,
           textAlign: `center`,

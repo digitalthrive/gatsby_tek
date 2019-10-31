@@ -58,8 +58,8 @@ const gallerypreview = () => {
     <div
       sx={{
         display: `grid`,
-        height: `600px`,
-        width: `60%`,
+        height: `496px`,
+        width: `100%`,
         gridTemplateColumns: `1fr 1fr 1fr`,
         gridTemplateRows: `50% 50%`,
         gridGap: `20px`,

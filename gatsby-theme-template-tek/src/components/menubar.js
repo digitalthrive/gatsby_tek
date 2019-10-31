@@ -72,7 +72,7 @@ const menubar = () => {
                     textDecoration: `none`,
                     color: `secondary`,
                     fontFamily: `heading`,
-                    fontSize: `1`,
+                    fontSize: `2` + "5px",
                     verticalAlign: `middle`,
                     lineHeight: `100px`,
                   }}
