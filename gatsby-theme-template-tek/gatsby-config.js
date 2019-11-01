@@ -4,6 +4,7 @@ module.exports = ({ contentPath = 'data', basePath = '/' }) => ({
     `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
