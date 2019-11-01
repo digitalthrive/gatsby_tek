@@ -54,8 +54,10 @@ const gallerypreview = props => {
     )
   })
   return (
-    <Section sx={{ position: `relative`, top: `-400px` }}>
-      <Styled.h2 sx={{ color: `text` }}>{props.toptext}</Styled.h2>
+    <Section>
+      <Styled.h1 sx={{ color: `text`, marginBottom: 1, paddingBottom: 1 }}>
+        {props.toptext}
+      </Styled.h1>
       <Styled.h2 sx={{ color: `primary` }}>{props.subtext}</Styled.h2>
       <Styled.h2 sx={{ color: `primary` }}>{props.header1}</Styled.h2>
       <div
