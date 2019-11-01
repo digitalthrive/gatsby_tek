@@ -94,7 +94,7 @@ const menubar = () => {
                   paddingBottom: 0,
                   textAlign: `left`,
                   fontSize: [4, 4, 6],
-                  width: [`100%`, `100%`, `40%`],
+                  width: ["100%", "100%", "100%", "100%", "100%"],
                   color: 'background'
                 }}
               >

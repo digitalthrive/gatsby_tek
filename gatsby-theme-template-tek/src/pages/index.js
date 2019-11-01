@@ -43,7 +43,7 @@ const homepage = ({ data }) => {
       <HomeScroller />
       {sectionTwo.length > 0 ? (
         <Section key={sectionTwo[0].node.id}>
-          <div sx={{ textAlign: `center`, marginBottom: `7%` }}>
+          <div sx={{ textAlign: `center`, marginTop: `3%`, marginBottom: `7%` }}>
             <Styled.h1
               sx={{
                 margin: `auto`,
@@ -55,13 +55,18 @@ const homepage = ({ data }) => {
             <Styled.h3 sx={{ margin: 0, padding: 0 }}>{sectionTwo[0].node.text2}</Styled.h3>
             <Styled.h3 sx={{ margin: 0, padding: 0 }}>{sectionTwo[0].node.text3}</Styled.h3>
           </div>
-          <div sx={{ display: `flex`, marginBottom: `7%` }}>
-              <div sx={{ width: `45%` }}>
+          <div
+            sx={{
+              display: `flex`,
+              marginBottom: `7%`,
+              flexDirection: ["column", "column", "column", "row", "row"]
+              }}>
+              <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
                 <Styled.h2
                   sx={{
                     position: `relative`,
                     fontSize: `6`,
-                    width: `65%`,
+                    width: ["100%", "100%", "100%", "65%", "65%"],
                     ":after": {
                       content: `""`,
                       position: `absolute`,
@@ -76,7 +81,7 @@ const homepage = ({ data }) => {
                   }}
                 >{sectionTwo[0].node.text4}</Styled.h2>
               </div>
-              <div sx={{ width: `55%`, alignSelf: `center` }}>
+              <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], alignSelf: `center` }}>
                 <Img
                   sx={{ width: `200px`, backgroundSize: `contain`, display: `inline-block`, marginRight: `10%` }}
                   fluid={sectionTwo[0].node.image.childImageSharp.fluid}
@@ -98,8 +103,25 @@ const homepage = ({ data }) => {
               sx={{
                 color: "background",
                 padding: `0`,
+                ":before": {
+                  display: `inline-block`,
+                  content: `""`,
+                  height: `8px`,
+                  backgroundColor: "primary",
+                  width: `95%`,
+                  position: `absolute`,
+                  left: `-100%`,
+                  top: `32%`
+                },
                 ":after": {
-                  display: `none`
+                  display: `inline-block`,
+                  content: `""`,
+                  height: `8px`,
+                  backgroundColor: "primary",
+                  width: `95%`,
+                  position: `absolute`,
+                  right: `-200%`,
+                  top: `32%`
                 }
               }}
             >
@@ -109,8 +131,25 @@ const homepage = ({ data }) => {
               sx={{
                 color: "background",
                 padding: `0`,
+                ":before": {
+                  display: `inline-block`,
+                  content: `""`,
+                  height: `8px`,
+                  backgroundColor: "primary",
+                  width: `95%`,
+                  position: `absolute`,
+                  left: `-100%`,
+                  top: `32%`
+                },
                 ":after": {
-                  display: `none`
+                  display: `inline-block`,
+                  content: `""`,
+                  height: `8px`,
+                  backgroundColor: "primary",
+                  width: `95%`,
+                  position: `absolute`,
+                  right: `-200%`,
+                  top: `32%`
                 }
               }}
             >
@@ -120,15 +159,56 @@ const homepage = ({ data }) => {
               sx={{
                 color: "background",
                 padding: `0`,
+                ":before": {
+                  display: `inline-block`,
+                  content: `""`,
+                  height: `8px`,
+                  backgroundColor: "primary",
+                  width: `95%`,
+                  position: `absolute`,
+                  left: `-100%`,
+                  top: `32%`
+                },
                 ":after": {
-                  display: `none`
+                  display: `inline-block`,
+                  content: `""`,
+                  height: `8px`,
+                  backgroundColor: "primary",
+                  width: `95%`,
+                  position: `absolute`,
+                  right: `-200%`,
+                  top: `32%`
                 }
               }}
             >
               {sectionThree[0].node.text3}
             </Styled.h2>
             <Img
-              sx={{ width: `153px`, display: `inline-block` }}
+              sx={{
+                width: `153px`,
+                display: `inline-block`,
+                position: `relative`,
+                ":before": {
+                  display: `inline-block`,
+                  content: `""`,
+                  height: `8px`,
+                  backgroundColor: "primary",
+                  width: `95%`,
+                  position: `absolute`,
+                  left: `-100%`,
+                  top: `32%`
+                },
+                ":after": {
+                  display: `inline-block`,
+                  content: `""`,
+                  height: `8px`,
+                  backgroundColor: "primary",
+                  width: `95%`,
+                  position: `absolute`,
+                  right: `-200%`,
+                  top: `32%`
+                }
+              }}
               fluid={sectionThree[0].node.image.childImageSharp.fluid}
             />
           </div>
@@ -138,13 +218,13 @@ const homepage = ({ data }) => {
         <Section key={sectionFour[0].node.id}>
 
 
-          <div sx={{ display: `flex`, marginBottom: `7%` }}>
-              <div sx={{ width: `45%` }}>
+          <div sx={{ display: `flex`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
+              <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
                 <Styled.h2
                   sx={{
                     position: `relative`,
                     fontSize: `6`,
-                    width: `65%`,
+                    width: ["100%", "100%", "100%", "65%", "65%"],
                     ":after": {
                       content: `""`,
                       position: `absolute`,
@@ -159,7 +239,7 @@ const homepage = ({ data }) => {
                   }}
                 >{sectionFour[0].node.text}</Styled.h2>
               </div>
-              <div sx={{ width: `55%`, alignSelf: `center` }}>
+              <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], alignSelf: `center` }}>
                 <Img
                   sx={{ width: `200px`, backgroundSize: `contain`, display: `inline-block`, marginRight: `10%` }}
                   fluid={sectionFour[0].node.image.childImageSharp.fluid}

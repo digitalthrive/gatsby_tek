@@ -33,7 +33,9 @@ const menubar = () => {
     <div
       sx={{
         width: `100vw`,
-        display: `grid`,
+        display: `flex`,
+        justifyContent: `space-around`,
+        alignItems: `center`,
         gridTemplateColumns: `400px 1fr 250px`,
         zIndex: `100`,
         height: `100px`,
@@ -41,8 +43,7 @@ const menubar = () => {
     >
       <div
         sx={{
-          width: `75%`,
-          marginLeft: `100px`,
+          width: `25%`,
           height: `100%`,
           position: `relative`,
           alignSelf: `center`,
@@ -51,7 +52,7 @@ const menubar = () => {
       >
         <Img
           sx={{
-            width: `100%`,
+            width: `80%`,
             display: `inline-block`,
             position: `absolute`,
             top: `50%`,
@@ -84,7 +85,7 @@ const menubar = () => {
           })}
         </Styled.ul>
       </div>
-      <div>
+      <div sx={{ display: `flex`, justifyContent: `center`, alignItems: `center` }}>
         <Button destination="/dealers" buttonText="BECOME A DEALER" />
       </div>
     </div>

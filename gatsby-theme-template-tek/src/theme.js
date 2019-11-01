@@ -10,7 +10,7 @@ export const theme = {
     body: 1.45,
     heading: 0.9,
   },
-  breakpoints: ['500px', '768px', '1024px', '1200px', '1600px'],
+  breakpoints: ['500px', '768px', '1024px', '1280px', '1600px'],
   colors: {
     text: '#fff',
     background: '#EFEFEF',
