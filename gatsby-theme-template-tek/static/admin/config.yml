@@ -1,6 +1,7 @@
 backend:
-<<<<<<< HEAD
-  name: test-repo
+  name: 'github'
+  repo: digitalthrive/gatsby_tek
+  branch: feature/netlify_cms
 
 media_folder: data/images
 public_folder: /images
@@ -14,7 +15,3 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Abbreviation', name: 'abbreviations', widget: 'string' }
-=======
-  name: git-gateway
-  branch: master
->>>>>>> 0b3309bb0f8e9feaa0eede31b41094618f3aa634
