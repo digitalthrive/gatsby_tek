@@ -1,5 +1,6 @@
 backend:
   name: test-repo
+  branch: feature/netlify_cms
 
 media_folder: data/images
 public_folder: /images
