@@ -70,4 +70,4 @@ yarn-error.log
 node_modules
 
 # Edittable data directories
-*/data/
+# */data/
