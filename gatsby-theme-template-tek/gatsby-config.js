@@ -15,13 +15,6 @@ module.exports = ({ contentPath = 'data', basePath = '/' }) => ({
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `items`,
-        path: `${contentPath}/items/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `sections`,
         path: `${contentPath}/sections/`,
       },
