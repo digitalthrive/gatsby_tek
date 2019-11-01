@@ -39,6 +39,8 @@ const menubar = () => {
         gridTemplateColumns: `400px 1fr 250px`,
         zIndex: `100`,
         height: `100px`,
+        position: `fixed`,
+        backgroundColor: `background`,
       }}
     >
       <div

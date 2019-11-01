@@ -27,21 +27,55 @@ const gallery = ({ data }) => {
 
   return (
     <Layout>
-      <BackImg
-        sx={{ backgroundSize: `contain`, backgroundPosition: `top` }}
+      <Img
+        sx={{
+          position: `absolute`,
+          top: 0,
+          left: 0,
+          backgroundSize: `contain`,
+          backgroundPosition: `top`,
+          filter: `brightness(50%)`,
+          marginTop: `100px`,
+        }}
         fluid={sectionOne[0].node.image.childImageSharp.fluid}
+      />
+      <div
+        sx={{
+          height: '100vh',
+          margin: 0,
+          backgroundColor: `transparent`,
+          position: `absolute`,
+          top: 0,
+          left: 0,
+        }}
+        css={css`
+          &::after {
+            content: '';
+            position: absolute;
+            top: -200px;
+            bottom: -750px;
+            left: -250px;
+            width: 300vw;
+            height: 200vh;
+            background: white;
+            transform: skew(-65deg);
+          }
+        `}
+      ></div>
+      <div
+        key={sectionOne[0].node.id}
+        css={css`
+          margin: -800px auto 200px auto;
+          width: 85vw;
+        `}
       >
-        <Section>
-          <div key={sectionOne[0].node.id}>
-            <Gallery
-              toptext={sectionOne[0].node.text}
-              subtext={sectionOne[0].node.text2}
-              header1={sectionOne[0].node.text3}
-              header2={sectionOne[0].node.text4}
-            />
-          </div>
-        </Section>
-      </BackImg>
+        <Gallery
+          toptext={sectionOne[0].node.text}
+          subtext={sectionOne[0].node.text2}
+          header1={sectionOne[0].node.text3}
+          header2={sectionOne[0].node.text4}
+        />
+      </div>
     </Layout>
   )
 }
