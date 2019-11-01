@@ -35,6 +35,7 @@ const gallery = ({ data }) => {
           backgroundSize: `contain`,
           backgroundPosition: `top`,
           filter: `brightness(50%)`,
+          marginTop: `100px`,
         }}
         fluid={sectionOne[0].node.image.childImageSharp.fluid}
       />
@@ -51,10 +52,11 @@ const gallery = ({ data }) => {
           &::after {
             content: '';
             position: absolute;
-            top: 0;
+            top: -200px;
             bottom: -750px;
             left: -250px;
             width: 300vw;
+            height: 200vh;
             background: white;
             transform: skew(-65deg);
           }
@@ -63,10 +65,7 @@ const gallery = ({ data }) => {
       <div
         key={sectionOne[0].node.id}
         css={css`
-          position: absolute;
-          top: 0;
-          left: 0;
-          margin: auto;
+          margin: -800px auto 200px auto;
           width: 85vw;
         `}
       >
