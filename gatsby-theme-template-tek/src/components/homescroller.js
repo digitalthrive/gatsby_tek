@@ -84,7 +84,7 @@ const menubar = () => {
             <div
               sx={{
                 height: `fit-content`,
-                padding: [0, 0, 12],
+                padding: [10, 10, 12],
               }}
             >
               <Styled.h1
@@ -98,13 +98,13 @@ const menubar = () => {
                   color: 'background'
                 }}
               >
-                {node.node.frontmatter.headerTopLine}<span sx={{color: 'primary', fontSize: 10, paddingLeft: 2}}>{node.node.frontmatter.headerLargeWord}</span><span sx={{display: `block`}}>{node.node.frontmatter.headerBottomLine}</span>
+                {node.node.frontmatter.headerTopLine}<span sx={{color: 'primary', fontSize: ["7", "7", "7", "10", "10"], paddingLeft: 2}}>{node.node.frontmatter.headerLargeWord}</span><span sx={{display: `block`}}>{node.node.frontmatter.headerBottomLine}</span>
               </Styled.h1>
               <Styled.h3
                 sx={{
                   margin: '0',
                   textAlign: `left`,
-                  fontSize: [0, 0, 2],
+                  fontSize: [2, 2, 2],
                   color: 'text',
                   fontFamily: `body`,
                   width: [`100%`, `100%`, `40%`]
@@ -154,9 +154,11 @@ const menubar = () => {
           >
             <Styled.h2
               sx={{
+                fontSize: ["2", "3", "4", "6", "6"],
                 padding: `0 0 0 10%`,
-                width: `50%`,
+                width: ["100%", "100%", "100%", "60%", "60%"],
                 color: 'background',
+                margin: `0`,
                 ":after": {
                   display: `none`
                 }
@@ -172,11 +174,11 @@ const menubar = () => {
   return (
     <>
       {slides[slide]}
-      <Section>
+      <Section sx={{ width: ["100%", "100%", "100%", "85%", "85%"] }}>
         <div
           sx={{
             backgroundColor: `black`,
-            height: `200px`,
+            height: ["140px", "140px", "140px", "200px", "200px"],
             display: `grid`,
             gridTemplateColumns: `33.33% 33.33% 33.33%`,
             position: 'relative',

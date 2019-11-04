@@ -6,6 +6,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import Button from '../components/button'
 import { relative } from 'upath'
 import Section from '../components/section'
+import HamburgerMenu from './hamburger.js'
 
 const menubar = () => {
   const data = useStaticQuery(graphql`
@@ -46,12 +47,13 @@ const menubar = () => {
           display: `flex`,
           justifyContent: `space-around`,
           alignItems: `center`,
+          height: ["100%", "100%", "100%", "auto", "auto"]
         }}
       >
         <div
           sx={{
-            width: `20%`,
-            height: `100%`,
+            width: ["50%", "50%", "50%", "20%", "20%"],
+            height: ["auto", "auto", "auto", "100%", "100%"],
             position: `relative`,
             alignSelf: `center`,
             justifySelf: `center`,
@@ -60,13 +62,13 @@ const menubar = () => {
           <Link destination="/">
             <Img
               sx={{
-                width: `382px`
+                maxWidth: `382px`
               }}
               fluid={data.file.childImageSharp.fluid}
             />
           </Link>
         </div>
-        <div sx={{ justifySelf: `center`, height: `100%` }}>
+        <div sx={{ justifySelf: `center`, height: `100%`, display: ["none", "none", "none", "block", "block"] }}>
           <Styled.ul sx={{ height: `100%`, display: `table` }}>
             {data.site.siteMetadata.menuLinks.map(link => {
               return (
@@ -89,9 +91,10 @@ const menubar = () => {
             })}
           </Styled.ul>
         </div>
-        <div sx={{ display: `flex`, justifyContent: `center`, alignItems: `center` }}>
+        <div sx={{ display: ["none", "none", "none", "flex", "flex"], justifyContent: `center`, alignItems: `center` }}>
           <Button destination="/dealers" buttonText="BECOME A DEALER" />
         </div>
+        <HamburgerMenu sx={{ justifySelf: `center`, alignSelf: `center` }} />
       </div>
     </div>
   )

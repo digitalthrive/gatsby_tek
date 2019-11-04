@@ -43,7 +43,7 @@ const homepage = ({ data }) => {
       <HomeScroller />
       {sectionTwo.length > 0 ? (
         <Section key={sectionTwo[0].node.id}>
-          <div sx={{ textAlign: `center`, marginTop: `3%`, marginBottom: `7%` }}>
+          <div sx={{ textAlign: `center`, marginTop: `0`, marginBottom: `7%` }}>
             <Styled.h1
               sx={{
                 margin: `auto`,
@@ -99,90 +99,46 @@ const homepage = ({ data }) => {
       {sectionThree.length > 0 ? (
         <BackImg fluid={sectionThree[0].node.image2.childImageSharp.fluid} sx={{ height: `188px`, margin: `5% 0` }}>
           <div sx={{ display: `flex`, justifyContent: `space-evenly`, alignItems: `center`, height: `100%` }}>
+            <div sx={{ height: `8px`, width: `10%`, backgroundColor: "primary", }}></div>
             <Styled.h2
               sx={{
                 color: "background",
                 padding: `0`,
-                ":before": {
-                  display: `inline-block`,
-                  content: `""`,
-                  height: `8px`,
-                  backgroundColor: "primary",
-                  width: `95%`,
-                  position: `absolute`,
-                  left: `-100%`,
-                  top: `32%`
-                },
+                fontSize: ["2", "3", "4", "6", "6"],
                 ":after": {
-                  display: `inline-block`,
-                  content: `""`,
-                  height: `8px`,
-                  backgroundColor: "primary",
-                  width: `95%`,
-                  position: `absolute`,
-                  right: `-200%`,
-                  top: `32%`
+                  display: `none`
                 }
               }}
             >
               {sectionThree[0].node.text}
             </Styled.h2>
+            <div sx={{ height: `8px`, width: `10%`, backgroundColor: "primary", }}></div>
             <Styled.h2
               sx={{
                 color: "background",
                 padding: `0`,
-                ":before": {
-                  display: `inline-block`,
-                  content: `""`,
-                  height: `8px`,
-                  backgroundColor: "primary",
-                  width: `95%`,
-                  position: `absolute`,
-                  left: `-100%`,
-                  top: `32%`
-                },
+                fontSize: ["2", "3", "4", "6", "6"],
                 ":after": {
-                  display: `inline-block`,
-                  content: `""`,
-                  height: `8px`,
-                  backgroundColor: "primary",
-                  width: `95%`,
-                  position: `absolute`,
-                  right: `-200%`,
-                  top: `32%`
+                  display: `none`
                 }
               }}
             >
               {sectionThree[0].node.text2}
             </Styled.h2>
+            <div sx={{ height: `8px`, width: `10%`, backgroundColor: "primary", }}></div>
             <Styled.h2
               sx={{
                 color: "background",
                 padding: `0`,
-                ":before": {
-                  display: `inline-block`,
-                  content: `""`,
-                  height: `8px`,
-                  backgroundColor: "primary",
-                  width: `95%`,
-                  position: `absolute`,
-                  left: `-100%`,
-                  top: `32%`
-                },
+                fontSize: ["2", "3", "4", "6", "6"],
                 ":after": {
-                  display: `inline-block`,
-                  content: `""`,
-                  height: `8px`,
-                  backgroundColor: "primary",
-                  width: `95%`,
-                  position: `absolute`,
-                  right: `-200%`,
-                  top: `32%`
+                  display: `none`
                 }
               }}
             >
               {sectionThree[0].node.text3}
             </Styled.h2>
+            <div sx={{ height: `8px`, width: `10%`, backgroundColor: "primary", }}></div>
             <Img
               sx={{
                 width: `153px`,
@@ -211,6 +167,7 @@ const homepage = ({ data }) => {
               }}
               fluid={sectionThree[0].node.image.childImageSharp.fluid}
             />
+            <div sx={{ height: `8px`, width: `15%`, backgroundColor: "primary", }}></div>
           </div>
         </BackImg>
       ) : null}
@@ -335,6 +292,7 @@ const homepage = ({ data }) => {
           </Section>
         ) : null}
       </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387144.0075834208!2d-73.97800349999999!3d40.7056308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY!5e0!3m2!1sen!2sus!4v1394298866288"  height="600" frameborder="0" sx={{ width: `100%`, display: `block`}}></iframe>
     </Layout>
   )
 }

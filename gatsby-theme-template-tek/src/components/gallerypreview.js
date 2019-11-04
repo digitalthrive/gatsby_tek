@@ -41,7 +41,7 @@ const gallerypreview = () => {
   let gallery1images = data.gallery1.edges.map(image => {
     return (
       <Img
-        sx={{ height: `100%`, width: `100%` }}
+        sx={{ height: ["185px", "185px", "185px", "230px", "230px"], width: ["185px", "185px", "185px", "230px", "230px"], margin: ["8px auto", "8px auto", "8px auto", "8px", "8px"] }}
         fluid={image.node.childImageSharp.fluid}
       />
     )
@@ -49,7 +49,7 @@ const gallerypreview = () => {
   let gallery2images = data.gallery2.edges.map(image => {
     return (
       <Img
-        sx={{ height: `100%`, width: `100%` }}
+        sx={{ height: ["185px", "185px", "185px", "230px", "230px"], width: ["185px", "185px", "185px", "230px", "230px"], margin: ["8px auto", "8px auto", "8px auto", "8px", "8px"] }}
         fluid={image.node.childImageSharp.fluid}
       />
     )
@@ -57,12 +57,8 @@ const gallerypreview = () => {
   return (
     <div
       sx={{
-        display: `grid`,
-        height: `496px`,
-        width: `100%`,
-        gridTemplateColumns: `1fr 1fr 1fr`,
-        gridTemplateRows: `50% 50%`,
-        gridGap: `20px`,
+        display: `flex`,
+        flexWrap: `wrap`,
       }}
     >
       {gallery1images}
