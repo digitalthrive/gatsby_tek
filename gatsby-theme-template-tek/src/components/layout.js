@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
       <Header>
         <MenuBar />
       </Header>
-      <Main>{children}</Main>
+      <Main sx={{ paddingTop: `100px` }}>{children}</Main>
       <Footer />
     </ThemeLayout>
   )

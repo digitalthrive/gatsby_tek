@@ -216,8 +216,6 @@ const homepage = ({ data }) => {
       ) : null}
       {sectionFour.length > 0 ? (
         <Section key={sectionFour[0].node.id}>
-
-
           <div sx={{ display: `flex`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
               <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
                 <Styled.h2
@@ -239,7 +237,7 @@ const homepage = ({ data }) => {
                   }}
                 >{sectionFour[0].node.text}</Styled.h2>
               </div>
-              <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], alignSelf: `center` }}>
+              <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
                 <Img
                   sx={{ width: `200px`, backgroundSize: `contain`, display: `inline-block`, marginRight: `10%` }}
                   fluid={sectionFour[0].node.image.childImageSharp.fluid}
@@ -252,16 +250,13 @@ const homepage = ({ data }) => {
                 <ButtonV2 destination="/products" buttonText={sectionFour[0].node.buttonText} borderColor="primary" color="primary" />
               </div>
           </div>
-
-
-
         </Section>
       ) : null}
       {sectionFive.length > 0 ? (
         <div sx={{ backgroundColor: "text" }}>
           <Section key={sectionFive[0].node.id}>
-            <div sx={{ display: `flex`, padding: `10% 0` }}>
-                <div sx={{ width: `45%` }}>
+            <div sx={{ display: `flex`, padding: `10% 0`, flexDirection: ["column", "column", "column", "row", "row"] }}>
+                <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"], paddingBottom: ["10%", "10%", "10%", "0", "0"] }}>
                   <Styled.h2>{sectionFive[0].node.text}</Styled.h2>
                   <ButtonV2
                     buttonText={sectionFive[0].node.buttonText}
@@ -270,14 +265,14 @@ const homepage = ({ data }) => {
                     color="primary"
                   />
                 </div>
-              <div sx={{ width: `55%` }}>
+              <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["20%", "20%", "20%", "0", "0"] }}>
                 <GalleryPreview />
               </div>
             </div>
           </Section>
         </div>
       ) : null}
-      <div sx={{ height: `600px`, backgroundColor: `#000`, display: `flex`, flexDirection: `column`, justifyContent: `center`, alignContent: `center`, textAlign: `center` }}>
+      <div sx={{ backgroundColor: `#000`, display: `flex`, flexDirection: `column`, justifyContent: `center`, alignContent: `center`, textAlign: `center`, padding: ["10% 0", "10% 0", "10% 0", "10% 0", "10% 0"] }}>
         <Section>
           <Styled.h2 sx={{ color: `text`, marginTop: `0`, ":after": {right: `0`} }}>Testimonial Scroller Placeholder</Styled.h2>
           <Styled.h3 sx={{ fontFamily: "body", color: "text", position: `relative` }}>
@@ -315,15 +310,15 @@ const homepage = ({ data }) => {
       <div sx={{ backgroundColor: "primary" }}>
         {sectionSix.length > 0 ? (
           <Section key={sectionSix[0].node.id}>
-            <div sx={{ display: `flex`, padding: `10% 0` }}>
-              <div sx={{ width: `45%` }}>
+            <div sx={{ display: `flex`, padding: ["10% 0 20% 0", "10% 0 20% 0", "10% 0 20% 0", "5% 0", "5% 0"], flexDirection: ["column", "column", "column", "row", "row"] }}>
+              <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
               <Styled.h2 sx={{ color: `text`, "after": {backgroundColor: "text"} }}>{sectionSix[0].node.text}</Styled.h2>
               <Img
                 sx={{ width: `411px` }}
                 fluid={sectionSix[0].node.image.childImageSharp.fluid}
               />
               </div>
-              <div sx={{ width: `55%`, alignSelf: `center` }}>
+              <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], alignSelf: `center` }}>
                 <Img
                   sx={{ width: `385px` }}
                   fluid={sectionSix[0].node.image2.childImageSharp.fluid}
