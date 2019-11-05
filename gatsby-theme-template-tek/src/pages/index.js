@@ -11,6 +11,7 @@ import GalleryPreview from '../components/gallerypreview'
 import Layout from '../components/layout'
 import Section from '../components/section'
 import Button from '../components/button'
+import ButtonV2 from '../components/button-v2'
 
 const homepage = ({ data }) => {
   const sections = data.allSection.edges
@@ -42,89 +43,256 @@ const homepage = ({ data }) => {
       <HomeScroller />
       {sectionTwo.length > 0 ? (
         <Section key={sectionTwo[0].node.id}>
-          <Styled.h1>{sectionTwo[0].node.text}</Styled.h1>
-          <Styled.h3>{sectionTwo[0].node.text2}</Styled.h3>
-          <Styled.h3>{sectionTwo[0].node.text3}</Styled.h3>
-          <Styled.h2>{sectionTwo[0].node.text4}</Styled.h2>
-          <Img
-            sx={{ height: `200px`, width: `200px` }}
-            fluid={sectionTwo[0].node.image.childImageSharp.fluid}
-          />
-          <Img
-            sx={{ height: `200px`, width: `200px` }}
-            fluid={sectionTwo[0].node.image2.childImageSharp.fluid}
-          />
-          <p sx={{ color: `grey` }}>{sectionTwo[0].node.text5}</p>
-          <Button
-            buttonText={sectionTwo[0].node.buttonText}
-            destination="/products"
-          />
+          <div sx={{ textAlign: `center`, marginTop: `0`, marginBottom: `7%` }}>
+            <Styled.h1
+              sx={{
+                margin: `auto`,
+                textAlign: `center`,
+                paddingBottom: 0,
+                fontSize: `8`
+              }}
+            >{sectionTwo[0].node.text}</Styled.h1>
+            <Styled.h3 sx={{ margin: 0, padding: 0 }}>{sectionTwo[0].node.text2}</Styled.h3>
+            <Styled.h3 sx={{ margin: 0, padding: 0 }}>{sectionTwo[0].node.text3}</Styled.h3>
+          </div>
+          <div
+            sx={{
+              display: `flex`,
+              marginBottom: `7%`,
+              flexDirection: ["column", "column", "column", "row", "row"]
+              }}>
+              <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
+                <Styled.h2
+                  sx={{
+                    position: `relative`,
+                    fontSize: `6`,
+                    width: ["100%", "100%", "100%", "65%", "65%"],
+                    ":after": {
+                      content: `""`,
+                      position: `absolute`,
+                      bottom: `0`,
+                      left: `0`,
+                      width: `20%`,
+                      height: `3px`,
+                      margin: `0 auto`,
+                      display: `block`,
+                      backgroundColor: "primary"
+                    }
+                  }}
+                >{sectionTwo[0].node.text4}</Styled.h2>
+              </div>
+              <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], alignSelf: `center` }}>
+                <Img
+                  sx={{ width: `200px`, backgroundSize: `contain`, display: `inline-block`, marginRight: `10%` }}
+                  fluid={sectionTwo[0].node.image.childImageSharp.fluid}
+                />
+                <Img
+                  sx={{ width: `239px`, backgroundSize: `contain`, display: `inline-block` }}
+                  fluid={sectionTwo[0].node.image2.childImageSharp.fluid}
+                />
+                <p sx={{ color: `grey` }}>{sectionTwo[0].node.text5}</p>
+                <ButtonV2 destination="/products" buttonText={sectionTwo[0].node.buttonText} borderColor="primary" color="primary" />
+              </div>
+          </div>
         </Section>
       ) : null}
       {sectionThree.length > 0 ? (
-        <div sx={{ height: `200px`, backgroundColor: `darkgrey` }}>
-          <p sx={{ display: `inline`, margin: `20px` }}>
-            {sectionThree[0].node.text}
-          </p>
-          <p sx={{ display: `inline`, margin: `20px` }}>
-            {sectionThree[0].node.text2}
-          </p>
-          <p sx={{ display: `inline`, margin: `20px` }}>
-            {sectionThree[0].node.text3}
-          </p>
-          <Img
-            sx={{ height: `25%`, width: `100px`, display: `inline-block` }}
-            fluid={sectionThree[0].node.image.childImageSharp.fluid}
-          />
-        </div>
+        <BackImg fluid={sectionThree[0].node.image2.childImageSharp.fluid} sx={{ height: `188px`, margin: `5% 0` }}>
+          <div sx={{ display: `flex`, justifyContent: `space-evenly`, alignItems: `center`, height: `100%` }}>
+            <div sx={{ height: `8px`, width: `10%`, backgroundColor: "primary", }}></div>
+            <Styled.h2
+              sx={{
+                color: "background",
+                padding: `0`,
+                fontSize: ["2", "3", "4", "6", "6"],
+                ":after": {
+                  display: `none`
+                }
+              }}
+            >
+              {sectionThree[0].node.text}
+            </Styled.h2>
+            <div sx={{ height: `8px`, width: `10%`, backgroundColor: "primary", }}></div>
+            <Styled.h2
+              sx={{
+                color: "background",
+                padding: `0`,
+                fontSize: ["2", "3", "4", "6", "6"],
+                ":after": {
+                  display: `none`
+                }
+              }}
+            >
+              {sectionThree[0].node.text2}
+            </Styled.h2>
+            <div sx={{ height: `8px`, width: `10%`, backgroundColor: "primary", }}></div>
+            <Styled.h2
+              sx={{
+                color: "background",
+                padding: `0`,
+                fontSize: ["2", "3", "4", "6", "6"],
+                ":after": {
+                  display: `none`
+                }
+              }}
+            >
+              {sectionThree[0].node.text3}
+            </Styled.h2>
+            <div sx={{ height: `8px`, width: `10%`, backgroundColor: "primary", }}></div>
+            <Img
+              sx={{
+                width: `153px`,
+                display: `inline-block`,
+                position: `relative`,
+                ":before": {
+                  display: `inline-block`,
+                  content: `""`,
+                  height: `8px`,
+                  backgroundColor: "primary",
+                  width: `95%`,
+                  position: `absolute`,
+                  left: `-100%`,
+                  top: `32%`
+                },
+                ":after": {
+                  display: `inline-block`,
+                  content: `""`,
+                  height: `8px`,
+                  backgroundColor: "primary",
+                  width: `95%`,
+                  position: `absolute`,
+                  right: `-200%`,
+                  top: `32%`
+                }
+              }}
+              fluid={sectionThree[0].node.image.childImageSharp.fluid}
+            />
+            <div sx={{ height: `8px`, width: `15%`, backgroundColor: "primary", }}></div>
+          </div>
+        </BackImg>
       ) : null}
       {sectionFour.length > 0 ? (
         <Section key={sectionFour[0].node.id}>
-          <Styled.h2>{sectionFour[0].node.text}</Styled.h2>
-          <Styled.h3>{sectionFour[0].node.text2}</Styled.h3>
-          <Img
-            sx={{ height: `200px`, width: `200px` }}
-            fluid={sectionFour[0].node.image.childImageSharp.fluid}
-          />
-          <Img
-            sx={{ height: `200px`, width: `200px` }}
-            fluid={sectionFour[0].node.image2.childImageSharp.fluid}
-          />
-          <p sx={{ color: `grey` }}>{sectionTwo[0].node.text4}</p>
-          <Button
-            buttonText={sectionFour[0].node.buttonText}
-            destination="/products"
-          />
+          <div sx={{ display: `flex`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
+              <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
+                <Styled.h2
+                  sx={{
+                    position: `relative`,
+                    fontSize: `6`,
+                    width: ["100%", "100%", "100%", "65%", "65%"],
+                    ":after": {
+                      content: `""`,
+                      position: `absolute`,
+                      bottom: `0`,
+                      left: `0`,
+                      width: `20%`,
+                      height: `3px`,
+                      margin: `0 auto`,
+                      display: `block`,
+                      backgroundColor: "primary"
+                    }
+                  }}
+                >{sectionFour[0].node.text}</Styled.h2>
+              </div>
+              <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
+                <Img
+                  sx={{ width: `200px`, backgroundSize: `contain`, display: `inline-block`, marginRight: `10%` }}
+                  fluid={sectionFour[0].node.image.childImageSharp.fluid}
+                />
+                <Img
+                  sx={{ width: `239px`, backgroundSize: `contain`, display: `inline-block` }}
+                  fluid={sectionFour[0].node.image2.childImageSharp.fluid}
+                />
+                <p sx={{ color: `grey` }}>{sectionFour[0].node.text5}</p>
+                <ButtonV2 destination="/products" buttonText={sectionFour[0].node.buttonText} borderColor="primary" color="primary" />
+              </div>
+          </div>
         </Section>
       ) : null}
       {sectionFive.length > 0 ? (
-        <Section key={sectionFive[0].node.id}>
-          <Styled.h2>{sectionFive[0].node.text}</Styled.h2>
-          <Button
-            buttonText={sectionFive[0].node.buttonText}
-            destination="/gallery"
-          />
-          <GalleryPreview />
-        </Section>
+        <div sx={{ backgroundColor: "text" }}>
+          <Section key={sectionFive[0].node.id}>
+            <div sx={{ display: `flex`, padding: `10% 0`, flexDirection: ["column", "column", "column", "row", "row"] }}>
+                <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"], paddingBottom: ["10%", "10%", "10%", "0", "0"] }}>
+                  <Styled.h2>{sectionFive[0].node.text}</Styled.h2>
+                  <ButtonV2
+                    buttonText={sectionFive[0].node.buttonText}
+                    destination="/gallery"
+                    borderColor="primary"
+                    color="primary"
+                  />
+                </div>
+              <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["20%", "20%", "20%", "0", "0"] }}>
+                <GalleryPreview />
+              </div>
+            </div>
+          </Section>
+        </div>
       ) : null}
-      <div sx={{ height: `600px`, backgroundColor: `darkgrey` }}>
-        <Styled.h2>Testimonial Scroller Placeholder</Styled.h2>
+      <div sx={{ backgroundColor: `#000`, display: `flex`, flexDirection: `column`, justifyContent: `center`, alignContent: `center`, textAlign: `center`, padding: ["10% 0", "10% 0", "10% 0", "10% 0", "10% 0"] }}>
+        <Section>
+          <Styled.h2 sx={{ color: `text`, marginTop: `0`, ":after": {right: `0`} }}>Testimonial Scroller Placeholder</Styled.h2>
+          <Styled.h3 sx={{ fontFamily: "body", color: "text", position: `relative` }}>
+            <div
+              sx={{
+                position: `relative`,
+                ":before": {
+                  content: `open-quote`,
+                  fontFamily: `heading`,
+                  color: "primary",
+                  display: `block`,
+                  position: `absolute`,
+                  left: `-20px`,
+                  top: `-20px`,
+                  fontSize: "8"
+                },
+                ":after": {
+                  content: `close-quote`,
+                  fontFamily: `heading`,
+                  color: "primary",
+                  display: `block`,
+                  position: `absolute`,
+                  right: `-20px`,
+                  bottom: `-20px`,
+                  fontSize: "8"
+                }
+              }}
+            >Our before and after is remarkable. All of our neighbors have asked us what kind of roof we put on. They were so surprised and impressed when we told them it was a Hurricane stone-coated metal roof.
+            </div>
+          </Styled.h3>
+          <Styled.h3 sx={{ fontFamily: "body", padding: `0`, margin: `0`, color: "text" }}>Sue and Paul</Styled.h3>
+          <Styled.h3 sx={{ fontFamily: "body", padding: `0`, margin: `0`, color: "text" }}>North Texas Homeowners</Styled.h3>
+        </Section>
       </div>
-      {sectionSix.length > 0 ? (
-        <Section key={sectionSix[0].node.id}>
-          <Styled.h2>{sectionSix[0].node.text}</Styled.h2>
-          <Img
-            sx={{ height: `200px`, width: `200px` }}
-            fluid={sectionSix[0].node.image.childImageSharp.fluid}
-          />
-          <Styled.h3>{sectionSix[0].node.text2}</Styled.h3>
-          <Styled.h3>{sectionSix[0].node.text3}</Styled.h3>
-          <Button
-            buttonText={sectionSix[0].node.buttonText}
-            destination="/dealers"
-          />
-        </Section>
-      ) : null}
+      <div sx={{ backgroundColor: "primary" }}>
+        {sectionSix.length > 0 ? (
+          <Section key={sectionSix[0].node.id}>
+            <div sx={{ display: `flex`, padding: ["10% 0 20% 0", "10% 0 20% 0", "10% 0 20% 0", "5% 0", "5% 0"], flexDirection: ["column", "column", "column", "row", "row"] }}>
+              <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
+              <Styled.h2 sx={{ color: `text`, "after": {backgroundColor: "text"} }}>{sectionSix[0].node.text}</Styled.h2>
+              <Img
+                sx={{ width: `411px` }}
+                fluid={sectionSix[0].node.image.childImageSharp.fluid}
+              />
+              </div>
+              <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], alignSelf: `center` }}>
+                <Img
+                  sx={{ width: `385px` }}
+                  fluid={sectionSix[0].node.image2.childImageSharp.fluid}
+                />
+                <Styled.p sx={{ color: `text` }}>{sectionSix[0].node.text3}</Styled.p>
+                <ButtonV2
+                  buttonText={sectionSix[0].node.buttonText}
+                  destination="/dealers"
+                  borderColor="text"
+                  color="text"
+                />
+              </div>
+            </div>
+          </Section>
+        ) : null}
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387144.0075834208!2d-73.97800349999999!3d40.7056308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY!5e0!3m2!1sen!2sus!4v1394298866288"  height="600" frameborder="0" sx={{ width: `100%`, display: `block`}}></iframe>
     </Layout>
   )
 }

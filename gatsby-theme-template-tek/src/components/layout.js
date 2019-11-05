@@ -13,14 +13,14 @@ const Layout = ({ children }) => {
         sx={{
           body: {
             margin: `0`,
-            padding: 0,
+            padding: 0
           },
         }}
       />
       <Header>
         <MenuBar />
       </Header>
-      <Main>{children}</Main>
+      <Main sx={{ paddingTop: `100px` }}>{children}</Main>
       <Footer />
     </ThemeLayout>
   )

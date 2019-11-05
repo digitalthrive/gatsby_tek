@@ -16,17 +16,17 @@
   page: home
   section: 1
 
-- text: WHAT IS THE HURRICANE EFFECT
-  text2: The Most exceptional metal roof in the industry.
-  text3: The last roof you'll ever have to buy
+- text: What is the HURRICANE effect?
+  text2: The most exceptional metal roof in the industry.
+  text3: The last roof you'll ever have to buy.
   text4: THE BEST ROOFING FOR SEVERE WEATHER
-  text5: Lorem ipsum dolor amet master cleanse art party paleo PBR&B schlitz mixtape whatever yr migas messenger bag single-origin coffee.
+  text5: For severe weather regions, HURRICANE® Metal Shake is the perfect solution. It has additional fasteners per panel, and each fastener designed with higher corrosion-resistance coating. Hurricane Shake has a 2-pound density foam insert made from a CNC Machine. HURRICANE® Metal Shake passed with the highest rating for both uplift and impact testing.
   buttonText: MORE
   buttonText2: ''
   sidetext: ''
   videoSrcURL: ''
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: ../images/hurricane-shake-logo-TEK.png
+  image2: ../images/extreme-durability-shield-graphic.png
   page: home
   section: 2
 
@@ -39,22 +39,22 @@
   buttonText2: ''
   sidetext: ''
   videoSrcURL: ''
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: ../images/tek-square-logo.png
+  image2: ../images/slim-header.jpg
   page: home
   section: 3
 
 - text: THE ORIGINAL HURRICANE METAL SHAKE WITH ADDED INTERLOCKING TECHNOLOGY
   text2: The Most exceptional metal roof in the industry.
-  text3: The last roof you'll ever have to buy
-  text4: Lorem ipsum dolor amet master cleanse art party paleo PBR&B schlitz mixtape whatever yr migas messenger bag single-origin coffee.
-  text5: ''
+  text3: ''
+  text4: ''
+  text5: The HURRICANE® Metal Shake Pro has the highest wind rating available, passing the ASTM E1592 test at CAT5 windspeeds. The TEK® Industries team has put together a product and strategy that brings you a beautifully crafted high TEK Roofing solution. Not only can the Hurricane Metal Shake withstand CAT5 windspeeds it also can withstand up to 2″ Hail.
   buttonText: MORE
   buttonText2: ''
   sidetext: ''
   videoSrcURL: ''
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: ../images/hurricane-pro-logo.png
+  image2: ../images/multilayer-technology-graphic.png
   page: home
   section: 4
 
@@ -81,8 +81,8 @@
   buttonText2: ''
   sidetext: ''
   videoSrcURL: ''
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: ../images/hurricane-shake-TEK-box.png
+  image2: ../images/tek-industries-roofing-partner.png
   page: home
   section: 6
 

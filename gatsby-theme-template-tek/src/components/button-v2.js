@@ -12,27 +12,26 @@ const button = props => {
     >
       <div
         sx={{
-          color: 'text',
-          bg: 'primary',
+          color: `${props.color}`,
+          bg: 'none',
           fontFamily: 'heading',
-          fontSize: `25px`,
+          fontSize: `2` + "5px",
           letterSpacing: 1,
           width: `fit-content`,
-          margin: `auto`,
           textAlign: `center`,
           padding: 0,
           lineHeight: `header`,
-          border: `none`,
-          borderColor: `primary`,
-          boxShadow: `0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)`,
+          border: `2px solid`,
+          borderColor: `${props.borderColor}`,
         }}
       >
         <p
           sx={{
-            paddingLeft: 4,
-            paddingRight: 4,
-            paddingTop: 1,
-            paddingBottom: 1,
+            paddingLeft: 5,
+            paddingRight: 5,
+            paddingTop: 2,
+            paddingBottom: 2,
+            margin: 0
           }}
         >
           {props.buttonText}
