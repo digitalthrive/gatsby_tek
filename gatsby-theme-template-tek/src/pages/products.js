@@ -44,6 +44,15 @@ const products = ({ data }) => {
   const before = 'https://picsum.photos/id/1005/1600/400'
   const after = 'https://picsum.photos/id/10/1600/400'
 
+  function reportWindowWidth() {
+    let width = window.innerWidth;
+    return width;
+  }
+  window.onload = reportWindowWidth;
+  window.onresize = function () {
+    reportWindowWidth();
+  };
+
   let SectionChooser = () => {
     return (
       <div
@@ -58,7 +67,10 @@ const products = ({ data }) => {
             <div
               key={el + index}
               sx={{
-                border: `2px solid`,
+                display: `flex`,
+                justifyContent: `center`,
+                alignItems: `center`,
+                border: `3px solid`,
                 borderColor: `primary`,
                 borderCollapse: `collapse`,
                 bg: index === firstSection ? `primary` : null,
@@ -67,7 +79,10 @@ const products = ({ data }) => {
             >
               <Styled.h3
                 sx={{
-                  margin: `auto`,
+                  margin: `0`,
+                  padding: `0`,
+                  fontFamily: "body",
+                  fontSize: "2",
                   width: `fit-content`,
                   color: index === firstSection ? `text` : `primary`,
                 }}
@@ -84,7 +99,7 @@ const products = ({ data }) => {
   return (
     <Layout>
       <Section>
-        <Styled.h2>
+        <Styled.h2 sx={{ fontSize: "9", color: "primary" }}>
           {firstSection === 0
             ? sectionOne[0].node.text
             : sectionOne[0].node.text2}
@@ -92,57 +107,66 @@ const products = ({ data }) => {
         <SectionChooser />
         {firstSection === 0 ? (
           <>
-            <Styled.h2>{sectionTwo[0].node.text}</Styled.h2>
-            <Img
-              sx={{ height: `200px`, width: `200px` }}
-              fluid={sectionTwo[0].node.image.childImageSharp.fluid}
-            />
-            <Img
-              sx={{ height: `200px`, width: `200px` }}
-              fluid={sectionTwo[0].node.image2.childImageSharp.fluid}
-            />
-            <Styled.h3>{sectionTwo[0].node.text3}</Styled.h3>
+            <div sx={{ display: `flex`, marginTop: `7%`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
+              <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
+                <Styled.h2>{sectionTwo[0].node.text}</Styled.h2>
+              </div>
+              <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
+                <Img
+                  sx={{ width: `200px`, backgroundSize: `contain`, display: `inline-block`, marginRight: `10%` }}
+                  fluid={sectionTwo[0].node.image.childImageSharp.fluid}
+                />
+                <Img
+                  sx={{ width: `239px`, backgroundSize: `contain`, display: `inline-block` }}
+                  fluid={sectionTwo[0].node.image2.childImageSharp.fluid}
+                />
+                <p sx={{ color: `grey` }}>{sectionTwo[0].node.text3}</p>
+              </div>
+            </div>
           </>
         ) : (
           <>
-            <Styled.h2>{sectionThree[0].node.text}</Styled.h2>
-            <Img
-              sx={{ height: `200px`, width: `200px` }}
-              fluid={sectionThree[0].node.image.childImageSharp.fluid}
-            />
-            <Img
-              sx={{ height: `200px`, width: `200px` }}
-              fluid={sectionThree[0].node.image2.childImageSharp.fluid}
-            />
-            <Styled.h3>{sectionThree[0].node.text3}</Styled.h3>
+          <div sx={{ display: `flex`, marginTop: `7%`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
+            <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
+              <Styled.h2>{sectionThree[0].node.text}</Styled.h2>
+            </div>
+            <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
+              <Img
+                sx={{ width: `200px`, backgroundSize: `contain`, display: `inline-block`, marginRight: `10%` }}
+                fluid={sectionThree[0].node.image.childImageSharp.fluid}
+              />
+              <Img
+                sx={{ width: `239px`, backgroundSize: `contain`, display: `inline-block` }}
+                fluid={sectionThree[0].node.image2.childImageSharp.fluid}
+              />
+              <p sx={{ color: `grey` }}>{sectionThree[0].node.text3}</p>
+            </div>
+          </div>
           </>
         )}
       </Section>
-      <Section>
-        <BeforeAfterSlider
-          before={before}
-          after={after}
-          width={1600}
-          height={400}
-        />
-      </Section>
-      <div sx={{ backgroundColor: `white`, height: `400px` }}>
+      <BeforeAfterSlider
+        before={before}
+        after={after}
+        width={reportWindowWidth()}
+        height={560}
+      />
+      <div sx={{ backgroundColor: `gray`, overflow: `hidden` }}>
         <Styled.h2>Layer Graphic Placeholder</Styled.h2>
+        <Section>
+          <Styled.h2 sx={{ color: "text" }}>{sectionFour[0].node.text}</Styled.h2>
+          <Styled.h3 sx={{ color: "text" }}>{sectionFour[0].node.text3}</Styled.h3>
+          <div
+            sx={{ bg: `primary`, width: `fit-content`, margin: `auto` }}
+            onClick={() => setShowTable(!showTable)}
+          >
+            <Styled.h3 sx={{ color: `text` }}>
+              {sectionFour[0].node.buttonText}
+            </Styled.h3>
+          </div>
+          {showTable ? <CompTable /> : null}
+        </Section>
       </div>
-      <Section>
-        <Styled.h2>{sectionFour[0].node.text}</Styled.h2>
-        <Styled.h3>{sectionFour[0].node.text3}</Styled.h3>
-        <div
-          sx={{ bg: `primary`, width: `fit-content`, margin: `auto` }}
-          onClick={() => setShowTable(!showTable)}
-        >
-          <Styled.h3 sx={{ color: `text` }}>
-            {sectionFour[0].node.buttonText}
-          </Styled.h3>
-        </div>
-        />
-        {showTable ? <CompTable /> : null}
-      </Section>
       <div
         sx={{
           display: `grid`,
