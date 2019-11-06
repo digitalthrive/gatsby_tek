@@ -46,6 +46,13 @@ module.exports = ({ contentPath = 'data', basePath = '/' }) => ({
         path: `${contentPath}/images/homescroller/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `hometestimonials`,
+        path: `${contentPath}/hometestimonial/`,
+      },
+    },
 
     {
       resolve: `gatsby-source-filesystem`,
