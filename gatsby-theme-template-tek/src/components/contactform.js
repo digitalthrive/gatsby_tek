@@ -3,13 +3,13 @@ import React, { useState, useEffect, useLayoutEffect } from 'react'
 import { Styled, jsx } from 'theme-ui'
 import Img from 'gatsby-image'
 
-const dealerform = () => {
+const contactform = () => {
   return (
     <div>
-      <Styled.h1>TEK DEALER APPLICATION</Styled.h1>
+      <Styled.h1>CONTACT TEK INDUSTRIES</Styled.h1>
       <form action=""></form>
     </div>
   )
 }
 
-export default dealerform
+export default contactform

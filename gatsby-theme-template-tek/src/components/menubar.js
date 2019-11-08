@@ -3,16 +3,24 @@ import React, { useState, useEffect, useLayoutEffect } from 'react'
 import { Styled, jsx } from 'theme-ui'
 import Img from 'gatsby-image'
 import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useTransition, animated } from 'react-spring'
 import Button from '../components/button'
-import { relative } from 'upath'
 import Section from '../components/section'
-import ContactModal from '../components/contactmodal'
+import DrawerModal from '../components/drawermodal'
 import HamburgerMenu from './hamburger.js'
 
 const menubar = () => {
   const [show, setShow] = useState(false)
+  const [form, setForm] = useState()
 
-  let showHandler = () => {
+  const transition = useTransition(show, null, {
+    from: { transform: `translate3d(2000px, 0, 0)` },
+    enter: { transform: `translate3d(0,0,0)` },
+    leave: { transform: `translate3d(2000px,0, 0)` },
+  })
+
+  let showHandler = form => {
+    setForm(form)
     setShow(!show)
   }
   const data = useStaticQuery(graphql`
@@ -48,7 +56,14 @@ const menubar = () => {
         backgroundColor: `background`,
       }}
     >
-      {show ? <ContactModal clickHandler={() => showHandler()} /> : null}
+      {transition.map(
+        ({ item, key, props }) =>
+          item && (
+            <animated.div key={key} style={props}>
+              <DrawerModal form={form} clickHandler={() => showHandler()} />
+            </animated.div>
+          )
+      )}
       <div
         sx={{
           display: `flex`,
@@ -102,7 +117,10 @@ const menubar = () => {
                 </Styled.li>
               )
             })}
-            <Styled.li key="liLinkMenuLast" onClick={showHandler}>
+            <Styled.li
+              key="liLinkMenuLast"
+              onClick={() => showHandler('contact')}
+            >
               <div
                 sx={{
                   textDecoration: `none`,
@@ -119,13 +137,42 @@ const menubar = () => {
           </Styled.ul>
         </div>
         <div
+          onClick={() => showHandler('dealer')}
           sx={{
             display: ['none', 'none', 'none', 'flex', 'flex'],
             justifyContent: `center`,
             alignItems: `center`,
           }}
         >
-          <Button destination="/dealers" buttonText="BECOME A DEALER" />
+          <div
+            sx={{
+              color: 'text',
+              bg: 'primary',
+              fontFamily: 'heading',
+              fontSize: `25px`,
+              letterSpacing: 1,
+              width: `fit-content`,
+              margin: `auto`,
+              textAlign: `center`,
+              padding: 0,
+              lineHeight: `header`,
+              border: `none`,
+              borderColor: `primary`,
+              boxShadow: `0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)`,
+            }}
+          >
+            <p
+              sx={{
+                paddingLeft: 4,
+                paddingRight: 4,
+                paddingTop: 1,
+                paddingBottom: 1,
+              }}
+            >
+              BECOME A DEALER
+            </p>
+          </div>
+          {/* <Button destination="/dealers" buttonText="BECOME A DEALER" /> */}
         </div>
         <HamburgerMenu sx={{ justifySelf: `center`, alignSelf: `center` }} />
       </div>
