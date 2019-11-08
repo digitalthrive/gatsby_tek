@@ -9,17 +9,18 @@ const comparisontable = () => {
       sx={{
         width: `100%`,
         border: `2px solid`,
-        borderColor: `primary`,
+        borderColor: `text`,
         borderCollapse: `collapse`,
+        textAlign: `center`
       }}
     >
       <thead>
-        <th></th>
-        <th sx={{ bg: `primary` }}>
-          <Styled.h3>BEST RATED FOR SEVERE WEATHER</Styled.h3>
+        <th sx={{ bg: `text` }}></th>
+        <th sx={{ bg: `text` }}>
+          <Styled.h3 sx={{ color: "primary", margin: `0`, padding: `0` }}>BEST RATED FOR SEVERE WEATHER</Styled.h3>
         </th>
-        <th sx={{ bg: `primary` }}>
-          <Styled.h3>HIDDEN FASTENER TECHNOLOGY</Styled.h3>
+        <th sx={{ bg: `text` }}>
+          <Styled.h3 sx={{ color: "primary", margin: `0`, padding: `0` }}>HIDDEN FASTENER TECHNOLOGY</Styled.h3>
         </th>
       </thead>
       <tbody>
@@ -27,87 +28,122 @@ const comparisontable = () => {
           <td
             sx={{
               border: `2px solid`,
-              borderColor: `primary`,
+              borderColor: `text`,
               borderCollapse: `collapse`,
             }}
           >
-            <Styled.h3>KEY DIFFERENCES</Styled.h3>
+            <Styled.h3 sx={{ margin: `0`, padding: `0`, color: "text", fontSize: "3" }}>KEY DIFFERENCES</Styled.h3>
           </td>
           <td
             sx={{
               border: `2px solid`,
-              borderColor: `primary`,
+              borderColor: `text`,
               borderCollapse: `collapse`,
             }}
           >
-            <Styled.h3>Image Placeholder</Styled.h3>
+            <p>Image Placeholder</p>
           </td>
           <td
             sx={{
               border: `2px solid`,
-              borderColor: `primary`,
+              borderColor: `text`,
               borderCollapse: `collapse`,
             }}
           >
-            <Styled.h3>Image Placeholder</Styled.h3>
-          </td>
-        </tr>
-        <tr>
-          <td
-            sx={{
-              border: `2px solid`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-            }}
-          >
-            <Styled.h3>20 Gauge Steel Core</Styled.h3>
-          </td>
-          <td
-            sx={{
-              border: `2px solid`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-            }}
-          >
-            <Styled.h3></Styled.h3>
-          </td>
-          <td
-            sx={{
-              border: `2px solid`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-            }}
-          >
-            <Styled.h3>Image Placeholder</Styled.h3>
+            <p>Image Placeholder</p>
           </td>
         </tr>
         <tr>
           <td
             sx={{
               border: `2px solid`,
-              borderColor: `primary`,
+              borderColor: `text`,
               borderCollapse: `collapse`,
+              backgroundColor: `#676767`
             }}
           >
-            <Styled.h3>Thingie</Styled.h3>
+            <p>20 Gauge Steel Core</p>
           </td>
           <td
             sx={{
               border: `2px solid`,
-              borderColor: `primary`,
+              borderColor: `text`,
               borderCollapse: `collapse`,
+              backgroundColor: `#676767`
             }}
           >
-            <Styled.h3>'Image Placeholder'</Styled.h3>
+            <p>circlegraphic</p>
           </td>
           <td
             sx={{
               border: `2px solid`,
-              borderColor: `primary`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#676767`
+            }}
+          >
+            <p>Image Placeholder</p>
+          </td>
+        </tr>
+        <tr>
+          <td
+            sx={{
+              border: `2px solid`,
+              borderColor: `text`,
               borderCollapse: `collapse`,
             }}
           >
-            <Styled.h3>Image Placeholder</Styled.h3>
+            <p>Thingie</p>
+          </td>
+          <td
+            sx={{
+              border: `2px solid`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+            }}
+          >
+            <p>Thingie</p>
+          </td>
+          <td
+            sx={{
+              border: `2px solid`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+            }}
+          >
+            <p>Thingie</p>
+          </td>
+        </tr>
+        <tr>
+          <td
+            sx={{
+              border: `2px solid`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#676767`
+            }}
+          >
+            <p>Thingie</p>
+          </td>
+          <td
+            sx={{
+              border: `2px solid`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#676767`
+            }}
+          >
+            <p>circlegraphic</p>
+          </td>
+          <td
+            sx={{
+              border: `2px solid`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#676767`
+            }}
+          >
+            <p>Thingie</p>
           </td>
         </tr>
       </tbody>

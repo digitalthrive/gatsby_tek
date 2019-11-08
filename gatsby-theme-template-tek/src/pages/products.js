@@ -151,18 +151,34 @@ const products = ({ data }) => {
         width={reportWindowWidth()}
         height={560}
       />
-      <div sx={{ backgroundColor: `gray`, overflow: `hidden` }}>
-        <Styled.h2>Layer Graphic Placeholder</Styled.h2>
+      <div sx={{ backgroundColor: `gray`, overflow: `hidden`, padding: `5% 0` }}>
         <Section>
-          <Styled.h2 sx={{ color: "text" }}>{sectionFour[0].node.text}</Styled.h2>
-          <Styled.h3 sx={{ color: "text" }}>{sectionFour[0].node.text3}</Styled.h3>
+          <div sx={{ display: `flex`, alignContent: `center`, justifyContent: `center` }}>
+            <Img
+              sx={{
+                width: `1039px`,
+                backgroundSize: `contain`,
+                display: `inline-block`,
+                textAlign: `center`
+              }}
+              fluid={sectionFour[0].node.image.childImageSharp.fluid}
+            />
+          </div>
+          <div sx={{ display: `flex`, marginTop: `7%`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
+            <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
+              <Styled.h2 sx={{ color: "text" }}>{sectionFour[0].node.text}</Styled.h2>
+            </div>
+            <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
+              <p sx={{ color: "text" }}>{sectionFour[0].node.text3}</p>
+            </div>
+          </div>
           <div
-            sx={{ bg: `primary`, width: `fit-content`, margin: `auto` }}
+            sx={{ margin: `auto`, borderColor: "text", borderWidth: `3px`, borderStyle: `solid` }}
             onClick={() => setShowTable(!showTable)}
           >
-            <Styled.h3 sx={{ color: `text` }}>
+            <p sx={{ color: `text`, textTransform: `uppercase`, fontWeight: `bold`, textAlign: `center`, padding: `1% 0` }}>
               {sectionFour[0].node.buttonText}
-            </Styled.h3>
+            </p>
           </div>
           {showTable ? <CompTable /> : null}
         </Section>
