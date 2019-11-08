@@ -199,14 +199,14 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.png
+  image: ../images/wind-speed-and-pressure.png
   image2: ../images/placeholder.png
   page: products
   section: 6
 
-- text: HURRICANE SHAKE UPLIFT GRAPH
-  text2: The Hurricane Shake windspeed and pressure test withstood over 140mph winds.
-  text3: null
+- text: SOMETHING TO BE EXCITED ABOUT
+  text2: null
+  text3: As you’d expect, interest in TEK® roofing products is skyrocketing and more homeowners are taking advantage of this opportunity each day. As they learn more of the details, they realize how crazy it would be to miss out on this great investment. Metal roofing by its nature endures better than any other solution. The homeowners’ insurance company should be able to offer them a discount on insurance premiums for Class 4 Roofing, an additional savings!
   text4: null
   text5: null
   buttonText: VIEW PRODUCT SPECS
@@ -218,9 +218,9 @@
   page: products
   section: 7
 
-- text: SOMETHING TO BE EXCITED ABOUT
+- text: THIS IS SECTION 8
   text2: null
-  text3: As you'd expect, interest in TEK roofing products is skyrocketing and more homeowners are taking advantage of this.....
+  text3: This is content for scetion 8. Specifically the text3 portion.
   text4: null
   text5: null
   buttonText: null
@@ -231,6 +231,20 @@
   image2: ../images/placeholder.png
   page: products
   section: 8
+
+- text: null
+  text2: null
+  text3: null
+  text4: null
+  text5: null
+  buttonText: null
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/squared-roof-preview.jpg
+  image2: ../images/placeholder.png
+  page: products
+  section: 9
 
   ## Gallery Page
 - text: TEK GALLERY

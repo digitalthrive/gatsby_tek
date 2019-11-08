@@ -13,6 +13,7 @@ import CompTable from '../components/comparisontable'
 const products = ({ data }) => {
   const [firstSection, setFirstSection] = useState(0)
   const [showTable, setShowTable] = useState(false)
+  const [sliderWidth, setSliderWidth] = useState(reportWindowWidth())
 
   const sections = data.allSection.edges
 
@@ -40,6 +41,9 @@ const products = ({ data }) => {
   let sectionEight = sections.filter(obj => {
     return obj.node.section === 8
   })
+  let sectionNine = sections.filter(obj => {
+    return obj.node.section === 9
+  })
 
   const before = 'https://picsum.photos/id/1005/1600/400'
   const after = 'https://picsum.photos/id/10/1600/400'
@@ -50,7 +54,7 @@ const products = ({ data }) => {
   }
   window.onload = reportWindowWidth;
   window.onresize = function () {
-    reportWindowWidth();
+    setSliderWidth(reportWindowWidth());
   };
 
   let SectionChooser = () => {
@@ -82,8 +86,9 @@ const products = ({ data }) => {
                   margin: `0`,
                   padding: `0`,
                   fontFamily: "body",
-                  fontSize: "2",
+                  fontSize: ['1', '1', '1', '2', '2'],
                   width: `fit-content`,
+                  textAlign: `center`,
                   color: index === firstSection ? `text` : `primary`,
                 }}
               >
@@ -99,7 +104,7 @@ const products = ({ data }) => {
   return (
     <Layout>
       <Section>
-        <Styled.h2 sx={{ fontSize: "9", color: "primary" }}>
+        <Styled.h2 sx={{ fontSize: ['8', '8', '8', '9', '9'], color: "primary" }}>
           {firstSection === 0
             ? sectionOne[0].node.text
             : sectionOne[0].node.text2}
@@ -148,7 +153,7 @@ const products = ({ data }) => {
       <BeforeAfterSlider
         before={before}
         after={after}
-        width={reportWindowWidth()}
+        width={sliderWidth}
         height={560}
       />
       <div sx={{ backgroundColor: `gray`, overflow: `hidden`, padding: `5% 0` }}>
@@ -183,6 +188,25 @@ const products = ({ data }) => {
           {showTable ? <CompTable /> : null}
         </Section>
       </div>
+      <div sx={{ backgroundColor: `darkgrey`, height: `400px`, overflow: `hidden` }}>
+        <Section>
+          <Styled.h2>Roofing Material Slider Placeholder</Styled.h2>
+        </Section>
+      </div>
+      <Section>
+        <div sx={{ display: `flex`, marginTop: `7%`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
+          <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
+            <Styled.h2>{sectionSix[0].node.text}</Styled.h2>
+            <p sx={{ color: "grey" }}>{sectionSix[0].node.text2}</p>
+          </div>
+          <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
+            <Img
+              sx={{ width: `749px` }}
+              fluid={sectionSix[0].node.image.childImageSharp.fluid}
+            />
+          </div>
+        </div>
+      </Section>
       <div
         sx={{
           display: `grid`,
@@ -191,9 +215,9 @@ const products = ({ data }) => {
           height: `600px`,
         }}
       >
-        <Img fluid={sectionOne[0].node.image.childImageSharp.fluid} />
-        <div>
-          <Styled.h2>TOP BENEFITS</Styled.h2>
+        <Img fluid={sectionNine[0].node.image.childImageSharp.fluid} />
+        <div sx={{ padding: `5% 5% 5% 15%` }}>
+          <Styled.h2 sx={{ color: "text", ':after': { borderColor: "text" } }}>TOP BENEFITS</Styled.h2>
           <ol>
             <li>Highly reflective to the radiant heat.</li>
             <li>
@@ -212,35 +236,14 @@ const products = ({ data }) => {
         </div>
       </div>
       <Section>
-        <Styled.h2>{sectionSix[0].node.text}</Styled.h2>
-        <Styled.h3>{sectionSix[0].node.text2}</Styled.h3>
-        <Img
-          sx={{ height: `200px`, width: `200px` }}
-          fluid={sectionSix[0].node.image.childImageSharp.fluid}
-        />
-      </Section>
-      <div sx={{ backgroundColor: `darkgrey`, height: `400px` }}>
-        <Styled.h2>Roofing Material Slider Placeholder</Styled.h2>
-      </div>
-      <Section>
-        <Img
-          sx={{ height: `200px`, width: `200px` }}
-          fluid={sectionSeven[0].node.image.childImageSharp.fluid}
-        />
-        <div
-          sx={{ bg: `primary`, width: `fit-content`, margin: `auto` }}
-          onClick={() => setShowTable(!showTable)}
-        >
-          <Styled.h3 sx={{ color: `text` }}>
-            {sectionSeven[0].node.buttonText}
-          </Styled.h3>
+        <div sx={{ display: `flex`, marginTop: `7%`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
+          <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"], padding: `0 5% 0 0`, boxSizing: `border-box` }}>
+            <Styled.h2>{sectionSeven[0].node.text}</Styled.h2>
+          </div>
+          <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
+            <p sx={{ color: `grey` }}>{sectionSeven[0].node.text3}</p>
+          </div>
         </div>
-        />
-        {showTable ? <CompTable /> : null}
-      </Section>
-      <Section>
-        <Styled.h2>{sectionEight[0].node.text}</Styled.h2>
-        <Styled.p sx={{ color: `grey` }}>{sectionEight[0].node.text3}</Styled.p>
       </Section>
     </Layout>
   )

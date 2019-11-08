@@ -11,7 +11,8 @@ const comparisontable = () => {
         border: `2px solid`,
         borderColor: `text`,
         borderCollapse: `collapse`,
-        textAlign: `center`
+        textAlign: `center`,
+        margin: `5% 0`
       }}
     >
       <thead>
@@ -27,7 +28,10 @@ const comparisontable = () => {
         <tr>
           <td
             sx={{
-              border: `2px solid`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
             }}
@@ -36,7 +40,10 @@ const comparisontable = () => {
           </td>
           <td
             sx={{
-              border: `2px solid`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
             }}
@@ -45,7 +52,10 @@ const comparisontable = () => {
           </td>
           <td
             sx={{
-              border: `2px solid`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
             }}
@@ -56,7 +66,10 @@ const comparisontable = () => {
         <tr>
           <td
             sx={{
-              border: `2px solid`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
               backgroundColor: `#676767`
@@ -66,7 +79,10 @@ const comparisontable = () => {
           </td>
           <td
             sx={{
-              border: `2px solid`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
               backgroundColor: `#676767`
@@ -76,7 +92,10 @@ const comparisontable = () => {
           </td>
           <td
             sx={{
-              border: `2px solid`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
               backgroundColor: `#676767`
@@ -88,7 +107,10 @@ const comparisontable = () => {
         <tr>
           <td
             sx={{
-              border: `2px solid`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
             }}
@@ -97,7 +119,10 @@ const comparisontable = () => {
           </td>
           <td
             sx={{
-              border: `2px solid`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
             }}
@@ -106,7 +131,10 @@ const comparisontable = () => {
           </td>
           <td
             sx={{
-              border: `2px solid`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
             }}
@@ -117,7 +145,10 @@ const comparisontable = () => {
         <tr>
           <td
             sx={{
-              border: `2px solid`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
               backgroundColor: `#676767`
@@ -127,7 +158,10 @@ const comparisontable = () => {
           </td>
           <td
             sx={{
-              border: `2px solid`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
               backgroundColor: `#676767`
@@ -137,7 +171,10 @@ const comparisontable = () => {
           </td>
           <td
             sx={{
-              border: `2px solid`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
               backgroundColor: `#676767`

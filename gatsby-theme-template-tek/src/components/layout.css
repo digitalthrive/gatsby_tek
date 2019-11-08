@@ -10,3 +10,27 @@ body {
 a {
   text-decoration: none;
 }
+div[class*='styles_handle'] {
+  width: 20px;
+  background-color: #d23a00;
+}
+div[class*='styles_afterWrapper']:before {
+  content: 'Before';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+div[class*='styles_before']:after {
+  content: 'After';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
