@@ -13,10 +13,11 @@ const Layout = ({ children }) => {
         sx={{
           body: {
             margin: `0`,
-            padding: 0
+            padding: 0,
           },
         }}
       />
+
       <Header>
         <MenuBar />
       </Header>

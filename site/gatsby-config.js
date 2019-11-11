@@ -22,10 +22,6 @@ module.exports = {
         name: 'DEALER TOOLS',
         link: '/dealers',
       },
-      {
-        name: 'CONTACT',
-        link: '/contact',
-      },
     ],
   },
   plugins: [
