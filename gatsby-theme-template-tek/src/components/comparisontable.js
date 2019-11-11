@@ -2,6 +2,7 @@
 import React from 'react'
 import { Styled, jsx } from 'theme-ui'
 import { SymbolDef } from 'terser'
+import checkMark from '../components/icons/check-mark.png'
 
 const comparisontable = () => {
   return (
@@ -18,10 +19,10 @@ const comparisontable = () => {
       <thead>
         <th sx={{ bg: `text` }}></th>
         <th sx={{ bg: `text` }}>
-          <Styled.h3 sx={{ color: "primary", margin: `0`, padding: `0` }}>BEST RATED FOR SEVERE WEATHER</Styled.h3>
+          <Styled.h3 sx={{ color: "primary", margin: `0`, padding: `0`, fontSize: ['2', '2', '2', '3', '3'] }}>BEST RATED FOR SEVERE WEATHER</Styled.h3>
         </th>
         <th sx={{ bg: `text` }}>
-          <Styled.h3 sx={{ color: "primary", margin: `0`, padding: `0` }}>HIDDEN FASTENER TECHNOLOGY</Styled.h3>
+          <Styled.h3 sx={{ color: "primary", margin: `0`, padding: `0`, fontSize: ['2', '2', '2', '3', '3'] }}>HIDDEN FASTENER TECHNOLOGY</Styled.h3>
         </th>
       </thead>
       <tbody>
@@ -36,7 +37,7 @@ const comparisontable = () => {
               borderCollapse: `collapse`,
             }}
           >
-            <Styled.h3 sx={{ margin: `0`, padding: `0`, color: "text", fontSize: "3" }}>KEY DIFFERENCES</Styled.h3>
+            <Styled.h3 sx={{ margin: `0`, padding: `0`, color: "text", fontSize: ['2', '2', '2', '3', '3'] }}>KEY DIFFERENCES</Styled.h3>
           </td>
           <td
             sx={{
@@ -48,7 +49,7 @@ const comparisontable = () => {
               borderCollapse: `collapse`,
             }}
           >
-            <p>Image Placeholder</p>
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
           </td>
           <td
             sx={{
@@ -60,7 +61,7 @@ const comparisontable = () => {
               borderCollapse: `collapse`,
             }}
           >
-            <p>Image Placeholder</p>
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
           </td>
         </tr>
         <tr>
@@ -88,7 +89,7 @@ const comparisontable = () => {
               backgroundColor: `#676767`
             }}
           >
-            <p>circlegraphic</p>
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
           </td>
           <td
             sx={{
@@ -101,7 +102,7 @@ const comparisontable = () => {
               backgroundColor: `#676767`
             }}
           >
-            <p>Image Placeholder</p>
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
           </td>
         </tr>
         <tr>
@@ -127,7 +128,7 @@ const comparisontable = () => {
               borderCollapse: `collapse`,
             }}
           >
-            <p>Thingie</p>
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
           </td>
           <td
             sx={{
@@ -139,7 +140,7 @@ const comparisontable = () => {
               borderCollapse: `collapse`,
             }}
           >
-            <p>Thingie</p>
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
           </td>
         </tr>
         <tr>
@@ -167,7 +168,7 @@ const comparisontable = () => {
               backgroundColor: `#676767`
             }}
           >
-            <p>circlegraphic</p>
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
           </td>
           <td
             sx={{
@@ -180,7 +181,7 @@ const comparisontable = () => {
               backgroundColor: `#676767`
             }}
           >
-            <p>Thingie</p>
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
           </td>
         </tr>
       </tbody>

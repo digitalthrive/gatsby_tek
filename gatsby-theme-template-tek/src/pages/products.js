@@ -9,6 +9,9 @@ import Layout from '../components/layout'
 import Section from '../components/section'
 import Button from '../components/button'
 import CompTable from '../components/comparisontable'
+import beforeImage from '../components/images/roof-after.jpg'
+import afterImage from '../components/images/roof-before.jpg'
+import arrowDown from '../components/icons/arrow-down.png'
 
 const products = ({ data }) => {
   const [firstSection, setFirstSection] = useState(0)
@@ -45,8 +48,8 @@ const products = ({ data }) => {
     return obj.node.section === 9
   })
 
-  const before = 'https://picsum.photos/id/1005/1600/400'
-  const after = 'https://picsum.photos/id/10/1600/400'
+  const before = beforeImage
+  const after = afterImage
 
   function reportWindowWidth() {
     let width = window.innerWidth;
@@ -178,11 +181,11 @@ const products = ({ data }) => {
             </div>
           </div>
           <div
-            sx={{ margin: `auto`, borderColor: "text", borderWidth: `3px`, borderStyle: `solid` }}
+            sx={{ margin: `auto`, borderColor: "text", borderWidth: `3px`, borderStyle: `solid`, cursor: `pointer` }}
             onClick={() => setShowTable(!showTable)}
           >
             <p sx={{ color: `text`, textTransform: `uppercase`, fontWeight: `bold`, textAlign: `center`, padding: `1% 0` }}>
-              {sectionFour[0].node.buttonText}
+              {sectionFour[0].node.buttonText} <img src={arrowDown} sx={{ marginLeft: `10px` }} alt="down arrow" />
             </p>
           </div>
           {showTable ? <CompTable /> : null}
@@ -201,7 +204,7 @@ const products = ({ data }) => {
           </div>
           <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
             <Img
-              sx={{ width: `749px` }}
+              sx={{ width: `749px`, maxWidth: `100%` }}
               fluid={sectionSix[0].node.image.childImageSharp.fluid}
             />
           </div>
@@ -209,10 +212,10 @@ const products = ({ data }) => {
       </Section>
       <div
         sx={{
-          display: `grid`,
+          display: ['block', 'block', 'grid', 'grid', 'grid'],
           gridTemplateColumns: `40% 1fr`,
           bg: `primary`,
-          height: `600px`,
+          height: ['auto', 'auto', '600px', '600px', '600px'],
         }}
       >
         <Img fluid={sectionNine[0].node.image.childImageSharp.fluid} />
