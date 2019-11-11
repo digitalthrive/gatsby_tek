@@ -91,7 +91,7 @@ export const theme = {
       fontFamily: 'heading',
       paddingBottom: 4,
       position: 'relative',
-      ":after": {
+      ':after': {
         content: '""',
         position: 'absolute',
         bottom: '0',
@@ -100,8 +100,8 @@ export const theme = {
         height: '3px',
         margin: '0 auto',
         display: 'block',
-        backgroundColor: 'primary'
-      }
+        backgroundColor: 'primary',
+      },
     },
     h3: {
       color: 'grey',

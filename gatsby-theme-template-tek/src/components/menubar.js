@@ -14,9 +14,9 @@ const menubar = () => {
   const [form, setForm] = useState()
 
   const transition = useTransition(show, null, {
-    from: { transform: `translate3d(2000px, 0, 0)` },
+    from: { transform: `translate3d(105vw, 0, 0)` },
     enter: { transform: `translate3d(0,0,0)` },
-    leave: { transform: `translate3d(2000px,0, 0)` },
+    leave: { transform: `translate3d(105vw,0, 0)` },
   })
 
   let showHandler = form => {
