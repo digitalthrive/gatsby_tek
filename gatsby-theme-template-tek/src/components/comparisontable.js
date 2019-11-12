@@ -2,6 +2,7 @@
 import React from 'react'
 import { Styled, jsx } from 'theme-ui'
 import { SymbolDef } from 'terser'
+import checkMark from '../components/icons/check-mark.png'
 
 const comparisontable = () => {
   return (
@@ -9,105 +10,178 @@ const comparisontable = () => {
       sx={{
         width: `100%`,
         border: `2px solid`,
-        borderColor: `primary`,
+        borderColor: `text`,
         borderCollapse: `collapse`,
+        textAlign: `center`,
+        margin: `5% 0`
       }}
     >
       <thead>
-        <th></th>
-        <th sx={{ bg: `primary` }}>
-          <Styled.h3>BEST RATED FOR SEVERE WEATHER</Styled.h3>
+        <th sx={{ bg: `text` }}></th>
+        <th sx={{ bg: `text` }}>
+          <Styled.h3 sx={{ color: "primary", margin: `0`, padding: `0`, fontSize: ['2', '2', '2', '3', '3'] }}>BEST RATED FOR SEVERE WEATHER</Styled.h3>
         </th>
-        <th sx={{ bg: `primary` }}>
-          <Styled.h3>HIDDEN FASTENER TECHNOLOGY</Styled.h3>
+        <th sx={{ bg: `text` }}>
+          <Styled.h3 sx={{ color: "primary", margin: `0`, padding: `0`, fontSize: ['2', '2', '2', '3', '3'] }}>HIDDEN FASTENER TECHNOLOGY</Styled.h3>
         </th>
       </thead>
       <tbody>
         <tr>
           <td
             sx={{
-              border: `2px solid`,
-              borderColor: `primary`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
               borderCollapse: `collapse`,
             }}
           >
-            <Styled.h3>KEY DIFFERENCES</Styled.h3>
+            <Styled.h3 sx={{ margin: `0`, padding: `0`, color: "text", fontSize: ['2', '2', '2', '3', '3'] }}>KEY DIFFERENCES</Styled.h3>
           </td>
           <td
             sx={{
-              border: `2px solid`,
-              borderColor: `primary`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
               borderCollapse: `collapse`,
             }}
           >
-            <Styled.h3>Image Placeholder</Styled.h3>
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
           </td>
           <td
             sx={{
-              border: `2px solid`,
-              borderColor: `primary`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
               borderCollapse: `collapse`,
             }}
           >
-            <Styled.h3>Image Placeholder</Styled.h3>
-          </td>
-        </tr>
-        <tr>
-          <td
-            sx={{
-              border: `2px solid`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-            }}
-          >
-            <Styled.h3>20 Gauge Steel Core</Styled.h3>
-          </td>
-          <td
-            sx={{
-              border: `2px solid`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-            }}
-          >
-            <Styled.h3></Styled.h3>
-          </td>
-          <td
-            sx={{
-              border: `2px solid`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-            }}
-          >
-            <Styled.h3>Image Placeholder</Styled.h3>
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
           </td>
         </tr>
         <tr>
           <td
             sx={{
-              border: `2px solid`,
-              borderColor: `primary`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
               borderCollapse: `collapse`,
+              backgroundColor: `#676767`
             }}
           >
-            <Styled.h3>Thingie</Styled.h3>
+            <p>20 Gauge Steel Core</p>
           </td>
           <td
             sx={{
-              border: `2px solid`,
-              borderColor: `primary`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
               borderCollapse: `collapse`,
+              backgroundColor: `#676767`
             }}
           >
-            <Styled.h3>'Image Placeholder'</Styled.h3>
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
           </td>
           <td
             sx={{
-              border: `2px solid`,
-              borderColor: `primary`,
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#676767`
+            }}
+          >
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
+          </td>
+        </tr>
+        <tr>
+          <td
+            sx={{
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
               borderCollapse: `collapse`,
             }}
           >
-            <Styled.h3>Image Placeholder</Styled.h3>
+            <p>Thingie</p>
+          </td>
+          <td
+            sx={{
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+            }}
+          >
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
+          </td>
+          <td
+            sx={{
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+            }}
+          >
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
+          </td>
+        </tr>
+        <tr>
+          <td
+            sx={{
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#676767`
+            }}
+          >
+            <p>Thingie</p>
+          </td>
+          <td
+            sx={{
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#676767`
+            }}
+          >
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
+          </td>
+          <td
+            sx={{
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#676767`
+            }}
+          >
+            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
           </td>
         </tr>
       </tbody>

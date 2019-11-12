@@ -122,8 +122,8 @@
 
 - text: THE BEST ROOFING FOR SEVERE WEATHER
   text2: TEK HIDDEN FASTENER TECHNOLOGY
-  text3: HURRICANE METAL SHAKE
-  text4: HURRICANE XT METAL SHAKE
+  text3: HURRICANE® METAL SHAKE
+  text4: HURRICANE® XT METAL SHAKE
   text5: null
   buttonText:
   buttonText2: null
@@ -136,43 +136,43 @@
 
 - text: UNLEASH THE BEAST! - HURRICANE METAL SHAKE
   text2: null
-  text3: The HURRICANE Metal Shake iz good
+  text3: The HURRICANE® Metal Shake has the highest wind rating available, suited with foam insulation inserts and built in radiant barrier. HURRICANE® Metal Shake passed the ASTM E1592 test at CAT5 windspeeds. The TEK® Industries team has put together a product and strategy that brings you a beautifully crafted high TEK Roofing solution. Not only can the Hurricane Metal Shake withstand CAT5 windspeeds it also can withstand up to 2″ Hail.
   text4: null
   text5: null
   buttonText:
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: ../images/hurricane-shake-logo-TEK.png
+  image2: ../images/extreme-durability-shield-graphic.png
   page: products
   section: 2
 
 - text: THE ORIGINAL HURRICANE METAL SHAKE WITH ADDED INTERLOCKING TECHNOLOGY
   text2: null
-  text3: For severe weather regions, HURRICANE Metal Shake is the perfect solution. It has additional fasteners per panel....
+  text3: For severe weather regions, HURRICANE® Metal Shake Pro is the perfect solution. It has additional fasteners per panel, and each fastener designed with higher corrosion-resistance coating. Hurricane Shake has a 2-pound density foam insert made from a CNC Machine. HURRICANE® Metal Shake passed with the highest rating for both uplift and impact testing.
   text4: null
   text5: null
   buttonText:
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: ../images/hurricane-pro-logo.png
+  image2: ../images/multilayer-technology-graphic.png
   page: products
   section: 3
 
 - text: THE BEST ROOFING FOR SEVERE WEATHER
   text2: null
-  text3: For severe weather regions, HURRICANE Metal Shake is the perfect solution. It has additional fasteners per panel....
+  text3: For severe weather regions, HURRICANE® Metal Shake is the perfect solution. It has additional fasteners per panel, and each fastener designed with higher corrosion-resistance coating. Hurricane Shake has a 2-pound density foam insert made from a CNC Machine. HURRICANE® Metal Shake passed with the highest rating for both uplift and impact testing.
   text4: null
   text5: null
   buttonText: VIEW PRODUCT COMPARISON CHART
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: ../images/tek-layers.jpg
+  image2: ../images/check-mark.png
   page: products
   section: 4
 
@@ -199,14 +199,14 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.png
+  image: ../images/wind-speed-and-pressure.png
   image2: ../images/placeholder.png
   page: products
   section: 6
 
-- text: HURRICANE SHAKE UPLIFT GRAPH
-  text2: The Hurricane Shake windspeed and pressure test withstood over 140mph winds.
-  text3: null
+- text: SOMETHING TO BE EXCITED ABOUT
+  text2: null
+  text3: As you’d expect, interest in TEK® roofing products is skyrocketing and more homeowners are taking advantage of this opportunity each day. As they learn more of the details, they realize how crazy it would be to miss out on this great investment. Metal roofing by its nature endures better than any other solution. The homeowners’ insurance company should be able to offer them a discount on insurance premiums for Class 4 Roofing, an additional savings!
   text4: null
   text5: null
   buttonText: VIEW PRODUCT SPECS
@@ -218,9 +218,9 @@
   page: products
   section: 7
 
-- text: SOMETHING TO BE EXCITED ABOUT
+- text: THIS IS SECTION 8
   text2: null
-  text3: As you'd expect, interest in TEK roofing products is skyrocketing and more homeowners are taking advantage of this.....
+  text3: This is content for scetion 8. Specifically the text3 portion.
   text4: null
   text5: null
   buttonText: null
@@ -231,6 +231,20 @@
   image2: ../images/placeholder.png
   page: products
   section: 8
+
+- text: null
+  text2: null
+  text3: null
+  text4: null
+  text5: null
+  buttonText: null
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/squared-roof-preview.jpg
+  image2: ../images/placeholder.png
+  page: products
+  section: 9
 
   ## Gallery Page
 - text: TEK GALLERY
