@@ -15,8 +15,8 @@ const gallerypreview = props => {
         edges {
           node {
             childImageSharp {
-              fixed(height: 400, width: 400, quality: 100) {
-                ...GatsbyImageSharpFixed_withWebp
+              fluid(maxWidth: 389, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -28,8 +28,8 @@ const gallerypreview = props => {
         edges {
           node {
             childImageSharp {
-              fixed(height: 400, width: 400, quality: 100) {
-                ...GatsbyImageSharpFixed_withWebp
+              fluid(maxWidth: 389, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -39,18 +39,46 @@ const gallerypreview = props => {
   `)
   let gallery1images = data.gallery1.edges.map(image => {
     return (
-      <Img
-        sx={{ height: `100%`, width: `100%` }}
-        fixed={image.node.childImageSharp.fixed}
-      />
+      <div sx={{
+        position: `relative`,
+        boxSizing: `border-box`,
+        flexBasis: ['calc(100% - 20px)', 'calc(50% - 20px)', 'calc(50% - 20px)', 'calc(33.333% - 20px)', 'calc(33.333% - 20px)'],
+        margin: `10px`,
+        ':before': {
+          content: '""',
+          display: `block`,
+          paddingTop: `100%`
+        }
+      }}>
+        <div sx={{ height: `100%`, width: `100%`, position: `absolute`, top: `0`, left: `0` }}>
+          <Img
+            sx={{ height: `100%`, width: `100%`, maxWidth: `100%`, display: `block` }}
+            fluid={image.node.childImageSharp.fluid}
+          />
+        </div>
+      </div>
     )
   })
   let gallery2images = data.gallery2.edges.map(image => {
     return (
-      <Img
-        sx={{ height: `100%`, width: `100%` }}
-        fixed={image.node.childImageSharp.fixed}
-      />
+      <div sx={{
+        position: `relative`,
+        boxSizing: `border-box`,
+        flexBasis: ['calc(100% - 20px)', 'calc(50% - 20px)', 'calc(50% - 20px)', 'calc(33.333% - 20px)', 'calc(33.333% - 20px)'],
+        margin: `10px`,
+        ':before': {
+          content: '""',
+          display: `block`,
+          paddingTop: `100%`
+        }
+      }}>
+        <div sx={{ height: `100%`, width: `100%`, position: `absolute`, top: `0`, left: `0` }}>
+          <Img
+            sx={{ height: `100%`, width: `100%`, maxWidth: `100%`, display: `block` }}
+            fluid={image.node.childImageSharp.fluid}
+          />
+        </div>
+      </div>
     )
   })
   return (
@@ -58,27 +86,32 @@ const gallerypreview = props => {
       <Styled.h1 sx={{ color: `text`, marginBottom: 1, paddingBottom: 1 }}>
         {props.toptext}
       </Styled.h1>
-      <Styled.h2 sx={{ color: `primary` }}>{props.subtext}</Styled.h2>
-      <Styled.h2 sx={{ color: `primary` }}>{props.header1}</Styled.h2>
+      <Styled.h2 sx={{
+        color: `primary`,
+        marginTop: `0`,
+        ':after': {
+          display: `none`
+        } }}>{props.subtext}</Styled.h2>
+      <Styled.h2 sx={{ color: `primary`, fontSize: ['3', '3', '4', '6', '6'] }}>{props.header1}</Styled.h2>
       <div
         sx={{
-          display: `grid`,
+          display: `flex`,
+          flexWrap: `wrap`,
           height: `100%`,
           width: `100%`,
-          gridTemplateColumns: `1fr 1fr 1fr`,
-          gridGap: `20px`,
+          marginBottom: `10%`
         }}
       >
         {gallery1images}
       </div>
-      <Styled.h2 sx={{ color: `primary` }}>{props.header2}</Styled.h2>
+      <Styled.h2 sx={{ color: `primary`, fontSize: ['3', '3', '4', '6', '6'] }}>{props.header2}</Styled.h2>
       <div
         sx={{
-          display: `grid`,
+          display: `flex`,
+          flexWrap: `wrap`,
           height: `100%`,
           width: `100%`,
-          gridTemplateColumns: `1fr 1fr 1fr`,
-          gridGap: `20px`,
+          marginBottom: `10%`
         }}
       >
         {gallery2images}
