@@ -27,55 +27,62 @@ const gallery = ({ data }) => {
 
   return (
     <Layout>
-      <Img
-        sx={{
-          position: `absolute`,
-          top: 0,
-          left: 0,
-          backgroundSize: `contain`,
-          backgroundPosition: `top`,
-          filter: `brightness(50%)`,
-          marginTop: `100px`,
-        }}
+      <BackImg
         fluid={sectionOne[0].node.image.childImageSharp.fluid}
-      />
-      <div
-        sx={{
-          height: '100vh',
-          margin: 0,
-          backgroundColor: `transparent`,
-          position: `absolute`,
-          top: 0,
-          left: 0,
-        }}
-        css={css`
-          &::after {
-            content: '';
-            position: absolute;
-            top: -200px;
-            bottom: -750px;
-            left: -250px;
-            width: 300vw;
-            height: 200vh;
-            background: white;
-            transform: skew(-65deg);
-          }
-        `}
-      ></div>
-      <div
-        key={sectionOne[0].node.id}
-        css={css`
-          margin: -800px auto 200px auto;
-          width: 85vw;
-        `}
+        sx={{ backgroundSize: `contain`, backgroundPosition: `top`, backgroundColor: `#fff`, overflow: `hidden` }}
       >
-        <Gallery
-          toptext={sectionOne[0].node.text}
-          subtext={sectionOne[0].node.text2}
-          header1={sectionOne[0].node.text3}
-          header2={sectionOne[0].node.text4}
-        />
-      </div>
+        <div
+          sx={{
+          position: `relative`,
+          ':before': {
+            content: '""',
+            display: ['none', 'none', 'block', 'block', 'block'],
+            position: `absolute`,
+            zIndex: `-1`,
+            top: `0`,
+            left: `0`,
+            right: `0`,
+            width: `100%`,
+            height: `100vh`,
+            background: `rgba(0,0,0,0.45)`
+            }
+          }}
+        >
+        <div
+          sx={{
+          ':before': {
+            content: '""',
+            display: ['none', 'none', 'block', 'block', 'block'],
+            position: `absolute`,
+            zIndex: `-1`,
+            top: ['-550px', '-550px', '-470px', '-470px', '0'],
+            bottom: `-750px`,
+            left: `-250px`,
+            width: `300vw`,
+            height: `200vh`,
+            background: `white`,
+            transform: `skew(-65deg)`
+            }
+          }}
+        >
+          <div
+            key={sectionOne[0].node.id}
+            sx={{
+              margin: `0 auto`,
+              width: ['auto', 'auto', 'auto', '85vw', '85vw'],
+              padding: `10% 0`
+            }}
+          >
+            <Gallery
+              toptext={sectionOne[0].node.text}
+              subtext={sectionOne[0].node.text2}
+              header1={sectionOne[0].node.text3}
+              header2={sectionOne[0].node.text4}
+            />
+          </div>
+        </div>
+        </div>
+      </BackImg>
     </Layout>
   )
 }
