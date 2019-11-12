@@ -129,9 +129,12 @@ const menubar = () => {
                   fontSize: '25px',
                   verticalAlign: `middle`,
                   lineHeight: `100px`,
+                  display: `inline-block`,
+                  verticalAlign: `middle`,
+                  cursor: `pointer`
                 }}
               >
-                Modal Test
+                Contact
               </div>
             </Styled.li>
           </Styled.ul>

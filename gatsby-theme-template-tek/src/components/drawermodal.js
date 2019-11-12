@@ -21,7 +21,7 @@ const drawermodal = props => {
         gridTemplateRows: `100%`,
       }}
     >
-      <div sx={{ background: `rgba(0,0,0,0.7)` }}></div>
+      <div sx={{ background: `rgba(0,0,0,0.6)` }}></div>
       <div sx={{ background: `white` }}>
         <MdClose
           onClick={props.clickHandler}
