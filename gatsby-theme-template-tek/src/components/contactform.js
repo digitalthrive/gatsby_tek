@@ -7,7 +7,7 @@ import Img from 'gatsby-image'
 const contactform = () => {
   return (
     <div>
-      <Styled.h1 sx={{ color: `secondary`, marginBottom: `0` }}>CONTACT <span sx={{ color: `primary` }}>TEK</span> INDUSTRIES</Styled.h1>
+      <Styled.h1 sx={{ color: `secondary`, marginBottom: `0`, fontSize: ['3', '3', '3', '6', '6'] }}>CONTACT <span sx={{ color: `primary` }}>TEK</span> INDUSTRIES</Styled.h1>
       <form
         name="contact"
         method="POST"
@@ -25,7 +25,7 @@ const contactform = () => {
           }
           textarea {
             width: 100%;
-            height: 400px;
+            height: 180px;
             background-color: #efefef;
             margin: 10px 0;
             border: 0;
@@ -56,7 +56,7 @@ const contactform = () => {
         Manufactured by TEK Industries, LLC 11801 Pierce Street, Suite 200,<br />
         Riverside, California, 92505
       </address>
-      <p sx={{ color: `gray` }}>At TEK® Industries, our mission is two-fold: to expand our roofing family and to renovate the entire roofing market by giving more to homeowners.</p>
+      <p sx={{ color: `gray`, display: ['none', 'none', 'block', 'block', 'block'] }}>At TEK® Industries, our mission is two-fold: to expand our roofing family and to renovate the entire roofing market by giving more to homeowners.</p>
     </div>
   )
 }

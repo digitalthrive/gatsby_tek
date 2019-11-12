@@ -76,7 +76,7 @@ const hamburger = () => {
                               fontFamily: 'heading',
                               listStyle: `none`,
                               margin: 4,
-                              width: ["auto", "auto", "25%"],
+                              width: ["auto", "auto", "50%"],
                             }}
                             key={link.name}
                           >

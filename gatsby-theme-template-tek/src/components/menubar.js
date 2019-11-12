@@ -170,6 +170,7 @@ const menubar = () => {
                 paddingRight: 4,
                 paddingTop: 1,
                 paddingBottom: 1,
+                margin: `0`
               }}
             >
               BECOME A DEALER
