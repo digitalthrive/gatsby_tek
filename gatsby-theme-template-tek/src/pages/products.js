@@ -9,6 +9,7 @@ import Layout from '../components/layout'
 import Section from '../components/section'
 import Button from '../components/button'
 import CompTable from '../components/comparisontable'
+import ProductSelector from '../components/productselector'
 import beforeImage from '../components/images/roof-after.jpg'
 import afterImage from '../components/images/roof-before.jpg'
 import arrowDown from '../components/icons/arrow-down.png'
@@ -52,13 +53,13 @@ const products = ({ data }) => {
   const after = afterImage
 
   function reportWindowWidth() {
-    let width = window.innerWidth;
-    return width;
+    let width = window.innerWidth
+    return width
   }
-  window.onload = reportWindowWidth;
-  window.onresize = function () {
-    setSliderWidth(reportWindowWidth());
-  };
+  window.onload = reportWindowWidth
+  window.onresize = function() {
+    setSliderWidth(reportWindowWidth())
+  }
 
   let SectionChooser = () => {
     return (
@@ -88,7 +89,7 @@ const products = ({ data }) => {
                 sx={{
                   margin: `0`,
                   padding: `0`,
-                  fontFamily: "body",
+                  fontFamily: 'body',
                   fontSize: ['1', '1', '1', '2', '2'],
                   width: `fit-content`,
                   textAlign: `center`,
@@ -107,7 +108,9 @@ const products = ({ data }) => {
   return (
     <Layout>
       <Section>
-        <Styled.h2 sx={{ fontSize: ['8', '8', '8', '9', '9'], color: "primary" }}>
+        <Styled.h2
+          sx={{ fontSize: ['8', '8', '8', '9', '9'], color: 'primary' }}
+        >
           {firstSection === 0
             ? sectionOne[0].node.text
             : sectionOne[0].node.text2}
@@ -115,17 +118,39 @@ const products = ({ data }) => {
         <SectionChooser />
         {firstSection === 0 ? (
           <>
-            <div sx={{ display: `flex`, marginTop: `7%`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
-              <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
+            <div
+              sx={{
+                display: `flex`,
+                marginTop: `7%`,
+                marginBottom: `7%`,
+                flexDirection: ['column', 'column', 'column', 'row', 'row'],
+              }}
+            >
+              <div sx={{ width: ['100%', '100%', '100%', '45%', '45%'] }}>
                 <Styled.h2>{sectionTwo[0].node.text}</Styled.h2>
               </div>
-              <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
+              <div
+                sx={{
+                  width: ['100%', '100%', '100%', '55%', '55%'],
+                  paddingBottom: ['10%', '10%', '10%', '0', '0'],
+                  alignSelf: `center`,
+                }}
+              >
                 <Img
-                  sx={{ width: `200px`, backgroundSize: `contain`, display: `inline-block`, marginRight: `10%` }}
+                  sx={{
+                    width: `200px`,
+                    backgroundSize: `contain`,
+                    display: `inline-block`,
+                    marginRight: `10%`,
+                  }}
                   fluid={sectionTwo[0].node.image.childImageSharp.fluid}
                 />
                 <Img
-                  sx={{ width: `239px`, backgroundSize: `contain`, display: `inline-block` }}
+                  sx={{
+                    width: `239px`,
+                    backgroundSize: `contain`,
+                    display: `inline-block`,
+                  }}
                   fluid={sectionTwo[0].node.image2.childImageSharp.fluid}
                 />
                 <p sx={{ color: `grey` }}>{sectionTwo[0].node.text3}</p>
@@ -134,22 +159,44 @@ const products = ({ data }) => {
           </>
         ) : (
           <>
-          <div sx={{ display: `flex`, marginTop: `7%`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
-            <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
-              <Styled.h2>{sectionThree[0].node.text}</Styled.h2>
+            <div
+              sx={{
+                display: `flex`,
+                marginTop: `7%`,
+                marginBottom: `7%`,
+                flexDirection: ['column', 'column', 'column', 'row', 'row'],
+              }}
+            >
+              <div sx={{ width: ['100%', '100%', '100%', '45%', '45%'] }}>
+                <Styled.h2>{sectionThree[0].node.text}</Styled.h2>
+              </div>
+              <div
+                sx={{
+                  width: ['100%', '100%', '100%', '55%', '55%'],
+                  paddingBottom: ['10%', '10%', '10%', '0', '0'],
+                  alignSelf: `center`,
+                }}
+              >
+                <Img
+                  sx={{
+                    width: `200px`,
+                    backgroundSize: `contain`,
+                    display: `inline-block`,
+                    marginRight: `10%`,
+                  }}
+                  fluid={sectionThree[0].node.image.childImageSharp.fluid}
+                />
+                <Img
+                  sx={{
+                    width: `239px`,
+                    backgroundSize: `contain`,
+                    display: `inline-block`,
+                  }}
+                  fluid={sectionThree[0].node.image2.childImageSharp.fluid}
+                />
+                <p sx={{ color: `grey` }}>{sectionThree[0].node.text3}</p>
+              </div>
             </div>
-            <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
-              <Img
-                sx={{ width: `200px`, backgroundSize: `contain`, display: `inline-block`, marginRight: `10%` }}
-                fluid={sectionThree[0].node.image.childImageSharp.fluid}
-              />
-              <Img
-                sx={{ width: `239px`, backgroundSize: `contain`, display: `inline-block` }}
-                fluid={sectionThree[0].node.image2.childImageSharp.fluid}
-              />
-              <p sx={{ color: `grey` }}>{sectionThree[0].node.text3}</p>
-            </div>
-          </div>
           </>
         )}
       </Section>
@@ -159,50 +206,101 @@ const products = ({ data }) => {
         width={sliderWidth}
         height={560}
       />
-      <div sx={{ backgroundColor: `gray`, overflow: `hidden`, padding: `5% 0` }}>
+      <div
+        sx={{ backgroundColor: `gray`, overflow: `hidden`, padding: `5% 0` }}
+      >
         <Section>
-          <div sx={{ display: `flex`, alignContent: `center`, justifyContent: `center` }}>
+          <div
+            sx={{
+              display: `flex`,
+              alignContent: `center`,
+              justifyContent: `center`,
+            }}
+          >
             <Img
               sx={{
                 width: `1039px`,
                 backgroundSize: `contain`,
                 display: `inline-block`,
-                textAlign: `center`
+                textAlign: `center`,
               }}
               fluid={sectionFour[0].node.image.childImageSharp.fluid}
             />
           </div>
-          <div sx={{ display: `flex`, marginTop: `7%`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
-            <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
-              <Styled.h2 sx={{ color: "text" }}>{sectionFour[0].node.text}</Styled.h2>
+          <div
+            sx={{
+              display: `flex`,
+              marginTop: `7%`,
+              marginBottom: `7%`,
+              flexDirection: ['column', 'column', 'column', 'row', 'row'],
+            }}
+          >
+            <div sx={{ width: ['100%', '100%', '100%', '45%', '45%'] }}>
+              <Styled.h2 sx={{ color: 'text' }}>
+                {sectionFour[0].node.text}
+              </Styled.h2>
             </div>
-            <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
-              <p sx={{ color: "text" }}>{sectionFour[0].node.text3}</p>
+            <div
+              sx={{
+                width: ['100%', '100%', '100%', '55%', '55%'],
+                paddingBottom: ['10%', '10%', '10%', '0', '0'],
+                alignSelf: `center`,
+              }}
+            >
+              <p sx={{ color: 'text' }}>{sectionFour[0].node.text3}</p>
             </div>
           </div>
           <div
-            sx={{ margin: `auto`, borderColor: "text", borderWidth: `3px`, borderStyle: `solid`, cursor: `pointer` }}
+            sx={{
+              margin: `auto`,
+              borderColor: 'text',
+              borderWidth: `3px`,
+              borderStyle: `solid`,
+              cursor: `pointer`,
+            }}
             onClick={() => setShowTable(!showTable)}
           >
-            <p sx={{ color: `text`, textTransform: `uppercase`, fontWeight: `bold`, textAlign: `center`, padding: `1% 0` }}>
-              {sectionFour[0].node.buttonText} <img src={arrowDown} sx={{ marginLeft: `10px` }} alt="down arrow" />
+            <p
+              sx={{
+                color: `text`,
+                textTransform: `uppercase`,
+                fontWeight: `bold`,
+                textAlign: `center`,
+                padding: `1% 0`,
+              }}
+            >
+              {sectionFour[0].node.buttonText}{' '}
+              <img
+                src={arrowDown}
+                sx={{ marginLeft: `10px` }}
+                alt='down arrow'
+              />
             </p>
           </div>
           {showTable ? <CompTable /> : null}
         </Section>
       </div>
-      <div sx={{ backgroundColor: `darkgrey`, height: `400px`, overflow: `hidden` }}>
-        <Section>
-          <Styled.h2>Roofing Material Slider Placeholder</Styled.h2>
-        </Section>
-      </div>
+      <ProductSelector />
       <Section>
-        <div sx={{ display: `flex`, marginTop: `7%`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
-          <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"] }}>
+        <div
+          sx={{
+            display: `flex`,
+            marginTop: `7%`,
+            marginBottom: `7%`,
+            flexDirection: ['column', 'column', 'column', 'row', 'row'],
+          }}
+        >
+          <div sx={{ width: ['100%', '100%', '100%', '45%', '45%'] }}>
             <Styled.h2>{sectionSix[0].node.text}</Styled.h2>
-            <p sx={{ color: "grey" }}>{sectionSix[0].node.text2}</p>
+            <p sx={{ color: 'grey' }}>{sectionSix[0].node.text2}</p>
           </div>
-          <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
+          <div
+            sx={{
+              width: ['100%', '100%', '100%', '55%', '55%'],
+              paddingBottom: ['10%', '10%', '10%', '0', '0'],
+              alignSelf: `center`,
+            }}
+          >
             <Img
               sx={{ width: `749px`, maxWidth: `100%` }}
               fluid={sectionSix[0].node.image.childImageSharp.fluid}
@@ -220,7 +318,9 @@ const products = ({ data }) => {
       >
         <Img fluid={sectionNine[0].node.image.childImageSharp.fluid} />
         <div sx={{ padding: `5% 5% 5% 15%` }}>
-          <Styled.h2 sx={{ color: "text", ':after': { borderColor: "text" } }}>TOP BENEFITS</Styled.h2>
+          <Styled.h2 sx={{ color: 'text', ':after': { borderColor: 'text' } }}>
+            TOP BENEFITS
+          </Styled.h2>
           <ol>
             <li>Highly reflective to the radiant heat.</li>
             <li>
@@ -239,11 +339,30 @@ const products = ({ data }) => {
         </div>
       </div>
       <Section>
-        <div sx={{ display: `flex`, marginTop: `7%`, marginBottom: `7%`, flexDirection: ["column", "column", "column", "row", "row"] }}>
-          <div sx={{ width: ["100%", "100%", "100%", "45%", "45%"], padding: `0 5% 0 0`, boxSizing: `border-box` }}>
+        <div
+          sx={{
+            display: `flex`,
+            marginTop: `7%`,
+            marginBottom: `7%`,
+            flexDirection: ['column', 'column', 'column', 'row', 'row'],
+          }}
+        >
+          <div
+            sx={{
+              width: ['100%', '100%', '100%', '45%', '45%'],
+              padding: `0 5% 0 0`,
+              boxSizing: `border-box`,
+            }}
+          >
             <Styled.h2>{sectionSeven[0].node.text}</Styled.h2>
           </div>
-          <div sx={{ width: ["100%", "100%", "100%", "55%", "55%"], paddingBottom: ["10%", "10%", "10%", "0", "0"], alignSelf: `center` }}>
+          <div
+            sx={{
+              width: ['100%', '100%', '100%', '55%', '55%'],
+              paddingBottom: ['10%', '10%', '10%', '0', '0'],
+              alignSelf: `center`,
+            }}
+          >
             <p sx={{ color: `grey` }}>{sectionSeven[0].node.text3}</p>
           </div>
         </div>
