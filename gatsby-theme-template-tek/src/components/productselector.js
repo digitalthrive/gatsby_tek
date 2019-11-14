@@ -1,17 +1,45 @@
 /** @jsx jsx */
 import React, { useState } from 'react'
-import { graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
+import BackImg from 'gatsby-background-image'
 import { useSpring, animated, config } from 'react-spring'
 import Layout from '../components/layout'
 
 const productselector = props => {
   const [activeFrame, setActiveFrame] = useState(`frame1`)
 
-  let phrases = ['WEATHERWOOD', 'MOCHA BROWN', 'SADDLE BROWN', 'CHARCOAL']
+  const data = useStaticQuery(graphql`
+    query ProductSelectorQuery {
+      allMdx(
+        sort: { fields: frontmatter___order }
+        filter: { fileAbsolutePath: { regex: "/productselector/" } }
+      ) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              image {
+                childImageSharp {
+                  fluid(quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              order
+            }
+          }
+        }
+      }
+    }
+  `)
 
-  let outputFrames = phrases.map((frametext, index) => {
+  let outputFrames = data.allMdx.edges.map((product, index) => {
     let indexNum = index + 1
     return (
       <div
@@ -19,39 +47,49 @@ const productselector = props => {
         sx={{
           position: `relative`,
           height: `400px`,
-          backgroundColor: `black`,
-          border: `1px solid white`,
           width: activeFrame === `frame${indexNum}` ? `40%` : `20%`,
+          filter:
+            activeFrame === `frame${indexNum}`
+              ? `brightness(1)`
+              : `brightness(50%)`,
           display: `inline-block`,
           boxSizing: `border-box`,
         }}
         css={css`
-          transition: transform 0.8s ease-in-out, width 0.5s;
+          transition: transform 0.8s ease-in-out, width 0.5s, filter 0.5s;
         `}
       >
-        <div
+        <BackImg
+          fluid={product.node.frontmatter.image.childImageSharp.fluid}
           sx={{
-            width: `100%`,
             height: `100%`,
-            display: `grid`,
-            justifyItems: `center`,
-            alignItems: `center`,
+            width: `100%`,
           }}
         >
-          <p
+          <div
             sx={{
-              fontFamily: `heading`,
-              fontSize: 5,
-              margin: 0,
-              padding: 0,
-              display: `inline-block`,
-              transform:
-                activeFrame === `frame${indexNum}` ? null : `rotate(90deg)`,
+              width: `100%`,
+              height: `100%`,
+              display: `grid`,
+              justifyItems: `center`,
+              alignItems: `center`,
             }}
           >
-            {frametext}
-          </p>
-        </div>
+            <p
+              sx={{
+                fontFamily: `heading`,
+                fontSize: 5,
+                margin: 0,
+                padding: 0,
+                display: `inline-block`,
+                transform:
+                  activeFrame === `frame${indexNum}` ? null : `rotate(90deg)`,
+              }}
+            >
+              {product.node.frontmatter.title}
+            </p>
+          </div>
+        </BackImg>
       </div>
     )
   })
