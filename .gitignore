@@ -71,3 +71,5 @@ node_modules
 
 # Edittable data directories
 # */data/
+
+.vscode/
