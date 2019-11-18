@@ -244,6 +244,17 @@ const dealers = ({ data }) => {
                 borderRight: `0 solid transparent`,
               }}
             ></div>
+            <div sx={{
+              backgroundColor: `rgb(210, 58, 0, .4)`,
+              position: `absolute`,
+              zIndex: `10`,
+              left: `0`,
+              right: `0`,
+              width: `100%`,
+              height: `100%`
+             }}>
+
+            </div>
           </BackImg>
         </div>
         <div sx={{ width: ['100%', '100%', '50%', '50%', '50%'], display: `flex`, flexDirection: `column`, justifyContent: `center`, padding: ['10% 5%', '10% 5%', '0', '0', '0'] }}>
