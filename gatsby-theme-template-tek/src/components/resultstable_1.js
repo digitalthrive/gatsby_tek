@@ -6,266 +6,268 @@ import checkMark from '../components/icons/check-mark.png'
 
 const comparisontable = () => {
   return (
-    <table
-      sx={{
-        width: `100%`,
-        border: `2px solid`,
-        borderColor: `primary`,
-        borderCollapse: `collapse`,
-        textAlign: `center`,
-        margin: `5% 0`,
-      }}
-    >
-      <thead>
-        <th
-          sx={{
-            bg: `text`,
-            borderRight: `2px solid`,
-            borderColor: `primary`,
-            padding: `1%`,
-          }}
-        >
-          <Styled.h3
+    <div sx={{ overflowX: `auto` }}>
+      <table
+        sx={{
+          width: `100%`,
+          border: `2px solid`,
+          borderColor: `primary`,
+          borderCollapse: `collapse`,
+          textAlign: `center`,
+          margin: `5% 0`,
+        }}
+      >
+        <thead>
+          <th
             sx={{
-              color: 'primary',
-              margin: `0`,
-              padding: `0`,
-              fontSize: ['2', '2', '2', '3', '3'],
-            }}
-          >
-            IMPACT #
-          </Styled.h3>
-        </th>
-        <th
-          sx={{
-            bg: `text`,
-            borderRight: `2px solid`,
-            borderColor: `primary`,
-            padding: `1%`,
-          }}
-        >
-          <Styled.h3
-            sx={{
-              color: 'primary',
-              margin: `0`,
-              padding: `0`,
-              fontSize: ['2', '2', '2', '3', '3'],
-            }}
-          >
-            IMPACT AREA
-          </Styled.h3>
-        </th>
-        <th
-          sx={{
-            bg: `text`,
-            borderRight: `2px solid`,
-            borderColor: `primary`,
-            padding: `1%`,
-          }}
-        >
-          <Styled.h3
-            sx={{
-              color: 'primary',
-              margin: `0`,
-              padding: `0`,
-              fontSize: ['2', '2', '2', '3', '3'],
-            }}
-          >
-            DEPRESSION DEPTH
-          </Styled.h3>
-        </th>
-        <th
-          sx={{
-            bg: `text`,
-            borderRight: `2px solid`,
-            borderColor: `primary`,
-            padding: `1%`,
-          }}
-        >
-          <Styled.h3
-            sx={{
-              color: 'primary',
-              margin: `0`,
-              padding: `0`,
-              fontSize: ['2', '2', '2', '3', '3'],
-            }}
-          >
-            OBSERVATIONS
-          </Styled.h3>
-        </th>
-        <th sx={{ bg: `text`, padding: `1%` }}>
-          <Styled.h3
-            sx={{
-              color: 'primary',
-              margin: `0`,
-              padding: `0`,
-              fontSize: ['2', '2', '2', '3', '3'],
-            }}
-          >
-            RESULTS
-          </Styled.h3>
-        </th>
-      </thead>
-      <tbody>
-        <tr>
-          <td
-            sx={{
-              borderLeft: `2px solid`,
+              bg: `text`,
               borderRight: `2px solid`,
-              borderTop: `2px solid`,
-              borderBottom: `none`,
               borderColor: `primary`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#fff`,
-              color: `secondary`,
+              padding: `1%`,
             }}
           >
-            <p sx={{ padding: `2%`, fontWeight: `bold` }}>1</p>
-          </td>
-          <td
+            <Styled.h3
+              sx={{
+                color: 'primary',
+                margin: `0`,
+                padding: `0`,
+                fontSize: ['2', '2', '2', '3', '3'],
+              }}
+            >
+              IMPACT #
+            </Styled.h3>
+          </th>
+          <th
             sx={{
-              borderLeft: `2px solid`,
+              bg: `text`,
               borderRight: `2px solid`,
-              borderTop: `2px solid`,
-              borderBottom: `none`,
               borderColor: `primary`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#fff`,
-              color: `secondary`,
+              padding: `1%`,
             }}
           >
-            <p sx={{ padding: `2%`, fontWeight: `bold` }}>
-              Top left seam where overlap occurs
-            </p>
-          </td>
-          <td
+            <Styled.h3
+              sx={{
+                color: 'primary',
+                margin: `0`,
+                padding: `0`,
+                fontSize: ['2', '2', '2', '3', '3'],
+              }}
+            >
+              IMPACT AREA
+            </Styled.h3>
+          </th>
+          <th
             sx={{
-              borderLeft: `2px solid`,
+              bg: `text`,
               borderRight: `2px solid`,
-              borderTop: `2px solid`,
-              borderBottom: `none`,
               borderColor: `primary`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#fff`,
-              color: `secondary`,
+              padding: `1%`,
             }}
           >
-            <p sx={{ padding: `2%`, fontWeight: `bold` }}>0.125”</p>
-          </td>
-          <td
+            <Styled.h3
+              sx={{
+                color: 'primary',
+                margin: `0`,
+                padding: `0`,
+                fontSize: ['2', '2', '2', '3', '3'],
+              }}
+            >
+              DEPRESSION DEPTH
+            </Styled.h3>
+          </th>
+          <th
             sx={{
-              borderLeft: `2px solid`,
+              bg: `text`,
               borderRight: `2px solid`,
-              borderTop: `2px solid`,
-              borderBottom: `none`,
               borderColor: `primary`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#fff`,
-              color: `secondary`,
+              padding: `1%`,
             }}
           >
-            <p sx={{ padding: `2%`, fontWeight: `bold` }}>
-              No visible evidence of tearing, cracking, fracturing, splitting,
-              <br />
-              rupture, crazing, or other evidence of opening in the prepared
-              roof covering layer.
-            </p>
-          </td>
-          <td
-            sx={{
-              borderLeft: `2px solid`,
-              borderRight: `2px solid`,
-              borderTop: `2px solid`,
-              borderBottom: `none`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#fff`,
-              color: `secondary`,
-            }}
-          >
-            <p sx={{ padding: `2%`, fontWeight: `bold` }}>PASS</p>
-          </td>
-        </tr>
+            <Styled.h3
+              sx={{
+                color: 'primary',
+                margin: `0`,
+                padding: `0`,
+                fontSize: ['2', '2', '2', '3', '3'],
+              }}
+            >
+              OBSERVATIONS
+            </Styled.h3>
+          </th>
+          <th sx={{ bg: `text`, padding: `1%` }}>
+            <Styled.h3
+              sx={{
+                color: 'primary',
+                margin: `0`,
+                padding: `0`,
+                fontSize: ['2', '2', '2', '3', '3'],
+              }}
+            >
+              RESULTS
+            </Styled.h3>
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              <p sx={{ padding: `2%`, fontWeight: `bold` }}>1</p>
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              <p sx={{ padding: `2%`, fontWeight: `bold` }}>
+                Top left seam where overlap occurs
+              </p>
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              <p sx={{ padding: `2%`, fontWeight: `bold` }}>0.125”</p>
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              <p sx={{ padding: `2%`, fontWeight: `bold` }}>
+                No visible evidence of tearing, cracking, fracturing, splitting,
+                <br />
+                rupture, crazing, or other evidence of opening in the prepared
+                roof covering layer.
+              </p>
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              <p sx={{ padding: `2%`, fontWeight: `bold` }}>PASS</p>
+            </td>
+          </tr>
 
-        <tr>
-          <td
-            sx={{
-              borderLeft: `2px solid`,
-              borderRight: `2px solid`,
-              borderTop: `2px solid`,
-              borderBottom: `none`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#fdf4f1`,
-              color: `secondary`,
-            }}
-          >
-            <p sx={{ padding: `2%`, fontWeight: `bold` }}>1</p>
-          </td>
-          <td
-            sx={{
-              borderLeft: `2px solid`,
-              borderRight: `2px solid`,
-              borderTop: `2px solid`,
-              borderBottom: `none`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#fdf4f1`,
-              color: `secondary`,
-            }}
-          >
-            <p sx={{ padding: `2%`, fontWeight: `bold` }}>Top left seam where overlap occurs</p>
-          </td>
-          <td
-            sx={{
-              borderLeft: `2px solid`,
-              borderRight: `2px solid`,
-              borderTop: `2px solid`,
-              borderBottom: `none`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#fdf4f1`,
-              color: `secondary`,
-            }}
-          >
-            <p sx={{ padding: `2%`, fontWeight: `bold` }}>0.125”</p>
-          </td>
-          <td
-            sx={{
-              borderLeft: `2px solid`,
-              borderRight: `2px solid`,
-              borderTop: `2px solid`,
-              borderBottom: `none`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#fdf4f1`,
-              color: `secondary`,
-            }}
-          >
-            <p sx={{ padding: `2%`, fontWeight: `bold` }}>
-              No visible evidence of tearing, cracking, fracturing, splitting,
-              <br />
-              rupture, crazing, or other evidence of opening in the prepared
-              roof covering layer.
-            </p>
-          </td>
-          <td
-            sx={{
-              borderLeft: `2px solid`,
-              borderRight: `2px solid`,
-              borderTop: `2px solid`,
-              borderBottom: `none`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#fdf4f1`,
-              color: `secondary`,
-            }}
-          >
-            <p sx={{ padding: `2%`, fontWeight: `bold` }}>PASS</p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          <tr>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              <p sx={{ padding: `2%`, fontWeight: `bold` }}>1</p>
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              <p sx={{ padding: `2%`, fontWeight: `bold` }}>Top left seam where overlap occurs</p>
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              <p sx={{ padding: `2%`, fontWeight: `bold` }}>0.125”</p>
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              <p sx={{ padding: `2%`, fontWeight: `bold` }}>
+                No visible evidence of tearing, cracking, fracturing, splitting,
+                <br />
+                rupture, crazing, or other evidence of opening in the prepared
+                roof covering layer.
+              </p>
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              <p sx={{ padding: `2%`, fontWeight: `bold` }}>PASS</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   )
 }
 

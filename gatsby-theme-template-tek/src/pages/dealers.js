@@ -81,40 +81,43 @@ const dealers = ({ data }) => {
       <div
         sx={{
           bg: `rgba(210, 58, 0, 0.75)`,
-          height: `200px`,
           width: `100%`,
-          display: `flex`,
-          flexDirection: `column`,
           alignItems: `center`,
           textAlign: `center`,
           justifyContent: `center`,
-          padding: `5%`,
+          position: `relative`,
           boxSizing: `border-box`,
-          ':nth-child(even)': {
-            paddingTop: `5%`
+          flexBasis: ['calc(100% - 20px)', 'calc(50% - 20px)', 'calc(50% - 20px)', 'calc(33.333% - 20px)', 'calc(33.333% - 20px)'],
+          margin: `10px`,
+          ':before': {
+            content: '""',
+            display: `block`,
+            paddingTop: `100%`
           }
         }}
       >
-        <Link
-          to={item.node.fields.slug}
-          sx={{
-            color: `text`,
-            textDecoration: `none`,
-            fontWeight: `bold`,
-          }}
-        >
-          {item.node.frontmatter.title}
-        </Link>
-        <Link
-          to={item.node.fields.slug}
-          sx={{
-            color: `text`,
-            textDecoration: `none`,
-            fontWeight: `bold`,
-          }}
-        >
-          <img src={downloadIcon} alt="download" sx={{ marginTop: `20px` }} />
-        </Link>
+        <div sx={{ height: `100%`, width: `100%`, position: `absolute`, top: `0`, left: `0`, display: `flex`, flexDirection: `column`, justifyContent: `center`, padding: `5%`, boxSizing: `border-box`, fontSize: ['5vmin', '3vmin', '3vmin', '1vmin', '13px'] }}>
+          <Link
+            to={item.node.fields.slug}
+            sx={{
+              color: `text`,
+              textDecoration: `none`,
+              fontWeight: `bold`
+            }}
+          >
+            {item.node.frontmatter.title}
+          </Link>
+          <Link
+            to={item.node.fields.slug}
+            sx={{
+              color: `text`,
+              textDecoration: `none`,
+              fontWeight: `bold`,
+            }}
+          >
+            <img src={downloadIcon} alt="download" sx={{ marginTop: `20px` }} />
+          </Link>
+        </div>
       </div>
     )
   })
@@ -174,9 +177,11 @@ const dealers = ({ data }) => {
               >
                 <div
                   sx={{
-                    display: `grid`,
-                    gridTemplateColumns: `1fr 1fr 1fr`,
-                    gridGap: `20px`
+                    display: `flex`,
+                    flexWrap: `wrap`,
+                    height: `100%`,
+                    width: `100%`,
+                    marginBottom: `10%`
                   }}
                 >
                   {selections}
@@ -207,8 +212,8 @@ const dealers = ({ data }) => {
                 <ButtonV2
                   destination="/installs"
                   buttonText={sectionOne[0].node.buttonText2}
-                  borderColor="text"
-                  color="text"
+                  borderColor="primary"
+                  color="primary"
                 />
               </p>
             </div>
@@ -216,15 +221,15 @@ const dealers = ({ data }) => {
             </div>
           </Section>
         </BackImg>
-      <div sx={{ backgroundColor: `#fff`, overflow: `hidden` }}>
+      <div sx={{ backgroundColor: `#fff`, overflow: `hidden`, padding: `0 0 10% 0` }}>
         <Section>
           <Styled.h2 sx={{ color: `primary` }}>{sectionTwo[0].node.text}</Styled.h2>
           <Styled.p sx={{ color: `grey` }}>{sectionTwo[0].node.text2}</Styled.p>
           <Styled.p sx={{ color: `grey` }}>{sectionTwo[0].node.text3}</Styled.p>
         </Section>
       </div>
-      <div sx={{ bg: `primary`, display: `flex`, justifyContent: `space-between`, overflow: `hidden`, height: `40vh` }}>
-        <div sx={{ width: `50%` }}>
+      <div sx={{ bg: `primary`, display: `flex`, justifyContent: `space-between`, overflow: `hidden`, height: ['auto', 'auto', '40vh', '40vh', '40vh'] }}>
+        <div sx={{ width: ['0', '0', '50%', '50%', '50%'] }}>
           <BackImg fluid={sectionThree[0].node.image.childImageSharp.fluid} sx={{ width: `100%`, height: `100%` }}>
             <div
               sx={{
@@ -241,10 +246,11 @@ const dealers = ({ data }) => {
             ></div>
           </BackImg>
         </div>
-        <div sx={{ width: `50%`, display: `flex`, flexDirection: `column`, justifyContent: `center` }}>
+        <div sx={{ width: ['100%', '100%', '50%', '50%', '50%'], display: `flex`, flexDirection: `column`, justifyContent: `center`, padding: ['10% 5%', '10% 5%', '0', '0', '0'] }}>
           <Styled.h2 sx={{
             color: `text`,
             marginBottom: `0`,
+            marginTop: `0`,
             ':after': {
               backgroundColor: `text`
             }
