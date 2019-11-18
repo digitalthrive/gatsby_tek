@@ -303,3 +303,18 @@
   image2: ../images/placeholder.png
   page: dealers
   section: 3
+
+## 404 Page
+- text: OOPS! THAT PAGE CAN’T BE FOUND.
+  text2: The page you are trying to reach doesn't exist.
+  text3: null
+  text4: null
+  text5: null
+  buttonText: Visit Our Home Page
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/squared-roof-preview.jpg
+  image2: ../images/placeholder.png
+  page: pagenotfound
+  section: 1
