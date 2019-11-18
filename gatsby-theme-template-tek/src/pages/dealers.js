@@ -7,7 +7,10 @@ import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
 import Layout from '../components/layout'
 import Section from '../components/section'
+import ResultsTable from '../components/resultstable_1'
 import Button from '../components/button'
+import ButtonV2 from '../components/button-v2'
+import downloadIcon from '../components/icons/download-icon.png'
 import ContactForm from '../components/contact'
 
 const dealers = ({ data }) => {
@@ -30,6 +33,7 @@ const dealers = ({ data }) => {
 
   let SectionChooser = () => {
     return (
+
       <div
         sx={{
           height: `100px`,
@@ -37,12 +41,15 @@ const dealers = ({ data }) => {
           gridTemplateColumns: `1fr 1fr`,
         }}
       >
-        {[sectionOne[0].node.text3, sectionOne[0].node.text4].map(
+        {[sectionFour[0].node.text3, sectionFour[0].node.text4].map(
           (el, index) => (
             <div
               key={el + index}
               sx={{
-                border: `2px solid`,
+                display: `flex`,
+                justifyContent: `center`,
+                alignItems: `center`,
+                border: `3px solid`,
                 borderColor: `primary`,
                 borderCollapse: `collapse`,
                 bg: index === internalSection ? `primary` : null,
@@ -51,8 +58,12 @@ const dealers = ({ data }) => {
             >
               <Styled.h3
                 sx={{
-                  margin: `auto`,
+                  margin: `0`,
+                  padding: `0`,
+                  fontFamily: "body",
+                  fontSize: ['1', '1', '1', '2', '2'],
                   width: `fit-content`,
+                  textAlign: `center`,
                   color: index === internalSection ? `text` : `primary`,
                 }}
               >
@@ -68,80 +79,211 @@ const dealers = ({ data }) => {
   let selections = data.allMdx.edges.map(item => {
     return (
       <div
-        sx={{ bg: `rgba(210, 58, 0, 0.75)`, height: `200px`, width: `100%` }}
+        sx={{
+          bg: `rgba(210, 58, 0, 0.75)`,
+          width: `100%`,
+          alignItems: `center`,
+          textAlign: `center`,
+          justifyContent: `center`,
+          position: `relative`,
+          boxSizing: `border-box`,
+          flexBasis: ['calc(100% - 20px)', 'calc(50% - 20px)', 'calc(50% - 20px)', 'calc(33.333% - 20px)', 'calc(33.333% - 20px)'],
+          margin: `10px`,
+          ':before': {
+            content: '""',
+            display: `block`,
+            paddingTop: `100%`
+          }
+        }}
       >
-        <Link
-          to={item.node.fields.slug}
-          sx={{
-            color: `text`,
-            textDecoration: `none`,
-            fontFamily: `futura pt`,
-            fontWeight: `bold`,
-          }}
-        >
-          {item.node.frontmatter.title}
-        </Link>
+        <div sx={{ height: `100%`, width: `100%`, position: `absolute`, top: `0`, left: `0`, display: `flex`, flexDirection: `column`, justifyContent: `center`, padding: `5%`, boxSizing: `border-box`, fontSize: ['5vmin', '3vmin', '3vmin', '1vmin', '13px'] }}>
+          <Link
+            to={item.node.fields.slug}
+            sx={{
+              color: `text`,
+              textDecoration: `none`,
+              fontWeight: `bold`
+            }}
+          >
+            {item.node.frontmatter.title}
+          </Link>
+          <Link
+            to={item.node.fields.slug}
+            sx={{
+              color: `text`,
+              textDecoration: `none`,
+              fontWeight: `bold`,
+            }}
+          >
+            <img src={downloadIcon} alt="download" sx={{ marginTop: `20px` }} />
+          </Link>
+        </div>
       </div>
     )
   })
 
   return (
     <Layout>
-      <BackImg fluid={sectionOne[0].node.image.childImageSharp.fluid}>
-        <Section>
-          <Styled.h2>{sectionOne[0].node.text}</Styled.h2>
-          <Styled.h2>{sectionOne[0].node.text2}</Styled.h2>
+        <BackImg fluid={sectionOne[0].node.image.childImageSharp.fluid} sx={{ overflow: `hidden` }}>
           <div
-            key={sectionOne[0].node.id}
+            sx={{
+              position: `absolute`,
+              zIndex: `10`,
+              bottom: `0`,
+              width: `0`,
+              height: `0`,
+              marginTop: `0`,
+              borderBottom: `100vh solid #fff`,
+              borderLeft: `100vw solid transparent`,
+              borderRight: `0 solid transparent`,
+            }}
+          ></div>
+          <div
             sx={{
               width: `100%`,
-              height: `800px`,
+              height: `100%`,
+              position: `absolute`,
+              backgroundColor: `rgba(0,0,0,0.65)`
+             }}
+          ></div>
+          <Section>
+            <div sx={{ position: `relative`, zIndex: `20`, paddingTop: `10%` }}>
+              <Styled.h1 sx={{ color: `text`, marginBottom: `0`, paddingBottom: `1%` }}>{sectionOne[0].node.text}</Styled.h1>
+              <Styled.h2
+                sx={{
+                  fontSize: ['3', '3', '4', '4', '4'],
+                  color: `primary`,
+                  marginTop: `0`,
+                  paddingTop: `0`,
+                  ':after': {
+                    display: `none`
+                  }
+                 }}
+              >{sectionOne[0].node.text2}</Styled.h2>
+
+          <div
+            sx={{
+              display: `flex`,
+              marginBottom: `7%`,
+              flexDirection: ['column', 'column', 'column', 'row', 'row'],
             }}
           >
+            <div sx={{ width: ['100%', '100%', '100%', '45%', '45%'] }}>
+              <div
+                key={sectionOne[0].node.id}
+                sx={{
+                  width: `100%`
+                }}
+              >
+                <div
+                  sx={{
+                    display: `flex`,
+                    flexWrap: `wrap`,
+                    height: `100%`,
+                    width: `100%`,
+                    marginBottom: `10%`
+                  }}
+                >
+                  {selections}
+                </div>
+              </div>
+            </div>
             <div
               sx={{
-                display: `grid`,
-                gridTemplateColumns: `1fr 1fr 1fr`,
-                width: `600px`,
-                gridGap: `20px`,
+                width: ['100%', '100%', '100%', '55%', '55%'],
+                paddingBottom: ['10%', '10%', '10%', '0', '0'],
+                paddingLeft: `5%`,
+                boxSizing: `border-box`,
+                alignSelf: `center`,
               }}
             >
-              {selections}
+              <Styled.p sx={{ color: `primary` }}>
+                {sectionOne[0].node.text3}
+              </Styled.p>
+              <p>
+                <ButtonV2
+                  destination="/dealers"
+                  buttonText={sectionOne[0].node.buttonText}
+                  borderColor="primary"
+                  color="primary"
+                />
+              </p>
+              <p>
+                <ButtonV2
+                  destination="/installs"
+                  buttonText={sectionOne[0].node.buttonText2}
+                  borderColor="primary"
+                  color="primary"
+                />
+              </p>
             </div>
-          </div>
-          <Styled.p sx={{ color: `primary` }}>
-            {sectionOne[0].node.text3}
-          </Styled.p>
-          <Button
-            destination="/dealers"
-            buttonText={sectionOne[0].node.buttonText}
-          />
-          <Button
-            destination="/installs"
-            buttonText={sectionOne[0].node.buttonText2}
-          />
+            </div>
+            </div>
+          </Section>
+        </BackImg>
+      <div sx={{ backgroundColor: `#fff`, overflow: `hidden`, padding: `0 0 10% 0` }}>
+        <Section>
+          <Styled.h2 sx={{ color: `primary` }}>{sectionTwo[0].node.text}</Styled.h2>
+          <Styled.p sx={{ color: `grey` }}>{sectionTwo[0].node.text2}</Styled.p>
+          <Styled.p sx={{ color: `grey` }}>{sectionTwo[0].node.text3}</Styled.p>
         </Section>
-      </BackImg>
-      <Section>
-        <Styled.h2>{sectionTwo[0].node.text}</Styled.h2>
-        <Styled.p sx={{ color: `grey` }}>{sectionTwo[0].node.text2}</Styled.p>
-        <Styled.p sx={{ color: `grey` }}>{sectionTwo[0].node.text3}</Styled.p>
-      </Section>
-      <div sx={{ bg: `primary` }}>
-        <Styled.h3 sx={{ color: `text` }}>
-          {sectionThree[0].node.text}
-        </Styled.h3>
-        <Styled.p>{sectionThree[0].node.text2}</Styled.p>
-        <Button
-          destination="/installs"
-          buttonText={sectionOne[0].node.buttonText}
-        />
       </div>
-      <Section>
-        <SectionChooser />
-        <Styled.h2>Additional charts here</Styled.h2>
-      </Section>
-      <ContactForm />
+      <div sx={{ bg: `primary`, display: `flex`, justifyContent: `space-between`, overflow: `hidden`, height: ['auto', 'auto', '40vh', '40vh', '40vh'] }}>
+        <div sx={{ width: ['0', '0', '50%', '50%', '50%'] }}>
+          <BackImg fluid={sectionThree[0].node.image.childImageSharp.fluid} sx={{ width: `100%`, height: `100%` }}>
+            <div
+              sx={{
+                position: `absolute`,
+                zIndex: `10`,
+                right: `0`,
+                width: `0`,
+                height: `0`,
+                marginTop: `0`,
+                borderBottom: `70vh solid #d23a00`,
+                borderLeft: `70vw solid transparent`,
+                borderRight: `0 solid transparent`,
+              }}
+            ></div>
+            <div sx={{
+              backgroundColor: `rgb(210, 58, 0, .4)`,
+              position: `absolute`,
+              zIndex: `10`,
+              left: `0`,
+              right: `0`,
+              width: `100%`,
+              height: `100%`
+             }}>
+
+            </div>
+          </BackImg>
+        </div>
+        <div sx={{ width: ['100%', '100%', '50%', '50%', '50%'], display: `flex`, flexDirection: `column`, justifyContent: `center`, padding: ['10% 5%', '10% 5%', '0', '0', '0'] }}>
+          <Styled.h2 sx={{
+            color: `text`,
+            marginBottom: `0`,
+            marginTop: `0`,
+            ':after': {
+              backgroundColor: `text`
+            }
+          }}>
+            {sectionThree[0].node.text}
+          </Styled.h2>
+          <p>{sectionThree[0].node.text2}</p>
+          <ButtonV2
+            destination="/installs"
+            buttonText={sectionOne[0].node.buttonText}
+            borderColor="text"
+            color="text"
+          />
+        </div>
+      </div>
+      <div sx={{ overflow: `hidden`, padding: `5% 0` }}>
+        <Section>
+          <SectionChooser />
+          <Styled.h2>HURRICANE® Metal Shake UL 2218 Testing Results</Styled.h2>
+          <ResultsTable />
+        </Section>
+      </div>
     </Layout>
   )
 }
