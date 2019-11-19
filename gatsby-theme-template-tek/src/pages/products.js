@@ -17,7 +17,7 @@ import arrowDown from '../components/icons/arrow-down.png'
 const products = ({ data }) => {
   const [firstSection, setFirstSection] = useState(0)
   const [showTable, setShowTable] = useState(false)
-  const [sliderWidth, setSliderWidth] = useState(reportWindowWidth())
+  const [sliderWidth, setSliderWidth] = useState(window.innerWidth)
 
   const sections = data.allSection.edges
 
@@ -52,13 +52,11 @@ const products = ({ data }) => {
   const before = beforeImage
   const after = afterImage
 
-  function reportWindowWidth() {
-    let width = window.innerWidth
-    return width
-  }
-  window.onload = reportWindowWidth
-  window.onresize = function() {
-    setSliderWidth(reportWindowWidth())
+  if (typeof window !== `undefined`) {
+    window.onload = window.innerWidth
+    window.onresize = function() {
+      setSliderWidth(window.innerWidth)
+    }
   }
 
   let SectionChooser = () => {
@@ -273,7 +271,7 @@ const products = ({ data }) => {
               <img
                 src={arrowDown}
                 sx={{ marginLeft: `10px` }}
-                alt='down arrow'
+                alt="down arrow"
               />
             </p>
           </div>
