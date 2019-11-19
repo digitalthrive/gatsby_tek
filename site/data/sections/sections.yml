@@ -271,14 +271,14 @@
   buttonText2: Install Methods
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.png
+  image: ../images/dealer-tools-roof.jpg
   image2: ../images/placeholder.png
   page: dealers
   section: 1
 
 - text: WHY ROOFING COMPANIES SHOULD PARTNER WITH TEK INDUSTRIES AND EXPAND TO A DEALER ROLE
-  text2: An exclusive opportunity is on hand, provided by TEK Industries for roofing materials dealers across the nation.  This new event .....
-  text3: When Tek Industries brings a new roofing company into our family of partners and clients, we want everyone to succeed and progress.
+  text2: An exclusive opportunity is on hand, provided by TEK® Industries for roofing materials dealers across the nation. This new event gives you direct access to the best metal shake products on the market. By avoiding an additional distributor, it lets you purchase at a reduced price, then pass those savings on to your customers. This opens the way for increased orders and increased profits.
+  text3: When TEK® Industries brings a new roofing company into our family of partners and clients, we want everyone to succeed and progress. That’s why we’re helping companies that have traditionally focused on fixing roofs now expand their vision and diversify their profit-making. With the exclusive access to the best-of-class roofing materials that we provide, you can make waves in the roofing industry. You will be able to supply other roofers with high quality metal shake and, just as easily, provide outstanding deals for the customers who want to work with you directly. These new opportunities are possible when you become part of the TEK® Industries family.
   text4: null
   text5: null
   buttonText: Become A Dealer
@@ -299,7 +299,36 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.png
+  image: ../images/roofers-working.jpg
   image2: ../images/placeholder.png
   page: dealers
   section: 3
+
+- text: null
+  text2: null
+  text3: HURRICANE METAL SHAKE TESTING RESULTS
+  text4: HURRICANE ® METAL SHAKE PRO TESTING RESULTS
+  text5: null
+  buttonText: null
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/placeholder.jpg
+  image2: ../images/placeholder.png
+  page: dealers
+  section: 4
+
+## 404 Page
+- text: OOPS! THAT PAGE CAN’T BE FOUND.
+  text2: The page you are trying to reach doesn't exist.
+  text3: null
+  text4: null
+  text5: null
+  buttonText: Visit Our Home Page
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/squared-roof-preview.jpg
+  image2: ../images/placeholder.png
+  page: pagenotfound
+  section: 1
