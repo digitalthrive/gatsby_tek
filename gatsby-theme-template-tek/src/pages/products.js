@@ -4,20 +4,18 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
+import Loadable from '@loadable/component'
 import BeforeAfterSlider from 'react-before-after-slider'
 import Layout from '../components/layout'
 import Section from '../components/section'
 import Button from '../components/button'
 import CompTable from '../components/comparisontable'
 import ProductSelector from '../components/productselector'
-import beforeImage from '../components/images/roof-after.jpg'
-import afterImage from '../components/images/roof-before.jpg'
 import arrowDown from '../components/icons/arrow-down.png'
 
 const products = ({ data }) => {
   const [firstSection, setFirstSection] = useState(0)
   const [showTable, setShowTable] = useState(false)
-  const [sliderWidth, setSliderWidth] = useState(1892)
 
   const sections = data.allSection.edges
 
@@ -49,15 +47,7 @@ const products = ({ data }) => {
     return obj.node.section === 9
   })
 
-  const before = beforeImage
-  const after = afterImage
-
-  if (typeof window !== `undefined`) {
-    window.onload = window.innerWidth
-    window.onresize = function() {
-      setSliderWidth(window.innerWidth)
-    }
-  }
+  const FinalSlider = Loadable(() => import('../components/slider'))
 
   let SectionChooser = () => {
     return (
@@ -198,12 +188,7 @@ const products = ({ data }) => {
           </>
         )}
       </Section>
-      <BeforeAfterSlider
-        before={before}
-        after={after}
-        width={sliderWidth}
-        height={560}
-      />
+      <FinalSlider />
       <div
         sx={{ backgroundColor: `gray`, overflow: `hidden`, padding: `5% 0` }}
       >
@@ -395,6 +380,20 @@ export const query = graphql`
             }
           }
           section
+        }
+      }
+    }
+    beforeImage: file(relativePath: { eq: "images/roof-before.jpg" }) {
+      childImageSharp {
+        fixed {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+    afterImage: file(relativePath: { eq: "images/roof-after.jpg" }) {
+      childImageSharp {
+        fixed {
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }

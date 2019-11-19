@@ -129,8 +129,8 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: ../images/roof-before.jpg
+  image2: ../images/roof-after.jpg
   page: products
   section: 1
 
