@@ -26,7 +26,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-theme-template-tek',
+      resolve: '@digitalthrive/gatsby-theme-template-tek',
       options: {
         contentPath: 'data',
         basePath: '/data',

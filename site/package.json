@@ -9,7 +9,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby-theme-template-tek": "^1.0.0",
+    "@digitalthrive/gatsby-theme-template-tek": "^1.0.1",
     "gatsby": "^2.10.0",
     "gatsby-transformer-remark": "^2.6.9",
     "react": "^16.8.6",

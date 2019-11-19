@@ -27,9 +27,9 @@ const homecarousel = () => {
     `
   )
 
-  let quotes = data.allMdx.edges.map(quote => {
+  let quotes = data.allMdx.edges.map((quote, index) => {
     return (
-      <div sx={{ height: `80%` }}>
+      <div key={`${quote}${index}`} sx={{ height: `80%` }}>
         <Styled.h3
           sx={{ fontFamily: 'body', color: 'text', position: `relative` }}
         >

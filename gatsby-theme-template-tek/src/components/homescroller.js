@@ -64,7 +64,7 @@ const menubar = () => {
               width: `100%`,
               height: `600px`,
               position: `relative`,
-              ":after": {
+              ':after': {
                 content: `""`,
                 position: `absolute`,
                 zIndex: `-1`,
@@ -77,8 +77,8 @@ const menubar = () => {
                 display: `block`,
                 background: `-moz-linear-gradient(left,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%)`,
                 background: `-webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)`,
-                background: `linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)`
-              }
+                background: `linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)`,
+              },
             }}
           >
             <div
@@ -94,11 +94,23 @@ const menubar = () => {
                   paddingBottom: 0,
                   textAlign: `left`,
                   fontSize: [4, 4, 6],
-                  width: ["100%", "100%", "100%", "100%", "100%"],
-                  color: 'background'
+                  width: ['100%', '100%', '100%', '100%', '100%'],
+                  color: 'background',
                 }}
               >
-                {node.node.frontmatter.headerTopLine}<span sx={{color: 'primary', fontSize: ["7", "7", "7", "10", "10"], paddingLeft: 2}}>{node.node.frontmatter.headerLargeWord}</span><span sx={{display: `block`}}>{node.node.frontmatter.headerBottomLine}</span>
+                {node.node.frontmatter.headerTopLine}
+                <span
+                  sx={{
+                    color: 'primary',
+                    fontSize: ['7', '7', '7', '10', '10'],
+                    paddingLeft: 2,
+                  }}
+                >
+                  {node.node.frontmatter.headerLargeWord}
+                </span>
+                <span sx={{ display: `block` }}>
+                  {node.node.frontmatter.headerBottomLine}
+                </span>
               </Styled.h1>
               <Styled.h3
                 sx={{
@@ -107,12 +119,17 @@ const menubar = () => {
                   fontSize: [2, 2, 2],
                   color: 'text',
                   fontFamily: `body`,
-                  width: [`100%`, `100%`, `40%`]
+                  width: [`100%`, `100%`, `40%`],
                 }}
               >
                 {node.node.frontmatter.detail}
               </Styled.h3>
-              <ButtonV2 destination="/" buttonText="MORE" borderColor="background" color="text" />
+              <ButtonV2
+                destination="/"
+                buttonText="MORE"
+                borderColor="background"
+                color="text"
+              />
             </div>
           </div>
         </BackImg>
@@ -122,11 +139,11 @@ const menubar = () => {
 
   let selectors = data.allMdx.edges.map((node, index) => {
     return (
-      <div onClick={() => slideHandler(index)}>
+      <div key={`${node}${index}`} onClick={() => slideHandler(index)}>
         <BackImg
           fluid={node.node.frontmatter.tabImage.childImageSharp.fluid}
           sx={{
-            height: `100%`
+            height: `100%`,
           }}
         >
           <div
@@ -137,7 +154,7 @@ const menubar = () => {
               justifyContent: `flex-start`,
               height: `100%`,
               cursor: `pointer`,
-              ":after": {
+              ':after': {
                 content: `""`,
                 position: `absolute`,
                 zIndex: `-1`,
@@ -149,19 +166,19 @@ const menubar = () => {
                 margin: `0 auto`,
                 display: `block`,
                 backgroundColor: `rgba(0,0,0,0.5)`,
-              }
+              },
             }}
           >
             <Styled.h2
               sx={{
-                fontSize: ["2", "3", "4", "6", "6"],
+                fontSize: ['2', '3', '4', '6', '6'],
                 padding: `0 0 0 10%`,
-                width: ["100%", "100%", "100%", "60%", "60%"],
+                width: ['100%', '100%', '100%', '60%', '60%'],
                 color: 'background',
                 margin: `0`,
-                ":after": {
-                  display: `none`
-                }
+                ':after': {
+                  display: `none`,
+                },
               }}
             >
               {node.node.frontmatter.name}
@@ -174,11 +191,11 @@ const menubar = () => {
   return (
     <>
       {slides[slide]}
-      <Section sx={{ width: ["100%", "100%", "100%", "85%", "85%"] }}>
+      <Section sx={{ width: ['100%', '100%', '100%', '85%', '85%'] }}>
         <div
           sx={{
             backgroundColor: `black`,
-            height: ["140px", "140px", "140px", "200px", "200px"],
+            height: ['140px', '140px', '140px', '200px', '200px'],
             display: `grid`,
             gridTemplateColumns: `33.33% 33.33% 33.33%`,
             position: 'relative',

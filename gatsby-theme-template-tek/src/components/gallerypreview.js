@@ -38,18 +38,28 @@ const gallerypreview = () => {
       }
     }
   `)
-  let gallery1images = data.gallery1.edges.map(image => {
+  let gallery1images = data.gallery1.edges.map((image, index) => {
     return (
       <Img
-        sx={{ height: ["185px", "185px", "185px", "230px", "230px"], width: ["185px", "185px", "185px", "230px", "230px"], margin: ["8px auto", "8px auto", "8px auto", "8px", "8px"] }}
+        key={`${image}${index}`}
+        sx={{
+          height: ['185px', '185px', '185px', '230px', '230px'],
+          width: ['185px', '185px', '185px', '230px', '230px'],
+          margin: ['8px auto', '8px auto', '8px auto', '8px', '8px'],
+        }}
         fluid={image.node.childImageSharp.fluid}
       />
     )
   })
-  let gallery2images = data.gallery2.edges.map(image => {
+  let gallery2images = data.gallery2.edges.map((image, index) => {
     return (
       <Img
-        sx={{ height: ["185px", "185px", "185px", "230px", "230px"], width: ["185px", "185px", "185px", "230px", "230px"], margin: ["8px auto", "8px auto", "8px auto", "8px", "8px"] }}
+        key={`${image}${index}`}
+        sx={{
+          height: ['185px', '185px', '185px', '230px', '230px'],
+          width: ['185px', '185px', '185px', '230px', '230px'],
+          margin: ['8px auto', '8px auto', '8px auto', '8px', '8px'],
+        }}
         fluid={image.node.childImageSharp.fluid}
       />
     )
