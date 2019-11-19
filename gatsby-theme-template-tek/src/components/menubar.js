@@ -81,7 +81,7 @@ const menubar = () => {
             justifySelf: `center`,
           }}
         >
-          <Link destination="/">
+          <Link to="/">
             <Img
               sx={{
                 maxWidth: `382px`,
@@ -131,7 +131,7 @@ const menubar = () => {
                   lineHeight: `100px`,
                   display: `inline-block`,
                   verticalAlign: `middle`,
-                  cursor: `pointer`
+                  cursor: `pointer`,
                 }}
               >
                 Contact
@@ -170,7 +170,7 @@ const menubar = () => {
                 paddingRight: 4,
                 paddingTop: 1,
                 paddingBottom: 1,
-                margin: `0`
+                margin: `0`,
               }}
             >
               BECOME A DEALER

@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   return (
     <ThemeLayout>
       <Global
-        sx={{
+        styles={{
           body: {
             margin: `0`,
             padding: 0,

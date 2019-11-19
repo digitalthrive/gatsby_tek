@@ -34,21 +34,28 @@ const hamburger = () => {
               position: `fixed`,
               right: `25px`,
               top: `36px`,
-              display: ["grid", "grid", "grid", "none", "none"],
+              display: ['grid', 'grid', 'grid', 'none', 'none'],
               justifyItems: `right`,
               cursor: `pointer`,
             }}
             onClick={() => setOpen(!open)}
           >
             <div
-              style={{ maskImage: `url(${hamburgerIcon})`, webkitMaskImage: `url(${hamburgerIcon})`, width: `30px`, height: `30px`, maskRepeat: `none`, maskSize: `30px`, webkitMaskSize: `30px` }}
+              style={{
+                maskImage: `url(${hamburgerIcon})`,
+                WebkitMaskImage: `url(${hamburgerIcon})`,
+                width: `30px`,
+                height: `30px`,
+                maskRepeat: `none`,
+                maskSize: `30px`,
+                WebkitMaskSize: `30px`,
+              }}
               sx={{
                 transition: `all 0.3s ease`,
                 backgroundColor: `primary`,
-                ":hover": {backgroundColor: `secondary`}
+                ':hover': { backgroundColor: `secondary` },
               }}
-            >
-            </div>
+            ></div>
             {transition.map(
               ({ item, key, props }) =>
                 item && (
@@ -65,7 +72,13 @@ const hamburger = () => {
                       zIndex: `99`,
                     }}
                   >
-                    <ul sx={{ paddingTop: [5, 5, 5], paddingLeft: [0, 0, 5], margin: [0, 0, 5] }}>
+                    <ul
+                      sx={{
+                        paddingTop: [5, 5, 5],
+                        paddingLeft: [0, 0, 5],
+                        margin: [0, 0, 5],
+                      }}
+                    >
                       {data.site.siteMetadata.menuLinks.map(link => {
                         return (
                           <li
@@ -76,19 +89,20 @@ const hamburger = () => {
                               fontFamily: 'heading',
                               listStyle: `none`,
                               margin: 4,
-                              width: ["auto", "auto", "50%"],
+                              width: ['auto', 'auto', '50%'],
                             }}
                             key={link.name}
                           >
-                            <Link to={link.link}
+                            <Link
+                              to={link.link}
                               sx={{
                                 color: `text`,
                                 position: `relative`,
                                 textTransform: 'uppercase',
-                                ":hover": {
-                                  color: `highlight`
+                                ':hover': {
+                                  color: `highlight`,
                                 },
-                                ":before": {
+                                ':before': {
                                   content: `""`,
                                   position: `absolute`,
                                   width: `100%`,
@@ -100,13 +114,13 @@ const hamburger = () => {
                                   webkitTransform: `scaleX(0)`,
                                   transform: `scaleX(0)`,
                                   webkitTransition: `all 0.3s ease-in-out 0s`,
-                                  transition: `all 0.3s ease-in-out 0s`
+                                  transition: `all 0.3s ease-in-out 0s`,
                                 },
-                                ":hover:before": {
+                                ':hover:before': {
                                   visibility: `visible`,
                                   webkitTransform: `scaleX(1)`,
-                                  transform: `scaleX(1)`
-                                }
+                                  transform: `scaleX(1)`,
+                                },
                               }}
                             >
                               {link.name}

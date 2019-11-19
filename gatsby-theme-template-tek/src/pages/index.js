@@ -17,9 +17,9 @@ import ButtonV2 from '../components/button-v2'
 const homepage = ({ data }) => {
   const sections = data.allSection.edges
 
-  let sectionOne = sections.filter(obj => {
-    return obj.node.section === 1
-  })
+  // let sectionOne = sections.filter(obj => {
+  //   return obj.node.section === 1
+  // })
   let sectionTwo = sections.filter(obj => {
     return obj.node.section === 2
   })

@@ -44,6 +44,7 @@ const productselector = props => {
     return (
       <div
         onClick={() => setActiveFrame(`frame${indexNum}`)}
+        key={`${product}${index}`}
         sx={{
           position: `relative`,
           height: `400px`,

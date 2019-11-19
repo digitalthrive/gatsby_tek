@@ -3,8 +3,8 @@ import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import { Styled, jsx, Container, Footer } from 'theme-ui'
 import Img from 'gatsby-image'
-import { FaFacebookF } from 'react-icons/fa';
-import { FaYoutube } from 'react-icons/fa';
+import { FaFacebookF } from 'react-icons/fa'
+import { FaYoutube } from 'react-icons/fa'
 
 const footer = () => {
   const data = useStaticQuery(graphql`
@@ -50,17 +50,18 @@ const footer = () => {
   let links = data.allSection.edges[0].node.links.map(link => {
     return (
       <Styled.li
-          sx={{
-            color: `text`,
-            listStyleType: `none`,
-            fontSize: `25px`,
-            fontFamily: `heading`,
-            display: `inline-block`,
-            marginRight: `10%`,
-            ":after": {display: `none`}
-          }}
-        >
-        <Link to={link.link} sx={{ color: "text" }}>
+        key={link.linktext}
+        sx={{
+          color: `text`,
+          listStyleType: `none`,
+          fontSize: `25px`,
+          fontFamily: `heading`,
+          display: `inline-block`,
+          marginRight: `10%`,
+          ':after': { display: `none` },
+        }}
+      >
+        <Link to={link.link} sx={{ color: 'text' }}>
           {link.linktext}
         </Link>
       </Styled.li>
@@ -71,18 +72,37 @@ const footer = () => {
 
   return (
     <Footer>
-      <div sx={{ minHeight: `300px`, width: `100%`, backgroundColor: `secondary`, padding: `5%`, position: `relative` }}>
-        <div sx={{ display: ["block", "block", "block", "flex", "flex"], justifyContent: `space-around` }}>
+      <div
+        sx={{
+          minHeight: `300px`,
+          width: `100%`,
+          backgroundColor: `secondary`,
+          padding: `5%`,
+          position: `relative`,
+        }}
+      >
+        <div
+          sx={{
+            display: ['block', 'block', 'block', 'flex', 'flex'],
+            justifyContent: `space-around`,
+          }}
+        >
           <div sx={{ paddingRight: `20px` }}>
             <Styled.h3
               sx={{
                 gridColumnStart: `1`,
                 gridColumnEnd: `end`,
-                fontSize: "4",
+                fontSize: '4',
                 color: `text`,
-                margin: ["5% 0 5% 0", "5% 0 5% 0", "5% 0 5% 0", "0 0 3% 0", "0 0 3% 0"],
+                margin: [
+                  '5% 0 5% 0',
+                  '5% 0 5% 0',
+                  '5% 0 5% 0',
+                  '0 0 3% 0',
+                  '0 0 3% 0',
+                ],
                 padding: `0`,
-                lineHeight: `1em`
+                lineHeight: `1em`,
               }}
             >
               {data.allSection.edges[0].node.text}
@@ -98,43 +118,145 @@ const footer = () => {
               </span>
               {data.allSection.edges[0].node.text3}
             </Styled.h3>
-            <Styled.ul sx={{ margin: ["5% 0 5% 0", "5% 0 5% 0", "5% 0 5% 0", "0", "0"] }}>
+            <Styled.ul
+              sx={{ margin: ['5% 0 5% 0', '5% 0 5% 0', '5% 0 5% 0', '0', '0'] }}
+            >
               {links}
             </Styled.ul>
           </div>
-          <div sx={{ paddingRight: `20px`, margin: ["5% 0 5% 0", "5% 0 5% 0", "5% 0 5% 0", "0", "0"] }}>
-            <address sx={{ fontStyle: `normal`, fontFamily: "heading", fontSize: "2" }}>
-              <h3 sx={{ margin: `0`, padding: `0`, ":after": {content: `""`, display: `inline-block`, width: `2px`, height: `18px`, backgroundColor: "primary", marginLeft: `10px`} }}>Address</h3>
+          <div
+            sx={{
+              paddingRight: `20px`,
+              margin: ['5% 0 5% 0', '5% 0 5% 0', '5% 0 5% 0', '0', '0'],
+            }}
+          >
+            <address
+              sx={{ fontStyle: `normal`, fontFamily: 'heading', fontSize: '2' }}
+            >
+              <h3
+                sx={{
+                  margin: `0`,
+                  padding: `0`,
+                  ':after': {
+                    content: `""`,
+                    display: `inline-block`,
+                    width: `2px`,
+                    height: `18px`,
+                    backgroundColor: 'primary',
+                    marginLeft: `10px`,
+                  },
+                }}
+              >
+                Address
+              </h3>
               <p sx={{ marginTop: `0` }}>
-                Manufactured by TEK Industries LLC<br />
-                11801 Pierce Street, Suite 200<br />
+                Manufactured by TEK Industries LLC
+                <br />
+                11801 Pierce Street, Suite 200
+                <br />
                 Riverside, California, 92505
               </p>
             </address>
           </div>
-          <div sx={{ fontFamily: "heading", fontSize: "2", paddingRight: `20px`, margin: ["5% 0 5% 0", "5% 0 5% 0", "5% 0 5% 0", "0", "0"] }}>
-            <h3 sx={{ margin: `0`, padding: `0`, ":after": {content: `""`, display: `inline-block`, width: `2px`, height: `18px`, backgroundColor: "primary", marginLeft: `10px`} }}>Phone</h3>
+          <div
+            sx={{
+              fontFamily: 'heading',
+              fontSize: '2',
+              paddingRight: `20px`,
+              margin: ['5% 0 5% 0', '5% 0 5% 0', '5% 0 5% 0', '0', '0'],
+            }}
+          >
+            <h3
+              sx={{
+                margin: `0`,
+                padding: `0`,
+                ':after': {
+                  content: `""`,
+                  display: `inline-block`,
+                  width: `2px`,
+                  height: `18px`,
+                  backgroundColor: 'primary',
+                  marginLeft: `10px`,
+                },
+              }}
+            >
+              Phone
+            </h3>
             <p sx={{ marginTop: `0` }}>
-              Corp Office<br />
-              877-729-5229<br />
+              Corp Office
+              <br />
+              877-729-5229
+              <br />
               Monday – Friday 8a.m. to 5p.m. pst
             </p>
           </div>
           <div>
             <Styled.ul sx={{ display: `flex`, justifyContent: `center` }}>
-              <li sx={{ display: `inline-block`, textAlign: `center`, padding: `0 10px` }}>
-                <Link destination="/" sx={{ color: "text" }}><FaFacebookF sx={{ fontSize: "3" }} /></Link>
+              <li
+                sx={{
+                  display: `inline-block`,
+                  textAlign: `center`,
+                  padding: `0 10px`,
+                }}
+              >
+                <Link to="/" sx={{ color: 'text' }}>
+                  <FaFacebookF sx={{ fontSize: '3' }} />
+                </Link>
               </li>
-              <li sx={{ display: `inline-block`, textAlign: `center`, padding: `0 10px` }}><Link destination="/" sx={{ color: "text" }}><FaYoutube sx={{ fontSize: "3" }} /></Link></li>
+              <li
+                sx={{
+                  display: `inline-block`,
+                  textAlign: `center`,
+                  padding: `0 10px`,
+                }}
+              >
+                <Link to="/" sx={{ color: 'text' }}>
+                  <FaYoutube sx={{ fontSize: '3' }} />
+                </Link>
+              </li>
             </Styled.ul>
           </div>
-          <div sx={{ position: ["relative", "relative", "relative", "absolute", "absolute"], left: `0`, right: `0`, bottom: `5%`, margin: `auto`, textAlign: `center` }}>
-            <Styled.p sx={{ fontSize: `16px`, color: `#BABABA`, lineHeight: `1.25` }}>Contact us today to find out how you can take advantage of this transformation in the industry.<br />
-            Copyright © 2019 TEK Industries. All rights reserved.</Styled.p>
+          <div
+            sx={{
+              position: [
+                'relative',
+                'relative',
+                'relative',
+                'absolute',
+                'absolute',
+              ],
+              left: `0`,
+              right: `0`,
+              bottom: `5%`,
+              margin: `auto`,
+              textAlign: `center`,
+            }}
+          >
+            <Styled.p
+              sx={{ fontSize: `16px`, color: `#BABABA`, lineHeight: `1.25` }}
+            >
+              Contact us today to find out how you can take advantage of this
+              transformation in the industry.
+              <br />
+              Copyright © 2019 TEK Industries. All rights reserved.
+            </Styled.p>
           </div>
         </div>
-        <div sx={{ position: ["relative", "relative", "relative", "absolute", "absolute"], right: `5%`, bottom: `10%`, display: ["none", "none", "none", "block", "block"] }}>
-          <Link destination="/">
+        <div
+          sx={{
+            position: [
+              'relative',
+              'relative',
+              'relative',
+              'absolute',
+              'absolute',
+            ],
+            right: `5%`,
+            bottom: `10%`,
+            display: ['none', 'none', 'none', 'block', 'block'],
+          }}
+        >
+          <Link to="/">
             <Img
               sx={{ width: `87px`, backgroundSize: `contain` }}
               fluid={data.allSection.edges[0].node.image.childImageSharp.fluid}
