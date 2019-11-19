@@ -27,7 +27,6 @@ const homecarousel = () => {
     `
   )
 
-  console.log(data.allMdx.edges)
   let quotes = data.allMdx.edges.map(quote => {
     return (
       <div sx={{ height: `80%` }}>
