@@ -17,7 +17,7 @@ import arrowDown from '../components/icons/arrow-down.png'
 const products = ({ data }) => {
   const [firstSection, setFirstSection] = useState(0)
   const [showTable, setShowTable] = useState(false)
-  const [sliderWidth, setSliderWidth] = useState(window.innerWidth)
+  const [sliderWidth, setSliderWidth] = useState(1892)
 
   const sections = data.allSection.edges
 
