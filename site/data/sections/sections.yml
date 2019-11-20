@@ -318,6 +318,35 @@
   page: dealers
   section: 4
 
+  ## Install Page
+- text: TEK HIP CAPS
+  text2: Metal Pro-X Hip Cap Installation Hip Cap Installation
+  text3: Hip Flashing Foot brake tool is required
+  text4: Hip Flashing Foot brake tool is required
+  text5: null
+  buttonText: More
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/installers-on-roof.jpg
+  image2: ../images/installs-header.jpg
+  page: installs
+  section: 1
+
+- text: BECOME A TEK INDUSTRIES DEALER
+  text2: When TEK® Industries brings a new roofing company into our family of partners and clients, we want everyone to succeed and progress. That’s why we’re helping companies that have traditionally focused on fixing roofs now expand their vision and diversify their profit-making.
+  text3: null
+  text4: null
+  text5: null
+  buttonText: More
+  buttonText2: null
+  sidetext: null
+  videoSrcURL: null
+  image: ../images/tek-industries-roofing-partner-red.png
+  image2: ../images/placeholder.png
+  page: installs
+  section: 2
+
 ## 404 Page
 - text: OOPS! THAT PAGE CAN’T BE FOUND.
   text2: The page you are trying to reach doesn't exist.
