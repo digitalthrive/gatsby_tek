@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "@digitalthrive/gatsby-theme-template-tek": "^1.0.1",
