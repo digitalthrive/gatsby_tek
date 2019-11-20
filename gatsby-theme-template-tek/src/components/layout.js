@@ -9,15 +9,6 @@ import './layout.css'
 const Layout = ({ children }) => {
   return (
     <ThemeLayout>
-      <Global
-        styles={{
-          body: {
-            margin: `0`,
-            padding: 0,
-          },
-        }}
-      />
-
       <Header>
         <MenuBar />
       </Header>
