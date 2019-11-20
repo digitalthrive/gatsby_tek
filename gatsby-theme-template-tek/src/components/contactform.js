@@ -16,7 +16,7 @@ const contactform = () => {
       >
         CONTACT <span sx={{ color: `primary` }}>TEK</span> INDUSTRIES
       </Styled.h1>
-      <form
+      {/* <form
         name="contact"
         method="post"
         data-netlify="true"
@@ -63,6 +63,27 @@ const contactform = () => {
           name="message"
         ></textarea>
         <button type="submit">Send message</button>
+      </form> */}
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <Styled.p>
+          <label>
+            Name <input type="text" name="name" />
+          </label>
+        </Styled.p>
+        <Styled.p>
+          <label>
+            Email <input type="email" name="email" />
+          </label>
+        </Styled.p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
       </form>
       <address sx={{ color: `gray`, fontStyle: `normal`, margin: `5% 0 0 0` }}>
         Corp Office
