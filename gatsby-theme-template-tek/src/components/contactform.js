@@ -57,7 +57,7 @@ const contactform = () => {
         <input type="hidden" name="form-name" value="contact" />
         <input type="text" placeholder="Name" name="name" />
         <input type="email" placeholder="Email" name="email" />
-        <input type="company" placeholder="Company" name="company" />
+        <input type="text" placeholder="Company" name="company" />
         <textarea
           placeholder="Let us know about your roofing needs"
           name="message"
@@ -65,10 +65,10 @@ const contactform = () => {
         <button type="submit">Send message</button>
       </form>
       <address sx={{ color: `gray`, fontStyle: `normal`, margin: `5% 0 0 0` }}>
-        Corp Office{' '}
+        Corp Office
         <span sx={{ color: `primary`, fontWeight: `bold` }}>877-729-5229</span>
         <br />
-        Monday –{' '}
+        Monday –
         <span sx={{ color: `primary`, fontWeight: `bold` }}>
           Friday 8a.m. - 5p.m. pst
         </span>
