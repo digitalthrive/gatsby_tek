@@ -80,6 +80,7 @@ const productselector = props => {
               sx={{
                 fontFamily: `heading`,
                 fontSize: 5,
+                color: `text`,
                 margin: 0,
                 padding: 0,
                 display: `inline-block`,

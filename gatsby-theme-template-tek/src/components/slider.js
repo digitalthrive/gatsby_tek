@@ -11,8 +11,8 @@ import afterImage from '../components/images/roof-before.jpg'
 export const slider = () => {
   const [sliderWidth, setSliderWidth] = useState(1892)
 
-  const before = { beforeImage }
-  const after = { afterImage }
+  const before = beforeImage
+  const after = afterImage
 
   window.onload = window.innerWidth
   window.onresize = function() {
