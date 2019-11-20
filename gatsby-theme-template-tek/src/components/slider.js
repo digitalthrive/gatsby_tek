@@ -9,7 +9,7 @@ import beforeImage from '../components/images/roof-after.jpg'
 import afterImage from '../components/images/roof-before.jpg'
 
 export const slider = () => {
-  const [sliderWidth, setSliderWidth] = useState(1892)
+  const [sliderWidth, setSliderWidth] = useState(window.innerWidth)
 
   const before = beforeImage
   const after = afterImage
