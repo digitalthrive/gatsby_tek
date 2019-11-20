@@ -53,6 +53,7 @@ const contactform = () => {
           }
         `}
       >
+        <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
         <input type="text" placeholder="Name" name="name" />
         <input type="email" placeholder="Email" name="email" />
