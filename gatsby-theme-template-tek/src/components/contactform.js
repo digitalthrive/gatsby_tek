@@ -7,7 +7,7 @@ import Img from 'gatsby-image'
 const contactform = () => {
   return (
     <div>
-      <Styled.h1
+      {/* <Styled.h1
         sx={{
           color: `secondary`,
           marginBottom: `0`,
@@ -15,7 +15,7 @@ const contactform = () => {
         }}
       >
         CONTACT <span sx={{ color: `primary` }}>TEK</span> INDUSTRIES
-      </Styled.h1>
+      </Styled.h1> */}
       {/* <form
         name="contact"
         method="post"
@@ -85,7 +85,7 @@ const contactform = () => {
           <button type="submit">Send</button>
         </p>
       </form>
-      <address sx={{ color: `gray`, fontStyle: `normal`, margin: `5% 0 0 0` }}>
+      {/* <address sx={{ color: `gray`, fontStyle: `normal`, margin: `5% 0 0 0` }}>
         Corp Office
         <span sx={{ color: `primary`, fontWeight: `bold` }}>877-729-5229</span>
         <br />
@@ -107,7 +107,7 @@ const contactform = () => {
         At TEK® Industries, our mission is two-fold: to expand our roofing
         family and to renovate the entire roofing market by giving more to
         homeowners.
-      </p>
+      </p> */}
     </div>
   )
 }
