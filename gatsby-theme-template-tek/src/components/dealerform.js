@@ -81,6 +81,7 @@ const dealerform = () => {
           }
         `}
       >
+        <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="dealer" />
         <label for="company_name">Company Name</label>
         <input type="text" placeholder="Company Name" name="company_name" />
