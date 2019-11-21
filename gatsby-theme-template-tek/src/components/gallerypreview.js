@@ -40,28 +40,90 @@ const gallerypreview = () => {
   `)
   let gallery1images = data.gallery1.edges.map((image, index) => {
     return (
-      <Img
-        key={`${image}${index}`}
+      <div
         sx={{
-          height: ['185px', '185px', '185px', '230px', '230px'],
-          width: ['185px', '185px', '185px', '230px', '230px'],
-          margin: ['8px auto', '8px auto', '8px auto', '8px', '8px'],
+          position: `relative`,
+          boxSizing: `border-box`,
+          flexBasis: [
+            'calc(100% - 20px)',
+            'calc(50% - 20px)',
+            'calc(50% - 20px)',
+            'calc(33.333% - 20px)',
+            'calc(33.333% - 20px)',
+          ],
+          margin: `10px`,
+          ':before': {
+            content: '""',
+            display: `block`,
+            paddingTop: `100%`,
+          },
         }}
-        fluid={image.node.childImageSharp.fluid}
-      />
+      >
+        <div
+          sx={{
+            height: `100%`,
+            width: `100%`,
+            position: `absolute`,
+            top: `0`,
+            left: `0`,
+          }}
+        >
+          <Img
+            key={`${image}${index}`}
+            sx={{
+              height: `100%`,
+              width: `100%`,
+              maxWidth: `100%`,
+              display: `block`,
+            }}
+            fluid={image.node.childImageSharp.fluid}
+          />
+        </div>
+      </div>
     )
   })
   let gallery2images = data.gallery2.edges.map((image, index) => {
     return (
-      <Img
-        key={`${image}${index}`}
+      <div
         sx={{
-          height: ['185px', '185px', '185px', '230px', '230px'],
-          width: ['185px', '185px', '185px', '230px', '230px'],
-          margin: ['8px auto', '8px auto', '8px auto', '8px', '8px'],
+          position: `relative`,
+          boxSizing: `border-box`,
+          flexBasis: [
+            'calc(100% - 20px)',
+            'calc(50% - 20px)',
+            'calc(50% - 20px)',
+            'calc(33.333% - 20px)',
+            'calc(33.333% - 20px)',
+          ],
+          margin: `10px`,
+          ':before': {
+            content: '""',
+            display: `block`,
+            paddingTop: `100%`,
+          },
         }}
-        fluid={image.node.childImageSharp.fluid}
-      />
+      >
+        <div
+          sx={{
+            height: `100%`,
+            width: `100%`,
+            position: `absolute`,
+            top: `0`,
+            left: `0`,
+          }}
+        >
+          <Img
+            key={`${image}${index}`}
+            sx={{
+              height: `100%`,
+              width: `100%`,
+              maxWidth: `100%`,
+              display: `block`,
+            }}
+            fluid={image.node.childImageSharp.fluid}
+          />
+        </div>
+      </div>
     )
   })
   return (

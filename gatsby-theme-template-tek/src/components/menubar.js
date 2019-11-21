@@ -81,7 +81,7 @@ const menubar = () => {
             justifySelf: `center`,
           }}
         >
-          <Link to="/">
+          <Link to='/'>
             <Img
               sx={{
                 maxWidth: `382px`,
@@ -110,6 +110,10 @@ const menubar = () => {
                       fontSize: '25px',
                       verticalAlign: `middle`,
                       lineHeight: `100px`,
+                      transition: `all 0.2s ease`,
+                      ':hover': {
+                        color: `primary`,
+                      },
                     }}
                   >
                     {link.name}
@@ -118,7 +122,7 @@ const menubar = () => {
               )
             })}
             <Styled.li
-              key="liLinkMenuLast"
+              key='liLinkMenuLast'
               onClick={() => showHandler('contact')}
             >
               <div
@@ -132,6 +136,10 @@ const menubar = () => {
                   display: `inline-block`,
                   verticalAlign: `middle`,
                   cursor: `pointer`,
+                  transition: `all 0.2s ease`,
+                  ':hover': {
+                    color: `primary`,
+                  },
                 }}
               >
                 Contact
@@ -171,6 +179,12 @@ const menubar = () => {
                 paddingTop: 1,
                 paddingBottom: 1,
                 margin: `0`,
+                transition: `all 0.2s ease`,
+                cursor: `pointer`,
+                ':hover': {
+                  backgroundColor: `text`,
+                  color: `primary`,
+                },
               }}
             >
               BECOME A DEALER

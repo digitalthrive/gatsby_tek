@@ -59,6 +59,14 @@ const menubar = () => {
       <div sx={{ backgroundColor: `black` }}>
         <BackImg fluid={node.node.frontmatter.image.childImageSharp.fluid}>
           <div
+            sx={{
+              width: `100%`,
+              height: `100%`,
+              position: `absolute`,
+              backgroundColor: `rgba(0,0,0,0.25)`,
+            }}
+          ></div>
+          <div
             key={node.node.id}
             sx={{
               width: `100%`,
@@ -125,10 +133,10 @@ const menubar = () => {
                 {node.node.frontmatter.detail}
               </Styled.h3>
               <ButtonV2
-                destination="/"
-                buttonText="MORE"
-                borderColor="background"
-                color="text"
+                destination='/'
+                buttonText='MORE'
+                borderColor='background'
+                color='text'
               />
             </div>
           </div>
@@ -139,7 +147,11 @@ const menubar = () => {
 
   let selectors = data.allMdx.edges.map((node, index) => {
     return (
-      <div key={`${node}${index}`} onClick={() => slideHandler(index)}>
+      <div
+        key={`${node}${index}`}
+        onClick={() => slideHandler(index)}
+        sx={{ cursor: `pointer` }}
+      >
         <BackImg
           fluid={node.node.frontmatter.tabImage.childImageSharp.fluid}
           sx={{
@@ -153,7 +165,6 @@ const menubar = () => {
               alignItems: `center`,
               justifyContent: `flex-start`,
               height: `100%`,
-              cursor: `pointer`,
               ':after': {
                 content: `""`,
                 position: `absolute`,

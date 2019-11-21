@@ -121,6 +121,7 @@ const products = ({ data }) => {
                 sx={{
                   width: ['100%', '100%', '100%', '55%', '55%'],
                   paddingBottom: ['10%', '10%', '10%', '0', '0'],
+                  paddingLeft: ['0', '0', '0', '5%', '5%'],
                   alignSelf: `center`,
                 }}
               >
@@ -162,6 +163,7 @@ const products = ({ data }) => {
                 sx={{
                   width: ['100%', '100%', '100%', '55%', '55%'],
                   paddingBottom: ['10%', '10%', '10%', '0', '0'],
+                  paddingLeft: ['0', '0', '0', '5%', '5%'],
                   alignSelf: `center`,
                 }}
               >
@@ -240,6 +242,10 @@ const products = ({ data }) => {
               borderWidth: `3px`,
               borderStyle: `solid`,
               cursor: `pointer`,
+              transition: `all 0.2s ease`,
+              ':hover': {
+                backgroundColor: `secondary`,
+              },
             }}
             onClick={() => setShowTable(!showTable)}
           >
@@ -256,7 +262,7 @@ const products = ({ data }) => {
               <img
                 src={arrowDown}
                 sx={{ marginLeft: `10px` }}
-                alt="down arrow"
+                alt='down arrow'
               />
             </p>
           </div>
@@ -304,7 +310,7 @@ const products = ({ data }) => {
           <Styled.h2 sx={{ color: 'text', ':after': { borderColor: 'text' } }}>
             TOP BENEFITS
           </Styled.h2>
-          <ol>
+          <ol sx={{ color: `text` }}>
             <li>Highly reflective to the radiant heat.</li>
             <li>
               Foam Insulation inserts for increased R-value and walkability.

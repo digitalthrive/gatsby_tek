@@ -121,7 +121,9 @@ const comparisontable = () => {
                 color: `secondary`,
               }}
             >
-              <p sx={{ padding: `2%`, fontWeight: `bold` }}>1</p>
+              <p sx={{ padding: `2%`, fontWeight: `bold`, color: `secondary` }}>
+                1
+              </p>
             </td>
             <td
               sx={{
@@ -135,7 +137,7 @@ const comparisontable = () => {
                 color: `secondary`,
               }}
             >
-              <p sx={{ padding: `2%`, fontWeight: `bold` }}>
+              <p sx={{ padding: `2%`, fontWeight: `bold`, color: `secondary` }}>
                 Top left seam where overlap occurs
               </p>
             </td>
@@ -151,7 +153,9 @@ const comparisontable = () => {
                 color: `secondary`,
               }}
             >
-              <p sx={{ padding: `2%`, fontWeight: `bold` }}>0.125”</p>
+              <p sx={{ padding: `2%`, fontWeight: `bold`, color: `secondary` }}>
+                0.125”
+              </p>
             </td>
             <td
               sx={{
@@ -165,7 +169,7 @@ const comparisontable = () => {
                 color: `secondary`,
               }}
             >
-              <p sx={{ padding: `2%`, fontWeight: `bold` }}>
+              <p sx={{ padding: `2%`, fontWeight: `bold`, color: `secondary` }}>
                 No visible evidence of tearing, cracking, fracturing, splitting,
                 <br />
                 rupture, crazing, or other evidence of opening in the prepared
@@ -184,7 +188,9 @@ const comparisontable = () => {
                 color: `secondary`,
               }}
             >
-              <p sx={{ padding: `2%`, fontWeight: `bold` }}>PASS</p>
+              <p sx={{ padding: `2%`, fontWeight: `bold`, color: `secondary` }}>
+                PASS
+              </p>
             </td>
           </tr>
 
@@ -201,7 +207,9 @@ const comparisontable = () => {
                 color: `secondary`,
               }}
             >
-              <p sx={{ padding: `2%`, fontWeight: `bold` }}>1</p>
+              <p sx={{ padding: `2%`, fontWeight: `bold`, color: `secondary` }}>
+                1
+              </p>
             </td>
             <td
               sx={{
@@ -215,7 +223,9 @@ const comparisontable = () => {
                 color: `secondary`,
               }}
             >
-              <p sx={{ padding: `2%`, fontWeight: `bold` }}>Top left seam where overlap occurs</p>
+              <p sx={{ padding: `2%`, fontWeight: `bold`, color: `secondary` }}>
+                Top left seam where overlap occurs
+              </p>
             </td>
             <td
               sx={{
@@ -229,7 +239,9 @@ const comparisontable = () => {
                 color: `secondary`,
               }}
             >
-              <p sx={{ padding: `2%`, fontWeight: `bold` }}>0.125”</p>
+              <p sx={{ padding: `2%`, fontWeight: `bold`, color: `secondary` }}>
+                0.125”
+              </p>
             </td>
             <td
               sx={{
@@ -243,7 +255,7 @@ const comparisontable = () => {
                 color: `secondary`,
               }}
             >
-              <p sx={{ padding: `2%`, fontWeight: `bold` }}>
+              <p sx={{ padding: `2%`, fontWeight: `bold`, color: `secondary` }}>
                 No visible evidence of tearing, cracking, fracturing, splitting,
                 <br />
                 rupture, crazing, or other evidence of opening in the prepared
@@ -262,7 +274,9 @@ const comparisontable = () => {
                 color: `secondary`,
               }}
             >
-              <p sx={{ padding: `2%`, fontWeight: `bold` }}>PASS</p>
+              <p sx={{ padding: `2%`, fontWeight: `bold`, color: `secondary` }}>
+                PASS
+              </p>
             </td>
           </tr>
         </tbody>

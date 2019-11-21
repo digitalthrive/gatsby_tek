@@ -13,16 +13,34 @@ const comparisontable = () => {
         borderColor: `text`,
         borderCollapse: `collapse`,
         textAlign: `center`,
-        margin: `5% 0`
+        margin: `5% 0`,
       }}
     >
       <thead>
         <th sx={{ bg: `text` }}></th>
         <th sx={{ bg: `text` }}>
-          <Styled.h3 sx={{ color: "primary", margin: `0`, padding: `0`, fontSize: ['2', '2', '2', '3', '3'] }}>BEST RATED FOR SEVERE WEATHER</Styled.h3>
+          <Styled.h3
+            sx={{
+              color: 'primary',
+              margin: `0`,
+              padding: `0`,
+              fontSize: ['2', '2', '2', '3', '3'],
+            }}
+          >
+            BEST RATED FOR SEVERE WEATHER
+          </Styled.h3>
         </th>
         <th sx={{ bg: `text` }}>
-          <Styled.h3 sx={{ color: "primary", margin: `0`, padding: `0`, fontSize: ['2', '2', '2', '3', '3'] }}>HIDDEN FASTENER TECHNOLOGY</Styled.h3>
+          <Styled.h3
+            sx={{
+              color: 'primary',
+              margin: `0`,
+              padding: `0`,
+              fontSize: ['2', '2', '2', '3', '3'],
+            }}
+          >
+            HIDDEN FASTENER TECHNOLOGY
+          </Styled.h3>
         </th>
       </thead>
       <tbody>
@@ -37,7 +55,16 @@ const comparisontable = () => {
               borderCollapse: `collapse`,
             }}
           >
-            <Styled.h3 sx={{ margin: `0`, padding: `0`, color: "text", fontSize: ['2', '2', '2', '3', '3'] }}>KEY DIFFERENCES</Styled.h3>
+            <Styled.h3
+              sx={{
+                margin: `0`,
+                padding: `0`,
+                color: 'text',
+                fontSize: ['2', '2', '2', '3', '3'],
+              }}
+            >
+              KEY DIFFERENCES
+            </Styled.h3>
           </td>
           <td
             sx={{
@@ -49,7 +76,11 @@ const comparisontable = () => {
               borderCollapse: `collapse`,
             }}
           >
-            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
+            <img
+              src={checkMark}
+              alt='Check mark'
+              sx={{ verticalAlign: `middle` }}
+            />
           </td>
           <td
             sx={{
@@ -61,48 +92,11 @@ const comparisontable = () => {
               borderCollapse: `collapse`,
             }}
           >
-            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
-          </td>
-        </tr>
-        <tr>
-          <td
-            sx={{
-              borderLeft: `2px solid`,
-              borderRight: `2px solid`,
-              borderTop: `none`,
-              borderBottom: `none`,
-              borderColor: `text`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#676767`
-            }}
-          >
-            <p>20 Gauge Steel Core</p>
-          </td>
-          <td
-            sx={{
-              borderLeft: `2px solid`,
-              borderRight: `2px solid`,
-              borderTop: `none`,
-              borderBottom: `none`,
-              borderColor: `text`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#676767`
-            }}
-          >
-            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
-          </td>
-          <td
-            sx={{
-              borderLeft: `2px solid`,
-              borderRight: `2px solid`,
-              borderTop: `none`,
-              borderBottom: `none`,
-              borderColor: `text`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#676767`
-            }}
-          >
-            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
+            <img
+              src={checkMark}
+              alt='Check mark'
+              sx={{ verticalAlign: `middle` }}
+            />
           </td>
         </tr>
         <tr>
@@ -114,9 +108,10 @@ const comparisontable = () => {
               borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
+              backgroundColor: `#676767`,
             }}
           >
-            <p>Thingie</p>
+            <p sx={{ color: `text` }}>20 Gauge Steel Core</p>
           </td>
           <td
             sx={{
@@ -126,9 +121,14 @@ const comparisontable = () => {
               borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
+              backgroundColor: `#676767`,
             }}
           >
-            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
+            <img
+              src={checkMark}
+              alt='Check mark'
+              sx={{ verticalAlign: `middle` }}
+            />
           </td>
           <td
             sx={{
@@ -138,9 +138,14 @@ const comparisontable = () => {
               borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
+              backgroundColor: `#676767`,
             }}
           >
-            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
+            <img
+              src={checkMark}
+              alt='Check mark'
+              sx={{ verticalAlign: `middle` }}
+            />
           </td>
         </tr>
         <tr>
@@ -152,10 +157,9 @@ const comparisontable = () => {
               borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
-              backgroundColor: `#676767`
             }}
           >
-            <p>Thingie</p>
+            <p sx={{ color: `text` }}>Thingie</p>
           </td>
           <td
             sx={{
@@ -165,10 +169,13 @@ const comparisontable = () => {
               borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
-              backgroundColor: `#676767`
             }}
           >
-            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
+            <img
+              src={checkMark}
+              alt='Check mark'
+              sx={{ verticalAlign: `middle` }}
+            />
           </td>
           <td
             sx={{
@@ -178,10 +185,62 @@ const comparisontable = () => {
               borderBottom: `none`,
               borderColor: `text`,
               borderCollapse: `collapse`,
-              backgroundColor: `#676767`
             }}
           >
-            <img src={checkMark} alt="Check mark" sx={{ verticalAlign: `middle` }} />
+            <img
+              src={checkMark}
+              alt='Check mark'
+              sx={{ verticalAlign: `middle` }}
+            />
+          </td>
+        </tr>
+        <tr>
+          <td
+            sx={{
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#676767`,
+            }}
+          >
+            <p sx={{ color: `text` }}>Thingie</p>
+          </td>
+          <td
+            sx={{
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#676767`,
+            }}
+          >
+            <img
+              src={checkMark}
+              alt='Check mark'
+              sx={{ verticalAlign: `middle` }}
+            />
+          </td>
+          <td
+            sx={{
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `none`,
+              borderBottom: `none`,
+              borderColor: `text`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#676767`,
+            }}
+          >
+            <img
+              src={checkMark}
+              alt='Check mark'
+              sx={{ verticalAlign: `middle` }}
+            />
           </td>
         </tr>
       </tbody>

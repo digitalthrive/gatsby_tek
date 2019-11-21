@@ -29,58 +29,63 @@ const gallery = ({ data }) => {
     <Layout>
       <BackImg
         fluid={sectionOne[0].node.image.childImageSharp.fluid}
-        sx={{ backgroundSize: `contain`, backgroundPosition: `top`, backgroundColor: `#fff`, overflow: `hidden` }}
+        sx={{
+          backgroundSize: `contain`,
+          backgroundPosition: `top`,
+          backgroundColor: `#fff`,
+          overflow: `hidden`,
+        }}
       >
         <div
           sx={{
-          position: `relative`,
-          ':before': {
-            content: '""',
-            display: ['none', 'none', 'block', 'block', 'block'],
-            position: `absolute`,
-            zIndex: `-1`,
-            top: `0`,
-            left: `0`,
-            right: `0`,
-            width: `100%`,
-            height: `100vh`,
-            background: `rgba(0,0,0,0.45)`
-            }
-          }}
-        >
-        <div
-          sx={{
-          ':before': {
-            content: '""',
-            display: ['none', 'none', 'block', 'block', 'block'],
-            position: `absolute`,
-            zIndex: `-1`,
-            top: ['-550px', '-550px', '-470px', '-470px', '0'],
-            bottom: `-750px`,
-            left: `-250px`,
-            width: `300vw`,
-            height: `200vh`,
-            background: `white`,
-            transform: `skew(-65deg)`
-            }
+            position: `relative`,
+            ':before': {
+              content: '""',
+              display: ['none', 'none', 'block', 'block', 'block'],
+              position: `absolute`,
+              zIndex: `-1`,
+              top: `0`,
+              left: `0`,
+              right: `0`,
+              width: `100%`,
+              height: `100vh`,
+              background: `rgba(0,0,0,0.45)`,
+            },
           }}
         >
           <div
-            key={sectionOne[0].node.id}
             sx={{
-              margin: `0 auto`,
-              width: ['auto', 'auto', 'auto', '85vw', '85vw'],
-              padding: `10% 0`
+              ':before': {
+                content: '""',
+                display: ['none', 'none', 'block', 'block', 'block'],
+                position: `absolute`,
+                zIndex: `-1`,
+                top: ['-550px', '-550px', '-470px', '-470px', '0'],
+                bottom: `-750px`,
+                left: `-250px`,
+                width: `300vw`,
+                height: `200vh`,
+                background: `white`,
+                transform: `skew(-65deg)`,
+              },
             }}
           >
-            <Gallery
-              toptext={sectionOne[0].node.text}
-              subtext={sectionOne[0].node.text2}
-              header1={sectionOne[0].node.text3}
-              header2={sectionOne[0].node.text4}
-            />
+            <div
+              key={sectionOne[0].node.id}
+              sx={{
+                margin: `0 auto`,
+                width: ['auto', 'auto', 'auto', '85vw', '85vw'],
+                padding: `10% 0`,
+              }}
+            >
+              <Gallery
+                toptext={sectionOne[0].node.text}
+                subtext={sectionOne[0].node.text2}
+                header1={sectionOne[0].node.text3}
+                header2={sectionOne[0].node.text4}
+              />
+            </div>
           </div>
-        </div>
         </div>
       </BackImg>
     </Layout>

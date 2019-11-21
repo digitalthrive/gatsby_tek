@@ -16,19 +16,23 @@ div[class*='styles_handle'] {
 }
 div[class*='styles_afterWrapper']:before {
   content: 'Before';
+  color: #fff;
   position: absolute;
   right: 50px;
   top: 45%;
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
   text-transform: uppercase;
+  font-family: 'Bebas Neue', system-ui, sans-serif;
 }
 div[class*='styles_handle']:after {
   content: 'After';
+  color: #fff;
   position: absolute;
   right: -148px;
   top: 45%;
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
   text-transform: uppercase;
+  font-family: 'Bebas Neue', system-ui, sans-serif;
 }

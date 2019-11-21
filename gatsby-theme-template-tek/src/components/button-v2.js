@@ -15,7 +15,7 @@ const button = props => {
           color: `${props.color}`,
           bg: 'none',
           fontFamily: 'heading',
-          fontSize: `2` + "5px",
+          fontSize: `2` + '5px',
           letterSpacing: 1,
           width: `fit-content`,
           textAlign: `center`,
@@ -23,6 +23,12 @@ const button = props => {
           lineHeight: `header`,
           border: `2px solid`,
           borderColor: `${props.borderColor}`,
+          transition: `all 0.2s ease`,
+          cursor: `pointer`,
+          ':hover': {
+            backgroundColor: `primary`,
+            color: `text`,
+          },
         }}
       >
         <p
@@ -31,7 +37,7 @@ const button = props => {
             paddingRight: 5,
             paddingTop: 2,
             paddingBottom: 2,
-            margin: 0
+            margin: 0,
           }}
         >
           {props.buttonText}

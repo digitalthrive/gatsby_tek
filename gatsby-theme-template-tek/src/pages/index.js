@@ -116,10 +116,10 @@ const homepage = ({ data }) => {
               />
               <p sx={{ color: `grey` }}>{sectionTwo[0].node.text5}</p>
               <ButtonV2
-                destination="/products"
+                destination='/products'
                 buttonText={sectionTwo[0].node.buttonText}
-                borderColor="primary"
-                color="primary"
+                borderColor='primary'
+                color='primary'
               />
             </div>
           </div>
@@ -139,7 +139,7 @@ const homepage = ({ data }) => {
             }}
           >
             <div
-              sx={{ height: `8px`, width: `10%`, backgroundColor: 'primary' }}
+              sx={{ height: `8px`, width: `8%`, backgroundColor: 'primary' }}
             ></div>
             <Styled.h2
               sx={{
@@ -154,7 +154,7 @@ const homepage = ({ data }) => {
               {sectionThree[0].node.text}
             </Styled.h2>
             <div
-              sx={{ height: `8px`, width: `10%`, backgroundColor: 'primary' }}
+              sx={{ height: `8px`, width: `8%`, backgroundColor: 'primary' }}
             ></div>
             <Styled.h2
               sx={{
@@ -169,7 +169,7 @@ const homepage = ({ data }) => {
               {sectionThree[0].node.text2}
             </Styled.h2>
             <div
-              sx={{ height: `8px`, width: `10%`, backgroundColor: 'primary' }}
+              sx={{ height: `8px`, width: `8%`, backgroundColor: 'primary' }}
             ></div>
             <Styled.h2
               sx={{
@@ -184,7 +184,7 @@ const homepage = ({ data }) => {
               {sectionThree[0].node.text3}
             </Styled.h2>
             <div
-              sx={{ height: `8px`, width: `10%`, backgroundColor: 'primary' }}
+              sx={{ height: `8px`, width: `8%`, backgroundColor: 'primary' }}
             ></div>
             <Img
               sx={{
@@ -215,7 +215,7 @@ const homepage = ({ data }) => {
               fluid={sectionThree[0].node.image.childImageSharp.fluid}
             />
             <div
-              sx={{ height: `8px`, width: `15%`, backgroundColor: 'primary' }}
+              sx={{ height: `8px`, width: `8%`, backgroundColor: 'primary' }}
             ></div>
           </div>
         </BackImg>
@@ -277,10 +277,10 @@ const homepage = ({ data }) => {
               />
               <p sx={{ color: `grey` }}>{sectionFour[0].node.text5}</p>
               <ButtonV2
-                destination="/products"
+                destination='/products'
                 buttonText={sectionFour[0].node.buttonText}
-                borderColor="primary"
-                color="primary"
+                borderColor='primary'
+                color='primary'
               />
             </div>
           </div>
@@ -305,9 +305,9 @@ const homepage = ({ data }) => {
                 <Styled.h2>{sectionFive[0].node.text}</Styled.h2>
                 <ButtonV2
                   buttonText={sectionFive[0].node.buttonText}
-                  destination="/gallery"
-                  borderColor="primary"
-                  color="primary"
+                  destination='/gallery'
+                  borderColor='primary'
+                  color='primary'
                 />
               </div>
               <div
@@ -322,26 +322,46 @@ const homepage = ({ data }) => {
           </Section>
         </div>
       ) : null}
-      <div
+      <BackImg
+        fluid={data.quoteImage.childImageSharp.fluid}
         sx={{
-          backgroundColor: `#000`,
-          display: `flex`,
-          flexDirection: `column`,
-          justifyContent: `center`,
-          alignContent: `center`,
-          textAlign: `center`,
-          padding: ['10% 0', '10% 0', '10% 0', '10% 0', '10% 0'],
+          backgroundSize: `cover`,
+          position: `relative`,
+          overflow: `hidden`,
         }}
       >
-        <Section>
-          <Styled.h2
-            sx={{ color: `text`, marginTop: `0`, ':after': { right: `0` } }}
-          >
-            Testimonials
-          </Styled.h2>
-          <HomeQuotes />
-        </Section>
-      </div>
+        <div
+          sx={{
+            display: `flex`,
+            flexDirection: `column`,
+            justifyContent: `center`,
+            alignContent: `center`,
+            textAlign: `center`,
+            padding: ['5% 0', '5% 0', '5% 0', '5% 0', '5% 0'],
+            ':before': {
+              content: '""',
+              display: ['block', 'block', 'block', 'block', 'block'],
+              position: `absolute`,
+              zIndex: `-1`,
+              top: `0`,
+              left: `0`,
+              right: `0`,
+              width: `100%`,
+              height: `100vh`,
+              background: `rgba(0,0,0,0.8)`,
+            },
+          }}
+        >
+          <Section>
+            <Styled.h2
+              sx={{ color: `text`, marginTop: `0`, ':after': { right: `0` } }}
+            >
+              Testimonials
+            </Styled.h2>
+            <HomeQuotes />
+          </Section>
+        </div>
+      </BackImg>
       <div sx={{ backgroundColor: 'primary' }}>
         {sectionSix.length > 0 ? (
           <Section key={sectionSix[0].node.id}>
@@ -384,9 +404,9 @@ const homepage = ({ data }) => {
                 </Styled.p>
                 <ButtonV2
                   buttonText={sectionSix[0].node.buttonText}
-                  destination="/dealers"
-                  borderColor="text"
-                  color="text"
+                  destination='/dealers'
+                  borderColor='text'
+                  color='text'
                 />
               </div>
             </div>
@@ -394,9 +414,9 @@ const homepage = ({ data }) => {
         ) : null}
       </div>
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.5361872519593!2d-117.49578258383998!3d33.90159718064733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcb772d99ff651%3A0x88ea560d6f039e2!2s11801%20Pierce%20St%20%23200%2C%20Riverside%2C%20CA%2092505!5e0!3m2!1sen!2sus!4v1573077629628!5m2!1sen!2sus"
-        height="600"
-        frameBorder="0"
+        src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.5361872519593!2d-117.49578258383998!3d33.90159718064733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcb772d99ff651%3A0x88ea560d6f039e2!2s11801%20Pierce%20St%20%23200%2C%20Riverside%2C%20CA%2092505!5e0!3m2!1sen!2sus!4v1573077629628!5m2!1sen!2sus'
+        height='600'
+        frameBorder='0'
         sx={{ width: `100%`, display: `block` }}
       ></iframe>
     </Layout>
@@ -428,6 +448,13 @@ export const query = graphql`
             }
           }
           section
+        }
+      }
+    }
+    quoteImage: file(relativePath: { regex: "images/installers-on-roof*/" }) {
+      childImageSharp {
+        fluid(maxHeight: 800, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

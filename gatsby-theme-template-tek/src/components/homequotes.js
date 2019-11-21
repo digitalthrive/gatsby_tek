@@ -29,7 +29,10 @@ const homecarousel = () => {
 
   let quotes = data.allMdx.edges.map((quote, index) => {
     return (
-      <div key={`${quote}${index}`} sx={{ height: `80%` }}>
+      <div
+        key={`${quote}${index}`}
+        sx={{ height: `80%`, padding: `0 5%`, boxSizing: `border-box` }}
+      >
         <Styled.h3
           sx={{ fontFamily: 'body', color: 'text', position: `relative` }}
         >
@@ -61,16 +64,27 @@ const homecarousel = () => {
             {quote.node.frontmatter.quote}
           </div>
         </Styled.h3>
-        <Styled.h3
-          sx={{ fontFamily: 'body', padding: `0`, margin: `0`, color: 'text' }}
+        <Styled.p
+          sx={{
+            fontFamily: 'body',
+            padding: `0`,
+            margin: `0`,
+            color: 'text',
+            fontWeight: `bold`,
+          }}
         >
           {quote.node.frontmatter.name}
-        </Styled.h3>
-        <Styled.h3
-          sx={{ fontFamily: 'body', padding: `0`, margin: `0`, color: 'text' }}
+        </Styled.p>
+        <Styled.p
+          sx={{
+            fontFamily: 'body',
+            padding: `0 0 5% 0`,
+            margin: `0`,
+            color: 'text',
+          }}
         >
           {quote.node.frontmatter.descriptor}
-        </Styled.h3>
+        </Styled.p>
       </div>
     )
   })
