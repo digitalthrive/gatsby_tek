@@ -1,0 +1,17 @@
+backend:
+  name: 'github'
+  repo: digitalthrive/gatsby_tek
+  branch: feature/netlify_cms
+
+media_folder: data/images
+public_folder: /images
+
+collections:
+  - name: 'items'
+    label: 'Items'
+    folder: 'data/items'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Abbreviation', name: 'abbreviations', widget: 'string' }
