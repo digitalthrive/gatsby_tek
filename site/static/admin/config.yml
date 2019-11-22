@@ -1,7 +1,5 @@
 backend:
-<<<<<<< HEAD
   name: git-gateway
-  branch: master
 
 media_folder: data/images/
 public_folder: /img
@@ -23,20 +21,3 @@ collections:
       - { label: 'Image', name: 'image', widget: 'string' }
       - { label: 'Tab Image', name: 'tabImage', widget: 'string' }
       - { label: 'Order', name: 'order', widget: 'string' }
-=======
-  name: test-repo
-  branch: feature/netlify_cms
-
-media_folder: data/images
-public_folder: /images
-
-collections:
-  - name: 'items'
-    label: 'Items'
-    folder: 'data/items'
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Abbreviation', name: 'abbreviations', widget: 'string' }
->>>>>>> 9d8dc51a6e86174bd8046d3cc66eae2b4f0abaff
