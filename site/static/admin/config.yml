@@ -1,13 +1,13 @@
 backend:
   name: git-gateway
 
-media_folder: data/images/
+media_folder: site/data/images/
 public_folder: /img
 
 collections:
   - name: 'feature'
     label: 'Features'
-    folder: 'data/homescroller'
+    folder: 'site/data/homescroller'
     create: true
     editor:
       preview: false
