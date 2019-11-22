@@ -128,6 +128,7 @@ const footer = () => {
             sx={{
               paddingRight: `20px`,
               margin: ['5% 0 5% 0', '5% 0 5% 0', '5% 0 5% 0', '0', '0'],
+              color: `text`,
             }}
           >
             <address
@@ -164,6 +165,7 @@ const footer = () => {
               fontSize: '2',
               paddingRight: `20px`,
               margin: ['5% 0 5% 0', '5% 0 5% 0', '5% 0 5% 0', '0', '0'],
+              color: `text`,
             }}
           >
             <h3
