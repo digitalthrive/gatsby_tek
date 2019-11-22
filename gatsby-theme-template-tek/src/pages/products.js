@@ -306,7 +306,7 @@ const products = ({ data }) => {
         }}
       >
         <Img fluid={sectionNine[0].node.image.childImageSharp.fluid} />
-        <div sx={{ padding: `5% 5% 5% 15%` }}>
+        <div sx={{ padding: `5% 5% 5% 15%`, color: `text` }}>
           <Styled.h2 sx={{ color: 'text', ':after': { borderColor: 'text' } }}>
             TOP BENEFITS
           </Styled.h2>
