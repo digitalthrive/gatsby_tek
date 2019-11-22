@@ -138,6 +138,7 @@ const footer = () => {
                 sx={{
                   margin: `0`,
                   padding: `0`,
+                  color: `text`,
                   ':after': {
                     content: `""`,
                     display: `inline-block`,
@@ -150,7 +151,7 @@ const footer = () => {
               >
                 Address
               </h3>
-              <p sx={{ marginTop: `0` }}>
+              <p sx={{ marginTop: `0`, color: `text` }}>
                 Manufactured by TEK Industries LLC
                 <br />
                 11801 Pierce Street, Suite 200
@@ -172,6 +173,7 @@ const footer = () => {
               sx={{
                 margin: `0`,
                 padding: `0`,
+                color: `text`,
                 ':after': {
                   content: `""`,
                   display: `inline-block`,
@@ -184,7 +186,7 @@ const footer = () => {
             >
               Phone
             </h3>
-            <p sx={{ marginTop: `0` }}>
+            <p sx={{ marginTop: `0`, color: `text` }}>
               Corp Office
               <br />
               877-729-5229
@@ -201,7 +203,7 @@ const footer = () => {
                   padding: `0 10px`,
                 }}
               >
-                <Link to="/" sx={{ color: 'text' }}>
+                <Link to='/' sx={{ color: 'text' }}>
                   <FaFacebookF sx={{ fontSize: '3' }} />
                 </Link>
               </li>
@@ -212,7 +214,7 @@ const footer = () => {
                   padding: `0 10px`,
                 }}
               >
-                <Link to="/" sx={{ color: 'text' }}>
+                <Link to='/' sx={{ color: 'text' }}>
                   <FaYoutube sx={{ fontSize: '3' }} />
                 </Link>
               </li>
@@ -258,7 +260,7 @@ const footer = () => {
             display: ['none', 'none', 'none', 'block', 'block'],
           }}
         >
-          <Link to="/">
+          <Link to='/'>
             <Img
               sx={{ width: `87px`, backgroundSize: `contain` }}
               fluid={data.allSection.edges[0].node.image.childImageSharp.fluid}

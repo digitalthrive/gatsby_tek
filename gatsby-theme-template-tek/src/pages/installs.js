@@ -65,7 +65,7 @@ const installs = ({ data }) => {
                 <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
                   <Styled.h3
                     sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>1</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Install 2×2 boards along hip area. Board spacing will vary.</p>
+                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Install 2×2 boards along hip area. Board spacing will vary.</p>
                 </div>
               </div>
 
@@ -80,7 +80,7 @@ const installs = ({ data }) => {
                 <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
                   <Styled.h3
                     sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>2</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Using pre painted weather resistant ring shank nails, fasten hip cap to the 2×2 boards.</p>
+                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Using pre painted weather resistant ring shank nails, fasten hip cap to the 2×2 boards.</p>
                 </div>
               </div>
 
@@ -95,7 +95,7 @@ const installs = ({ data }) => {
                 <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
                   <Styled.h3
                     sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>3</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Nail placement should be on the bottom left and right side of each hip cap.</p>
+                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Nail placement should be on the bottom left and right side of each hip cap.</p>
                 </div>
               </div>
 
@@ -110,7 +110,7 @@ const installs = ({ data }) => {
                 <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
                   <Styled.h3
                     sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>4</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Finished! As a final check, your hip cap line should appear straight and beautiful.</p>
+                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Finished! As a final check, your hip cap line should appear straight and beautiful.</p>
                 </div>
               </div>
 
@@ -136,7 +136,7 @@ const installs = ({ data }) => {
                 <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
                   <Styled.h3
                     sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>1</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Using a Foot brake bend Panel up 2×2 board and even with the top of 2×2 board.</p>
+                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Using a Foot brake bend Panel up 2×2 board and even with the top of 2×2 board.</p>
                 </div>
               </div>
 
@@ -151,7 +151,7 @@ const installs = ({ data }) => {
                 <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
                   <Styled.h3
                     sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>2</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Make sure panel is snug against 2×2 board for optimal hip cap placement.</p>
+                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Make sure panel is snug against 2×2 board for optimal hip cap placement.</p>
                 </div>
               </div>
           </div>

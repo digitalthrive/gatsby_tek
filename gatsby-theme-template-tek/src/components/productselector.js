@@ -84,6 +84,7 @@ const productselector = props => {
                 margin: 0,
                 padding: 0,
                 display: `inline-block`,
+                transition: `all 0.3s ease`,
                 transform:
                   activeFrame === `frame${indexNum}` ? null : `rotate(90deg)`,
               }}
