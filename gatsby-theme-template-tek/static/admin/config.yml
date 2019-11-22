@@ -1,7 +1,5 @@
 backend:
-  name: 'github'
-  repo: digitalthrive/gatsby_tek
-  branch: feature/netlify_cms
+  name: git-gateway
 
 media_folder: data/images
 public_folder: /images
