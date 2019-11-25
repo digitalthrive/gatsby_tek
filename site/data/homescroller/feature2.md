@@ -1,4 +1,5 @@
 ---
+title: Feature 2
 name: TEK FEATURED UPGRADE
 headerTopLine: TEK
 headerLargeWord: FEATURED

@@ -1,4 +1,5 @@
 ---
+title: Feature 1
 name: TEK DURABILITY
 headerTopLine: MOST
 headerLargeWord: DURABLE

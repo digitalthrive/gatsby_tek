@@ -1,4 +1,5 @@
 ---
+title: Feature 3
 name: TEK PRO UPGRADE
 headerTopLine: TEK
 headerLargeWord: PRO
