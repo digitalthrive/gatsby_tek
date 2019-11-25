@@ -13,16 +13,13 @@ const productselector = cold(props => {
 
   const data = useStaticQuery(graphql`
     query ProductSelectorQuery {
-      allMdx(
+      allMarkdownRemark(
         sort: { fields: frontmatter___order }
         filter: { fileAbsolutePath: { regex: "/productselector/" } }
       ) {
         edges {
           node {
             id
-            fields {
-              slug
-            }
             frontmatter {
               title
               image {
@@ -40,7 +37,7 @@ const productselector = cold(props => {
     }
   `)
 
-  let outputFrames = data.allMdx.edges.map((product, index) => {
+  let outputFrames = data.allMarkdownRemark.edges.map((product, index) => {
     let indexNum = index + 1
     return (
       <div

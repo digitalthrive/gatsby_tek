@@ -17,42 +17,51 @@ const pageNotFound = ({ data }) => {
   })
 
   return (
-      <Layout>
-        <Section>
-          <div sx={{ display: `flex`, flexDirection: `column`, flex: `1 1 auto`, height: `100%`, padding: `10% 0` }}>
-            <Styled.h2
-              sx={{
-                position: `relative`,
-                fontSize: `6`,
-                marginBottom: `0`,
-                ':after': {
-                  content: `""`,
-                  position: `absolute`,
-                  bottom: `0`,
-                  left: `0`,
-                  width: `20%`,
-                  height: `3px`,
-                  margin: `0 auto`,
-                  display: `block`,
-                  backgroundColor: 'primary',
-                },
-              }}
-            >
-              {sectionOne[0].node.text}
-            </Styled.h2>
-            <p sx={{ color: `grey`, padding: `1% 0` }}>{sectionOne[0].node.text2}</p>
-            <ButtonV2
-              destination="/"
-              buttonText={sectionOne[0].node.buttonText}
-              borderColor="primary"
-              color="primary"
-            />
-          </div>
-        </Section>
-      </Layout>
+    <Layout>
+      <Section>
+        <div
+          sx={{
+            display: `flex`,
+            flexDirection: `column`,
+            flex: `1 1 auto`,
+            height: `100%`,
+            padding: `10% 0`,
+          }}
+        >
+          <Styled.h2
+            sx={{
+              position: `relative`,
+              fontSize: `6`,
+              marginBottom: `0`,
+              ':after': {
+                content: `""`,
+                position: `absolute`,
+                bottom: `0`,
+                left: `0`,
+                width: `20%`,
+                height: `3px`,
+                margin: `0 auto`,
+                display: `block`,
+                backgroundColor: 'primary',
+              },
+            }}
+          >
+            {sectionOne[0].node.text}
+          </Styled.h2>
+          <p sx={{ color: `grey`, padding: `1% 0` }}>
+            {sectionOne[0].node.text2}
+          </p>
+          <ButtonV2
+            destination="/"
+            buttonText={sectionOne[0].node.buttonText}
+            borderColor="primary"
+            color="primary"
+          />
+        </div>
+      </Section>
+    </Layout>
   )
 }
-
 
 export const query = graphql`
   query PageNotFoundPageQuery {
@@ -84,7 +93,7 @@ export const query = graphql`
         }
       }
     }
-    allMdx(filter: { fileAbsolutePath: { regex: "/items/" } }) {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/items/" } }) {
       edges {
         node {
           id

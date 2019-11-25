@@ -11,7 +11,9 @@ const homecarousel = cold(() => {
   const data = useStaticQuery(
     graphql`
       query MyQuery {
-        allMdx(filter: { fileAbsolutePath: { regex: "/hometestimonial/" } }) {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/hometestimonial/" } }
+        ) {
           edges {
             node {
               fileAbsolutePath
@@ -28,7 +30,7 @@ const homecarousel = cold(() => {
     `
   )
 
-  let quotes = data.allMdx.edges.map((quote, index) => {
+  let quotes = data.allMarkdownRemark.edges.map((quote, index) => {
     return (
       <div
         key={`${quote}${index}`}

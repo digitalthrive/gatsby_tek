@@ -85,7 +85,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // We only want to operate on `Mdx` nodes. If we had content from a
   // remote CMS we could also check to see if the parent node was a
   // `File` node here
-  if (node.internal.type === 'Mdx') {
+  if (node.internal.type === 'MarkdownRemark') {
     const value = createFilePath({ node, getNode })
     createNodeField({
       // Name of the field you are adding
@@ -111,7 +111,7 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
 
   const result = await graphql(`
     query {
-      allMdx(filter: { fileAbsolutePath: { regex: "/items/" } }) {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/items/" } }) {
         edges {
           node {
             id
@@ -127,7 +127,7 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
     reporter.panic('🚨  ERROR: Loading "createPages" query', result.errors)
   }
 
-  const posts = result.data.allMdx.edges
+  const posts = result.data.allMarkdownRemark.edges
 
   posts.forEach(({ node }, index) => {
     createPage({

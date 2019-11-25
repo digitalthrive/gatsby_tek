@@ -48,6 +48,7 @@ module.exports = ({ contentPath = 'data', basePath = '/' }) => ({
         path: `${contentPath}/hometestimonial/`,
       },
     },
+    `gatsby-transformer-remark`,
 
     {
       resolve: `gatsby-source-filesystem`,

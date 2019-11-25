@@ -17,7 +17,7 @@ const menubar = cold(() => {
   }
   const data = useStaticQuery(graphql`
     query HomeScrollerQuery {
-      allMdx(
+      allMarkdownRemark(
         sort: { fields: frontmatter___order }
         filter: { fileAbsolutePath: { regex: "/homescroller/" } }
       ) {
@@ -55,7 +55,7 @@ const menubar = cold(() => {
     }
   `)
 
-  let slides = data.allMdx.edges.map(node => {
+  let slides = data.allMarkdownRemark.edges.map(node => {
     return (
       <div sx={{ backgroundColor: `black` }}>
         <BackImg fluid={node.node.frontmatter.image.childImageSharp.fluid}>
@@ -146,7 +146,7 @@ const menubar = cold(() => {
     )
   })
 
-  let selectors = data.allMdx.edges.map((node, index) => {
+  let selectors = data.allMarkdownRemark.edges.map((node, index) => {
     return (
       <div
         key={`${node}${index}`}

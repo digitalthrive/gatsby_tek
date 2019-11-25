@@ -76,7 +76,7 @@ const dealers = cold(({ data }) => {
     )
   }
 
-  let selections = data.allMdx.edges.map(item => {
+  let selections = data.allMarkdownRemark.edges.map(item => {
     return (
       <div
         sx={{
@@ -376,15 +376,15 @@ export const query = graphql`
         }
       }
     }
-    allMdx(filter: { fileAbsolutePath: { regex: "/items/" } }) {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/items/" } }) {
       edges {
         node {
           id
-          frontmatter {
-            title
-          }
           fields {
             slug
+          }
+          frontmatter {
+            title
           }
         }
       }

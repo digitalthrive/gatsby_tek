@@ -6,8 +6,8 @@ import Img from 'gatsby-image'
 import Section from '../components/section'
 import Layout from '../components/layout'
 
-const product = ({ data: { mdx } }) => {
-  const item = mdx
+const product = ({ data: { markdownRemark } }) => {
+  const item = markdownRemark
 
   return (
     <Layout>
@@ -20,7 +20,7 @@ const product = ({ data: { mdx } }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt
       frontmatter {
