@@ -3,13 +3,14 @@ import React, { useState, useEffect, useLayoutEffect } from 'react'
 import { Styled, jsx } from 'theme-ui'
 import Img from 'gatsby-image'
 import { Link, useStaticQuery, graphql } from 'gatsby'
+import { cold } from 'react-hot-loader'
 import { useTransition, animated } from 'react-spring'
 import Button from '../components/button'
 import Section from '../components/section'
 import DrawerModal from '../components/drawermodal'
 import HamburgerMenu from './hamburger.js'
 
-const menubar = () => {
+const menubar = cold(() => {
   const [show, setShow] = useState(false)
   const [form, setForm] = useState()
 
@@ -81,7 +82,7 @@ const menubar = () => {
             justifySelf: `center`,
           }}
         >
-          <Link to='/'>
+          <Link to="/">
             <Img
               sx={{
                 maxWidth: `382px`,
@@ -122,7 +123,7 @@ const menubar = () => {
               )
             })}
             <Styled.li
-              key='liLinkMenuLast'
+              key="liLinkMenuLast"
               onClick={() => showHandler('contact')}
             >
               <div
@@ -196,6 +197,6 @@ const menubar = () => {
       </div>
     </div>
   )
-}
+})
 
 export default menubar

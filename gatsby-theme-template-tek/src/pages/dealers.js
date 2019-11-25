@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React, { useState, useRef, useEffect } from 'react'
+import { cold } from 'react-hot-loader'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import BackImg from 'gatsby-background-image'
@@ -13,7 +14,7 @@ import ButtonV2 from '../components/button-v2'
 import downloadIcon from '../components/icons/download-icon.png'
 import ContactForm from '../components/contact'
 
-const dealers = ({ data }) => {
+const dealers = cold(({ data }) => {
   const sections = data.allSection.edges
 
   const [internalSection, setSection] = useState(0)
@@ -134,7 +135,7 @@ const dealers = ({ data }) => {
               fontWeight: `bold`,
             }}
           >
-            <img src={downloadIcon} alt='download' sx={{ marginTop: `20px` }} />
+            <img src={downloadIcon} alt="download" sx={{ marginTop: `20px` }} />
           </Link>
         </div>
       </div>
@@ -230,18 +231,18 @@ const dealers = ({ data }) => {
                 </Styled.p>
                 <p>
                   <ButtonV2
-                    destination='/dealers'
+                    destination="/dealers"
                     buttonText={sectionOne[0].node.buttonText}
-                    borderColor='primary'
-                    color='primary'
+                    borderColor="primary"
+                    color="primary"
                   />
                 </p>
                 <p>
                   <ButtonV2
-                    destination='/installs'
+                    destination="/installs"
                     buttonText={sectionOne[0].node.buttonText2}
-                    borderColor='primary'
-                    color='primary'
+                    borderColor="primary"
+                    color="primary"
                   />
                 </p>
               </div>
@@ -327,10 +328,10 @@ const dealers = ({ data }) => {
           </Styled.h2>
           <p sx={{ color: `text` }}>{sectionThree[0].node.text2}</p>
           <ButtonV2
-            destination='/installs'
+            destination="/installs"
             buttonText={sectionOne[0].node.buttonText}
-            borderColor='text'
-            color='text'
+            borderColor="text"
+            color="text"
           />
         </div>
       </div>
@@ -343,7 +344,7 @@ const dealers = ({ data }) => {
       </div>
     </Layout>
   )
-}
+})
 
 export const query = graphql`
   query DealersPageQuery {

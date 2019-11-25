@@ -1,51 +1,56 @@
 /** @jsx jsx */
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
+import { setConfig, cold } from 'react-hot-loader'
 import { Styled, jsx, Container, Footer } from 'theme-ui'
 import Img from 'gatsby-image'
 import { FaFacebookF } from 'react-icons/fa'
 import { FaYoutube } from 'react-icons/fa'
 
-const footer = () => {
-  const data = useStaticQuery(graphql`
-    query FooterQuery {
-      allSection(filter: { page: { eq: "footer" } }) {
-        edges {
-          node {
-            id
-            links {
-              link
-              linktext
-            }
-            sociallinks {
-              facebook
-              insta
-              linkedin
-              twitter
-            }
-            text
-            text2
-            text3
-            image {
-              childImageSharp {
-                fluid(maxHeight: 300, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
+setConfig({ reloadHooks: false })
+
+const footer = cold(() => {
+  const data = useStaticQuery(
+    graphql`
+      query FooterQuery {
+        allSection(filter: { page: { eq: "footer" } }) {
+          edges {
+            node {
+              id
+              links {
+                link
+                linktext
+              }
+              sociallinks {
+                facebook
+                insta
+                linkedin
+                twitter
+              }
+              text
+              text2
+              text3
+              image {
+                childImageSharp {
+                  fluid(maxHeight: 300, quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
                 }
               }
             }
           }
         }
-      }
-      file(relativePath: { regex: "images/icon*/" }) {
-        id
-        childImageSharp {
-          fluid(maxHeight: 100, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+        file(relativePath: { regex: "images/icon*/" }) {
+          id
+          childImageSharp {
+            fluid(maxHeight: 100, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
           }
         }
       }
-    }
-  `)
+    `
+  )
 
   let links = data.allSection.edges[0].node.links.map(link => {
     return (
@@ -203,7 +208,7 @@ const footer = () => {
                   padding: `0 10px`,
                 }}
               >
-                <Link to='/' sx={{ color: 'text' }}>
+                <Link to="/" sx={{ color: 'text' }}>
                   <FaFacebookF sx={{ fontSize: '3' }} />
                 </Link>
               </li>
@@ -214,7 +219,7 @@ const footer = () => {
                   padding: `0 10px`,
                 }}
               >
-                <Link to='/' sx={{ color: 'text' }}>
+                <Link to="/" sx={{ color: 'text' }}>
                   <FaYoutube sx={{ fontSize: '3' }} />
                 </Link>
               </li>
@@ -260,7 +265,7 @@ const footer = () => {
             display: ['none', 'none', 'none', 'block', 'block'],
           }}
         >
-          <Link to='/'>
+          <Link to="/">
             <Img
               sx={{ width: `87px`, backgroundSize: `contain` }}
               fluid={data.allSection.edges[0].node.image.childImageSharp.fluid}
@@ -270,6 +275,6 @@ const footer = () => {
       </div>
     </Footer>
   )
-}
+})
 
 export default footer

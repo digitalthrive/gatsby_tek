@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import React, { useState, useEffect, useLayoutEffect } from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
+import { cold } from 'react-hot-loader'
 import { Styled, jsx, Container } from 'theme-ui'
 import { useSpring, useTransition, animated } from 'react-spring'
 import hamburgerIcon from '../components/icons/hamburger.png'
 
-const hamburger = () => {
+const hamburger = cold(() => {
   const [open, setOpen] = useState(false)
   const transition = useTransition(open, null, {
     from: { opacity: `0` },
@@ -137,6 +138,6 @@ const hamburger = () => {
       )}
     />
   )
-}
+})
 
 export default hamburger

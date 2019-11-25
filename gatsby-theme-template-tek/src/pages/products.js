@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React, { useState, useRef, useEffect } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
+import { cold } from 'react-hot-loader'
 import Img from 'gatsby-image'
 import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
@@ -13,7 +14,7 @@ import CompTable from '../components/comparisontable'
 import ProductSelector from '../components/productselector'
 import arrowDown from '../components/icons/arrow-down.png'
 
-const products = ({ data }) => {
+const products = cold(({ data }) => {
   const [firstSection, setFirstSection] = useState(0)
   const [showTable, setShowTable] = useState(false)
 
@@ -262,7 +263,7 @@ const products = ({ data }) => {
               <img
                 src={arrowDown}
                 sx={{ marginLeft: `10px` }}
-                alt='down arrow'
+                alt="down arrow"
               />
             </p>
           </div>
@@ -358,7 +359,7 @@ const products = ({ data }) => {
       </Section>
     </Layout>
   )
-}
+})
 
 export const query = graphql`
   query ProductsPageQuery {

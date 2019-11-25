@@ -1,13 +1,14 @@
 /** @jsx jsx */
 import React, { useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import { cold } from 'react-hot-loader'
 import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
 import BackImg from 'gatsby-background-image'
 import { useSpring, animated, config } from 'react-spring'
 import Layout from '../components/layout'
 
-const productselector = props => {
+const productselector = cold(props => {
   const [activeFrame, setActiveFrame] = useState(`frame1`)
 
   const data = useStaticQuery(graphql`
@@ -108,6 +109,6 @@ const productselector = props => {
       {outputFrames}
     </div>
   )
-}
+})
 
 export default productselector

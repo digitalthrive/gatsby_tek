@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React, { useState } from 'react'
+import { cold } from 'react-hot-loader'
 import { Styled, jsx } from 'theme-ui'
 import BackImg from 'gatsby-background-image'
 import Img from 'gatsby-image'
@@ -8,7 +9,7 @@ import Section from '../components/section'
 import Button from '../components/button'
 import ButtonV2 from '../components/button-v2'
 
-const menubar = () => {
+const menubar = cold(() => {
   const [slide, setSlide] = useState(0)
 
   let slideHandler = index => {
@@ -133,10 +134,10 @@ const menubar = () => {
                 {node.node.frontmatter.detail}
               </Styled.h3>
               <ButtonV2
-                destination='/'
-                buttonText='MORE'
-                borderColor='background'
-                color='text'
+                destination="/"
+                buttonText="MORE"
+                borderColor="background"
+                color="text"
               />
             </div>
           </div>
@@ -218,6 +219,6 @@ const menubar = () => {
       </Section>
     </>
   )
-}
+})
 
 export default menubar

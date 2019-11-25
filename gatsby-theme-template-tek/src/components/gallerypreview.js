@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
+import { cold } from 'react-hot-loader'
 import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
 import Img from 'gatsby-image'
 
-const gallerypreview = () => {
+const gallerypreview = cold(() => {
   let data = useStaticQuery(graphql`
     query GalleryComponentQuery {
       gallery1: allFile(
@@ -137,6 +138,6 @@ const gallerypreview = () => {
       {gallery2images}
     </div>
   )
-}
+})
 
 export default gallerypreview

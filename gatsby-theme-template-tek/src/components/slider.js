@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React, { useState, useRef, useEffect } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
+import { cold } from 'react-hot-loader'
 import Img from 'gatsby-image'
 import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
@@ -8,7 +9,7 @@ import BeforeAfterSlider from 'react-before-after-slider'
 import beforeImage from '../components/images/roof-after.jpg'
 import afterImage from '../components/images/roof-before.jpg'
 
-export const slider = () => {
+export const slider = cold(() => {
   const [sliderWidth, setSliderWidth] = useState(window.innerWidth)
 
   const before = beforeImage
@@ -35,6 +36,6 @@ export const slider = () => {
       <LoadableSlider />
     </>
   )
-}
+})
 
 export default slider
