@@ -1,13 +1,27 @@
-text: test
-text2: test
-text3: test
-text4: test
-text5: test
-buttonText: tese
-buttonText2: ssdf
-sidetext: sdf
-videoSrcURL: sadfasdf
-image: adsf
-image2: adsf
-page: asdf
-section: 3
+datasection:
+  - buttonText: t
+    buttonText2: t
+    image: t
+    image2: t
+    page: t
+    section: 1
+    sidetext: t
+    text: te
+    text2: t
+    text3: t
+    text4: t
+    text5: t
+    videoSrcURL: t
+  - buttonText: t
+    buttonText2: t
+    image: t
+    image2: t
+    page: t
+    section: 2
+    sidetext: t
+    text: t
+    text2: t
+    text3: t
+    text4: t
+    text5: t
+    videoSrcURL: t
