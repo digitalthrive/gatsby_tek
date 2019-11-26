@@ -1,27 +1,13 @@
-internalsection:
-  - buttonText: test
-    buttonText2: test
-    image: test
-    image2: test
-    page: test
-    section: 2
-    sidetext: test
-    text: test
-    text2: test
-    text3: test
-    text4: test
-    text5: test
-    videoSrcURL: test
-  - buttonText: test2
-    buttonText2: test2
-    image: test2
-    image2: test2
-    page: test2
-    section: 2
-    sidetext: test2
-    text: test2
-    text2: test2
-    text3: test2
-    text4: test2
-    text5: test2
-    videoSrcURL: test2
+text: test
+text2: test
+text3: test
+text4: test
+text5: test
+buttonText: tese
+buttonText2: ssdf
+sidetext: sdf
+videoSrcURL: sadfasdf
+image: adsf
+image2: adsf
+page: asdf
+section: 3
