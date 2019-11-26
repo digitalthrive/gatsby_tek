@@ -1,13 +1,14 @@
-text: Added
-text2: 'addded '
-text3: sdfksdf
-text4: skdfjskdjf
-text5: sdkfj
-buttonText: sdf
-buttonText2: sdfdsf
-sidetext: sdfsdf
-videoSrcURL: skdfjsd
-image: dk
-image2: dkdk
-page: dealers
-section: 2
+internalsection:
+  - buttonText: test
+    buttonText2: test
+    image: test
+    image2: test
+    page: test
+    section: 2
+    sidetext: test
+    text: test
+    text2: test
+    text3: test
+    text4: test
+    text5: test
+    videoSrcURL: test
