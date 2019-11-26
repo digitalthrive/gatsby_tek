@@ -1,5 +1,5 @@
 ---
 title: TEK WARRANTY
 abbreviation: TEK WARRANTY
-file: /hurricane-shake®-warranty.pdf
+file: site/static/uploads/hurricane-shake®-warranty.pdf
 ---
