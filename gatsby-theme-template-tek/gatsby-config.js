@@ -6,6 +6,7 @@ module.exports = ({ contentPath = 'data', basePath = '/' }) => ({
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify-cache`,
+    `gatsby-plugin-netlify-cms-paths`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -48,7 +49,12 @@ module.exports = ({ contentPath = 'data', basePath = '/' }) => ({
         path: `${contentPath}/hometestimonial/`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-plugin-netlify-cms-paths`],
+      },
+    },
 
     {
       resolve: `gatsby-source-filesystem`,

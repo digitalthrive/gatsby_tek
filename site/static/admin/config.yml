@@ -2,25 +2,25 @@ backend:
   name: git-gateway
 
 media_folder: site/data/images/
-public_folder: /img
+public_folder: /media
 
 collections:
-  - name: 'feature'
-    label: 'Features'
-    folder: 'site/data/homescroller'
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'Header Top', name: 'headerTopLine', widget: 'string' }
-      - { label: 'Header Large', name: 'headerLargeWord', widget: 'string' }
-      - { label: 'Header Bottom', name: 'headerBottomLine', widget: 'string' }
-      - { label: 'Detail', name: 'detail', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'string' }
-      - { label: 'Tab Image', name: 'tabImage', widget: 'string' }
-      - { label: 'Order', name: 'order', widget: 'number' }
+  # - name: 'feature'
+  #   label: 'Features'
+  #   folder: 'site/data/homescroller'
+  #   create: true
+  #   editor:
+  #     preview: false
+  #   fields:
+  #     - { label: 'Title', name: 'title', widget: 'string' }
+  #     - { label: 'Name', name: 'name', widget: 'string' }
+  #     - { label: 'Header Top', name: 'headerTopLine', widget: 'string' }
+  #     - { label: 'Header Large', name: 'headerLargeWord', widget: 'string' }
+  #     - { label: 'Header Bottom', name: 'headerBottomLine', widget: 'string' }
+  #     - { label: 'Detail', name: 'detail', widget: 'string' }
+  #     - { label: 'Image', name: 'image', widget: 'string' }
+  #     - { label: 'Tab Image', name: 'tabImage', widget: 'string' }
+  #     - { label: 'Order', name: 'order', widget: 'number' }
   - name: 'quote'
     label: 'Quotes'
     folder: 'site/data/hometestimonial'
@@ -41,6 +41,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Abbreviation', name: 'abbreviation', widget: 'string' }
+      - { label: 'File', name: 'file', widget: 'file' }
   # - name: 'sections'
   #   label: 'Sections'
   #   files:
