@@ -106,7 +106,7 @@ const products = cold(({ data }) => {
         </Styled.h2>
         <SectionChooser />
         {firstSection === 0 ? (
-          <>
+          <div sx={{ height: `400px` }}>
             <div
               sx={{
                 display: `flex`,
@@ -146,9 +146,9 @@ const products = cold(({ data }) => {
                 <p sx={{ color: `grey` }}>{sectionTwo[0].node.text3}</p>
               </div>
             </div>
-          </>
+          </div>
         ) : (
-          <>
+          <div sx={{ height: `400px` }}>
             <div
               sx={{
                 display: `flex`,
@@ -188,7 +188,7 @@ const products = cold(({ data }) => {
                 <p sx={{ color: `grey` }}>{sectionThree[0].node.text3}</p>
               </div>
             </div>
-          </>
+          </div>
         )}
       </Section>
       <FinalSlider />
@@ -291,10 +291,7 @@ const products = cold(({ data }) => {
               alignSelf: `center`,
             }}
           >
-            <Img
-              sx={{ width: `749px`, maxWidth: `100%` }}
-              fluid={sectionSix[0].node.image.childImageSharp.fluid}
-            />
+            <Img fluid={sectionSix[0].node.image.childImageSharp.fluid} />
           </div>
         </div>
       </Section>
