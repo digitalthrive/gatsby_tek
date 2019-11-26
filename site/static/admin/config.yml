@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
 
-media_folder: site/data/images/
-public_folder: /media
+media_folder: site/static/
+public_folder: site/static/
 
 collections:
   # - name: 'feature'

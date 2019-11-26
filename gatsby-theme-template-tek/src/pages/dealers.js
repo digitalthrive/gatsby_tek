@@ -117,26 +117,61 @@ const dealers = cold(({ data }) => {
             fontSize: ['5vmin', '3vmin', '3vmin', '1vmin', '13px'],
           }}
         >
-          <Link
-            to={item.node.fields.slug}
-            sx={{
-              color: `text`,
-              textDecoration: `none`,
-              fontWeight: `bold`,
-            }}
-          >
-            {item.node.frontmatter.title}
-          </Link>
-          <Link
-            to={item.node.fields.slug}
-            sx={{
-              color: `text`,
-              textDecoration: `none`,
-              fontWeight: `bold`,
-            }}
-          >
-            <img src={downloadIcon} alt="download" sx={{ marginTop: `20px` }} />
-          </Link>
+          {item.node.frontmatter.file === null ? (
+            <>
+              <Link
+                to={item.node.fields.slug}
+                sx={{
+                  color: `text`,
+                  textDecoration: `none`,
+                  fontWeight: `bold`,
+                }}
+              >
+                {item.node.frontmatter.title}
+              </Link>
+              <Link
+                to={item.node.fields.slug}
+                sx={{
+                  color: `text`,
+                  textDecoration: `none`,
+                  fontWeight: `bold`,
+                }}
+              >
+                <img
+                  src={downloadIcon}
+                  alt="download"
+                  sx={{ marginTop: `20px` }}
+                />
+              </Link>
+            </>
+          ) : (
+            <>
+              <a
+                href={item.node.frontmatter.file}
+                sx={{
+                  color: `text`,
+                  textDecoration: `none`,
+                  fontWeight: `bold`,
+                }}
+              >
+                {item.node.frontmatter.title}
+              </a>
+              <a
+                href={item.node.frontmatter.file}
+                sx={{
+                  color: `text`,
+                  textDecoration: `none`,
+                  fontWeight: `bold`,
+                }}
+              >
+                <img
+                  src={downloadIcon}
+                  alt="download"
+                  sx={{ marginTop: `20px` }}
+                />
+              </a>
+            </>
+          )}
         </div>
       </div>
     )
@@ -385,6 +420,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            file
           }
         }
       }
