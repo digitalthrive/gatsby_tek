@@ -17,10 +17,10 @@ const contactform = () => {
         CONTACT <span sx={{ color: `primary` }}>TEK</span> INDUSTRIES
       </Styled.h1>
       <form
-        name='contact'
-        method='post'
-        data-netlify='true'
-        data-netlify-honeypot='bot-field'
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
         css={css`
           input {
             width: 100%;
@@ -30,7 +30,7 @@ const contactform = () => {
             border: 0;
             padding: 0 3%;
             box-sizing: border-box;
-            font-size: 16px;
+            font-size: 18px;
           }
           textarea {
             width: 100%;
@@ -41,7 +41,7 @@ const contactform = () => {
             padding: 3%;
             box-sizing: border-box;
             font-family: inherit;
-            font-size: 16px;
+            font-size: 18px;
           }
           button {
             display: block;
@@ -51,20 +51,20 @@ const contactform = () => {
             cursor: pointer;
             background: #fff;
             font-family: 'Bebas Neue', system-ui, sans-serif;
-            font-size: 20px;
+            font-size: 18px;
           }
         `}
       >
-        <input type='hidden' name='bot-field' />
-        <input type='hidden' name='form-name' value='contact' />
-        <input type='text' placeholder='Name' name='name' />
-        <input type='email' placeholder='Email' name='email' />
-        <input type='text' placeholder='Company' name='company' />
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" placeholder="Name" name="name" />
+        <input type="email" placeholder="Email" name="email" />
+        <input type="text" placeholder="Company" name="company" />
         <textarea
-          placeholder='Let us know about your roofing needs'
-          name='message'
+          placeholder="Let us know about your roofing needs"
+          name="message"
         ></textarea>
-        <button type='submit'>Send message</button>
+        <button type="submit">Send message</button>
       </form>
       <address sx={{ color: `gray`, fontStyle: `normal`, margin: `5% 0 0 0` }}>
         Corp Office

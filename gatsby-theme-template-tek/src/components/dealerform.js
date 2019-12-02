@@ -17,10 +17,10 @@ const dealerform = () => {
         <span sx={{ color: `primary` }}>TEK</span> DEALER APPLICATION
       </Styled.h1>
       <form
-        name='dealer'
-        method='post'
-        data-netlify='true'
-        data-netlify-honeypot='bot-field'
+        name="dealer"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
         css={css`
           color: #414141;
           label {
@@ -39,7 +39,7 @@ const dealerform = () => {
             border: 0;
             padding: 0 3%;
             box-sizing: border-box;
-            font-size: 16px;
+            font-size: 18px;
           }
           select {
             width: 100%;
@@ -49,8 +49,8 @@ const dealerform = () => {
             border: 0;
             padding: 0 3%;
             box-sizing: border-box;
-            font-size: 16px;
-            text-indent: 20px;
+            font-size: 18px;
+            text-indent: 18px;
           }
           input[type='radio'] {
             width: auto;
@@ -69,7 +69,7 @@ const dealerform = () => {
             padding: 3%;
             box-sizing: border-box;
             font-family: inherit;
-            font-size: 16px;
+            font-size: 18px;
           }
           button {
             display: block;
@@ -79,63 +79,63 @@ const dealerform = () => {
             cursor: pointer;
             background: #fff;
             font-family: 'Bebas Neue', system-ui, sans-serif;
-            font-size: 20px;
+            font-size: 18px;
           }
         `}
       >
-        <input type='hidden' name='bot-field' />
-        <input type='hidden' name='form-name' value='dealer' />
-        <label for='company_name'>Company Name</label>
-        <input type='text' placeholder='Company Name' name='company_name' />
-        <label for='company_address'>Company Address</label>
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="dealer" />
+        <label for="company_name">Company Name</label>
+        <input type="text" placeholder="Company Name" name="company_name" />
+        <label for="company_address">Company Address</label>
         <input
-          type='text'
-          placeholder='Company Address'
-          name='company_address'
+          type="text"
+          placeholder="Company Address"
+          name="company_address"
         />
-        <label for='company_website'>Company Website</label>
+        <label for="company_website">Company Website</label>
         <input
-          type='text'
-          placeholder='Company Website'
-          name='company_website'
+          type="text"
+          placeholder="Company Website"
+          name="company_website"
         />
-        <label for='contact_name'>Contact Name</label>
-        <input type='text' placeholder='Contact Name' name='contact_name' />
-        <label for='role[]'>Your Role: </label>
-        <select name='role'>
-          <option value='none'>Choose Role</option>
-          <option value='leader'>Leader</option>
-          <option value='follower'>Follower</option>
+        <label for="contact_name">Contact Name</label>
+        <input type="text" placeholder="Contact Name" name="contact_name" />
+        <label for="role[]">Your Role: </label>
+        <select name="role">
+          <option value="none">Choose Role</option>
+          <option value="leader">Leader</option>
+          <option value="follower">Follower</option>
         </select>
-        <label for='email'>Email</label>
-        <input type='email' placeholder='Email' name='email' />
-        <label for='phone'>Phone (optional)</label>
-        <input type='phone' placeholder='Phone (optional)' name='phone' />
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" name="email" />
+        <label for="phone">Phone (optional)</label>
+        <input type="phone" placeholder="Phone (optional)" name="phone" />
         <p>Number of years in business</p>
-        <input type='radio' name='years_in_business' value='1-5' /> 1-5
+        <input type="radio" name="years_in_business" value="1-5" /> 1-5
         <br />
-        <input type='radio' name='years_in_business' value='6-10' /> 6-10
+        <input type="radio" name="years_in_business" value="6-10" /> 6-10
         <br />
-        <input type='radio' name='years_in_business' value='11-15' /> 11-15
+        <input type="radio" name="years_in_business" value="11-15" /> 11-15
         <br />
-        <input type='radio' name='years_in_business' value='15+' /> 15+
+        <input type="radio" name="years_in_business" value="15+" /> 15+
         <br />
         <br />
-        <label for='how_did_you_hear_about_TEK'>
+        <label for="how_did_you_hear_about_TEK">
           How did you hear about TEK dealer Plans?
         </label>
         <textarea
-          placeholder='How did you hear about TEK dealer Plans?'
-          name='how_did_you_hear_about_TEK'
+          placeholder="How did you hear about TEK dealer Plans?"
+          name="how_did_you_hear_about_TEK"
         ></textarea>
-        <label for='describe_why_you_are_for_for_a_dealer'>
+        <label for="describe_why_you_are_for_for_a_dealer">
           Please describe why you would be a good fit for a dealer
         </label>
         <textarea
-          placeholder='Please describe why you would be a good fit for a dealer'
-          name='describe_why_you_are_for_for_a_dealer'
+          placeholder="Please describe why you would be a good fit for a dealer"
+          name="describe_why_you_are_for_for_a_dealer"
         ></textarea>
-        <button type='submit'>Send</button>
+        <button type="submit">Send</button>
       </form>
     </div>
   )

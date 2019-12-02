@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import {  cold } from 'react-hot-loader'
+import { cold } from 'react-hot-loader'
 import { Styled, jsx, Container, Footer } from 'theme-ui'
 import Img from 'gatsby-image'
 import { FaFacebookF } from 'react-icons/fa'
 import { FaYoutube } from 'react-icons/fa'
-
 
 const footer = cold(() => {
   const data = useStaticQuery(

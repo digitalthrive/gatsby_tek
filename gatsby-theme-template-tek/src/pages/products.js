@@ -299,7 +299,7 @@ const products = cold(({ data }) => {
         sx={{
           display: ['block', 'block', 'grid', 'grid', 'grid'],
           gridTemplateColumns: `40% 1fr`,
-          bg: `primary`,
+          bg: `secondary`,
           height: ['auto', 'auto', '600px', '600px', '600px'],
         }}
       >
@@ -320,7 +320,8 @@ const products = cold(({ data }) => {
             <li>CAT-5 Wind resistance.</li>
             <li>Can withstand baseball size hail</li>
             <li>
-              Interlocking Technology "you cannot see any of the fasteners"
+              Interlocking Technology hides fasteners for a sleek, premium
+              appearance.
             </li>
           </ol>
         </div>

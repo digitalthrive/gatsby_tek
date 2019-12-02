@@ -110,7 +110,7 @@ const installs = ({ data }) => {
                 <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
                   <Styled.h3
                     sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>4</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Finished! As a final check, your hip cap line should appear straight and beautiful.</p>
+                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>As a final check, your hip cap line should appear straight and beautiful.</p>
                 </div>
               </div>
 
