@@ -134,7 +134,7 @@ const menubar = cold(() => {
                 {node.node.frontmatter.detail}
               </Styled.h3>
               <ButtonV2
-                destination="/"
+                destination="/products"
                 buttonText="MORE"
                 borderColor="background"
                 color="text"

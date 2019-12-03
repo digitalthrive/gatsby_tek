@@ -191,7 +191,6 @@ const menubar = cold(() => {
               BECOME A DEALER
             </p>
           </div>
-          {/* <Button destination="/dealers" buttonText="BECOME A DEALER" /> */}
         </div>
         <HamburgerMenu sx={{ justifySelf: `center`, alignSelf: `center` }} />
       </div>

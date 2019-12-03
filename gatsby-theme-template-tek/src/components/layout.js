@@ -28,7 +28,7 @@ const ContactHidden = () => {
             Email <input type="email" name="email" />
           </label>
         </p>
-        <input type="text" placeholder="Company" name="company" />
+        <input type="tel" placeholder="Phone (555-555-5555)" name="telephone" />
         <textarea name="message"></textarea>
         <p>
           <button type="submit">Send</button>
