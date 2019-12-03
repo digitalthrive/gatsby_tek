@@ -151,7 +151,9 @@ const menubar = cold(() => {
       <div
         key={`${node}${index}`}
         onClick={() => slideHandler(index)}
-        sx={{ cursor: `pointer` }}
+        sx={{
+          cursor: `pointer`,
+        }}
       >
         <BackImg
           fluid={node.node.frontmatter.tabImage.childImageSharp.fluid}
@@ -178,6 +180,10 @@ const menubar = cold(() => {
                 margin: `0 auto`,
                 display: `block`,
                 backgroundColor: `rgba(0,0,0,0.5)`,
+              },
+              ':hover': {
+                backgroundColor: `rgba(210,58,0,0.7)`,
+                transition: `0.4s`,
               },
             }}
           >

@@ -59,7 +59,12 @@ const contactform = () => {
         <input type="hidden" name="form-name" value="contact" />
         <input type="text" placeholder="Name" name="name" />
         <input type="email" placeholder="Email" name="email" />
-        <input type="text" placeholder="Company" name="company" />
+        <input
+          type="tel"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          placeholder="Phone (555-555-5555)"
+          name="telephone"
+        />
         <textarea
           placeholder="Let us know about your roofing needs"
           name="message"
