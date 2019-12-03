@@ -43,6 +43,8 @@ const menubar = cold(() => {
                   }
                 }
               }
+              buttonText
+              buttonURL
               headerTopLine
               headerLargeWord
               headerBottomLine
@@ -124,6 +126,7 @@ const menubar = cold(() => {
               <Styled.h3
                 sx={{
                   margin: '0',
+                  marginTop: `2`,
                   textAlign: `left`,
                   fontSize: [2, 2, 2],
                   color: 'text',
@@ -133,12 +136,14 @@ const menubar = cold(() => {
               >
                 {node.node.frontmatter.detail}
               </Styled.h3>
-              <ButtonV2
-                destination="/products"
-                buttonText="MORE"
-                borderColor="background"
-                color="text"
-              />
+              {node.node.frontmatter.buttonText !== null ? (
+                <ButtonV2
+                  destination={node.node.frontmatter.buttonURL}
+                  buttonText={node.node.frontmatter.buttonText}
+                  borderColor="background"
+                  color="text"
+                />
+              ) : null}
             </div>
           </div>
         </BackImg>

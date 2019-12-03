@@ -264,14 +264,14 @@ const dealers = cold(({ data }) => {
                 <Styled.p sx={{ color: `primary` }}>
                   {sectionOne[0].node.text3}
                 </Styled.p>
-                <p>
+                {/* <p>
                   <ButtonV2
                     destination="/dealers"
                     buttonText={sectionOne[0].node.buttonText}
                     borderColor="primary"
                     color="primary"
                   />
-                </p>
+                </p> */}
                 <p>
                   <ButtonV2
                     destination="/installs"
@@ -364,7 +364,7 @@ const dealers = cold(({ data }) => {
           <p sx={{ color: `text` }}>{sectionThree[0].node.text2}</p>
           <ButtonV2
             destination="/installs"
-            buttonText={sectionOne[0].node.buttonText}
+            buttonText="INSTALL METHODS"
             borderColor="text"
             color="text"
           />

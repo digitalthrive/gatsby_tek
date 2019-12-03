@@ -188,7 +188,7 @@ const menubar = cold(() => {
                 },
               }}
             >
-              BECOME A DEALER
+              BECOME A TEK INDUSTRY DEALER
             </p>
           </div>
         </div>
