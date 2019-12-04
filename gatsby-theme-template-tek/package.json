@@ -1,5 +1,5 @@
 {
-  "name": "@digitalthrive/gatsby-theme-template-tek",
+  "name": "gatsby-theme-template-tek",
   "version": "1.0.7",
   "license": "MIT",
   "main": "index.js",

@@ -10,7 +10,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@digitalthrive/gatsby-theme-template-tek": "^1.0.1",
+    "gatsby-theme-template-tek": "^1.0.1",
     "gatsby": "^2.10.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
