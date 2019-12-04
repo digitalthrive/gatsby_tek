@@ -16,8 +16,12 @@ const gallerypreview = cold(props => {
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 389, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+              fluid(
+                maxWidth: 389
+                srcSetBreakpoints: [200, 400]
+                quality: 100
+              ) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -29,8 +33,12 @@ const gallerypreview = cold(props => {
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 389, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+              fluid(
+                maxWidth: 389
+                srcSetBreakpoints: [200, 400]
+                quality: 100
+              ) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

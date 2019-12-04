@@ -25,7 +25,7 @@ const productselector = cold(props => {
               image {
                 childImageSharp {
                   fluid(quality: 100) {
-                    ...GatsbyImageSharpFluid_withWebp
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
