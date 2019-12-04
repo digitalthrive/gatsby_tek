@@ -423,7 +423,7 @@ export const query = graphql`
           frontmatter {
             title
             file
-            URL
+            url
           }
         }
       }
