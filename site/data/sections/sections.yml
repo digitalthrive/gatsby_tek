@@ -67,8 +67,8 @@
   buttonText2: ''
   sidetext: ''
   videoSrcURL: ''
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: null
+  image2: null
   page: home
   section: 5
 
@@ -185,8 +185,8 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: null
+  image2: null
   page: products
   section: 5
 
@@ -200,7 +200,7 @@
   sidetext: null
   videoSrcURL: null
   image: ../images/wind-speed-and-pressure.png
-  image2: ../images/placeholder.png
+  image2: null
   page: products
   section: 6
 
@@ -213,8 +213,8 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: null
+  image2: null
   page: products
   section: 7
 
@@ -227,8 +227,8 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: null
+  image2: null
   page: products
   section: 8
 
@@ -242,7 +242,7 @@
   sidetext: null
   videoSrcURL: null
   image: ../images/squared-roof-preview.jpg
-  image2: ../images/placeholder.png
+  image2: null
   page: products
   section: 9
 
@@ -257,7 +257,7 @@
   sidetext: null
   videoSrcURL: null
   image: ../images/gallerytop.png
-  image2: ../images/placeholder.png
+  image2: null
   page: gallery
   section: 1
 
@@ -272,7 +272,7 @@
   sidetext: null
   videoSrcURL: null
   image: ../images/dealer-tools-roof.jpg
-  image2: ../images/placeholder.png
+  image2: null
   page: dealers
   section: 1
 
@@ -285,8 +285,8 @@
   buttonText2: Install Methods
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.png
-  image2: ../images/placeholder.png
+  image: null
+  image2: null
   page: dealers
   section: 2
 
@@ -300,7 +300,7 @@
   sidetext: null
   videoSrcURL: null
   image: ../images/roofers-working.jpg
-  image2: ../images/placeholder.png
+  image2: null
   page: dealers
   section: 3
 
@@ -313,8 +313,8 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/placeholder.jpg
-  image2: ../images/placeholder.png
+  image: null
+  image2: null
   page: dealers
   section: 4
 
@@ -343,7 +343,7 @@
   sidetext: null
   videoSrcURL: null
   image: ../images/tek-industries-roofing-partner-red.png
-  image2: ../images/placeholder.png
+  image2: null
   page: installs
   section: 2
 
@@ -372,7 +372,7 @@
   sidetext: null
   videoSrcURL: null
   image: ../images/tek-industries-roofing-partner-red.png
-  image2: ../images/placeholder.png
+  image2: null
   page: installs
   section: 2
 
@@ -387,6 +387,6 @@
   sidetext: null
   videoSrcURL: null
   image: ../images/squared-roof-preview.jpg
-  image2: ../images/placeholder.png
+  image2: null
   page: pagenotfound
   section: 1
