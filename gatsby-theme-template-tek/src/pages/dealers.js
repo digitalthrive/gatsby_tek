@@ -119,8 +119,9 @@ const dealers = cold(({ data }) => {
         >
           {item.node.frontmatter.file === null ? (
             <>
-              <Link
-                to={item.node.fields.slug}
+              <a
+                href={item.node.frontmatter.URL}
+                target="_blank"
                 sx={{
                   color: `text`,
                   textDecoration: `none`,
@@ -128,9 +129,10 @@ const dealers = cold(({ data }) => {
                 }}
               >
                 {item.node.frontmatter.title}
-              </Link>
-              <Link
-                to={item.node.fields.slug}
+              </a>
+              <a
+                href={item.node.frontmatter.URL}
+                target="_blank"
                 sx={{
                   color: `text`,
                   textDecoration: `none`,
@@ -142,7 +144,7 @@ const dealers = cold(({ data }) => {
                   alt="download"
                   sx={{ marginTop: `20px` }}
                 />
-              </Link>
+              </a>
             </>
           ) : (
             <>
@@ -421,6 +423,7 @@ export const query = graphql`
           frontmatter {
             title
             file
+            URL
           }
         }
       }
