@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { cold } from 'react-hot-loader'
+import Waypoint from 'react-waypoint'
 import Img from 'gatsby-image'
 import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
@@ -13,10 +14,21 @@ import Button from '../components/button'
 import CompTable from '../components/comparisontable'
 import ProductSelector from '../components/productselector'
 import arrowDown from '../components/icons/arrow-down.png'
+import tekVideo from '../assets/TEKDiagram.mp4'
 
 const products = cold(({ data }) => {
   const [firstSection, setFirstSection] = useState(0)
   const [showTable, setShowTable] = useState(false)
+
+  const videoElem = useRef(null)
+
+  async function videoElemPlay() {
+    try {
+      await videoElem.current.play()
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   const sections = data.allSection.edges
 
@@ -192,27 +204,32 @@ const products = cold(({ data }) => {
         )}
       </Section>
       <FinalSlider />
+      <div sx={{ padding: `5% 0` }}>
+        <Waypoint
+          bottomOffset="35%"
+          onEnter={() => {
+            videoElemPlay()
+          }}
+        />
+        <Section>
+          <div>
+            <video
+              ref={videoElem}
+              sx={{
+                width: `100%`,
+                margin: `0 auto`,
+                display: `block`,
+              }}
+            >
+              <source src={tekVideo} type="video/mp4" />
+            </video>
+          </div>
+        </Section>
+      </div>
       <div
         sx={{ backgroundColor: `gray`, overflow: `hidden`, padding: `5% 0` }}
       >
         <Section>
-          <div
-            sx={{
-              display: `flex`,
-              alignContent: `center`,
-              justifyContent: `center`,
-            }}
-          >
-            <Img
-              sx={{
-                width: `1039px`,
-                backgroundSize: `contain`,
-                display: `inline-block`,
-                textAlign: `center`,
-              }}
-              fluid={sectionFour[0].node.image.childImageSharp.fluid}
-            />
-          </div>
           <div
             sx={{
               display: `flex`,
