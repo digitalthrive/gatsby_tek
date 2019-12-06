@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { cold } from 'react-hot-loader'
-import Waypoint from 'react-waypoint'
+import { Waypoint } from 'react-waypoint'
 import Img from 'gatsby-image'
 import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
@@ -211,7 +211,6 @@ const products = cold(({ data }) => {
             videoElemPlay()
           }}
         />
-
         <div>
           <video
             ref={videoElem}
