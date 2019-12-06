@@ -31,6 +31,7 @@ const installs = ({ data }) => {
   return (
     <Layout>
       <BackImg
+        critical
         fluid={sectionOne[0].node.image2.childImageSharp.fluid}
         sx={{
           overflow: `hidden`,

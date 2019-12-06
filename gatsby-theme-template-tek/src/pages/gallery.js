@@ -28,6 +28,7 @@ const gallery = ({ data }) => {
   return (
     <Layout>
       <BackImg
+        critical
         fluid={sectionOne[0].node.image.childImageSharp.fluid}
         sx={{
           backgroundSize: `contain`,
@@ -80,7 +81,7 @@ const gallery = ({ data }) => {
             >
               <Gallery
                 toptext={sectionOne[0].node.text}
-                subtext={sectionOne[0].node.text2}
+                // subtext={sectionOne[0].node.text2}
                 header1={sectionOne[0].node.text3}
                 header2={sectionOne[0].node.text4}
               />

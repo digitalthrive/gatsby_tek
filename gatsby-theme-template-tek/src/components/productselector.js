@@ -60,6 +60,7 @@ const productselector = cold(props => {
         `}
       >
         <BackImg
+          critical
           fluid={product.node.frontmatter.image.childImageSharp.fluid}
           sx={{
             height: `100%`,

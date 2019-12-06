@@ -183,6 +183,7 @@ const dealers = cold(({ data }) => {
   return (
     <Layout>
       <BackImg
+        critical
         fluid={sectionOne[0].node.image.childImageSharp.fluid}
         sx={{ overflow: `hidden` }}
       >
@@ -314,6 +315,7 @@ const dealers = cold(({ data }) => {
       >
         <div sx={{ width: ['0', '0', '50%', '50%', '50%'] }}>
           <BackImg
+            critical
             fluid={sectionThree[0].node.image.childImageSharp.fluid}
             sx={{ width: `100%`, height: `100%` }}
           >

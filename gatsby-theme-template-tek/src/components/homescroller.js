@@ -32,14 +32,14 @@ const menubar = cold(() => {
               image {
                 childImageSharp {
                   fluid(quality: 100) {
-                    ...GatsbyImageSharpFluid_withWebp
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
               }
               tabImage {
                 childImageSharp {
                   fluid(quality: 100) {
-                    ...GatsbyImageSharpFluid_withWebp
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
               }
@@ -60,7 +60,7 @@ const menubar = cold(() => {
   let slides = data.allMarkdownRemark.edges.map(node => {
     return (
       <div sx={{ backgroundColor: `black` }}>
-        <BackImg fluid={node.node.frontmatter.image.childImageSharp.fluid}>
+        <BackImg critical fluid={node.node.frontmatter.image.childImageSharp.fluid}>
           <div
             sx={{
               width: `100%`,
@@ -161,6 +161,7 @@ const menubar = cold(() => {
         }}
       >
         <BackImg
+          critical
           fluid={node.node.frontmatter.tabImage.childImageSharp.fluid}
           sx={{
             height: `100%`,

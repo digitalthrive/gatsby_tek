@@ -137,7 +137,7 @@ const gallerypreview = cold(props => {
       <Styled.h1 sx={{ color: `text`, marginBottom: 1, paddingBottom: 1 }}>
         {props.toptext}
       </Styled.h1>
-      <Styled.h2
+      {/* <Styled.h2
         sx={{
           color: `primary`,
           marginTop: `0`,
@@ -147,7 +147,7 @@ const gallerypreview = cold(props => {
         }}
       >
         {props.subtext}
-      </Styled.h2>
+      </Styled.h2> */}
       <Styled.h2 sx={{ color: `primary`, fontSize: ['3', '3', '4', '6', '6'] }}>
         {props.header1}
       </Styled.h2>
