@@ -9,7 +9,12 @@ import Layout from '../components/layout'
 import Gallery from '../components/galleryfull'
 import Section from '../components/section'
 import ButtonV2 from '../components/button-v2'
-import hipcap1 from '../components/images/hip-cap-1.jpg'
+import hipcap_1 from '../components/images/hip-cap-1.jpg'
+import hipcap_2 from '../components/images/hip-cap-2.jpg'
+import hipcap_3 from '../components/images/hip-cap-3.jpg'
+import hipcap_4 from '../components/images/hip-cap-4.jpg'
+import hipflash_1 from '../components/images/hip-flash-1.jpg'
+import hipflash_2 from '../components/images/hip-flash-2.jpg'
 
 const installs = ({ data }) => {
   const sections = data.allSection.edges
@@ -21,9 +26,7 @@ const installs = ({ data }) => {
     return obj.node.section === 2
   })
 
-  const hipcap_1 = hipcap1
 
-  console.log(hipcap1);
 
   return (
     <Layout>
@@ -75,7 +78,7 @@ const installs = ({ data }) => {
                     ':after': { content: `""`, display: ['none', 'none', 'block', 'block', 'block'], height: `20px`, width: `1px`, height: `50px`, position: `absolute`, top: `0`, right: `0`, backgroundColor: `text`
                     }
                   }}>
-                  <img src={hipcap_1} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
+                  <img src={hipcap_2} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
                 </div>
                 <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
                   <Styled.h3
@@ -90,7 +93,7 @@ const installs = ({ data }) => {
                     ':after': { content: `""`, display: ['none', 'none', 'block', 'block', 'block'], height: `20px`, width: `1px`, height: `50px`, position: `absolute`, top: `0`, right: `0`, backgroundColor: `text`
                     }
                   }}>
-                  <img src={hipcap_1} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
+                  <img src={hipcap_3} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
                 </div>
                 <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
                   <Styled.h3
@@ -105,7 +108,7 @@ const installs = ({ data }) => {
                     ':after': { content: `""`, display: ['none', 'none', 'block', 'block', 'block'], height: `20px`, width: `1px`, height: `50px`, position: `absolute`, top: `0`, right: `0`, backgroundColor: `text`
                     }
                   }}>
-                  <img src={hipcap_1} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
+                  <img src={hipcap_4} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
                 </div>
                 <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
                   <Styled.h3
@@ -131,7 +134,7 @@ const installs = ({ data }) => {
                     ':after': { content: `""`, display: ['none', 'none', 'block', 'block', 'block'], height: `20px`, width: `1px`, height: `50px`, position: `absolute`, top: `0`, right: `0`, backgroundColor: `text`
                     }
                   }}>
-                  <img src={hipcap_1} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
+                  <img src={hipflash_1} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
                 </div>
                 <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
                   <Styled.h3
@@ -146,7 +149,7 @@ const installs = ({ data }) => {
                     ':after': { content: `""`, display: ['none', 'none', 'block', 'block', 'block'], height: `20px`, width: `1px`, height: `50px`, position: `absolute`, top: `0`, right: `0`, backgroundColor: `text`
                     }
                   }}>
-                  <img src={hipcap_1} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
+                  <img src={hipflash_2} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
                 </div>
                 <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
                   <Styled.h3
@@ -247,14 +250,14 @@ export const query = graphql`
           image {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
           image2 {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

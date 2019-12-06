@@ -32,14 +32,14 @@ const menubar = cold(() => {
               image {
                 childImageSharp {
                   fluid(quality: 100) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
               tabImage {
                 childImageSharp {
                   fluid(quality: 100) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }

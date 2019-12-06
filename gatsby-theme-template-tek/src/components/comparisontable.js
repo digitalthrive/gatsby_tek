@@ -158,13 +158,11 @@ let chartArray = [
 ]
 
 let tableRows = chartArray.map((row, index) => {
-  let oddColor = `none`
-  let evenColor = `#676767`
   let rowColor
   if (index % 2 === 0) {
-    rowColor = evenColor
+    rowColor = `#676767`
   } else {
-    rowColor = oddColor
+    rowColor = `none`
   }
   return (
     <tr>

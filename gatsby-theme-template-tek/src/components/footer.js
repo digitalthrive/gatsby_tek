@@ -31,7 +31,7 @@ const footer = cold(() => {
               image {
                 childImageSharp {
                   fluid(maxHeight: 300, quality: 100) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
@@ -42,7 +42,7 @@ const footer = cold(() => {
           id
           childImageSharp {
             fluid(maxHeight: 100, quality: 100) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

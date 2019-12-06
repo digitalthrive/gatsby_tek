@@ -21,7 +21,7 @@ const gallerypreview = cold(props => {
                 srcSetBreakpoints: [200, 400]
                 quality: 100
               ) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -38,7 +38,7 @@ const gallerypreview = cold(props => {
                 srcSetBreakpoints: [200, 400]
                 quality: 100
               ) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

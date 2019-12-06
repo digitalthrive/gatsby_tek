@@ -211,20 +211,19 @@ const products = cold(({ data }) => {
             videoElemPlay()
           }}
         />
-        <Section>
-          <div>
-            <video
-              ref={videoElem}
-              sx={{
-                width: `100%`,
-                margin: `0 auto`,
-                display: `block`,
-              }}
-            >
-              <source src={tekVideo} type="video/mp4" />
-            </video>
-          </div>
-        </Section>
+
+        <div>
+          <video
+            ref={videoElem}
+            sx={{
+              width: `100%`,
+              margin: `0 auto`,
+              display: `block`,
+            }}
+          >
+            <source src={tekVideo} type="video/mp4" />
+          </video>
+        </div>
       </div>
       <div
         sx={{ backgroundColor: `gray`, overflow: `hidden`, padding: `5% 0` }}
@@ -390,14 +389,14 @@ export const query = graphql`
           image {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
           image2 {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

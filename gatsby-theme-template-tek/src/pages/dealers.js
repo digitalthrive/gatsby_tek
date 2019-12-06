@@ -8,7 +8,8 @@ import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
 import Layout from '../components/layout'
 import Section from '../components/section'
-import ResultsTable from '../components/resultstable_1'
+import ResultsTable1 from '../components/resultstable1'
+import ResultsTable2 from '../components/resultstable2'
 import Button from '../components/button'
 import ButtonV2 from '../components/button-v2'
 import downloadIcon from '../components/icons/download-icon.png'
@@ -375,8 +376,7 @@ const dealers = cold(({ data }) => {
       <div sx={{ overflow: `hidden`, padding: `5% 0` }}>
         <Section>
           <SectionChooser />
-          <Styled.h2>HURRICANE® Metal Shake UL 2218 Testing Results</Styled.h2>
-          <ResultsTable />
+          {internalSection === 0 ? <ResultsTable1 /> : <ResultsTable2 />}
         </Section>
       </div>
     </Layout>
@@ -405,7 +405,7 @@ export const query = graphql`
           image2 {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

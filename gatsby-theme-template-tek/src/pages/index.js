@@ -436,14 +436,14 @@ export const query = graphql`
           image {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
           image2 {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -454,7 +454,7 @@ export const query = graphql`
     quoteImage: file(relativePath: { regex: "images/installers-on-roof*/" }) {
       childImageSharp {
         fluid(maxHeight: 800, quality: 100) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

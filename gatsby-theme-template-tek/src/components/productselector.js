@@ -25,7 +25,7 @@ const productselector = cold(props => {
               image {
                 childImageSharp {
                   fluid(quality: 100) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
@@ -46,12 +46,13 @@ const productselector = cold(props => {
         sx={{
           position: `relative`,
           height: `400px`,
-          width: activeFrame === `frame${indexNum}` ? `40%` : `20%`,
+          width: activeFrame === `frame${indexNum}` ? `25%` : `15%`,
           filter:
             activeFrame === `frame${indexNum}`
               ? `brightness(1)`
               : `brightness(50%)`,
           display: `inline-block`,
+          whiteSpace: `nowrap`,
           boxSizing: `border-box`,
         }}
         css={css`
@@ -77,7 +78,7 @@ const productselector = cold(props => {
             <p
               sx={{
                 fontFamily: `heading`,
-                fontSize: 5,
+                fontSize: ['3', '3', '3', '5', '5'],
                 color: `text`,
                 margin: 0,
                 padding: 0,
@@ -95,17 +96,7 @@ const productselector = cold(props => {
     )
   })
 
-  return (
-    <div
-      sx={
-        {
-          // gridTemplateColumns: `${frame1} ${frame2} ${frame3} ${frame4}`,
-        }
-      }
-    >
-      {outputFrames}
-    </div>
-  )
+  return <div>{outputFrames}</div>
 })
 
 export default productselector
