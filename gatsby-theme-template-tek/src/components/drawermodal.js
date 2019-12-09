@@ -13,7 +13,7 @@ const drawermodal = props => {
       sx={{
         width: `100vw`,
         position: `absolute`,
-        zIndex: `9999`,
+        zIndex: `9998`,
         height: `100vh`,
         top: 0,
         left: 0,

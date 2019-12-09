@@ -1,13 +1,23 @@
 /** @jsx jsx */
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { cold } from 'react-hot-loader'
 import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
 import Img from 'gatsby-image'
+import ImageModal from '../components/gallery_modal'
 import Section from '../components/section'
 
-const gallerypreview = cold(props => {
+const galleryfull = cold(props => {
+
+  const [open, setOpen] = useState(false);
+  const [openimage, setImage] = useState(null);
+
+  let imageClick = image => {
+    setOpen(!open)
+    setImage(image)
+  }
+
   let data = useStaticQuery(graphql`
     query FullGalleryComponentQuery {
       gallery1: allFile(
@@ -17,12 +27,13 @@ const gallerypreview = cold(props => {
           node {
             childImageSharp {
               fluid(
-                maxWidth: 389
-                srcSetBreakpoints: [200, 400]
+                maxWidth: 1920
+
                 quality: 100
               ) {
                 ...GatsbyImageSharpFluid_withWebp
               }
+
             }
           }
         }
@@ -34,18 +45,19 @@ const gallerypreview = cold(props => {
           node {
             childImageSharp {
               fluid(
-                maxWidth: 389
-                srcSetBreakpoints: [200, 400]
+                maxWidth: 1920
                 quality: 100
               ) {
                 ...GatsbyImageSharpFluid_withWebp
               }
+
             }
           }
         }
       }
     }
   `)
+
   let gallery1images = data.gallery1.edges.map(image => {
     return (
       <div
@@ -68,6 +80,7 @@ const gallerypreview = cold(props => {
         }}
       >
         <div
+          onClick={() => imageClick(image.node.childImageSharp.fluid)}
           sx={{
             height: `100%`,
             width: `100%`,
@@ -111,6 +124,7 @@ const gallerypreview = cold(props => {
         }}
       >
         <div
+          onClick={() => imageClick(image.node.childImageSharp.fluid)}
           sx={{
             height: `100%`,
             width: `100%`,
@@ -134,6 +148,8 @@ const gallerypreview = cold(props => {
   })
   return (
     <Section>
+      {openimage ? <ImageModal image={openimage} open={imageClick} /> : null}
+
       <Styled.h1 sx={{ color: `text`, marginBottom: 1, paddingBottom: 1 }}>
         {props.toptext}
       </Styled.h1>
@@ -180,4 +196,4 @@ const gallerypreview = cold(props => {
   )
 })
 
-export default gallerypreview
+export default galleryfull
