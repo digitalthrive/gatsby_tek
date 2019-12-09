@@ -19,6 +19,7 @@ import tekVideo from '../assets/TEKDiagram.mp4'
 const products = cold(({ data }) => {
   const [firstSection, setFirstSection] = useState(0)
   const [showTable, setShowTable] = useState(false)
+  const [showProductSelector, setShowProduct] = useState(true)
 
   const videoElem = useRef(null)
 
@@ -285,7 +286,7 @@ const products = cold(({ data }) => {
           {showTable ? <CompTable /> : null}
         </Section>
       </div>
-      <ProductSelector />
+      {showProductSelector ? <ProductSelector /> : null}
       <Section>
         <div
           sx={{
