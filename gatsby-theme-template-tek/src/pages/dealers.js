@@ -121,7 +121,7 @@ const dealers = cold(({ data }) => {
           {item.node.frontmatter.file === null ? (
             <>
               <a
-                href={item.node.frontmatter.URL}
+                href={item.node.frontmatter.url}
                 target="_blank"
                 sx={{
                   color: `text`,
@@ -132,7 +132,7 @@ const dealers = cold(({ data }) => {
                 {item.node.frontmatter.title}
               </a>
               <a
-                href={item.node.frontmatter.URL}
+                href={item.node.frontmatter.url}
                 target="_blank"
                 sx={{
                   color: `text`,
