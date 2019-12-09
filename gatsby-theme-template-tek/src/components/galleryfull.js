@@ -27,8 +27,6 @@ const galleryfull = cold(props => {
           node {
             childImageSharp {
               fluid(
-                maxWidth: 1920
-
                 quality: 100
               ) {
                 ...GatsbyImageSharpFluid_withWebp
@@ -45,7 +43,6 @@ const galleryfull = cold(props => {
           node {
             childImageSharp {
               fluid(
-                maxWidth: 1920
                 quality: 100
               ) {
                 ...GatsbyImageSharpFluid_withWebp

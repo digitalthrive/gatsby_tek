@@ -6,7 +6,7 @@ import { Styled, jsx } from 'theme-ui'
 import Img from 'gatsby-image'
 
 
-const image_modal = (props) => {
+const image_modal = cold((props) => {
     return (
       <div sx={{
         width: `100%`,
@@ -34,6 +34,6 @@ const image_modal = (props) => {
           />
       </div>
     );
-};
+});
 
 export default image_modal;
