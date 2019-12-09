@@ -9,9 +9,8 @@ import ImageModal from '../components/gallery_modal'
 import Section from '../components/section'
 
 const galleryfull = cold(props => {
-
-  const [open, setOpen] = useState(false);
-  const [openimage, setImage] = useState(null);
+  const [open, setOpen] = useState(false)
+  const [openimage, setImage] = useState(null)
 
   let imageClick = image => {
     setOpen(!open)
@@ -26,12 +25,12 @@ const galleryfull = cold(props => {
         edges {
           node {
             childImageSharp {
-              fluid(
-                quality: 100
-              ) {
+              fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
-
+              fixed(width: 400) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
             }
           }
         }
@@ -42,12 +41,12 @@ const galleryfull = cold(props => {
         edges {
           node {
             childImageSharp {
-              fluid(
-                quality: 100
-              ) {
+              fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
-
+              fixed(width: 400) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
             }
           }
         }
@@ -93,7 +92,7 @@ const galleryfull = cold(props => {
               maxWidth: `100%`,
               display: `block`,
             }}
-            fluid={image.node.childImageSharp.fluid}
+            fixed={image.node.childImageSharp.fixed}
           />
         </div>
       </div>
@@ -137,7 +136,7 @@ const galleryfull = cold(props => {
               maxWidth: `100%`,
               display: `block`,
             }}
-            fluid={image.node.childImageSharp.fluid}
+            fluid={image.node.childImageSharp.fixed}
           />
         </div>
       </div>
