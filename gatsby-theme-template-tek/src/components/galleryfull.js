@@ -28,7 +28,7 @@ const galleryfull = cold(props => {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
-              fixed(width: 400) {
+              fixed(width: 400, height: 300) {
                 ...GatsbyImageSharpFixed_withWebp
               }
             }
@@ -44,7 +44,7 @@ const galleryfull = cold(props => {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
-              fixed(width: 400) {
+              fixed(width: 400, height: 300) {
                 ...GatsbyImageSharpFixed_withWebp
               }
             }
@@ -136,7 +136,7 @@ const galleryfull = cold(props => {
               maxWidth: `100%`,
               display: `block`,
             }}
-            fluid={image.node.childImageSharp.fixed}
+            fixed={image.node.childImageSharp.fixed}
           />
         </div>
       </div>
