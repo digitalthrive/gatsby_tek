@@ -56,89 +56,21 @@ const galleryfull = cold(props => {
 
   let gallery1images = data.gallery1.edges.map(image => {
     return (
-      <div
-        sx={{
-          position: `relative`,
-          boxSizing: `border-box`,
-          flexBasis: [
-            'calc(100% - 20px)',
-            'calc(50% - 20px)',
-            'calc(50% - 20px)',
-            'calc(33.333% - 20px)',
-            'calc(33.333% - 20px)',
-          ],
-          margin: `10px`,
-          ':before': {
-            content: '""',
-            display: `block`,
-            paddingTop: `100%`,
-          },
-        }}
-      >
-        <div
-          onClick={() => imageClick(image.node.childImageSharp.fluid)}
-          sx={{
-            height: `100%`,
-            width: `100%`,
-            position: `absolute`,
-            top: `0`,
-            left: `0`,
-          }}
-        >
-          <Img
-            sx={{
-              height: `100%`,
-              width: `100%`,
-              maxWidth: `100%`,
-              display: `block`,
-            }}
-            fixed={image.node.childImageSharp.fixed}
-          />
-        </div>
+      <div onClick={() => imageClick(image.node.childImageSharp.fluid)}>
+        <Img
+          sx={{ height: `100%`, width: `100%` }}
+          fluid={image.node.childImageSharp.fluid}
+        />
       </div>
     )
   })
   let gallery2images = data.gallery2.edges.map(image => {
     return (
-      <div
-        sx={{
-          position: `relative`,
-          boxSizing: `border-box`,
-          flexBasis: [
-            'calc(100% - 20px)',
-            'calc(50% - 20px)',
-            'calc(50% - 20px)',
-            'calc(33.333% - 20px)',
-            'calc(33.333% - 20px)',
-          ],
-          margin: `10px`,
-          ':before': {
-            content: '""',
-            display: `block`,
-            paddingTop: `100%`,
-          },
-        }}
-      >
-        <div
-          onClick={() => imageClick(image.node.childImageSharp.fluid)}
-          sx={{
-            height: `100%`,
-            width: `100%`,
-            position: `absolute`,
-            top: `0`,
-            left: `0`,
-          }}
-        >
-          <Img
-            sx={{
-              height: `100%`,
-              width: `100%`,
-              maxWidth: `100%`,
-              display: `block`,
-            }}
-            fixed={image.node.childImageSharp.fixed}
-          />
-        </div>
+      <div onClick={() => imageClick(image.node.childImageSharp.fluid)}>
+        <Img
+          sx={{ height: `100%`, width: `100%` }}
+          fluid={image.node.childImageSharp.fluid}
+        />
       </div>
     )
   })
@@ -165,11 +97,11 @@ const galleryfull = cold(props => {
       </Styled.h2>
       <div
         sx={{
-          display: `flex`,
-          flexWrap: `wrap`,
+          display: `grid`,
           height: `100%`,
           width: `100%`,
-          marginBottom: `10%`,
+          gridTemplateColumns: `repeat(auto-fit, minmax(300px, 1fr))`,
+          gridGap: `20px`,
         }}
       >
         {gallery1images}
@@ -179,11 +111,11 @@ const galleryfull = cold(props => {
       </Styled.h2>
       <div
         sx={{
-          display: `flex`,
-          flexWrap: `wrap`,
+          display: `grid`,
           height: `100%`,
           width: `100%`,
-          marginBottom: `10%`,
+          gridTemplateColumns: `repeat(auto-fit, minmax(300px, 1fr))`,
+          gridGap: `20px`,
         }}
       >
         {gallery2images}
