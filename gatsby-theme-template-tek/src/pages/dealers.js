@@ -13,6 +13,8 @@ import ResultsTable2 from '../components/resultstable2'
 import Button from '../components/button'
 import ButtonV2 from '../components/button-v2'
 import downloadIcon from '../components/icons/download-icon.png'
+import metalShakeImg from '../components/images/tek-panel-sketch.jpg'
+import metalShakeXTImg from '../components/images/tek-panel-xt-sketch.png'
 import ContactForm from '../components/contact'
 
 const dealers = cold(({ data }) => {
@@ -378,6 +380,21 @@ const dealers = cold(({ data }) => {
       <div sx={{ overflow: `hidden`, padding: `5% 0` }}>
         <Section>
           <SectionChooser />
+          <div sx={{ height: `400px` }}>
+            {internalSection === 0 ? (
+              <img
+                src={metalShakeImg}
+                sx={{ display: `block`, margin: `0 auto` }}
+                alt="panel sketch"
+              />
+            ) : (
+              <img
+                src={metalShakeXTImg}
+                sx={{ display: `block`, margin: `0 auto` }}
+                alt="panel sketch"
+              />
+            )}
+          </div>
           {internalSection === 0 ? <ResultsTable1 /> : <ResultsTable2 />}
         </Section>
       </div>
