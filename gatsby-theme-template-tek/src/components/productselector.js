@@ -41,7 +41,7 @@ const productselector = cold(props => {
     let indexNum = index + 1
     return (
       <div
-        onClick={() => setActiveFrame(`frame${indexNum}`)}
+        onMouseEnter={() => setActiveFrame(`frame${indexNum}`)}
         key={`${product}${index}`}
         sx={{
           position: `relative`,
@@ -97,7 +97,11 @@ const productselector = cold(props => {
     )
   })
 
-  return <div>{outputFrames}</div>
+  return (
+    <div sx={{ width: `100vw`, backgroundColor: `#1E2121` }}>
+      {outputFrames}
+    </div>
+  )
 })
 
 export default productselector

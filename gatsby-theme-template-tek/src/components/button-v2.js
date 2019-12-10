@@ -26,8 +26,8 @@ const button = props => {
           transition: `all 0.2s ease`,
           cursor: `pointer`,
           ':hover': {
-            backgroundColor: `primary`,
-            color: `text`,
+            backgroundColor: props.hoverBg ? `${props.hoverBg}` : `primary`,
+            color: props.hoverText ? `${props.hoverText}` : `text`,
           },
         }}
       >

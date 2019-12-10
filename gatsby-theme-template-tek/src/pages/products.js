@@ -84,6 +84,11 @@ const products = cold(({ data }) => {
                 borderColor: `primary`,
                 borderCollapse: `collapse`,
                 bg: index === firstSection ? `primary` : null,
+                cursor: `pointer`,
+                transition: `all .3s ease-in-out`,
+                ':hover': {
+                  backgroundColor: `rgba(119, 119, 119, 0.5)`,
+                },
               }}
               onClick={() => setFirstSection(index)}
             >
@@ -278,7 +283,11 @@ const products = cold(({ data }) => {
               {sectionFour[0].node.buttonText}{' '}
               <img
                 src={arrowDown}
-                sx={{ marginLeft: `10px` }}
+                sx={{
+                  marginLeft: `10px`,
+                  transition: `all .2s ease-in-out`,
+                  transform: showTable ? null : `rotate(180deg)`,
+                }}
                 alt="down arrow"
               />
             </p>

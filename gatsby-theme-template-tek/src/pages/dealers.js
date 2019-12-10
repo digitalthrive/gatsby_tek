@@ -56,6 +56,11 @@ const dealers = cold(({ data }) => {
                 borderColor: `primary`,
                 borderCollapse: `collapse`,
                 bg: index === internalSection ? `primary` : null,
+                cursor: `pointer`,
+                transition: `all .3s ease-in-out`,
+                ':hover': {
+                  backgroundColor: `rgba(119, 119, 119, 0.5)`,
+                },
               }}
               onClick={() => setSection(index)}
             >
@@ -374,6 +379,8 @@ const dealers = cold(({ data }) => {
             buttonText="INSTALL METHODS"
             borderColor="text"
             color="text"
+            hoverBg="text"
+            hoverText="primary"
           />
         </div>
       </div>

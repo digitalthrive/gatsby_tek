@@ -129,7 +129,7 @@ const installs = ({ data }) => {
                 }
               }}>{sectionOne[0].node.text3}</Styled.h2>
 
-<div sx={{ display: ['block', 'block', 'flex', 'flex', 'flex'], paddingBottom: `5%` }}>
+              <div sx={{ display: ['block', 'block', 'flex', 'flex', 'flex'], paddingBottom: `5%` }}>
                 <div
                   sx={{ width: ['100%', '100%', '50%', '50%', '50%'], position: `relative`,
                     ':after': { content: `""`, display: ['none', 'none', 'block', 'block', 'block'], height: `20px`, width: `1px`, height: `50px`, position: `absolute`, top: `0`, right: `0`, backgroundColor: `text`
