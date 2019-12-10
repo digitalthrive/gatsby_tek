@@ -397,7 +397,13 @@ const dealers = cold(({ data }) => {
           />
         </div>
       </div>
-      <div sx={{ overflow: `hidden`, padding: `5% 0` }}>
+      <div
+        sx={{
+          overflow: `hidden`,
+          padding: `5% 0`,
+          display: [`none`, `none`, `block`, `block`, `block`],
+        }}
+      >
         <Section>
           <SectionChooser />
           <div sx={{ height: `400px` }}>

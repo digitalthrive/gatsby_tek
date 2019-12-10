@@ -131,10 +131,10 @@ const menubar = cold(() => {
                   margin: '0',
                   marginTop: `2`,
                   textAlign: `left`,
-                  fontSize: [2, 2, 2],
+                  fontSize: [2, 2, 2, 2, 2],
                   color: 'text',
                   fontFamily: `body`,
-                  width: [`100%`, `100%`, `40%`],
+                  width: [`100%`, `100%`, `60%`, `40%`, `40%`],
                 }}
               >
                 {node.node.frontmatter.detail}
@@ -227,7 +227,13 @@ const menubar = cold(() => {
             display: `grid`,
             gridTemplateColumns: `33.33% 33.33% 33.33%`,
             position: 'relative',
-            transform: `translate(0, -50%)`,
+            transform: [
+              `translate(0, -25%)`,
+              `translate(0, -25%)`,
+              `translate(0, -40%)`,
+              `translate(0, -50%)`,
+              `translate(0, -50%)`,
+            ],
           }}
         >
           {selectors}

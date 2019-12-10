@@ -27,6 +27,9 @@ export const slider = cold(() => {
         after={after}
         width={sliderWidth}
         height={560}
+        sx={{
+          display: [`none`, `none`, `block`, `block`, `block`],
+        }}
       />
     )
   }

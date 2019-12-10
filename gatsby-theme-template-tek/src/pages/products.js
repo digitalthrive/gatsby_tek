@@ -213,7 +213,12 @@ const products = cold(({ data }) => {
         )}
       </Section>
       <FinalSlider />
-      <div sx={{ padding: `5% 0` }}>
+      <div
+        sx={{
+          padding: `5% 0`,
+          display: [`none`, `none`, `block`, `block`, `block`],
+        }}
+      >
         <Waypoint
           bottomOffset="35%"
           onEnter={() => {
@@ -298,7 +303,7 @@ const products = cold(({ data }) => {
           {showTable ? <CompTable /> : null}
         </Section>
       </div>
-      {showProductSelector ? <ProductSelector /> : null}
+      <ProductSelector />
       <Section>
         <div
           sx={{

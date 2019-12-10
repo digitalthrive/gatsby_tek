@@ -98,7 +98,13 @@ const productselector = cold(props => {
   })
 
   return (
-    <div sx={{ width: `100vw`, backgroundColor: `#1E2121` }}>
+    <div
+      sx={{
+        width: `100vw`,
+        backgroundColor: `#1E2121`,
+        display: [`none`, `none`, `block`, `block`, `block`],
+      }}
+    >
       {outputFrames}
     </div>
   )
