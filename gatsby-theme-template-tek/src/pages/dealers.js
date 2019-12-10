@@ -200,6 +200,414 @@ const dealers = cold(({ data }) => {
     )
   })
 
+  let MetalShakeStats = () => {
+    return (
+      <table
+        sx={{
+          width: `100%`,
+          border: `2px solid`,
+          borderColor: `primary`,
+          borderCollapse: `collapse`,
+          textAlign: `center`,
+          margin: `5% 0`,
+        }}
+      >
+        <thead>
+          <tr>
+            <th
+              colspan="2"
+              sx={{
+                bg: `text`,
+                borderBottom: `2px solid`,
+                borderColor: `primary`,
+                padding: `1%`,
+                bg: `primary`,
+              }}
+            >
+              <Styled.h3
+                sx={{
+                  color: 'text',
+                  margin: `0`,
+                  padding: `0`,
+                  fontSize: ['2', '2', '2', '3', '3'],
+                }}
+              >
+                HURRICANE® Metal Shake
+              </Styled.h3>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              Minimum roof pitch
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              3:12
+            </td>
+          </tr>
+          <tr>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              Panel size
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              52-1/2” X 16-1/2”
+            </td>
+          </tr>
+          <tr
+            sx={{
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `2px solid`,
+              borderBottom: `none`,
+              borderColor: `primary`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#fdf4f1`,
+              color: `secondary`,
+            }}
+          >
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              Installed exposure
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              50-3/4” X 14-1/2”
+            </td>
+          </tr>
+          <tr>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              Panels per square
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              20
+            </td>
+          </tr>
+          <tr>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              Installed Weight
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              145.5 lbs/sq
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    )
+  }
+
+  let MetalShakeXTStats = () => {
+    return (
+      <table
+        sx={{
+          width: `100%`,
+          border: `2px solid`,
+          borderColor: `primary`,
+          borderCollapse: `collapse`,
+          textAlign: `center`,
+          margin: `5% 0`,
+        }}
+      >
+        <thead>
+          <tr>
+            <th
+              colspan="2"
+              sx={{
+                bg: `text`,
+                borderBottom: `2px solid`,
+                borderColor: `primary`,
+                padding: `1%`,
+                bg: `primary`,
+              }}
+            >
+              <Styled.h3
+                sx={{
+                  color: 'text',
+                  margin: `0`,
+                  padding: `0`,
+                  fontSize: ['2', '2', '2', '3', '3'],
+                }}
+              >
+                HURRICANE® Metal Shake Pro
+              </Styled.h3>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              Minimum roof pitch
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              3:12
+            </td>
+          </tr>
+          <tr>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              Panel size
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              52-1/2” X 14-1/2”
+            </td>
+          </tr>
+          <tr
+            sx={{
+              borderLeft: `2px solid`,
+              borderRight: `2px solid`,
+              borderTop: `2px solid`,
+              borderBottom: `none`,
+              borderColor: `primary`,
+              borderCollapse: `collapse`,
+              backgroundColor: `#fdf4f1`,
+              color: `secondary`,
+            }}
+          >
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              Installed exposure
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              48-3/4” X 13-1/2”
+            </td>
+          </tr>
+          <tr>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              Panels per square
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fff`,
+                color: `secondary`,
+              }}
+            >
+              23
+            </td>
+          </tr>
+          <tr>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              Installed Weight
+            </td>
+            <td
+              sx={{
+                borderLeft: `2px solid`,
+                borderRight: `2px solid`,
+                borderTop: `2px solid`,
+                borderBottom: `none`,
+                borderColor: `primary`,
+                borderCollapse: `collapse`,
+                backgroundColor: `#fdf4f1`,
+                color: `secondary`,
+              }}
+            >
+              145.5 lbs/sq
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    )
+  }
+
   return (
     <Layout>
       <BackImg
@@ -406,21 +814,22 @@ const dealers = cold(({ data }) => {
       >
         <Section>
           <SectionChooser />
-          <div sx={{ height: `400px` }}>
+          <div sx={{ padding: `20px` }}>
             {internalSection === 0 ? (
               <img
                 src={metalShakeImg}
-                sx={{ display: `block`, margin: `0 auto` }}
+                sx={{ display: `block`, margin: `0 auto`, marginTop: `20px` }}
                 alt="panel sketch"
               />
             ) : (
               <img
                 src={metalShakeXTImg}
-                sx={{ display: `block`, margin: `0 auto` }}
+                sx={{ display: `block`, margin: `0 auto`, marginTop: `20px` }}
                 alt="panel sketch"
               />
             )}
           </div>
+          {internalSection === 0 ? <MetalShakeStats /> : <MetalShakeXTStats />}
           {internalSection === 0 ? <ResultsTable1 /> : <ResultsTable2 />}
         </Section>
       </div>
