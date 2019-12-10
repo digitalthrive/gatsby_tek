@@ -60,7 +60,10 @@ const menubar = cold(() => {
   let slides = data.allMarkdownRemark.edges.map(node => {
     return (
       <div sx={{ backgroundColor: `black` }}>
-        <BackImg critical fluid={node.node.frontmatter.image.childImageSharp.fluid}>
+        <BackImg
+          critical
+          fluid={node.node.frontmatter.image.childImageSharp.fluid}
+        >
           <div
             sx={{
               width: `100%`,
@@ -185,7 +188,8 @@ const menubar = cold(() => {
                 height: `100%`,
                 margin: `0 auto`,
                 display: `block`,
-                backgroundColor: `rgba(0,0,0,0.5)`,
+                backgroundColor:
+                  index === slide ? `rgba(210,58,0,0.7)` : `rgba(0,0,0,0.5)`,
               },
               ':hover': {
                 backgroundColor: `rgba(210,58,0,0.7)`,
