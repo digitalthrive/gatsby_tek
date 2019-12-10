@@ -37,3 +37,7 @@ div[class*='styles_handle']:after {
   text-transform: uppercase;
   font-family: 'Bebas Neue', system-ui, sans-serif;
 }
+
+.active:first-child {
+  color: #d23a00;
+}

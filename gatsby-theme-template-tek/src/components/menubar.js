@@ -103,6 +103,7 @@ const menubar = cold(() => {
               return (
                 <Styled.li key={link.name} sx={{ display: `table-cell` }}>
                   <Link
+                    exact
                     to={link.link}
                     sx={{
                       textDecoration: `none`,
@@ -116,6 +117,7 @@ const menubar = cold(() => {
                         color: `primary`,
                       },
                     }}
+                    activeClassName="active"
                   >
                     {link.name}
                   </Link>

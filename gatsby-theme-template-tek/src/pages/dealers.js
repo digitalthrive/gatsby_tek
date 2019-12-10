@@ -59,7 +59,10 @@ const dealers = cold(({ data }) => {
                 cursor: `pointer`,
                 transition: `all .3s ease-in-out`,
                 ':hover': {
-                  backgroundColor: `rgba(119, 119, 119, 0.5)`,
+                  backgroundColor: `primary`,
+                },
+                ':hover > h3': {
+                  color: `text`,
                 },
               }}
               onClick={() => setSection(index)}
@@ -110,64 +113,34 @@ const dealers = cold(({ data }) => {
           },
         }}
       >
-        <div
-          sx={{
-            height: `100%`,
-            width: `100%`,
-            position: `absolute`,
-            top: `0`,
-            left: `0`,
-            display: `flex`,
-            flexDirection: `column`,
-            justifyContent: `center`,
-            padding: `5%`,
-            boxSizing: `border-box`,
-            fontSize: ['5vmin', '3vmin', '3vmin', '1vmin', '13px'],
-          }}
-        >
-          {item.node.frontmatter.file === null ? (
-            <>
-              <a
-                href={item.node.frontmatter.url}
-                target="_blank"
-                sx={{
-                  color: `text`,
-                  textDecoration: `none`,
-                  fontWeight: `bold`,
-                }}
-              >
-                {item.node.frontmatter.title}
-              </a>
-              <a
-                href={item.node.frontmatter.url}
-                target="_blank"
-                sx={{
-                  color: `text`,
-                  textDecoration: `none`,
-                  fontWeight: `bold`,
-                }}
-              >
-                <img
-                  src={downloadIcon}
-                  alt="download"
-                  sx={{ marginTop: `20px` }}
-                />
-              </a>
-            </>
-          ) : (
-            <>
-              <a
-                href={item.node.frontmatter.file}
-                sx={{
-                  color: `text`,
-                  textDecoration: `none`,
-                  fontWeight: `bold`,
-                }}
-              >
-                {item.node.frontmatter.title}
-              </a>
-              <a
-                href={item.node.frontmatter.file}
+        {item.node.frontmatter.file === null ? (
+          <a
+            href={item.node.frontmatter.url}
+            target="_blank"
+            sx={{
+              color: `text`,
+              textDecoration: `none`,
+              fontWeight: `bold`,
+            }}
+          >
+            <div
+              sx={{
+                height: `100%`,
+                width: `100%`,
+                position: `absolute`,
+                top: `0`,
+                left: `0`,
+                display: `flex`,
+                flexDirection: `column`,
+                justifyContent: `center`,
+                padding: `5%`,
+                boxSizing: `border-box`,
+                fontSize: ['5vmin', '3vmin', '3vmin', '1vmin', '13px'],
+              }}
+            >
+              {item.node.frontmatter.title}
+
+              <div
                 sx={{
                   color: `text`,
                   textDecoration: `none`,
@@ -179,10 +152,50 @@ const dealers = cold(({ data }) => {
                   alt="download"
                   sx={{ marginTop: `20px` }}
                 />
-              </a>
-            </>
-          )}
-        </div>
+              </div>
+            </div>
+          </a>
+        ) : (
+          <a
+            href={item.node.frontmatter.file}
+            sx={{
+              color: `text`,
+              textDecoration: `none`,
+              fontWeight: `bold`,
+            }}
+          >
+            <div
+              sx={{
+                height: `100%`,
+                width: `100%`,
+                position: `absolute`,
+                top: `0`,
+                left: `0`,
+                display: `flex`,
+                flexDirection: `column`,
+                justifyContent: `center`,
+                padding: `5%`,
+                boxSizing: `border-box`,
+                fontSize: ['5vmin', '3vmin', '3vmin', '1vmin', '13px'],
+              }}
+            >
+              {item.node.frontmatter.title}
+              <div
+                sx={{
+                  color: `text`,
+                  textDecoration: `none`,
+                  fontWeight: `bold`,
+                }}
+              >
+                <img
+                  src={downloadIcon}
+                  alt="download"
+                  sx={{ marginTop: `20px` }}
+                />
+              </div>
+            </div>
+          </a>
+        )}
       </div>
     )
   })

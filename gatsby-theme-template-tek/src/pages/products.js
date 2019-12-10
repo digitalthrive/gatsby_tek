@@ -87,7 +87,10 @@ const products = cold(({ data }) => {
                 cursor: `pointer`,
                 transition: `all .3s ease-in-out`,
                 ':hover': {
-                  backgroundColor: `rgba(119, 119, 119, 0.5)`,
+                  backgroundColor: `primary`,
+                },
+                ':hover > h3': {
+                  color: `text`,
                 },
               }}
               onClick={() => setFirstSection(index)}

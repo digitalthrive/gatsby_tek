@@ -1,7 +1,7 @@
 ---
 title: Quote 1
-quote: Our before and after is remarkable. All of our neighbors have asked us what kind of roof we put on. They were so surprised and impressed when we told them it was a Hurricane stone-coated metal roof.
-name: Sue and Paul
-descriptor: North Texas Homeowners
+quote: We know that this is the last roof we’ll ever have to put on this home. Our insurance rates have come down. Our prestige within the neighborhood has finally gone back up. We are completely satisfied, and I know that anybody else that puts this roof on will be completely satisfied as well.
+name: Anne
+descriptor: Haslet, TX
 order: 1
 ---
