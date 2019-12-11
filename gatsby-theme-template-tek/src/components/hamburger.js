@@ -5,15 +5,16 @@ import { cold } from 'react-hot-loader'
 import { Styled, jsx, Container } from 'theme-ui'
 import { useSpring, useTransition, animated } from 'react-spring'
 import hamburgerIcon from '../components/icons/hamburger.png'
+import { MdClose } from 'react-icons/md'
 
-const hamburger = cold(() => {
+const hamburger = cold(props => {
   const [open, setOpen] = useState(false)
+  const [showContact, setShowContact] = useState(false)
   const transition = useTransition(open, null, {
-    from: { opacity: `0` },
-    enter: { opacity: `1` },
-    leave: { opacity: `0` },
+    from: { transform: `translate(110vw)` },
+    enter: { transform: `translate(0)` },
+    leave: { transform: `translate(110vw)` },
   })
-
   return (
     <StaticQuery
       query={graphql`
@@ -73,6 +74,18 @@ const hamburger = cold(() => {
                       zIndex: `99`,
                     }}
                   >
+                    <MdClose
+                      sx={{
+                        color: `text`,
+                        width: `50px`,
+                        height: `50px`,
+                        position: `absolute`,
+                        top: `10px`,
+                        right: ['2%', '2%', '50px', '50px', '50px'],
+                        zIndex: `100`,
+                        cursor: `pointer`,
+                      }}
+                    />
                     <ul
                       sx={{
                         paddingTop: [5, 5, 5],
@@ -129,6 +142,51 @@ const hamburger = cold(() => {
                           </li>
                         )
                       })}
+                      <li
+                        sx={{
+                          fontSize: [6, 6, 6],
+                          fontWeight: 'bold',
+                          lineHeight: 'heading',
+                          fontFamily: 'heading',
+                          listStyle: `none`,
+                          margin: 4,
+                          width: ['auto', 'auto', '50%'],
+                        }}
+                        key="contact-link"
+                      >
+                        <Link
+                          to="/contact"
+                          sx={{
+                            color: `text`,
+                            position: `relative`,
+                            textTransform: 'uppercase',
+                            ':hover': {
+                              color: `highlight`,
+                            },
+                            ':before': {
+                              content: `""`,
+                              position: `absolute`,
+                              width: `100%`,
+                              height: `5px`,
+                              bottom: `0`,
+                              left: `0`,
+                              backgroundColor: `highlight`,
+                              visibility: `hidden`,
+                              webkitTransform: `scaleX(0)`,
+                              transform: `scaleX(0)`,
+                              webkitTransition: `all 0.3s ease-in-out 0s`,
+                              transition: `all 0.3s ease-in-out 0s`,
+                            },
+                            ':hover:before': {
+                              visibility: `visible`,
+                              webkitTransform: `scaleX(1)`,
+                              transform: `scaleX(1)`,
+                            },
+                          }}
+                        >
+                          CONTACT
+                        </Link>
+                      </li>
                     </ul>
                   </animated.div>
                 )
