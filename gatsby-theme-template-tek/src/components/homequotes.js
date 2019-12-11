@@ -34,7 +34,12 @@ const homecarousel = cold(() => {
     return (
       <div
         key={`${quote}${index}`}
-        sx={{ height: `80%`, padding: `0 5%`, boxSizing: `border-box` }}
+        sx={{
+          height: `80%`,
+          padding: `2% 5%`,
+          marginBottom: `2`,
+          boxSizing: `border-box`,
+        }}
       >
         <Styled.h3
           sx={{ fontFamily: 'body', color: 'text', position: `relative` }}

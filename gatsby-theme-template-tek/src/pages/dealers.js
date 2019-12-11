@@ -99,7 +99,7 @@ const dealers = cold(({ data }) => {
           position: `relative`,
           boxSizing: `border-box`,
           flexBasis: [
-            'calc(100% - 20px)',
+            'calc(50% - 20px)',
             'calc(50% - 20px)',
             'calc(50% - 20px)',
             'calc(33.333% - 20px)',
@@ -135,7 +135,7 @@ const dealers = cold(({ data }) => {
                 justifyContent: `center`,
                 padding: `5%`,
                 boxSizing: `border-box`,
-                fontSize: ['5vmin', '3vmin', '3vmin', '1vmin', '13px'],
+                fontSize: ['3vmin', '3vmin', '3vmin', '1vmin', '13px'],
               }}
             >
               {item.node.frontmatter.title}
@@ -176,7 +176,7 @@ const dealers = cold(({ data }) => {
                 justifyContent: `center`,
                 padding: `5%`,
                 boxSizing: `border-box`,
-                fontSize: ['5vmin', '3vmin', '3vmin', '1vmin', '13px'],
+                fontSize: ['3vmin', '3vmin', '3vmin', '1vmin', '13px'],
               }}
             >
               {item.node.frontmatter.title}

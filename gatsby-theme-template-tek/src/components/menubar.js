@@ -103,7 +103,7 @@ const menubar = cold(() => {
               return (
                 <Styled.li key={link.name} sx={{ display: `table-cell` }}>
                   <Link
-                    exact
+                    exact="true"
                     to={link.link}
                     sx={{
                       textDecoration: `none`,

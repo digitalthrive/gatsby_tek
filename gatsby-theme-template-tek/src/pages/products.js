@@ -127,7 +127,7 @@ const products = cold(({ data }) => {
         </Styled.h2>
         <SectionChooser />
         {firstSection === 0 ? (
-          <div sx={{ height: `400px` }}>
+          <div sx={{ minHeight: [null, null, null, `400px`, `400px`] }}>
             <div
               sx={{
                 display: `flex`,

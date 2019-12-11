@@ -347,7 +347,7 @@ const homepage = ({ data }) => {
               left: `0`,
               right: `0`,
               width: `100%`,
-              height: `100vh`,
+              height: `100%`,
               background: `rgba(0,0,0,0.8)`,
             },
           }}
