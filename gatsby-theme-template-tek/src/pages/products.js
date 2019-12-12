@@ -80,14 +80,20 @@ const products = cold(({ data }) => {
                 display: `flex`,
                 justifyContent: `center`,
                 alignItems: `center`,
-                border: `3px solid`,
-                borderColor: `primary`,
+                borderTop: `3px solid #d23a00`,
+                borderBottom: `3px solid #d23a00`,
+                borderRight: index === 0 ? null : `3px solid #d23a00`,
+                borderLeft: index === 1 ? null : `3px solid #d23a00`,
                 borderCollapse: `collapse`,
                 bg: index === firstSection ? `primary` : null,
                 cursor: `pointer`,
                 transition: `all .3s ease-in-out`,
                 ':hover': {
                   backgroundColor: `primary`,
+                  borderRight:
+                    index === 0 ? `1px solid #fff` : `3px solid #d23a00`,
+                  borderLeft:
+                    index === 1 ? `1px solid #fff` : `3px solid #d23a00`,
                 },
                 ':hover > h3': {
                   color: `text`,
@@ -294,7 +300,7 @@ const products = cold(({ data }) => {
                 sx={{
                   marginLeft: `10px`,
                   transition: `all .2s ease-in-out`,
-                  transform: showTable ? null : `rotate(180deg)`,
+                  transform: showTable ? `rotate(180deg)` : null,
                 }}
                 alt="down arrow"
               />

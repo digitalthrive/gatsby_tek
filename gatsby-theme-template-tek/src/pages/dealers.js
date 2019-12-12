@@ -52,14 +52,20 @@ const dealers = cold(({ data }) => {
                 display: `flex`,
                 justifyContent: `center`,
                 alignItems: `center`,
-                border: `3px solid`,
-                borderColor: `primary`,
+                borderTop: `3px solid #d23a00`,
+                borderBottom: `3px solid #d23a00`,
+                borderRight: index === 0 ? null : `3px solid #d23a00`,
+                borderLeft: index === 1 ? null : `3px solid #d23a00`,
                 borderCollapse: `collapse`,
                 bg: index === internalSection ? `primary` : null,
                 cursor: `pointer`,
                 transition: `all .3s ease-in-out`,
                 ':hover': {
                   backgroundColor: `primary`,
+                  borderRight:
+                    index === 0 ? `1px solid #fff` : `3px solid #d23a00`,
+                  borderLeft:
+                    index === 1 ? `1px solid #fff` : `3px solid #d23a00`,
                 },
                 ':hover > h3': {
                   color: `text`,
@@ -210,6 +216,7 @@ const dealers = cold(({ data }) => {
           borderCollapse: `collapse`,
           textAlign: `center`,
           margin: `5% 0`,
+          overflowX: `scroll`,
         }}
       >
         <thead>
@@ -414,6 +421,7 @@ const dealers = cold(({ data }) => {
           borderCollapse: `collapse`,
           textAlign: `center`,
           margin: `5% 0`,
+          overflowX: `scroll`,
         }}
       >
         <thead>
@@ -499,7 +507,7 @@ const dealers = cold(({ data }) => {
                 color: `secondary`,
               }}
             >
-              52-1/2” X 14-1/2”
+              50-1/2” X 14-1/2”
             </td>
           </tr>
           <tr
@@ -809,7 +817,6 @@ const dealers = cold(({ data }) => {
         sx={{
           overflow: `hidden`,
           padding: `5% 0`,
-          display: [`none`, `none`, `block`, `block`, `block`],
         }}
       >
         <Section>
@@ -818,19 +825,30 @@ const dealers = cold(({ data }) => {
             {internalSection === 0 ? (
               <img
                 src={metalShakeImg}
-                sx={{ display: `block`, margin: `0 auto`, marginTop: `20px` }}
+                sx={{
+                  display: `block`,
+                  margin: `0 auto`,
+                  marginTop: `20px`,
+                  maxWidth: `90%`,
+                }}
                 alt="panel sketch"
               />
             ) : (
               <img
                 src={metalShakeXTImg}
-                sx={{ display: `block`, margin: `0 auto`, marginTop: `20px` }}
+                sx={{
+                  display: `block`,
+                  margin: `0 auto`,
+                  marginTop: `20px`,
+                  maxWidth: `90%`,
+                }}
                 alt="panel sketch"
               />
             )}
           </div>
           {internalSection === 0 ? <MetalShakeStats /> : <MetalShakeXTStats />}
-          {internalSection === 0 ? <ResultsTable1 /> : <ResultsTable2 />}
+          <ResultsTable1 />
+          <ResultsTable2 />
         </Section>
       </div>
     </Layout>

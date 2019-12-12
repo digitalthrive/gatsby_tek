@@ -407,6 +407,8 @@ const homepage = ({ data }) => {
                   destination="/dealers"
                   borderColor="text"
                   color="text"
+                  hoverBg="text"
+                  hoverText="primary"
                 />
               </div>
             </div>
