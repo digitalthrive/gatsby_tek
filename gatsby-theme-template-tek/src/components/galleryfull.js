@@ -117,7 +117,6 @@ const galleryfull = cold(props => {
           height: `100%`,
           width: `100%`,
           gridTemplateColumns: `repeat(auto-fit, minmax(300px, 1fr))`,
-          gridAutoRows: `240px`,
           gridGap: `20px`,
         }}
       >
