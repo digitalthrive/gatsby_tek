@@ -385,7 +385,7 @@ const homepage = ({ data }) => {
                   {sectionSix[0].node.text}
                 </Styled.h2>
                 <Img
-                  sx={{ width: `411px` }}
+                  sx={{ width: `411px`, maxWidth: `80%` }}
                   fluid={sectionSix[0].node.image.childImageSharp.fluid}
                 />
               </div>
@@ -396,7 +396,7 @@ const homepage = ({ data }) => {
                 }}
               >
                 <Img
-                  sx={{ width: `385px` }}
+                  sx={{ width: `385px`, maxWidth: `80%` }}
                   fluid={sectionSix[0].node.image2.childImageSharp.fluid}
                 />
                 <Styled.p sx={{ color: `text` }}>

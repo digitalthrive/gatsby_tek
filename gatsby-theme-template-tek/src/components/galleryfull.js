@@ -21,6 +21,7 @@ const galleryfull = cold(props => {
     query FullGalleryComponentQuery {
       gallery1: allFile(
         filter: { relativeDirectory: { regex: "/images/gallery/gallery1/" } }
+        sort: { fields: childImageSharp___original___src }
       ) {
         edges {
           node {
@@ -37,6 +38,7 @@ const galleryfull = cold(props => {
       }
       gallery2: allFile(
         filter: { relativeDirectory: { regex: "/images/gallery/gallery2/" } }
+        sort: { fields: childImageSharp___original___src }
       ) {
         edges {
           node {
