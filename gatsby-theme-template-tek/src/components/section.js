@@ -1,12 +1,6 @@
 /** @jsx jsx */
-import React, { useState } from 'react'
-import { graphql } from 'gatsby'
-import { Styled, jsx } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import { Container } from 'theme-ui'
-import { css } from '@emotion/core'
-import { useSpring, animated, config } from 'react-spring'
-import { Waypoint } from 'react-waypoint'
-import Layout from '../components/layout'
 
 const section = props => {
   return (

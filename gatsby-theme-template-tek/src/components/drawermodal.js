@@ -1,9 +1,6 @@
 /** @jsx jsx */
-import React from 'react'
-import { Styled, jsx } from 'theme-ui'
-import { css } from '@emotion/core'
+import { jsx } from 'theme-ui'
 import { MdClose } from 'react-icons/md'
-import Section from './section'
 import Contact from './contactform'
 import Dealer from './dealerform'
 

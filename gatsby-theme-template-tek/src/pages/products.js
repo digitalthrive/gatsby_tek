@@ -1,16 +1,13 @@
 /** @jsx jsx */
-import React, { useState, useRef, useEffect } from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import React, { useState, useRef } from 'react'
+import { graphql } from 'gatsby'
 import { cold } from 'react-hot-loader'
 import { Waypoint } from 'react-waypoint'
 import Img from 'gatsby-image'
 import { Styled, jsx } from 'theme-ui'
-import { css } from '@emotion/core'
 import Loadable from '@loadable/component'
-import BeforeAfterSlider from 'react-before-after-slider'
 import Layout from '../components/layout'
 import Section from '../components/section'
-import Button from '../components/button'
 import CompTable from '../components/comparisontable'
 import ProductSelector from '../components/productselector'
 import arrowDown from '../components/icons/arrow-down.png'
@@ -19,7 +16,6 @@ import tekVideo from '../assets/TEKDiagram.mp4'
 const products = cold(({ data }) => {
   const [firstSection, setFirstSection] = useState(0)
   const [showTable, setShowTable] = useState(false)
-  const [showProductSelector, setShowProduct] = useState(true)
 
   const videoElem = useRef(null)
 
@@ -45,18 +41,18 @@ const products = cold(({ data }) => {
   let sectionFour = sections.filter(obj => {
     return obj.node.section === 4
   })
-  let sectionFive = sections.filter(obj => {
-    return obj.node.section === 5
-  })
+  // let sectionFive = sections.filter(obj => {
+  //   return obj.node.section === 5
+  // })
   let sectionSix = sections.filter(obj => {
     return obj.node.section === 6
   })
   let sectionSeven = sections.filter(obj => {
     return obj.node.section === 7
   })
-  let sectionEight = sections.filter(obj => {
-    return obj.node.section === 8
-  })
+  // let sectionEight = sections.filter(obj => {
+  //   return obj.node.section === 8
+  // })
   let sectionNine = sections.filter(obj => {
     return obj.node.section === 9
   })

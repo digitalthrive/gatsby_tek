@@ -1,8 +1,5 @@
 /** @jsx jsx */
-import React from 'react'
 import { Styled, jsx } from 'theme-ui'
-import { SymbolDef } from 'terser'
-import checkMark from '../components/icons/check-mark.png'
 
 let tableRowsASTME1592 = [
   {
@@ -133,7 +130,7 @@ let E1592table = tableRowsASTME1592.map((row, index) => {
     </td>
   )
   return (
-    <tr>
+    <tr key={`TDSection${index}`}>
       <TdSection>{row.pressure}</TdSection>
       <TdSection>{row.inch1}</TdSection>
       <TdSection>{row.inch2}</TdSection>
@@ -181,7 +178,7 @@ const E1592results = () => {
               </Styled.h3>
             </th>
             <th
-              colspan="6"
+              colSpan="6"
               sx={{
                 bg: `text`,
                 border: `2px 0 solid`,
@@ -221,7 +218,7 @@ const E1592results = () => {
               ></Styled.h3>
             </th>
             <th
-              colspan="3"
+              colSpan="3"
               sx={{
                 bg: `text`,
                 border: `2px solid`,
@@ -242,7 +239,7 @@ const E1592results = () => {
               </Styled.h3>
             </th>
             <th
-              colspan="3"
+              colSpan="3"
               sx={{
                 bg: `text`,
                 border: `2px solid`,

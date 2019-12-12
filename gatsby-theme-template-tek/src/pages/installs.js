@@ -1,12 +1,9 @@
 /** @jsx jsx */
-import React, { useState, useRef, useEffect } from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import BackImg from 'gatsby-background-image'
 import { Styled, jsx } from 'theme-ui'
-import { css } from '@emotion/core'
 import Layout from '../components/layout'
-import Gallery from '../components/galleryfull'
 import Section from '../components/section'
 import ButtonV2 from '../components/button-v2'
 import hipcap_1 from '../components/images/hip-cap-1.jpg'
@@ -26,8 +23,6 @@ const installs = ({ data }) => {
     return obj.node.section === 2
   })
 
-
-
   return (
     <Layout>
       <BackImg
@@ -37,127 +32,435 @@ const installs = ({ data }) => {
           overflow: `hidden`,
           backgroundSize: `contain`,
           backgroundPosition: `top`,
-          backgroundColor: `primary`
-        }}>
-
-        <div sx={{ maxWidth: `1024px`, margin: `auto`, padding: ['15% 10% 20% 10%', '15% 10% 20% 10%', '15% 10% 20% 10%', '15% 10% 20% 10%', '10%'], position: `relative`, zIndex: `15`, overflow: `hidden` }}>
+          backgroundColor: `primary`,
+        }}
+      >
+        <div
+          sx={{
+            maxWidth: `1024px`,
+            margin: `auto`,
+            padding: [
+              '15% 10% 20% 10%',
+              '15% 10% 20% 10%',
+              '15% 10% 20% 10%',
+              '15% 10% 20% 10%',
+              '10%',
+            ],
+            position: `relative`,
+            zIndex: `15`,
+            overflow: `hidden`,
+          }}
+        >
           <div
-            key={sectionOne[0].node.id}
             sx={{
-              width: `100%`
+              width: `100%`,
             }}
           >
-            <Styled.h1
-              sx={{ color: `text` }}>{sectionOne[0].node.text}</Styled.h1>
+            <Styled.h1 sx={{ color: `text` }}>
+              {sectionOne[0].node.text}
+            </Styled.h1>
             <Styled.h2
               sx={{
                 color: `text`,
                 fontSize: `4`,
                 ':after': {
                   backgroundColor: 'text',
-                }
-              }}>{sectionOne[0].node.text2}</Styled.h2>
+                },
+              }}
+            >
+              {sectionOne[0].node.text2}
+            </Styled.h2>
 
-              <div sx={{ display: ['block', 'block', 'flex', 'flex', 'flex'], paddingBottom: `5%` }}>
-                <div
-                  sx={{ width: ['100%', '100%', '50%', '50%', '50%'], position: `relative`,
-                    ':after': { content: `""`, display: ['none', 'none', 'block', 'block', 'block'], height: `20px`, width: `1px`, height: `50px`, position: `absolute`, top: `0`, right: `0`, backgroundColor: `text`
-                    }
-                  }}>
-                  <img src={hipcap_1} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
-                </div>
-                <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
-                  <Styled.h3
-                    sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>1</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Install 2×2 boards along hip area. Board spacing will vary.</p>
-                </div>
+            <div
+              sx={{
+                display: ['block', 'block', 'flex', 'flex', 'flex'],
+                paddingBottom: `5%`,
+              }}
+            >
+              <div
+                sx={{
+                  width: ['100%', '100%', '50%', '50%', '50%'],
+                  position: `relative`,
+                  ':after': {
+                    content: `""`,
+                    display: ['none', 'none', 'block', 'block', 'block'],
+                    height: `20px`,
+                    width: `1px`,
+                    height: `50px`,
+                    position: `absolute`,
+                    top: `0`,
+                    right: `0`,
+                    backgroundColor: `text`,
+                  },
+                }}
+              >
+                <img
+                  alt="hipcap1"
+                  src={hipcap_1}
+                  sx={{
+                    padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'],
+                    boxSizing: `border-box`,
+                    maxWidth: `100%`,
+                  }}
+                />
               </div>
-
-              <div sx={{ display: ['block', 'block', 'flex', 'flex', 'flex'], paddingBottom: `5%` }}>
-                <div
-                  sx={{ width: ['100%', '100%', '50%', '50%', '50%'], position: `relative`,
-                    ':after': { content: `""`, display: ['none', 'none', 'block', 'block', 'block'], height: `20px`, width: `1px`, height: `50px`, position: `absolute`, top: `0`, right: `0`, backgroundColor: `text`
-                    }
-                  }}>
-                  <img src={hipcap_2} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
-                </div>
-                <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
-                  <Styled.h3
-                    sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>2</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Using pre painted weather resistant ring shank nails, fasten hip cap to the 2×2 boards.</p>
-                </div>
+              <div
+                sx={{
+                  width: ['100%', '100%', '35%', '35%', '35%'],
+                  padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'],
+                }}
+              >
+                <Styled.h3
+                  sx={{
+                    color: `text`,
+                    marginBottom: `0`,
+                    marginTop: `0`,
+                    paddingBottom: `0`,
+                  }}
+                >
+                  1
+                </Styled.h3>
+                <p
+                  sx={{
+                    fontWeight: `bold`,
+                    fontSize: `2`,
+                    color: `text`,
+                    marginTop: ['0', '0', 'auto', 'auto', 'auto'],
+                  }}
+                >
+                  Install 2×2 boards along hip area. Board spacing will vary.
+                </p>
               </div>
+            </div>
 
-              <div sx={{ display: ['block', 'block', 'flex', 'flex', 'flex'], paddingBottom: `5%` }}>
-                <div
-                  sx={{ width: ['100%', '100%', '50%', '50%', '50%'], position: `relative`,
-                    ':after': { content: `""`, display: ['none', 'none', 'block', 'block', 'block'], height: `20px`, width: `1px`, height: `50px`, position: `absolute`, top: `0`, right: `0`, backgroundColor: `text`
-                    }
-                  }}>
-                  <img src={hipcap_3} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
-                </div>
-                <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
-                  <Styled.h3
-                    sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>3</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Nail placement should be on the bottom left and right side of each hip cap.</p>
-                </div>
+            <div
+              sx={{
+                display: ['block', 'block', 'flex', 'flex', 'flex'],
+                paddingBottom: `5%`,
+              }}
+            >
+              <div
+                sx={{
+                  width: ['100%', '100%', '50%', '50%', '50%'],
+                  position: `relative`,
+                  ':after': {
+                    content: `""`,
+                    display: ['none', 'none', 'block', 'block', 'block'],
+                    height: `20px`,
+                    width: `1px`,
+                    height: `50px`,
+                    position: `absolute`,
+                    top: `0`,
+                    right: `0`,
+                    backgroundColor: `text`,
+                  },
+                }}
+              >
+                <img
+                  alt="hipcap2"
+                  src={hipcap_2}
+                  sx={{
+                    padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'],
+                    boxSizing: `border-box`,
+                    maxWidth: `100%`,
+                  }}
+                />
               </div>
-
-              <div sx={{ display: ['block', 'block', 'flex', 'flex', 'flex'], paddingBottom: `5%` }}>
-                <div
-                  sx={{ width: ['100%', '100%', '50%', '50%', '50%'], position: `relative`,
-                    ':after': { content: `""`, display: ['none', 'none', 'block', 'block', 'block'], height: `20px`, width: `1px`, height: `50px`, position: `absolute`, top: `0`, right: `0`, backgroundColor: `text`
-                    }
-                  }}>
-                  <img src={hipcap_4} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
-                </div>
-                <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
-                  <Styled.h3
-                    sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>4</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>As a final check, your hip cap line should appear straight and beautiful.</p>
-                </div>
+              <div
+                sx={{
+                  width: ['100%', '100%', '35%', '35%', '35%'],
+                  padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'],
+                }}
+              >
+                <Styled.h3
+                  sx={{
+                    color: `text`,
+                    marginBottom: `0`,
+                    marginTop: `0`,
+                    paddingBottom: `0`,
+                  }}
+                >
+                  2
+                </Styled.h3>
+                <p
+                  sx={{
+                    fontWeight: `bold`,
+                    fontSize: `2`,
+                    color: `text`,
+                    marginTop: ['0', '0', 'auto', 'auto', 'auto'],
+                  }}
+                >
+                  Using pre painted weather resistant ring shank nails, fasten
+                  hip cap to the 2×2 boards.
+                </p>
               </div>
+            </div>
 
-              <hr sx={{ marginTop: `5%`, marginBottom: `10%` }} />
+            <div
+              sx={{
+                display: ['block', 'block', 'flex', 'flex', 'flex'],
+                paddingBottom: `5%`,
+              }}
+            >
+              <div
+                sx={{
+                  width: ['100%', '100%', '50%', '50%', '50%'],
+                  position: `relative`,
+                  ':after': {
+                    content: `""`,
+                    display: ['none', 'none', 'block', 'block', 'block'],
+                    height: `20px`,
+                    width: `1px`,
+                    height: `50px`,
+                    position: `absolute`,
+                    top: `0`,
+                    right: `0`,
+                    backgroundColor: `text`,
+                  },
+                }}
+              >
+                <img
+                  alt="hipcap3"
+                  src={hipcap_3}
+                  sx={{
+                    padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'],
+                    boxSizing: `border-box`,
+                    maxWidth: `100%`,
+                  }}
+                />
+              </div>
+              <div
+                sx={{
+                  width: ['100%', '100%', '35%', '35%', '35%'],
+                  padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'],
+                }}
+              >
+                <Styled.h3
+                  sx={{
+                    color: `text`,
+                    marginBottom: `0`,
+                    marginTop: `0`,
+                    paddingBottom: `0`,
+                  }}
+                >
+                  3
+                </Styled.h3>
+                <p
+                  sx={{
+                    fontWeight: `bold`,
+                    fontSize: `2`,
+                    color: `text`,
+                    marginTop: ['0', '0', 'auto', 'auto', 'auto'],
+                  }}
+                >
+                  Nail placement should be on the bottom left and right side of
+                  each hip cap.
+                </p>
+              </div>
+            </div>
 
-              <Styled.h2
+            <div
+              sx={{
+                display: ['block', 'block', 'flex', 'flex', 'flex'],
+                paddingBottom: `5%`,
+              }}
+            >
+              <div
+                sx={{
+                  width: ['100%', '100%', '50%', '50%', '50%'],
+                  position: `relative`,
+                  ':after': {
+                    content: `""`,
+                    display: ['none', 'none', 'block', 'block', 'block'],
+                    height: `20px`,
+                    width: `1px`,
+                    height: `50px`,
+                    position: `absolute`,
+                    top: `0`,
+                    right: `0`,
+                    backgroundColor: `text`,
+                  },
+                }}
+              >
+                <img
+                  alt="hipcap4"
+                  src={hipcap_4}
+                  sx={{
+                    padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'],
+                    boxSizing: `border-box`,
+                    maxWidth: `100%`,
+                  }}
+                />
+              </div>
+              <div
+                sx={{
+                  width: ['100%', '100%', '35%', '35%', '35%'],
+                  padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'],
+                }}
+              >
+                <Styled.h3
+                  sx={{
+                    color: `text`,
+                    marginBottom: `0`,
+                    marginTop: `0`,
+                    paddingBottom: `0`,
+                  }}
+                >
+                  4
+                </Styled.h3>
+                <p
+                  sx={{
+                    fontWeight: `bold`,
+                    fontSize: `2`,
+                    color: `text`,
+                    marginTop: ['0', '0', 'auto', 'auto', 'auto'],
+                  }}
+                >
+                  As a final check, your hip cap line should appear straight and
+                  beautiful.
+                </p>
+              </div>
+            </div>
+
+            <hr sx={{ marginTop: `5%`, marginBottom: `10%` }} />
+
+            <Styled.h2
               sx={{
                 color: `text`,
                 fontSize: `4`,
                 ':after': {
                   backgroundColor: 'text',
-                }
-              }}>{sectionOne[0].node.text3}</Styled.h2>
+                },
+              }}
+            >
+              {sectionOne[0].node.text3}
+            </Styled.h2>
 
-              <div sx={{ display: ['block', 'block', 'flex', 'flex', 'flex'], paddingBottom: `5%` }}>
-                <div
-                  sx={{ width: ['100%', '100%', '50%', '50%', '50%'], position: `relative`,
-                    ':after': { content: `""`, display: ['none', 'none', 'block', 'block', 'block'], height: `20px`, width: `1px`, height: `50px`, position: `absolute`, top: `0`, right: `0`, backgroundColor: `text`
-                    }
-                  }}>
-                  <img src={hipflash_1} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
-                </div>
-                <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
-                  <Styled.h3
-                    sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>1</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Using a Foot brake bend Panel up 2×2 board and even with the top of 2×2 board.</p>
-                </div>
+            <div
+              sx={{
+                display: ['block', 'block', 'flex', 'flex', 'flex'],
+                paddingBottom: `5%`,
+              }}
+            >
+              <div
+                sx={{
+                  width: ['100%', '100%', '50%', '50%', '50%'],
+                  position: `relative`,
+                  ':after': {
+                    content: `""`,
+                    display: ['none', 'none', 'block', 'block', 'block'],
+                    height: `20px`,
+                    width: `1px`,
+                    height: `50px`,
+                    position: `absolute`,
+                    top: `0`,
+                    right: `0`,
+                    backgroundColor: `text`,
+                  },
+                }}
+              >
+                <img
+                  alt="hipflash1"
+                  src={hipflash_1}
+                  sx={{
+                    padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'],
+                    boxSizing: `border-box`,
+                    maxWidth: `100%`,
+                  }}
+                />
               </div>
+              <div
+                sx={{
+                  width: ['100%', '100%', '35%', '35%', '35%'],
+                  padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'],
+                }}
+              >
+                <Styled.h3
+                  sx={{
+                    color: `text`,
+                    marginBottom: `0`,
+                    marginTop: `0`,
+                    paddingBottom: `0`,
+                  }}
+                >
+                  1
+                </Styled.h3>
+                <p
+                  sx={{
+                    fontWeight: `bold`,
+                    fontSize: `2`,
+                    color: `text`,
+                    marginTop: ['0', '0', 'auto', 'auto', 'auto'],
+                  }}
+                >
+                  Using a Foot brake bend Panel up 2×2 board and even with the
+                  top of 2×2 board.
+                </p>
+              </div>
+            </div>
 
-              <div sx={{ display: ['block', 'block', 'flex', 'flex', 'flex'], paddingBottom: `5%` }}>
-                <div
-                  sx={{ width: ['100%', '100%', '50%', '50%', '50%'], position: `relative`,
-                    ':after': { content: `""`, display: ['none', 'none', 'block', 'block', 'block'], height: `20px`, width: `1px`, height: `50px`, position: `absolute`, top: `0`, right: `0`, backgroundColor: `text`
-                    }
-                  }}>
-                  <img src={hipflash_2} sx={{ padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'], boxSizing: `border-box`, maxWidth: `100%` }} />
-                </div>
-                <div sx={{ width: ['100%', '100%', '35%', '35%', '35%'], padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'] }}>
-                  <Styled.h3
-                    sx={{ color: `text`, marginBottom: `0`, marginTop: `0`, paddingBottom: `0` }}>2</Styled.h3>
-                    <p sx={{ fontWeight: `bold`, fontSize: `2`, color: `text`, marginTop: ['0', '0', 'auto', 'auto', 'auto'] }}>Make sure panel is snug against 2×2 board for optimal hip cap placement.</p>
-                </div>
+            <div
+              sx={{
+                display: ['block', 'block', 'flex', 'flex', 'flex'],
+                paddingBottom: `5%`,
+              }}
+            >
+              <div
+                sx={{
+                  width: ['100%', '100%', '50%', '50%', '50%'],
+                  position: `relative`,
+                  ':after': {
+                    content: `""`,
+                    display: ['none', 'none', 'block', 'block', 'block'],
+                    height: `20px`,
+                    width: `1px`,
+                    height: `50px`,
+                    position: `absolute`,
+                    top: `0`,
+                    right: `0`,
+                    backgroundColor: `text`,
+                  },
+                }}
+              >
+                <img
+                  alt="hipflash2"
+                  src={hipflash_2}
+                  sx={{
+                    padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'],
+                    boxSizing: `border-box`,
+                    maxWidth: `100%`,
+                  }}
+                />
               </div>
+              <div
+                sx={{
+                  width: ['100%', '100%', '35%', '35%', '35%'],
+                  padding: ['0', '0', '0 0 0 2%', '0 0 0 2%', '0 0 0 2%'],
+                }}
+              >
+                <Styled.h3
+                  sx={{
+                    color: `text`,
+                    marginBottom: `0`,
+                    marginTop: `0`,
+                    paddingBottom: `0`,
+                  }}
+                >
+                  2
+                </Styled.h3>
+                <p
+                  sx={{
+                    fontWeight: `bold`,
+                    fontSize: `2`,
+                    color: `text`,
+                    marginTop: ['0', '0', 'auto', 'auto', 'auto'],
+                  }}
+                >
+                  Make sure panel is snug against 2×2 board for optimal hip cap
+                  placement.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </BackImg>
@@ -174,15 +477,15 @@ const installs = ({ data }) => {
             borderLeft: `0 solid transparent`,
             borderRight: `100vw solid transparent`,
           }}
-          ></div>
+        ></div>
         <Section>
-            <div
-              sx={{
-                display: `flex`,
-                paddingBottom: ['15%', '15%', '7%', '7%', '7%'],
-                flexDirection: ['column', 'column', 'column', 'row', 'row'],
-              }}
-            >
+          <div
+            sx={{
+              display: `flex`,
+              paddingBottom: ['15%', '15%', '7%', '7%', '7%'],
+              flexDirection: ['column', 'column', 'column', 'row', 'row'],
+            }}
+          >
             <div sx={{ width: ['100%', '100%', '100%', '45%', '45%'] }}>
               <Styled.h2
                 sx={{
@@ -209,7 +512,7 @@ const installs = ({ data }) => {
               sx={{
                 width: ['100%', '100%', '100%', '55%', '55%'],
                 alignSelf: `center`,
-                paddingTop: ['0', '0', '5%', '5%', '5%']
+                paddingTop: ['0', '0', '5%', '5%', '5%'],
               }}
             >
               <Img

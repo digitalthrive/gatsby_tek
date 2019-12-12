@@ -1,8 +1,5 @@
 /** @jsx jsx */
-import React from 'react'
 import { Styled, jsx } from 'theme-ui'
-import { SymbolDef } from 'terser'
-import checkMark from '../components/icons/check-mark.png'
 
 let tableRowsUL2218 = [
   {
@@ -118,7 +115,7 @@ let UL2218table = tableRowsUL2218.map((row, index) => {
     </td>
   )
   return (
-    <tr>
+    <tr key={`TR${index}`}>
       <TdSection>{row.impact}</TdSection>
       <TdSection>{row.area}</TdSection>
       <TdSection>{row.depression}</TdSection>
@@ -143,94 +140,96 @@ const ul2218results = () => {
         }}
       >
         <thead>
-          <th
-            sx={{
-              bg: `text`,
-              borderRight: `2px solid`,
-              borderColor: `primary`,
-              padding: `1%`,
-            }}
-          >
-            <Styled.h3
+          <tr>
+            <th
               sx={{
-                color: 'primary',
-                margin: `0`,
-                padding: `0`,
-                fontSize: ['2', '2', '2', '3', '3'],
+                bg: `text`,
+                borderRight: `2px solid`,
+                borderColor: `primary`,
+                padding: `1%`,
               }}
             >
-              IMPACT #
-            </Styled.h3>
-          </th>
-          <th
-            sx={{
-              bg: `text`,
-              borderRight: `2px solid`,
-              borderColor: `primary`,
-              padding: `1%`,
-            }}
-          >
-            <Styled.h3
+              <Styled.h3
+                sx={{
+                  color: 'primary',
+                  margin: `0`,
+                  padding: `0`,
+                  fontSize: ['2', '2', '2', '3', '3'],
+                }}
+              >
+                IMPACT #
+              </Styled.h3>
+            </th>
+            <th
               sx={{
-                color: 'primary',
-                margin: `0`,
-                padding: `0`,
-                fontSize: ['2', '2', '2', '3', '3'],
+                bg: `text`,
+                borderRight: `2px solid`,
+                borderColor: `primary`,
+                padding: `1%`,
               }}
             >
-              IMPACT AREA
-            </Styled.h3>
-          </th>
-          <th
-            sx={{
-              bg: `text`,
-              borderRight: `2px solid`,
-              borderColor: `primary`,
-              padding: `1%`,
-            }}
-          >
-            <Styled.h3
+              <Styled.h3
+                sx={{
+                  color: 'primary',
+                  margin: `0`,
+                  padding: `0`,
+                  fontSize: ['2', '2', '2', '3', '3'],
+                }}
+              >
+                IMPACT AREA
+              </Styled.h3>
+            </th>
+            <th
               sx={{
-                color: 'primary',
-                margin: `0`,
-                padding: `0`,
-                fontSize: ['2', '2', '2', '3', '3'],
+                bg: `text`,
+                borderRight: `2px solid`,
+                borderColor: `primary`,
+                padding: `1%`,
               }}
             >
-              DEPRESSION DEPTH
-            </Styled.h3>
-          </th>
-          <th
-            sx={{
-              bg: `text`,
-              borderRight: `2px solid`,
-              borderColor: `primary`,
-              padding: `1%`,
-            }}
-          >
-            <Styled.h3
+              <Styled.h3
+                sx={{
+                  color: 'primary',
+                  margin: `0`,
+                  padding: `0`,
+                  fontSize: ['2', '2', '2', '3', '3'],
+                }}
+              >
+                DEPRESSION DEPTH
+              </Styled.h3>
+            </th>
+            <th
               sx={{
-                color: 'primary',
-                margin: `0`,
-                padding: `0`,
-                fontSize: ['2', '2', '2', '3', '3'],
+                bg: `text`,
+                borderRight: `2px solid`,
+                borderColor: `primary`,
+                padding: `1%`,
               }}
             >
-              OBSERVATIONS
-            </Styled.h3>
-          </th>
-          <th sx={{ bg: `text`, padding: `1%` }}>
-            <Styled.h3
-              sx={{
-                color: 'primary',
-                margin: `0`,
-                padding: `0`,
-                fontSize: ['2', '2', '2', '3', '3'],
-              }}
-            >
-              RESULTS
-            </Styled.h3>
-          </th>
+              <Styled.h3
+                sx={{
+                  color: 'primary',
+                  margin: `0`,
+                  padding: `0`,
+                  fontSize: ['2', '2', '2', '3', '3'],
+                }}
+              >
+                OBSERVATIONS
+              </Styled.h3>
+            </th>
+            <th sx={{ bg: `text`, padding: `1%` }}>
+              <Styled.h3
+                sx={{
+                  color: 'primary',
+                  margin: `0`,
+                  padding: `0`,
+                  fontSize: ['2', '2', '2', '3', '3'],
+                }}
+              >
+                RESULTS
+              </Styled.h3>
+            </th>
+          </tr>
         </thead>
         <tbody>{UL2218table}</tbody>
       </table>

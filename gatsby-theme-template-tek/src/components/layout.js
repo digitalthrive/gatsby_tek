@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from 'react'
 import { Layout as ThemeLayout, Header, Main, jsx } from 'theme-ui'
 import MenuBar from '../components/menubar'
 import Footer from '../components/footer'

@@ -1,13 +1,9 @@
 /** @jsx jsx */
-import React, { useState, useRef, useEffect } from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 import BackImg from 'gatsby-background-image'
-import { Styled, jsx } from 'theme-ui'
-import { css } from '@emotion/core'
+import { jsx } from 'theme-ui'
 import Layout from '../components/layout'
 import Gallery from '../components/galleryfull'
-import Section from '../components/section'
 
 const gallery = ({ data }) => {
   const sections = data.allSection.edges
@@ -15,15 +11,15 @@ const gallery = ({ data }) => {
   let sectionOne = sections.filter(obj => {
     return obj.node.section === 1
   })
-  let sectionTwo = sections.filter(obj => {
-    return obj.node.section === 2
-  })
-  let sectionThree = sections.filter(obj => {
-    return obj.node.section === 3
-  })
-  let sectionFour = sections.filter(obj => {
-    return obj.node.section === 4
-  })
+  // let sectionTwo = sections.filter(obj => {
+  //   return obj.node.section === 2
+  // })
+  // let sectionThree = sections.filter(obj => {
+  //   return obj.node.section === 3
+  // })
+  // let sectionFour = sections.filter(obj => {
+  //   return obj.node.section === 4
+  // })
 
   return (
     <Layout>

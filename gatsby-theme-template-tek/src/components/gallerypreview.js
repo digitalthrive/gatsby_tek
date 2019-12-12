@@ -1,9 +1,8 @@
 /** @jsx jsx */
-import React from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { cold } from 'react-hot-loader'
-import { Styled, jsx } from 'theme-ui'
-import { css } from '@emotion/core'
+import { jsx } from 'theme-ui'
+
 import Img from 'gatsby-image'
 
 const gallerypreview = cold(() => {
@@ -42,6 +41,7 @@ const gallerypreview = cold(() => {
   let gallery1images = data.gallery1.edges.map((image, index) => {
     return (
       <div
+        key={`gal1${index}`}
         sx={{
           position: `relative`,
           boxSizing: `border-box`,
@@ -86,6 +86,7 @@ const gallerypreview = cold(() => {
   let gallery2images = data.gallery2.edges.map((image, index) => {
     return (
       <div
+        key={`gal2${index}`}
         sx={{
           position: `relative`,
           boxSizing: `border-box`,

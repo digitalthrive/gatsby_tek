@@ -1,7 +1,5 @@
 /** @jsx jsx */
-import React from 'react'
 import { Styled, jsx } from 'theme-ui'
-import { SymbolDef } from 'terser'
 import checkMark from '../components/icons/check-mark.png'
 
 let chartArray = [
@@ -165,7 +163,7 @@ let tableRows = chartArray.map((row, index) => {
     rowColor = `none`
   }
   return (
-    <tr>
+    <tr key={`row${index}`}>
       <td
         sx={{
           borderLeft: `2px solid`,
@@ -234,31 +232,33 @@ const comparisontable = () => {
       }}
     >
       <thead>
-        <th sx={{ bg: `text` }}></th>
-        <th sx={{ bg: `text` }}>
-          <Styled.h3
-            sx={{
-              color: 'primary',
-              margin: `0`,
-              padding: `0`,
-              fontSize: ['2', '2', '2', '3', '3'],
-            }}
-          >
-            BEST RATED FOR SEVERE WEATHER
-          </Styled.h3>
-        </th>
-        <th sx={{ bg: `text` }}>
-          <Styled.h3
-            sx={{
-              color: 'primary',
-              margin: `0`,
-              padding: `0`,
-              fontSize: ['2', '2', '2', '3', '3'],
-            }}
-          >
-            HIDDEN FASTENER TECHNOLOGY
-          </Styled.h3>
-        </th>
+        <tr>
+          <th sx={{ bg: `text` }}></th>
+          <th sx={{ bg: `text` }}>
+            <Styled.h3
+              sx={{
+                color: 'primary',
+                margin: `0`,
+                padding: `0`,
+                fontSize: ['2', '2', '2', '3', '3'],
+              }}
+            >
+              BEST RATED FOR SEVERE WEATHER
+            </Styled.h3>
+          </th>
+          <th sx={{ bg: `text` }}>
+            <Styled.h3
+              sx={{
+                color: 'primary',
+                margin: `0`,
+                padding: `0`,
+                fontSize: ['2', '2', '2', '3', '3'],
+              }}
+            >
+              HIDDEN FASTENER TECHNOLOGY
+            </Styled.h3>
+          </th>
+        </tr>
       </thead>
       <tbody>
         <tr>

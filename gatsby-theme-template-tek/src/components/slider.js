@@ -1,10 +1,7 @@
 /** @jsx jsx */
-import React, { useState, useRef, useEffect } from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import React, { useState } from 'react'
 import { cold } from 'react-hot-loader'
-import Img from 'gatsby-image'
-import { Styled, jsx } from 'theme-ui'
-import { css } from '@emotion/core'
+import { jsx } from 'theme-ui'
 import BeforeAfterSlider from 'react-before-after-slider'
 import beforeImage from '../components/images/roof-after.jpg'
 import afterImage from '../components/images/roof-before.jpg'

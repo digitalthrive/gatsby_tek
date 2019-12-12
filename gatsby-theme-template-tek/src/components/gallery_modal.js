@@ -1,8 +1,6 @@
 /** @jsx jsx */
-import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
 import { cold } from 'react-hot-loader'
-import { Styled, jsx } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import Img from 'gatsby-image'
 
 const image_modal = cold(props => {
@@ -21,8 +19,8 @@ const image_modal = cold(props => {
     >
       <Img
         sx={{
-          width: `75%`,
-          height: `75%`,
+          width: [`90%`, `90%`, `75%`, `75%`, `75%`],
+          height: [`auto`, `auto`, `75%`, `75%`, `75%`],
           position: `absolute`,
           top: `50%`,
           left: `50%`,

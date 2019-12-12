@@ -1,15 +1,15 @@
 /** @jsx jsx */
-import React, { useState, useEffect, useLayoutEffect } from 'react'
+import React, { useState } from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import { cold } from 'react-hot-loader'
-import { Styled, jsx, Container } from 'theme-ui'
-import { useSpring, useTransition, animated } from 'react-spring'
+import { jsx } from 'theme-ui'
+import { useTransition, animated } from 'react-spring'
 import hamburgerIcon from '../components/icons/hamburger.png'
 import { MdClose } from 'react-icons/md'
 
 const hamburger = cold(props => {
   const [open, setOpen] = useState(false)
-  const [showContact, setShowContact] = useState(false)
+
   const transition = useTransition(open, null, {
     from: { transform: `translate(110vw)` },
     enter: { transform: `translate(0)` },

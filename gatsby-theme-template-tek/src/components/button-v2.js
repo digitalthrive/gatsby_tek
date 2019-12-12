@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Link } from 'gatsby'
-import { Styled, jsx } from 'theme-ui'
+import { jsx } from 'theme-ui'
 
 const button = props => {
   return (

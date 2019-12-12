@@ -3,10 +3,8 @@ import React, { useState } from 'react'
 import { cold } from 'react-hot-loader'
 import { Styled, jsx } from 'theme-ui'
 import BackImg from 'gatsby-background-image'
-import Img from 'gatsby-image'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import Section from '../components/section'
-import Button from '../components/button'
 import ButtonV2 from '../components/button-v2'
 
 const menubar = cold(() => {

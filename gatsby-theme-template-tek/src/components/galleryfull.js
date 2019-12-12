@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import React, { useState } from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { cold } from 'react-hot-loader'
 import { Styled, jsx } from 'theme-ui'
-import { css } from '@emotion/core'
 import Img from 'gatsby-image'
 import ImageModal from '../components/gallery_modal'
 import Section from '../components/section'
@@ -56,9 +55,12 @@ const galleryfull = cold(props => {
     }
   `)
 
-  let gallery1images = data.gallery1.edges.map(image => {
+  let gallery1images = data.gallery1.edges.map((image, index) => {
     return (
-      <div onClick={() => imageClick(image.node.childImageSharp.fluid)}>
+      <div
+        key={`gal1${index}`}
+        onClick={() => imageClick(image.node.childImageSharp.fluid)}
+      >
         <Img
           sx={{ height: `100%`, width: `100%` }}
           fluid={image.node.childImageSharp.fluid}
@@ -66,9 +68,12 @@ const galleryfull = cold(props => {
       </div>
     )
   })
-  let gallery2images = data.gallery2.edges.map(image => {
+  let gallery2images = data.gallery2.edges.map((image, index) => {
     return (
-      <div onClick={() => imageClick(image.node.childImageSharp.fluid)}>
+      <div
+        key={`gal2${index}`}
+        onClick={() => imageClick(image.node.childImageSharp.fluid)}
+      >
         <Img
           sx={{ height: `100%`, width: `100%` }}
           fluid={image.node.childImageSharp.fluid}
@@ -103,6 +108,7 @@ const galleryfull = cold(props => {
           height: `100%`,
           width: `100%`,
           gridTemplateColumns: `repeat(auto-fit, minmax(300px, 1fr))`,
+          gridAutoRows: [`200px`, `200px`, `300px`, `300px`, `300px`],
           gridGap: `20px`,
         }}
       >
@@ -117,6 +123,7 @@ const galleryfull = cold(props => {
           height: `100%`,
           width: `100%`,
           gridTemplateColumns: `repeat(auto-fit, minmax(300px, 1fr))`,
+          gridAutoRows: [`200px`, `200px`, `300px`, `300px`, `300px`],
           gridGap: `20px`,
         }}
       >

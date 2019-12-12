@@ -1,21 +1,17 @@
 /** @jsx jsx */
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
 import { cold } from 'react-hot-loader'
-import { graphql, Link, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 import BackImg from 'gatsby-background-image'
 import { Styled, jsx } from 'theme-ui'
-import { css } from '@emotion/core'
 import Layout from '../components/layout'
 import Section from '../components/section'
 import ResultsTable1 from '../components/resultstable1'
 import ResultsTable2 from '../components/resultstable2'
-import Button from '../components/button'
 import ButtonV2 from '../components/button-v2'
 import downloadIcon from '../components/icons/download-icon.png'
 import metalShakeImg from '../components/images/tek-panel-sketch.jpg'
 import metalShakeXTImg from '../components/images/tek-panel-xt-sketch.png'
-import ContactForm from '../components/contact'
 
 const dealers = cold(({ data }) => {
   const sections = data.allSection.edges
@@ -93,9 +89,10 @@ const dealers = cold(({ data }) => {
     )
   }
 
-  let selections = data.allMarkdownRemark.edges.map(item => {
+  let selections = data.allMarkdownRemark.edges.map((item, index) => {
     return (
       <div
+        key={`selection${index}`}
         sx={{
           bg: `rgba(210, 58, 0, 0.75)`,
           width: `100%`,
@@ -123,6 +120,7 @@ const dealers = cold(({ data }) => {
           <a
             href={item.node.frontmatter.url}
             target="_blank"
+            rel="noopener noreferrer"
             sx={{
               color: `text`,
               textDecoration: `none`,
@@ -222,7 +220,7 @@ const dealers = cold(({ data }) => {
         <thead>
           <tr>
             <th
-              colspan="2"
+              colSpan="2"
               sx={{
                 bg: `text`,
                 borderBottom: `2px solid`,
@@ -427,7 +425,7 @@ const dealers = cold(({ data }) => {
         <thead>
           <tr>
             <th
-              colspan="2"
+              colSpan="2"
               sx={{
                 bg: `text`,
                 borderBottom: `2px solid`,
@@ -712,14 +710,13 @@ const dealers = cold(({ data }) => {
                     color="primary"
                   />
                 </p> */}
-                <p>
-                  <ButtonV2
-                    destination="/installs"
-                    buttonText={sectionOne[0].node.buttonText2}
-                    borderColor="primary"
-                    color="primary"
-                  />
-                </p>
+
+                <ButtonV2
+                  destination="/installs"
+                  buttonText={sectionOne[0].node.buttonText2}
+                  borderColor="primary"
+                  color="primary"
+                />
               </div>
             </div>
           </div>
@@ -824,6 +821,7 @@ const dealers = cold(({ data }) => {
           <div sx={{ padding: `20px` }}>
             {internalSection === 0 ? (
               <img
+                alt="Metal Shake"
                 src={metalShakeImg}
                 sx={{
                   display: `block`,
@@ -835,6 +833,7 @@ const dealers = cold(({ data }) => {
               />
             ) : (
               <img
+                alt="Metal Shake Pro"
                 src={metalShakeXTImg}
                 sx={{
                   display: `block`,

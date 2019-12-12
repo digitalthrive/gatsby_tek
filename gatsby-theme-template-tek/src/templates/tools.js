@@ -1,8 +1,6 @@
 /** @jsx jsx */
-import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { Styled, jsx } from 'theme-ui'
-import Img from 'gatsby-image'
 import Section from '../components/section'
 import Layout from '../components/layout'
 

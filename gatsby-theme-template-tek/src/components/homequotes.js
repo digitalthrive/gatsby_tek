@@ -1,11 +1,9 @@
 /** @jsx jsx */
-import React from 'react'
 import Swiper from 'react-id-swiper'
 import { graphql, useStaticQuery } from 'gatsby'
 import { cold } from 'react-hot-loader'
 import { Styled, jsx } from 'theme-ui'
-import Img from 'gatsby-image'
-import { Pagination, Navigation } from 'swiper/dist/js/swiper.esm'
+import { Pagination } from 'swiper/dist/js/swiper.esm'
 
 const homecarousel = cold(() => {
   const data = useStaticQuery(

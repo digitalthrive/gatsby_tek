@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import { cold } from 'react-hot-loader'
-import { Styled, jsx, Container, Footer } from 'theme-ui'
+import { Styled, jsx, Footer } from 'theme-ui'
 import Img from 'gatsby-image'
 import { FaFacebookF } from 'react-icons/fa'
 import { FaYoutube } from 'react-icons/fa'
@@ -70,8 +69,6 @@ const footer = cold(() => {
       </Styled.li>
     )
   })
-
-  let sociallinks = data.allSection.edges[0].node.sociallinks
 
   return (
     <Footer>
@@ -265,6 +262,7 @@ const footer = cold(() => {
         >
           <Link to="/">
             <Img
+              alt="home"
               sx={{ width: `87px`, backgroundSize: `contain` }}
               fluid={data.allSection.edges[0].node.image.childImageSharp.fluid}
             />

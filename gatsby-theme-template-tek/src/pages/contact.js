@@ -1,10 +1,7 @@
 /** @jsx jsx */
-import React, { useState, useRef, useEffect } from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
-import BackImg from 'gatsby-background-image'
+import React, { useState } from 'react'
 import { Styled, jsx } from 'theme-ui'
 import { cold } from 'react-hot-loader'
-import { css } from '@emotion/core'
 import Layout from '../components/layout'
 import ContactForm from '../components/contactform'
 import DealerForm from '../components/dealerform'

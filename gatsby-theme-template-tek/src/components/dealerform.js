@@ -1,8 +1,6 @@
 /** @jsx jsx */
-import React, { useState, useEffect, useLayoutEffect } from 'react'
 import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
-import Img from 'gatsby-image'
 
 const dealerform = () => {
   return (
@@ -85,31 +83,31 @@ const dealerform = () => {
       >
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="dealer" />
-        <label for="company_name">Company Name</label>
+        <label htmlFor="company_name">Company Name</label>
         <input type="text" placeholder="Company Name" name="company_name" />
-        <label for="company_address">Company Address</label>
+        <label htmlFor="company_address">Company Address</label>
         <input
           type="text"
           placeholder="Company Address"
           name="company_address"
         />
-        <label for="company_website">Company Website</label>
+        <label htmlFor="company_website">Company Website</label>
         <input
           type="text"
           placeholder="Company Website"
           name="company_website"
         />
-        <label for="contact_name">Contact Name</label>
+        <label htmlFor="contact_name">Contact Name</label>
         <input type="text" placeholder="Contact Name" name="contact_name" />
-        <label for="role[]">Your Role: </label>
+        <label htmlFor="role[]">Your Role: </label>
         <select name="role">
           <option value="none">Choose Role</option>
           <option value="leader">Leader</option>
           <option value="follower">Follower</option>
         </select>
-        <label for="email">Email</label>
+        <label htmlFor="email">Email</label>
         <input type="email" placeholder="Email" name="email" />
-        <label for="phone">Phone (optional)</label>
+        <label htmlFor="phone">Phone (optional)</label>
         <input type="phone" placeholder="Phone (optional)" name="phone" />
         <p>Number of years in business</p>
         <input type="radio" name="years_in_business" value="1-5" /> 1-5
@@ -121,14 +119,14 @@ const dealerform = () => {
         <input type="radio" name="years_in_business" value="15+" /> 15+
         <br />
         <br />
-        <label for="how_did_you_hear_about_TEK">
+        <label htmlFor="how_did_you_hear_about_TEK">
           How did you hear about TEK dealer Plans?
         </label>
         <textarea
           placeholder="How did you hear about TEK dealer Plans?"
           name="how_did_you_hear_about_TEK"
         ></textarea>
-        <label for="describe_why_you_are_for_for_a_dealer">
+        <label htmlFor="describe_why_you_are_for_for_a_dealer">
           Please describe why you would be a good fit for a dealer
         </label>
         <textarea

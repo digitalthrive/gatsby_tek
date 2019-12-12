@@ -1,12 +1,10 @@
 /** @jsx jsx */
-import React, { useState, useEffect, useLayoutEffect } from 'react'
+import React, { useState } from 'react'
 import { Styled, jsx } from 'theme-ui'
 import Img from 'gatsby-image'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { cold } from 'react-hot-loader'
 import { useTransition, animated } from 'react-spring'
-import Button from '../components/button'
-import Section from '../components/section'
 import DrawerModal from '../components/drawermodal'
 import HamburgerMenu from './hamburger.js'
 

@@ -1,8 +1,6 @@
 /** @jsx jsx */
-import React, { useState, useEffect, useLayoutEffect } from 'react'
 import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
-import Img from 'gatsby-image'
 
 const contactform = () => {
   return (

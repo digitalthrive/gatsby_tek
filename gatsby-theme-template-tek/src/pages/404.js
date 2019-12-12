@@ -1,10 +1,6 @@
 /** @jsx jsx */
-import React, { useState, useRef, useEffect } from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
-import BackImg from 'gatsby-background-image'
+import { graphql } from 'gatsby'
 import { Styled, jsx } from 'theme-ui'
-import { css } from '@emotion/core'
 import Layout from '../components/layout'
 import Section from '../components/section'
 import ButtonV2 from '../components/button-v2'
