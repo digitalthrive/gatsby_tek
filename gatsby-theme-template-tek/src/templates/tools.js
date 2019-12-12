@@ -24,7 +24,6 @@ export const query = graphql`
       id
       excerpt
       frontmatter {
-        abbreviation
         title
       }
     }
