@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { graphql } from 'gatsby'
 import { Styled, jsx } from 'theme-ui'
+import { Helmet } from 'react-helmet'
 import BackImg from 'gatsby-background-image'
 import Img from 'gatsby-image'
 import HomeScroller from '../components/homescroller'
@@ -37,6 +38,9 @@ const homepage = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet title="Home | Tek Roofing Systems" defer={false}>
+        <meta name="Home" content="Home" />
+      </Helmet>
       <HomeScroller />
       {sectionTwo.length > 0 ? (
         <Section key={sectionTwo[0].node.id}>

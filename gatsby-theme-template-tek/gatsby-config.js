@@ -7,6 +7,7 @@ module.exports = ({ contentPath = 'data', basePath = '/' }) => ({
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-netlify-cms-paths`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
