@@ -1,5 +1,5 @@
 ---
 title: RUSTIC
-image: ../images/productselector/product4.jpg
-order: 6
+image: ../images/productselector/product6.jpg
+order: 4
 ---
