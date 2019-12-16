@@ -7,7 +7,7 @@ WD Jam Theme - Full Site - Tek Roofing
 WARNING: Any change through the CMS or editing of the Github files directly will trigger a site rebuild.  These site rebuilds take 5-8 build minutes and will not affect access or viewing the site while it is ongoing.  However, for the free tier of Netlify, you are alotted 300 free build minutes.
 If you edit the CMS enough to go over the build minutes, you will have to purchase a higher tier.
 
-CMS is loacated at tekroofingsystems.com/admin. You will need to login with your Netlify Identity credentials when accessing.
+CMS is loacated at https://tekroofingsystems.com/admin. You will need to login with your Netlify Identity credentials when accessing.
 
 These categories can be edited through the CMS:
 
