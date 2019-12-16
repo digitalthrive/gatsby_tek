@@ -4,11 +4,11 @@ module.exports = {
     description: `Tek Roofing`,
     author: `Warren Douglas Advertising`,
     logo: `icon.jpg`,
-    phone: `773.657.3438`,
-    street: `West 7th Street`,
-    city: `Fort Worth, TX`,
-    zip: `76102`,
-    siteUrl: `https://digitalthrive.wdgital.com`,
+    phone: `877-729-5229`,
+    street: `11801 Pierce Street Suite 200`,
+    city: `Riverside, CA`,
+    zip: `92505`,
+    siteUrl: `https://tekroofingsystems.com`,
     menuLinks: [
       {
         name: 'PRODUCTS',
