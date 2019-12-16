@@ -70,12 +70,11 @@ const contactform = () => {
         <button type="submit">Send message</button>
       </form>
       <address sx={{ color: `gray`, fontStyle: `normal`, margin: `5% 0 0 0` }}>
-        Corp Office
-        <span sx={{ color: `primary`, fontWeight: `bold` }}>877-729-5229</span>
+        `Corp Office
+        <span sx={{ color: `primary`, fontWeight: `bold`, marginLeft: `16px` }}>877-729-5229</span>
         <br />
-        Monday –
         <span sx={{ color: `primary`, fontWeight: `bold` }}>
-          Friday 8a.m. - 5p.m. pst
+        Monday – Friday 8a.m. - 5p.m. pst
         </span>
         <br />
         Manufactured by TEK Industries, LLC 11801 Pierce Street, Suite 200,
