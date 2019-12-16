@@ -17,7 +17,7 @@ These categories can be edited through the CMS:
 
 Gallery Images can be added by going to https://github.com/cthiebaud0718/tek_roofing_site/tree/master/site/data/images/gallery and choosing gallery1 or gallery2 folder.  Use the upload files widget - Gallery 1 folder is Metal Shake, Gallery 2 folder is Metal Shake Pro
 
-General content may be edited by editing the file at https://github.com/cthiebaud0718/tek_roofing_site/site/data/sections/sections.yml located on Github.  This is NOT RECOMMENDED as this can have unintended consequences to the overall design and/or break the site if data is entered incorrectly.
+General content may be edited by editing the file at https://github.com/cthiebaud0718/tek_roofing_site/blob/master/site/data/sections/sections.yml located on Github.  This is NOT RECOMMENDED as this can have unintended consequences to the overall design and/or break the site if data is entered incorrectly.
 
 
 # Development requirements
