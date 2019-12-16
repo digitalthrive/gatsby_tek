@@ -55,7 +55,7 @@ const menubar = cold(() => {
     }
   `)
 
-  let slides = data.allMarkdownRemark.edges.map(node => {
+  let slides = data.allMarkdownRemark.edges.map((node, index) => {
     return (
       <div sx={{ backgroundColor: `black` }}>
         <BackImg
@@ -143,6 +143,7 @@ const menubar = cold(() => {
                   buttonText={node.node.frontmatter.buttonText}
                   borderColor="background"
                   color="text"
+                  passed={index === 2 ? 1 : 0}
                 />
               ) : null}
             </div>

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { cold } from 'react-hot-loader'
 import { Helmet } from 'react-helmet'
@@ -14,8 +14,10 @@ import ProductSelector from '../components/productselector'
 import arrowDown from '../components/icons/arrow-down.png'
 import tekVideo from '../assets/TEKDiagram.mp4'
 
-const products = cold(({ data }) => {
-  const [firstSection, setFirstSection] = useState(0)
+const products = cold(({ data, location }) => {
+  const [firstSection, setFirstSection] = useState(
+    parseInt(location.state.passed)
+  )
   const [showTable, setShowTable] = useState(false)
 
   const videoElem = useRef(null)
@@ -121,9 +123,18 @@ const products = cold(({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>TEK® Industries | The Best Roof For Severe Weather | View Our Metal Roofs</title>
-        <meta name="description" content="With TEK Industries, you know you are getting the most durable metal roof for severe weather. View our metal shakes and their many benefits!" />
-        <meta name="keywords" content="benefits of metal roof, roof for severe weather, hurricane roof, durable roof, durable metal roof, hurricane metal roof, roof for bad weather, metal roof for bad weather" />
+        <title>
+          TEK® Industries | The Best Roof For Severe Weather | View Our Metal
+          Roofs
+        </title>
+        <meta
+          name="description"
+          content="With TEK Industries, you know you are getting the most durable metal roof for severe weather. View our metal shakes and their many benefits!"
+        />
+        <meta
+          name="keywords"
+          content="benefits of metal roof, roof for severe weather, hurricane roof, durable roof, durable metal roof, hurricane metal roof, roof for bad weather, metal roof for bad weather"
+        />
       </Helmet>
       <Section>
         <Styled.h2

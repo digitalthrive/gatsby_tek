@@ -39,9 +39,17 @@ const homepage = ({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>TEK® Industries | The Best and Most Durable Metal Roof in the Industry</title>
-        <meta name="description" content="Our industry leading metal roofs provide homeowners with lifelong durability during severe weather, beauty and exceptional performance." />
-        <meta name="keywords" content="metal roof, durable roof, durable metal roof, roof for severe weather, metal roof for bad weather, best roof, beautiful roof, efficient roof, tek roofing, tek roof, tek industries" />
+        <title>
+          TEK® Industries | The Best and Most Durable Metal Roof in the Industry
+        </title>
+        <meta
+          name="description"
+          content="Our industry leading metal roofs provide homeowners with lifelong durability during severe weather, beauty and exceptional performance."
+        />
+        <meta
+          name="keywords"
+          content="metal roof, durable roof, durable metal roof, roof for severe weather, metal roof for bad weather, best roof, beautiful roof, efficient roof, tek roofing, tek roof, tek industries"
+        />
       </Helmet>
       <HomeScroller />
       {sectionTwo.length > 0 ? (
@@ -122,6 +130,7 @@ const homepage = ({ data }) => {
                 buttonText={sectionTwo[0].node.buttonText}
                 borderColor="primary"
                 color="primary"
+                passed="0"
               />
             </div>
           </div>
@@ -283,6 +292,7 @@ const homepage = ({ data }) => {
                 buttonText={sectionFour[0].node.buttonText}
                 borderColor="primary"
                 color="primary"
+                passed="1"
               />
             </div>
           </div>
@@ -310,6 +320,7 @@ const homepage = ({ data }) => {
                   destination="/gallery"
                   borderColor="primary"
                   color="primary"
+                  passed="0"
                 />
               </div>
               <div
@@ -411,6 +422,7 @@ const homepage = ({ data }) => {
                   color="text"
                   hoverBg="text"
                   hoverText="primary"
+                  passed="0"
                 />
               </div>
             </div>

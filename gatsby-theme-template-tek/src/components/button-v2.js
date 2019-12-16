@@ -6,6 +6,7 @@ const button = props => {
   return (
     <Link
       to={props.destination}
+      state={{ passed: `${props.passed}` }}
       sx={{
         textDecoration: `none`,
       }}
