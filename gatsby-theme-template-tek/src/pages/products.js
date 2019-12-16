@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react'
 import { graphql } from 'gatsby'
 import { cold } from 'react-hot-loader'
+import { Helmet } from 'react-helmet'
 import { Waypoint } from 'react-waypoint'
 import Img from 'gatsby-image'
 import { Styled, jsx } from 'theme-ui'
@@ -119,6 +120,11 @@ const products = cold(({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>TEK® Industries | The Best Roof For Severe Weather | View Our Metal Roofs</title>
+        <meta name="description" content="With TEK Industries, you know you are getting the most durable metal roof for severe weather. View our metal shakes and their many benefits!" />
+        <meta name="keywords" content="benefits of metal roof, roof for severe weather, hurricane roof, durable roof, durable metal roof, hurricane metal roof, roof for bad weather, metal roof for bad weather" />
+      </Helmet>
       <Section>
         <Styled.h2
           sx={{ fontSize: ['8', '8', '8', '9', '9'], color: 'primary' }}

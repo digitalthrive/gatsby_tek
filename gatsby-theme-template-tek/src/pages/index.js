@@ -38,8 +38,10 @@ const homepage = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet title="Home | Tek Roofing Systems" defer={false}>
-        <meta name="Home" content="Home" />
+      <Helmet>
+        <title>TEK® Industries | The Best and Most Durable Metal Roof in the Industry</title>
+        <meta name="description" content="Our industry leading metal roofs provide homeowners with lifelong durability during severe weather, beauty and exceptional performance." />
+        <meta name="keywords" content="metal roof, durable roof, durable metal roof, roof for severe weather, metal roof for bad weather, best roof, beautiful roof, efficient roof, tek roofing, tek roof, tek industries" />
       </Helmet>
       <HomeScroller />
       {sectionTwo.length > 0 ? (
@@ -415,13 +417,13 @@ const homepage = ({ data }) => {
           </Section>
         ) : null}
       </div>
-      <iframe
+      {/* <iframe
         title="Location Map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.5361872519593!2d-117.49578258383998!3d33.90159718064733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcb772d99ff651%3A0x88ea560d6f039e2!2s11801%20Pierce%20St%20%23200%2C%20Riverside%2C%20CA%2092505!5e0!3m2!1sen!2sus!4v1573077629628!5m2!1sen!2sus"
         height="600"
         frameBorder="0"
         sx={{ width: `100%`, display: `block` }}
-      ></iframe>
+      ></iframe> */}
     </Layout>
   )
 }

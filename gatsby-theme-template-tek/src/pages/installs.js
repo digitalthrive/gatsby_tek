@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import BackImg from 'gatsby-background-image'
 import { Styled, jsx } from 'theme-ui'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import Section from '../components/section'
 import ButtonV2 from '../components/button-v2'
@@ -25,6 +26,11 @@ const installs = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>TEK® Industries | Metal Pro-X Hip Cap Installation | Metal Roof Installation</title>
+        <meta name="description" content="Interested in installing the metal pro-x hip caps yourself? Follow the steps on our website to ensure your roof is as durable as possible!" />
+        <meta name="keywords" content="metal rool, durable roof, durable metal roof, tek indsustries, tek roofing, tek installation, tek roof install, roof installation" />
+      </Helmet>
       <BackImg
         critical
         fluid={sectionOne[0].node.image2.childImageSharp.fluid}

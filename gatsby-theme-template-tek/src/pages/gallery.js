@@ -2,6 +2,7 @@
 import { graphql } from 'gatsby'
 import BackImg from 'gatsby-background-image'
 import { jsx } from 'theme-ui'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import Gallery from '../components/galleryfull'
 
@@ -23,6 +24,11 @@ const gallery = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>TEK® Industries | View Our Beautiful, Durable Roofs</title>
+        <meta name="description" content="TEK Industries roofs aren't just the most durable, they also offer lifelong exceptional performance wile looking beautiful. View our past work to see for yourself." />
+        <meta name="keywords" content="metal roof, durable roof, durable metal roof, roof for severe weather, metal roof for bad weather, best roof, beautiful roof, efficient roof, tek roofing, tek roof, tek industries" />
+      </Helmet>
       <BackImg
         critical
         fluid={sectionOne[0].node.image.childImageSharp.fluid}

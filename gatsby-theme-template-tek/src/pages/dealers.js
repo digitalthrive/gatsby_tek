@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { cold } from 'react-hot-loader'
 import { graphql } from 'gatsby'
 import BackImg from 'gatsby-background-image'
+import { Helmet } from 'react-helmet'
 import { Styled, jsx } from 'theme-ui'
 import Layout from '../components/layout'
 import Section from '../components/section'
@@ -616,6 +617,11 @@ const dealers = cold(({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>TEK® Industries | TEK Dealer Tools | The Most Durable Roof in the Industry</title>
+        <meta name="description" content="Partner with TEK Industries to get direct access to the best metal shake products on the market. TEK Industries wants everyone to succeed and progress." />
+        <meta name="keywords" content="metal roof, durable roof, durable metal roof, roof for severe weather, metal roof for bad weather, tek roof, tek industries, tek dealer, tek dealer tools, tek partner" />
+      </Helmet>
       <BackImg
         critical
         fluid={sectionOne[0].node.image.childImageSharp.fluid}

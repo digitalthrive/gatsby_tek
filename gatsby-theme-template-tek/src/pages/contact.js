@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Styled, jsx } from 'theme-ui'
 import { cold } from 'react-hot-loader'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import ContactForm from '../components/contactform'
 import DealerForm from '../components/dealerform'
@@ -67,6 +68,9 @@ const contact = cold(() => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>TEK® Industries | Contact Us</title>
+      </Helmet>
       <div
         sx={{
           width: [`80%`, `80%`, `80%`, `800px`, `800px`],

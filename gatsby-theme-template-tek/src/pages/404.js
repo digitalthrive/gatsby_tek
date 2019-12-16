@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { graphql } from 'gatsby'
 import { Styled, jsx } from 'theme-ui'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import Section from '../components/section'
 import ButtonV2 from '../components/button-v2'
