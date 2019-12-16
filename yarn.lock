@@ -14908,7 +14908,7 @@ web-namespaces@^1.0.0, web-namespaces@^1.1.2:
 
 webpack-assets-manifest@^3.1.1:
   version "3.1.1"
-  resolved "https://nexus.digitalthrive.com/repository/npm-group/webpack-assets-manifest/-/webpack-assets-manifest-3.1.1.tgz#39bbc3bf2ee57fcd8ba07cda51c9ba4a3c6ae1de"
+  resolved "https://registry.npmjs.org/repository/npm-group/webpack-assets-manifest/-/webpack-assets-manifest-3.1.1.tgz#39bbc3bf2ee57fcd8ba07cda51c9ba4a3c6ae1de"
   integrity sha512-JV9V2QKc5wEWQptdIjvXDUL1ucbPLH2f27toAY3SNdGZp+xSaStAgpoMcvMZmqtFrBc9a5pTS1058vxyMPOzRQ==
   dependencies:
     chalk "^2.0"
