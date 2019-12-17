@@ -203,9 +203,12 @@ const footer = cold(() => {
                   padding: `0 10px`,
                 }}
               >
-                <Link to="/" sx={{ color: 'text' }}>
+                <a
+                  href="https://www.facebook.com/TEK-Industries-Metal-Roofing-Supply-620992491686019/"
+                  sx={{ color: 'text' }}
+                >
                   <FaFacebookF sx={{ fontSize: '3' }} />
-                </Link>
+                </a>
               </li>
               <li
                 sx={{
@@ -214,9 +217,12 @@ const footer = cold(() => {
                   padding: `0 10px`,
                 }}
               >
-                <Link to="/" sx={{ color: 'text' }}>
+                <a
+                  href="https://www.youtube.com/channel/UCrRlytpQNeJsq46rrSmStMw/featured"
+                  sx={{ color: 'text' }}
+                >
                   <FaYoutube sx={{ fontSize: '3' }} />
-                </Link>
+                </a>
               </li>
             </Styled.ul>
           </div>

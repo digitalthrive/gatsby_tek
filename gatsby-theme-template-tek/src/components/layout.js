@@ -2,6 +2,8 @@
 import { Layout as ThemeLayout, Header, Main, jsx } from 'theme-ui'
 import MenuBar from '../components/menubar'
 import Footer from '../components/footer'
+import { Helmet } from 'react-helmet'
+import favicon32 from '../components/icons/TEK_Favicon_-32x32.png'
 import './layout.css'
 
 // Workaround to enable netlify form in modal to function
@@ -115,6 +117,9 @@ const DealerHidden = () => {
 const Layout = ({ children }) => {
   return (
     <ThemeLayout>
+      <Helmet>
+        <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
+      </Helmet>
       <Header>
         <ContactHidden />
         <DealerHidden />
