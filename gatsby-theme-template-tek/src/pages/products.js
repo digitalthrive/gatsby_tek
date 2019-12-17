@@ -188,7 +188,7 @@ const products = cold(({ data, location }) => {
             </div>
           </div>
         ) : (
-          <div sx={{ height: `400px` }}>
+          <div sx={{ minHeight: [null, null, null, `400px`, `400px`] }}>
             <div
               sx={{
                 display: `flex`,
