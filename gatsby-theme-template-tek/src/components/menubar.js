@@ -115,6 +115,7 @@ const menubar = cold(() => {
                         color: `primary`,
                       },
                     }}
+                    passed="0"
                     activeClassName="active"
                   >
                     {link.name}
