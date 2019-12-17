@@ -247,6 +247,8 @@ const products = cold(({ data, location }) => {
         <div>
           <video
             ref={videoElem}
+            playsinline
+            muted
             sx={{
               width: `100%`,
               margin: `0 auto`,
