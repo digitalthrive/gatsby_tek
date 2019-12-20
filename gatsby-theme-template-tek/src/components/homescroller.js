@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { cold } from 'react-hot-loader'
 import { Styled, jsx } from 'theme-ui'
+import Img from 'gatsby-image'
 import BackImg from 'gatsby-background-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import Section from '../components/section'
@@ -30,7 +31,7 @@ const menubar = cold(() => {
               image {
                 childImageSharp {
                   fluid(quality: 100) {
-                    ...GatsbyImageSharpFluid_withWebp_noBase64
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
@@ -58,10 +59,7 @@ const menubar = cold(() => {
   let slides = data.allMarkdownRemark.edges.map((node, index) => {
     return (
       <div sx={{ backgroundColor: `black` }}>
-        <BackImg
-          critical
-          fluid={node.node.frontmatter.image.childImageSharp.fluid}
-        >
+        <BackImg fluid={node.node.frontmatter.image.childImageSharp.fluid}>
           <div
             sx={{
               width: `100%`,
