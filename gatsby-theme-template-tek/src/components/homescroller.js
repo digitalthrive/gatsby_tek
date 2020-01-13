@@ -127,7 +127,7 @@ const menubar = cold(() => {
                   margin: '0',
                   marginTop: `2`,
                   textAlign: `left`,
-                  fontSize: [2, 2, 2, 2, 2],
+                  fontSize: [`18px`, 2, 2, 2, 2],
                   color: 'text',
                   fontFamily: `body`,
                   width: [`100%`, `100%`, `60%`, `40%`, `40%`],

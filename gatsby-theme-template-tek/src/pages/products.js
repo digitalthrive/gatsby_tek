@@ -11,6 +11,7 @@ import Layout from '../components/layout'
 import Section from '../components/section'
 import CompTable from '../components/comparisontable'
 import ProductSelector from '../components/productselector'
+import MobileProductSelector from '../components/mobileproductselector'
 import arrowDown from '../components/icons/arrow-down.png'
 import tekVideo from '../assets/TEKDiagram.mp4'
 
@@ -325,6 +326,7 @@ const products = cold(({ data, location }) => {
         </Section>
       </div>
       <ProductSelector />
+      <MobileProductSelector />
       <Section>
         <div
           sx={{
