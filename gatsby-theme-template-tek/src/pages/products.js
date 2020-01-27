@@ -12,12 +12,15 @@ import Section from '../components/section'
 import CompTable from '../components/comparisontable'
 import ProductSelector from '../components/productselector'
 import MobileProductSelector from '../components/mobileproductselector'
+import MobileDiagram from '../components/mobilediagram'
 import arrowDown from '../components/icons/arrow-down.png'
 import tekVideo from '../assets/TEKDiagram.mp4'
 
 const products = cold(({ data, location }) => {
   const [firstSection, setFirstSection] = useState(
-    location.state ? parseInt(location.state.passed) : 0
+    location.state && location.state.passed
+      ? parseInt(location.state.passed)
+      : 0
   )
   const [showTable, setShowTable] = useState(false)
 
@@ -233,6 +236,13 @@ const products = cold(({ data, location }) => {
         )}
       </Section>
       <FinalSlider />
+      <div
+        sx={{
+          display: [`block`, `block`, `none`, `none`, `none`],
+        }}
+      >
+        <MobileDiagram />
+      </div>
       <div
         sx={{
           padding: `5% 0`,
