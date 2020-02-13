@@ -28,15 +28,14 @@ const trafficatalyst = () => {
                 map_api_key: 'redundant-field',
                 old_ga: false,
                 gtm: false,
+                css_files: ["tekroofing"]
               })
             }
           }
         `}</script>
       </Helmet>
 
-      <div className="traffic-express" sx={{ minHeight: `200px` }}>
-        HI I AM TRAFFIC EXPRESS
-      </div>
+      <div className="traffic-express" sx={{ minHeight: `200px` }}></div>
     </div>
   )
 }
