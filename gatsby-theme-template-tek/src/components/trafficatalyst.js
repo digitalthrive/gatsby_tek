@@ -33,7 +33,8 @@ const trafficatalyst = () => {
           }
         `}</script>
       </Helmet>
-      <div className="traffic-express" sx={{ minHeight: `600px` }}>
+
+      <div className="traffic-express" sx={{ minHeight: `200px` }}>
         HI I AM TRAFFIC EXPRESS
       </div>
     </div>
