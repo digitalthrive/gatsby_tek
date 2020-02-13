@@ -10,6 +10,7 @@ import Layout from '../components/layout'
 import Section from '../components/section'
 import HomeQuotes from '../components/homequotes'
 import ButtonV2 from '../components/button-v2'
+import Trafficatalyst from '../components/trafficatalyst'
 
 const homepage = ({ data }) => {
   const sections = data.allSection.edges
@@ -375,6 +376,11 @@ const homepage = ({ data }) => {
           </Section>
         </div>
       </BackImg>
+      <div sx={{ backgroundColor: 'secondary', color: `text` }}>
+        <Section>
+          <Trafficatalyst />
+        </Section>
+      </div>
       <div sx={{ backgroundColor: 'primary' }}>
         {sectionSix.length > 0 ? (
           <Section key={sectionSix[0].node.id}>
@@ -429,6 +435,7 @@ const homepage = ({ data }) => {
           </Section>
         ) : null}
       </div>
+
       {/* <iframe
         title="Location Map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.5361872519593!2d-117.49578258383998!3d33.90159718064733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcb772d99ff651%3A0x88ea560d6f039e2!2s11801%20Pierce%20St%20%23200%2C%20Riverside%2C%20CA%2092505!5e0!3m2!1sen!2sus!4v1573077629628!5m2!1sen!2sus"
