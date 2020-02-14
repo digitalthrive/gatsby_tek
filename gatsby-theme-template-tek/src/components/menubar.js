@@ -103,7 +103,7 @@ const menubar = cold(() => {
                   <Link
                     exact="true"
                     to={link.link}
-                    state={{ passed: `0`, fromPage: true }}
+                    state={{ passed: 0, fromPage: true }}
                     sx={{
                       textDecoration: `none`,
                       color: `secondary`,

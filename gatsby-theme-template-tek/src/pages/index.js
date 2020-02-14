@@ -15,7 +15,6 @@ import Trafficatalyst from '../components/trafficatalyst'
 const homepage = ({ data, location }) => {
   const sections = data.allSection.edges
   const { state = {} } = location
-  console.log(state)
   // let sectionOne = sections.filter(obj => {
   //   return obj.node.section === 1
   // })
@@ -380,7 +379,7 @@ const homepage = ({ data, location }) => {
       <div sx={{ backgroundColor: 'secondary', color: `text` }}>
         <Section>
           <Trafficatalyst
-            fromPage={location.state && location.state.fromPage ? 1 : 0}
+            fromPage={location.state && location.state.fromPage == 1 ? 1 : 0}
           />
         </Section>
       </div>
