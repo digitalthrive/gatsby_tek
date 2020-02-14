@@ -32,7 +32,7 @@ const trafficatalyst = props => {
             window.onload = () => {
               var tc = require('TRAFFIX')
               tc.init({
-                api_endpoint: 'https://tekroofing.trafficatalyst.wdgital.com',
+                api_endpoint: 'https://tekroofing.trafficatalyst.digitalthrive.com',
                 api_key: 'KlSAwe2as6I0He3AqOph6pUPREtA2uJ7',
                 map_api_key: 'redundant-field',
                 old_ga: false,
