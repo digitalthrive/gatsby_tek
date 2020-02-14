@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet'
 const trafficatalyst = props => {
   useEffect(() => {
     setTimeout(function() {
-      if (props.fromPage === 1) {
+      if (props.fromPage === 1 && !document.getElementById('whereToBuy')) {
         dispatchEvent(new Event('load'))
       }
     }, 2000)
