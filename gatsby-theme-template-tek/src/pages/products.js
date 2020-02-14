@@ -18,7 +18,6 @@ import tekVideo from '../assets/TEKDiagram.mp4'
 
 const products = cold(({ data, location }) => {
   const { state = {} } = location
-  console.log(state)
   const [firstSection, setFirstSection] = useState(
     location.state && location.state.passed
       ? parseInt(location.state.passed)

@@ -5,9 +5,11 @@ import { Helmet } from 'react-helmet'
 
 const trafficatalyst = props => {
   useEffect(() => {
-    if (props.fromPage === 1) {
-      dispatchEvent(new Event('load'))
-    }
+    setTimeout(function() {
+      if (props.fromPage === 1) {
+        dispatchEvent(new Event('load'))
+      }
+    }, 2000)
   }, [])
 
   return (
@@ -41,7 +43,7 @@ const trafficatalyst = props => {
           }
         `}</script>
       </Helmet>
-      <div className="traffic-express" sx={{ minHeight: `200px` }}></div>
+      <div className="traffic-express"></div>
     </div>
   )
 }
