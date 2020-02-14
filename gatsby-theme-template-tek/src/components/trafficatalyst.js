@@ -1,8 +1,15 @@
 /** @jsx jsx */
+import React, { useEffect } from 'react'
 import { jsx } from 'theme-ui'
 import { Helmet } from 'react-helmet'
 
-const trafficatalyst = () => {
+const trafficatalyst = props => {
+  useEffect(() => {
+    if (props.fromPage === 1) {
+      dispatchEvent(new Event('load'))
+    }
+  }, [])
+
   return (
     <div>
       <Helmet>

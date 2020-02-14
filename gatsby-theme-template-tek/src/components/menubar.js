@@ -80,7 +80,7 @@ const menubar = cold(() => {
             justifySelf: `center`,
           }}
         >
-          <Link to="/">
+          <Link to="/" state={{ fromPage: true, passed: 0 }}>
             <Img
               sx={{
                 maxWidth: `382px`,
@@ -103,6 +103,7 @@ const menubar = cold(() => {
                   <Link
                     exact="true"
                     to={link.link}
+                    state={{ passed: `0`, fromPage: true }}
                     sx={{
                       textDecoration: `none`,
                       color: `secondary`,
@@ -115,7 +116,6 @@ const menubar = cold(() => {
                         color: `primary`,
                       },
                     }}
-                    state={{ passed: `0` }}
                     activeClassName="active"
                   >
                     {link.name}

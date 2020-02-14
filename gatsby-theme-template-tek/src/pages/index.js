@@ -12,9 +12,10 @@ import HomeQuotes from '../components/homequotes'
 import ButtonV2 from '../components/button-v2'
 import Trafficatalyst from '../components/trafficatalyst'
 
-const homepage = ({ data }) => {
+const homepage = ({ data, location }) => {
   const sections = data.allSection.edges
-
+  const { state = {} } = location
+  console.log(state)
   // let sectionOne = sections.filter(obj => {
   //   return obj.node.section === 1
   // })
@@ -378,7 +379,9 @@ const homepage = ({ data }) => {
       </BackImg>
       <div sx={{ backgroundColor: 'secondary', color: `text` }}>
         <Section>
-          <Trafficatalyst />
+          <Trafficatalyst
+            fromPage={location.state && location.state.fromPage ? 1 : 0}
+          />
         </Section>
       </div>
       <div sx={{ backgroundColor: 'primary' }}>
