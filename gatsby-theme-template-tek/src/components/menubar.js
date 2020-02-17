@@ -150,51 +150,6 @@ const menubar = cold(() => {
           </Styled.ul>
         </div>
         <div
-          sx={{
-            display: ['none', 'none', 'none', 'flex', 'flex'],
-            justifyContent: `center`,
-            alignItems: `center`,
-          }}
-        >
-          <Link to="/#tcmap" state={{ fromPage: true, passed: 0 }}>
-            <div
-              sx={{
-                color: 'text',
-                bg: 'primary',
-                fontFamily: 'heading',
-                fontSize: `25px`,
-                letterSpacing: 1,
-                width: `fit-content`,
-                margin: `auto`,
-                textAlign: `center`,
-                padding: 0,
-                lineHeight: `header`,
-                border: `none`,
-                borderColor: `primary`,
-                boxShadow: `0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)`,
-              }}
-            >
-              <p
-                sx={{
-                  paddingLeft: 4,
-                  paddingRight: 4,
-                  paddingTop: 1,
-                  paddingBottom: 1,
-                  margin: `0`,
-                  transition: `all 0.2s ease`,
-                  cursor: `pointer`,
-                  ':hover': {
-                    backgroundColor: `text`,
-                    color: `primary`,
-                  },
-                }}
-              >
-                FIND AN INSTALLER
-              </p>
-            </div>
-          </Link>
-        </div>
-        <div
           onClick={() => showHandler('dealer')}
           sx={{
             display: ['none', 'none', 'none', 'flex', 'flex'],

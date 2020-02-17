@@ -15,7 +15,7 @@ const gallerypreview = cold(() => {
         edges {
           node {
             childImageSharp {
-              fluid(maxHeight: 800, quality: 100) {
+              fluid(maxHeight: 200, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
@@ -29,7 +29,7 @@ const gallerypreview = cold(() => {
         edges {
           node {
             childImageSharp {
-              fluid(maxHeight: 800, quality: 100) {
+              fluid(maxHeight: 200, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

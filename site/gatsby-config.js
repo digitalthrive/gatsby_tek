@@ -19,6 +19,10 @@ module.exports = {
         link: '/gallery',
       },
       {
+        name: 'FIND AN INSTALLER',
+        link: '/#tcmap',
+      },
+      {
         name: 'DEALER TOOLS',
         link: '/dealers',
       },
