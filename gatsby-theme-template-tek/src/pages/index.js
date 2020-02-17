@@ -377,6 +377,15 @@ const homepage = ({ data, location }) => {
         </div>
       </BackImg>
       <div sx={{ backgroundColor: 'secondary', color: `text` }}>
+        <a
+          id="tcmap"
+          sx={{
+            display: 'block',
+            position: 'relative',
+            top: '-100px',
+            visibility: 'hidden',
+          }}
+        ></a>
         <Section>
           <Trafficatalyst
             fromPage={location.state && location.state.fromPage == 1 ? 1 : 0}
