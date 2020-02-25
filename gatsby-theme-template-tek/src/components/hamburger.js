@@ -187,6 +187,51 @@ const hamburger = cold(props => {
                           CONTACT
                         </Link>
                       </li>
+                      <li
+                        sx={{
+                          fontSize: [6, 6, 6],
+                          fontWeight: 'bold',
+                          lineHeight: 'heading',
+                          fontFamily: 'heading',
+                          listStyle: `none`,
+                          margin: 4,
+                          width: ['auto', 'auto', '50%'],
+                        }}
+                        key="contact-link"
+                      >
+                        <Link
+                          to="/#tcmap"
+                          sx={{
+                            color: `text`,
+                            position: `relative`,
+                            textTransform: 'uppercase',
+                            ':hover': {
+                              color: `highlight`,
+                            },
+                            ':before': {
+                              content: `""`,
+                              position: `absolute`,
+                              width: `100%`,
+                              height: `5px`,
+                              bottom: `0`,
+                              left: `0`,
+                              backgroundColor: `highlight`,
+                              visibility: `hidden`,
+                              webkitTransform: `scaleX(0)`,
+                              transform: `scaleX(0)`,
+                              webkitTransition: `all 0.3s ease-in-out 0s`,
+                              transition: `all 0.3s ease-in-out 0s`,
+                            },
+                            ':hover:before': {
+                              visibility: `visible`,
+                              webkitTransform: `scaleX(1)`,
+                              transform: `scaleX(1)`,
+                            },
+                          }}
+                        >
+                          FIND AN INSTALLER
+                        </Link>
+                      </li>
                     </ul>
                   </animated.div>
                 )

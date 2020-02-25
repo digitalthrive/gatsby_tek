@@ -156,15 +156,61 @@ const menubar = cold(() => {
             alignItems: `center`,
           }}
         >
-          <Link to="/#tcmap" state={{ fromPage: true, passed: 0 }}>
+          <div sx={{ marginRight: `20px` }}>
+            <Link to="/#tcmap" state={{ fromPage: true, passed: 0 }}>
+              <div
+                sx={{
+                  color: 'text',
+                  bg: 'primary',
+                  fontFamily: 'heading',
+                  fontSize: [`16px`, `16px`, `16px`, `16px`, `25px`],
+                  letterSpacing: 1,
+                  width: [`100px`, `100px`, `100px`, `100px`, `fit-content`],
+                  margin: `auto`,
+                  textAlign: `center`,
+                  padding: 0,
+                  lineHeight: `header`,
+                  border: `none`,
+                  borderColor: `primary`,
+                  boxShadow: `0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)`,
+                }}
+              >
+                <p
+                  sx={{
+                    paddingLeft: 4,
+                    paddingRight: 4,
+                    paddingTop: 1,
+                    paddingBottom: 1,
+                    margin: `0`,
+                    transition: `all 0.2s ease`,
+                    cursor: `pointer`,
+                    ':hover': {
+                      backgroundColor: `text`,
+                      color: `primary`,
+                    },
+                  }}
+                >
+                  FIND AN INSTALLER
+                </p>
+              </div>
+            </Link>
+          </div>
+          <div
+            onClick={() => showHandler('dealer')}
+            sx={{
+              display: ['none', 'none', 'none', 'flex', 'flex'],
+              justifyContent: `center`,
+              alignItems: `center`,
+            }}
+          >
             <div
               sx={{
                 color: 'text',
                 bg: 'primary',
                 fontFamily: 'heading',
-                fontSize: `25px`,
+                fontSize: [`16px`, `16px`, `16px`, `16px`, `25px`],
                 letterSpacing: 1,
-                width: `fit-content`,
+                width: [`100px`, `100px`, `100px`, `100px`, `fit-content`],
                 margin: `auto`,
                 textAlign: `center`,
                 padding: 0,
@@ -189,53 +235,9 @@ const menubar = cold(() => {
                   },
                 }}
               >
-                FIND AN INSTALLER
+                BECOME A DEALER
               </p>
             </div>
-          </Link>
-        </div>
-        <div
-          onClick={() => showHandler('dealer')}
-          sx={{
-            display: ['none', 'none', 'none', 'flex', 'flex'],
-            justifyContent: `center`,
-            alignItems: `center`,
-          }}
-        >
-          <div
-            sx={{
-              color: 'text',
-              bg: 'primary',
-              fontFamily: 'heading',
-              fontSize: `25px`,
-              letterSpacing: 1,
-              width: `fit-content`,
-              margin: `auto`,
-              textAlign: `center`,
-              padding: 0,
-              lineHeight: `header`,
-              border: `none`,
-              borderColor: `primary`,
-              boxShadow: `0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)`,
-            }}
-          >
-            <p
-              sx={{
-                paddingLeft: 4,
-                paddingRight: 4,
-                paddingTop: 1,
-                paddingBottom: 1,
-                margin: `0`,
-                transition: `all 0.2s ease`,
-                cursor: `pointer`,
-                ':hover': {
-                  backgroundColor: `text`,
-                  color: `primary`,
-                },
-              }}
-            >
-              BECOME A DEALER
-            </p>
           </div>
         </div>
         <HamburgerMenu sx={{ justifySelf: `center`, alignSelf: `center` }} />
