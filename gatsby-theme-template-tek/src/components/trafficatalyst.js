@@ -9,7 +9,7 @@ const trafficatalyst = props => {
       if (props.fromPage === 1 && !document.getElementById('whereToBuy')) {
         dispatchEvent(new Event('load'))
       }
-    }, 2000)
+    }, 1000)
   }, [])
 
   return (
