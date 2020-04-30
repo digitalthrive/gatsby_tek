@@ -1,5 +1,5 @@
 ---
-title: Product Knowledge Videos
+title: PRODUCT KNOWLEDGE VIDEOS
 url: 'https://metalroofingbids.com/start'
 ---
 
