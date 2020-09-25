@@ -3,9 +3,9 @@ import React, { useEffect } from 'react'
 import { jsx } from 'theme-ui'
 import { Helmet } from 'react-helmet'
 
-const trafficatalyst = props => {
+const Trafficatalyst = (props) => {
   useEffect(() => {
-    setTimeout(function() {
+    setTimeout(function () {
       if (props.fromPage === 1 && !document.getElementById('whereToBuy')) {
         dispatchEvent(new Event('load'))
       }
@@ -48,4 +48,4 @@ const trafficatalyst = props => {
   )
 }
 
-export default trafficatalyst
+export default Trafficatalyst

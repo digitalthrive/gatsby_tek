@@ -3,7 +3,7 @@ import { cold } from 'react-hot-loader'
 import { jsx } from 'theme-ui'
 import Img from 'gatsby-image'
 
-const image_modal = cold(props => {
+const image_modal = cold((props) => {
   return (
     <div
       sx={{
@@ -25,6 +25,7 @@ const image_modal = cold(props => {
           top: `50%`,
           left: `50%`,
           transform: `translate(-50%, -50%)`,
+          maxWidth: `1000px`,
         }}
         fluid={props.image}
       />
