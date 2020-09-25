@@ -2,6 +2,14 @@
 
 WD Jam Theme - Full Site - Tek Roofing
 
+
+# Multiple Repositories
+
+There are two separate repositories for this project:
+
+- One at digitalthrive/gatsby_tek. This is not a fork, just a separate copy of the site.
+- One that is under the client's Github account /gatsby_tek, which is the repo connected to Netlify. This is the repo which, if changed, will trigger site rebuilds as outlined below.
+
 # CMS / Content Editing Instructions
 
 WARNING: Any change through the CMS or editing of the Github files directly will trigger a site rebuild. These site rebuilds take 5-8 build minutes and will not affect access or viewing the site while it is ongoing. However, for the free tier of Netlify, you are alotted 300 free build minutes.
