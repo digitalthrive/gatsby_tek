@@ -11,7 +11,7 @@ import ButtonV2 from '../components/button-v2'
 const menubar = cold(() => {
   const [slide, setSlide] = useState(0)
 
-  let slideHandler = index => {
+  let slideHandler = (index) => {
     setSlide(index)
   }
   const data = useStaticQuery(graphql`
@@ -31,7 +31,7 @@ const menubar = cold(() => {
               image {
                 childImageSharp {
                   fluid(quality: 100) {
-                    ...GatsbyImageSharpFluid_withWebp
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
               }

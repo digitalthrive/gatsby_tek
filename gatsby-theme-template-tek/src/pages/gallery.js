@@ -9,7 +9,7 @@ import Gallery from '../components/galleryfull'
 const gallery = ({ data }) => {
   const sections = data.allSection.edges
 
-  let sectionOne = sections.filter(obj => {
+  let sectionOne = sections.filter((obj) => {
     return obj.node.section === 1
   })
   // let sectionTwo = sections.filter(obj => {
@@ -26,8 +26,14 @@ const gallery = ({ data }) => {
     <Layout>
       <Helmet>
         <title>TEK® Industries | View Our Beautiful, Durable Roofs</title>
-        <meta name="description" content="TEK Industries roofs aren't just the most durable, they also offer lifelong exceptional performance wile looking beautiful. View our past work to see for yourself." />
-        <meta name="keywords" content="metal roof, durable roof, durable metal roof, roof for severe weather, metal roof for bad weather, best roof, beautiful roof, efficient roof, tek roofing, tek roof, tek industries" />
+        <meta
+          name="description"
+          content="TEK Industries roofs aren't just the most durable, they also offer lifelong exceptional performance wile looking beautiful. View our past work to see for yourself."
+        />
+        <meta
+          name="keywords"
+          content="metal roof, durable roof, durable metal roof, roof for severe weather, metal roof for bad weather, best roof, beautiful roof, efficient roof, tek roofing, tek roof, tek industries"
+        />
       </Helmet>
       <BackImg
         critical
@@ -109,14 +115,14 @@ export const query = graphql`
           image {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           image2 {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }

@@ -7,11 +7,11 @@ import Img from 'gatsby-image'
 import ImageModal from '../components/gallery_modal'
 import Section from '../components/section'
 
-const galleryfull = cold(props => {
+const galleryfull = cold((props) => {
   const [open, setOpen] = useState(false)
   const [openimage, setImage] = useState(null)
 
-  let imageClick = image => {
+  let imageClick = (image) => {
     setOpen(!open)
     setImage(image)
   }
@@ -26,10 +26,10 @@ const galleryfull = cold(props => {
           node {
             childImageSharp {
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
               fixed(width: 400, height: 300) {
-                ...GatsbyImageSharpFixed_withWebp
+                ...GatsbyImageSharpFixed_withWebp_noBase64
               }
             }
           }
@@ -43,10 +43,10 @@ const galleryfull = cold(props => {
           node {
             childImageSharp {
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
               fixed(width: 400, height: 300) {
-                ...GatsbyImageSharpFixed_withWebp
+                ...GatsbyImageSharpFixed_withWebp_noBase64
               }
             }
           }

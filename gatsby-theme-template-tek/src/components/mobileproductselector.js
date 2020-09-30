@@ -6,7 +6,7 @@ import { Styled, jsx } from 'theme-ui'
 import { css } from '@emotion/core'
 import BackImg from 'gatsby-background-image'
 
-const mobileproductselector = cold(props => {
+const mobileproductselector = cold((props) => {
   const data = useStaticQuery(graphql`
     query MobileProductSelectorQuery {
       allMarkdownRemark(
@@ -21,7 +21,7 @@ const mobileproductselector = cold(props => {
               image {
                 childImageSharp {
                   fluid(quality: 100) {
-                    ...GatsbyImageSharpFluid_withWebp
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
               }

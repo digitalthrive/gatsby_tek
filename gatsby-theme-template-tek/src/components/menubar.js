@@ -18,7 +18,7 @@ const menubar = cold(() => {
     leave: { transform: `translate3d(105vw,0, 0)` },
   })
 
-  let showHandler = form => {
+  let showHandler = (form) => {
     setForm(form)
     setShow(!show)
   }
@@ -37,7 +37,7 @@ const menubar = cold(() => {
       file(relativePath: { regex: "images/icon*/" }) {
         childImageSharp {
           fluid(maxHeight: 200, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
@@ -97,7 +97,7 @@ const menubar = cold(() => {
           }}
         >
           <Styled.ul sx={{ height: `100%`, display: `table` }}>
-            {data.site.siteMetadata.menuLinks.map(link => {
+            {data.site.siteMetadata.menuLinks.map((link) => {
               return (
                 <Styled.li key={link.name} sx={{ display: `table-cell` }}>
                   <Link

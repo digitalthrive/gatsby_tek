@@ -17,19 +17,28 @@ import hipflash_2 from '../components/images/hip-flash-2.jpg'
 const installs = ({ data }) => {
   const sections = data.allSection.edges
 
-  let sectionOne = sections.filter(obj => {
+  let sectionOne = sections.filter((obj) => {
     return obj.node.section === 1
   })
-  let sectionTwo = sections.filter(obj => {
+  let sectionTwo = sections.filter((obj) => {
     return obj.node.section === 2
   })
 
   return (
     <Layout>
       <Helmet>
-        <title>TEK® Industries | Metal Pro-X Hip Cap Installation | Metal Roof Installation</title>
-        <meta name="description" content="Interested in installing the metal pro-x hip caps yourself? Follow the steps on our website to ensure your roof is as durable as possible!" />
-        <meta name="keywords" content="metal rool, durable roof, durable metal roof, tek indsustries, tek roofing, tek installation, tek roof install, roof installation" />
+        <title>
+          TEK® Industries | Metal Pro-X Hip Cap Installation | Metal Roof
+          Installation
+        </title>
+        <meta
+          name="description"
+          content="Interested in installing the metal pro-x hip caps yourself? Follow the steps on our website to ensure your roof is as durable as possible!"
+        />
+        <meta
+          name="keywords"
+          content="metal rool, durable roof, durable metal roof, tek indsustries, tek roofing, tek installation, tek roof install, roof installation"
+        />
       </Helmet>
       <BackImg
         critical
@@ -560,14 +569,14 @@ export const query = graphql`
           image {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           image2 {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }

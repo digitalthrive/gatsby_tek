@@ -19,16 +19,16 @@ const dealers = cold(({ data }) => {
 
   const [internalSection, setSection] = useState(0)
 
-  let sectionOne = sections.filter(obj => {
+  let sectionOne = sections.filter((obj) => {
     return obj.node.section === 1
   })
-  let sectionTwo = sections.filter(obj => {
+  let sectionTwo = sections.filter((obj) => {
     return obj.node.section === 2
   })
-  let sectionThree = sections.filter(obj => {
+  let sectionThree = sections.filter((obj) => {
     return obj.node.section === 3
   })
-  let sectionFour = sections.filter(obj => {
+  let sectionFour = sections.filter((obj) => {
     return obj.node.section === 4
   })
 
@@ -618,9 +618,18 @@ const dealers = cold(({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>TEK® Industries | TEK Dealer Tools | The Most Durable Roof in the Industry</title>
-        <meta name="description" content="Partner with TEK Industries to get direct access to the best metal shake products on the market. TEK Industries wants everyone to succeed and progress." />
-        <meta name="keywords" content="metal roof, durable roof, durable metal roof, roof for severe weather, metal roof for bad weather, tek roof, tek industries, tek dealer, tek dealer tools, tek partner" />
+        <title>
+          TEK® Industries | TEK Dealer Tools | The Most Durable Roof in the
+          Industry
+        </title>
+        <meta
+          name="description"
+          content="Partner with TEK Industries to get direct access to the best metal shake products on the market. TEK Industries wants everyone to succeed and progress."
+        />
+        <meta
+          name="keywords"
+          content="metal roof, durable roof, durable metal roof, roof for severe weather, metal roof for bad weather, tek roof, tek industries, tek dealer, tek dealer tools, tek partner"
+        />
       </Helmet>
       <BackImg
         critical
@@ -875,14 +884,14 @@ export const query = graphql`
           image {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           image2 {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
