@@ -15,8 +15,8 @@ const gallerypreview = cold(() => {
         edges {
           node {
             childImageSharp {
-              fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
+              fixed(width: 230, height: 230) {
+                ...GatsbyImageSharpFixed_withWebp_noBase64
               }
             }
           }
@@ -29,8 +29,8 @@ const gallerypreview = cold(() => {
         edges {
           node {
             childImageSharp {
-              fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
+              fixed(width: 230, height: 230) {
+                ...GatsbyImageSharpFixed_withWebp_noBase64
               }
             }
           }
@@ -73,11 +73,12 @@ const gallerypreview = cold(() => {
             key={`${image}${index}`}
             sx={{
               height: `100%`,
+              maxHeight: [`100%`, `100%`, `100%`, `100%`, `100%`],
               width: `100%`,
               maxWidth: `100%`,
               display: `block`,
             }}
-            fluid={image.node.childImageSharp.fluid}
+            fixed={image.node.childImageSharp.fixed}
           />
         </div>
       </div>
@@ -118,11 +119,12 @@ const gallerypreview = cold(() => {
             key={`${image}${index}`}
             sx={{
               height: `100%`,
+              maxHeight: [`100%`, `100%`, `100%`, `100%`, `100%`],
               width: `100%`,
               maxWidth: `100%`,
               display: `block`,
             }}
-            fluid={image.node.childImageSharp.fluid}
+            fixed={image.node.childImageSharp.fixed}
           />
         </div>
       </div>

@@ -28,7 +28,7 @@ const galleryfull = cold((props) => {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp_noBase64
               }
-              fixed(width: 400, height: 300) {
+              fixed(height: 300) {
                 ...GatsbyImageSharpFixed_withWebp_noBase64
               }
             }
@@ -45,7 +45,7 @@ const galleryfull = cold((props) => {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp_noBase64
               }
-              fixed(width: 400, height: 300) {
+              fixed(height: 300) {
                 ...GatsbyImageSharpFixed_withWebp_noBase64
               }
             }
@@ -62,8 +62,11 @@ const galleryfull = cold((props) => {
         onClick={() => imageClick(image.node.childImageSharp.fluid)}
       >
         <Img
-          sx={{ height: `100%`, width: `100%` }}
-          fluid={image.node.childImageSharp.fluid}
+          sx={{
+            maxHeight: [`100%`, `100%`, `100%`, `100%`, `325px`],
+            maxWidth: [`100%`, `100%`, `100%`, `100%`, `100%`],
+          }}
+          fixed={image.node.childImageSharp.fixed}
         />
       </div>
     )
@@ -75,8 +78,11 @@ const galleryfull = cold((props) => {
         onClick={() => imageClick(image.node.childImageSharp.fluid)}
       >
         <Img
-          sx={{ height: `100%`, width: `100%` }}
-          fluid={image.node.childImageSharp.fluid}
+          sx={{
+            maxHeight: [`100%`, `100%`, `100%`, `100%`, `325px`],
+            maxWidth: [`100%`, `100%`, `100%`, `100%`, `100%`],
+          }}
+          fixed={image.node.childImageSharp.fixed}
         />
       </div>
     )
