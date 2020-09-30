@@ -6,7 +6,7 @@ import { jsx } from 'theme-ui'
 import { css } from '@emotion/core'
 import BackImg from 'gatsby-background-image'
 
-const productselector = cold(props => {
+const productselector = cold((props) => {
   const [activeFrame, setActiveFrame] = useState(`frame1`)
 
   const data = useStaticQuery(graphql`
@@ -23,7 +23,7 @@ const productselector = cold(props => {
               image {
                 childImageSharp {
                   fluid(quality: 100) {
-                    ...GatsbyImageSharpFluid_withWebp
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
               }

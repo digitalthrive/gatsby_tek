@@ -37,31 +37,31 @@ const products = cold(({ data, location }) => {
 
   const sections = data.allSection.edges
 
-  let sectionOne = sections.filter(obj => {
+  let sectionOne = sections.filter((obj) => {
     return obj.node.section === 1
   })
-  let sectionTwo = sections.filter(obj => {
+  let sectionTwo = sections.filter((obj) => {
     return obj.node.section === 2
   })
-  let sectionThree = sections.filter(obj => {
+  let sectionThree = sections.filter((obj) => {
     return obj.node.section === 3
   })
-  let sectionFour = sections.filter(obj => {
+  let sectionFour = sections.filter((obj) => {
     return obj.node.section === 4
   })
   // let sectionFive = sections.filter(obj => {
   //   return obj.node.section === 5
   // })
-  let sectionSix = sections.filter(obj => {
+  let sectionSix = sections.filter((obj) => {
     return obj.node.section === 6
   })
-  let sectionSeven = sections.filter(obj => {
+  let sectionSeven = sections.filter((obj) => {
     return obj.node.section === 7
   })
   // let sectionEight = sections.filter(obj => {
   //   return obj.node.section === 8
   // })
-  let sectionNine = sections.filter(obj => {
+  let sectionNine = sections.filter((obj) => {
     return obj.node.section === 9
   })
 
@@ -440,14 +440,14 @@ export const query = graphql`
           image {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           image2 {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
@@ -458,14 +458,14 @@ export const query = graphql`
     beforeImage: file(relativePath: { eq: "images/roof-before.jpg" }) {
       childImageSharp {
         fixed {
-          ...GatsbyImageSharpFixed_withWebp
+          ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }
     }
     afterImage: file(relativePath: { eq: "images/roof-after.jpg" }) {
       childImageSharp {
         fixed {
-          ...GatsbyImageSharpFixed_withWebp
+          ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }
     }

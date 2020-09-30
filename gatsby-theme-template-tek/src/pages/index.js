@@ -18,19 +18,19 @@ const homepage = ({ data, location }) => {
   // let sectionOne = sections.filter(obj => {
   //   return obj.node.section === 1
   // })
-  let sectionTwo = sections.filter(obj => {
+  let sectionTwo = sections.filter((obj) => {
     return obj.node.section === 2
   })
-  let sectionThree = sections.filter(obj => {
+  let sectionThree = sections.filter((obj) => {
     return obj.node.section === 3
   })
-  let sectionFour = sections.filter(obj => {
+  let sectionFour = sections.filter((obj) => {
     return obj.node.section === 4
   })
-  let sectionFive = sections.filter(obj => {
+  let sectionFive = sections.filter((obj) => {
     return obj.node.section === 5
   })
-  let sectionSix = sections.filter(obj => {
+  let sectionSix = sections.filter((obj) => {
     return obj.node.section === 6
   })
   // let sectionSeven = sections.filter(obj => {
@@ -463,14 +463,14 @@ export const query = graphql`
           image {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           image2 {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
@@ -481,7 +481,7 @@ export const query = graphql`
     quoteImage: file(relativePath: { regex: "images/installers-on-roof*/" }) {
       childImageSharp {
         fluid(maxHeight: 800, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }

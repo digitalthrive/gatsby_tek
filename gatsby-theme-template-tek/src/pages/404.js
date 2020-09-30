@@ -9,7 +9,7 @@ import ButtonV2 from '../components/button-v2'
 const pageNotFound = ({ data }) => {
   const sections = data.allSection.edges
 
-  let sectionOne = sections.filter(obj => {
+  let sectionOne = sections.filter((obj) => {
     return obj.node.section === 1
   })
 
@@ -75,14 +75,14 @@ export const query = graphql`
           image {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
           image2 {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
