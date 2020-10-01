@@ -7,11 +7,11 @@ import Img from 'gatsby-image'
 import ImageModal from '../components/gallery_modal'
 import Section from '../components/section'
 
-const galleryfull = cold(props => {
+const galleryfull = cold((props) => {
   const [open, setOpen] = useState(false)
   const [openimage, setImage] = useState(null)
 
-  let imageClick = image => {
+  let imageClick = (image) => {
     setOpen(!open)
     setImage(image)
   }
@@ -26,10 +26,10 @@ const galleryfull = cold(props => {
           node {
             childImageSharp {
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
-              fixed(width: 400, height: 300) {
-                ...GatsbyImageSharpFixed_withWebp
+              fixed(height: 300) {
+                ...GatsbyImageSharpFixed_withWebp_noBase64
               }
             }
           }
@@ -43,10 +43,10 @@ const galleryfull = cold(props => {
           node {
             childImageSharp {
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
-              fixed(width: 400, height: 300) {
-                ...GatsbyImageSharpFixed_withWebp
+              fixed(height: 300) {
+                ...GatsbyImageSharpFixed_withWebp_noBase64
               }
             }
           }
@@ -62,8 +62,11 @@ const galleryfull = cold(props => {
         onClick={() => imageClick(image.node.childImageSharp.fluid)}
       >
         <Img
-          sx={{ height: `100%`, width: `100%` }}
-          fluid={image.node.childImageSharp.fluid}
+          sx={{
+            maxHeight: [`100%`, `100%`, `100%`, `100%`, `325px`],
+            maxWidth: [`100%`, `100%`, `100%`, `100%`, `100%`],
+          }}
+          fixed={image.node.childImageSharp.fixed}
         />
       </div>
     )
@@ -75,8 +78,11 @@ const galleryfull = cold(props => {
         onClick={() => imageClick(image.node.childImageSharp.fluid)}
       >
         <Img
-          sx={{ height: `100%`, width: `100%` }}
-          fluid={image.node.childImageSharp.fluid}
+          sx={{
+            maxHeight: [`100%`, `100%`, `100%`, `100%`, `325px`],
+            maxWidth: [`100%`, `100%`, `100%`, `100%`, `100%`],
+          }}
+          fixed={image.node.childImageSharp.fixed}
         />
       </div>
     )
