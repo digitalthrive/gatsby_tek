@@ -1,4 +1,5 @@
 ---
-title: TEK INSTALLATION MANUAL
-file: /uploads/tek-installation-manual.pdf
+title: Metal Shake Installation Manual
+file: /uploads/Hurricane Shake Installation Manual.pdf
 ---
+
