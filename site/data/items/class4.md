@@ -1,4 +1,4 @@
 ---
 title: CLASS 4 IMPACT LISTING
-url: http://www.helpinsure.com/home/roofingx.html#metal
+url: https://www.tdi.texas.gov/company/roofing-discounts.html#metal
 ---

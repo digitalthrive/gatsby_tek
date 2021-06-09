@@ -7,8 +7,6 @@ import { Helmet } from 'react-helmet'
 import { Styled, jsx } from 'theme-ui'
 import Layout from '../components/layout'
 import Section from '../components/section'
-import ResultsTable1 from '../components/resultstable1'
-import ResultsTable2 from '../components/resultstable2'
 import ButtonV2 from '../components/button-v2'
 import downloadIcon from '../components/icons/download-icon.png'
 import metalShakeImg from '../components/images/tek-panel-sketch.jpg'
@@ -750,8 +748,11 @@ const dealers = cold(({ data }) => {
           </Styled.h2>
           <Styled.p sx={{ color: `grey` }}>{sectionTwo[0].node.text2}</Styled.p>
           <Styled.p sx={{ color: `grey` }}>{sectionTwo[0].node.text3}</Styled.p>
+          <iframe src="https://forms.monday.com/forms/embed/c91f166614911f27d00392326237ce90?r=use1" width="100%" height="500" style={{display: "block", margin: "auto", border: "0", boxShadow: "5px 5px 56px 0px rgba(0,0,0,0.25)"}}></iframe>
         </Section>
+
       </div>
+
       <div
         sx={{
           bg: `primary`,
@@ -861,9 +862,9 @@ const dealers = cold(({ data }) => {
             )}
           </div>
           {internalSection === 0 ? <MetalShakeStats /> : <MetalShakeXTStats />}
-          <ResultsTable1 />
-          <ResultsTable2 />
-        </Section>
+          <Styled.h3 sx={{textAlign: "center"}}><a href="https://www.tdi.texas.gov/company/roofing-discounts.html#metal" sx={{color: "gray"}}>HURRICANE® Metal Shake UL 2218 Certifications</a></Styled.h3>
+          <Styled.h3 sx={{textAlign: "center"}}><a href="https://www.tdi.texas.gov/wind/prod/rc/rc593.pdf" sx={{color: "gray"}}>HURRICANE® Metal Shake ASTM E1592 Certifications</a></Styled.h3>
+        </Section>"
       </div>
     </Layout>
   )
