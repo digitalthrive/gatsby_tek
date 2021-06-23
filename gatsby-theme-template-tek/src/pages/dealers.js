@@ -863,7 +863,35 @@ const dealers = cold(({ data }) => {
           </div>
           {internalSection === 0 ? <MetalShakeStats /> : <MetalShakeXTStats />}
           <Styled.h3 sx={{textAlign: "center"}}><a href="https://www.tdi.texas.gov/company/roofing-discounts.html#metal" sx={{color: "gray"}}>HURRICANE® Metal Shake UL 2218 Certifications</a></Styled.h3>
+          <h4 sx={{ color: `primary` }}>Texas Department of Insurance</h4>
+          <ul sx={{ color: `secondary` }}>
+            <li><a sx={{ color: `primary`, textDecoration: `underline`}} href="https://www.tdi.texas.gov/company/roofing-discounts.html#metal" target="_blank">UL 2218 Class IV</a></li>
+            <li><a sx={{ color: `primary`, textDecoration: `underline` }} href="https://www.tdi.texas.gov/wind/prod/rc/rc593.pdf" target="_blank">ASTM E1592</a></li>
+          </ul>
+          <h4 sx={{ color: `primary` }}>Other Specs</h4>
+          <ul sx={{ color: `secondary` }}>
+            <li>ASTM A792</li>
+            <li>ASTM B117</li>
+            <li>ASTM G155</li>
+          </ul>
           <Styled.h3 sx={{textAlign: "center"}}><a href="https://www.tdi.texas.gov/wind/prod/rc/rc593.pdf" sx={{color: "gray"}}>HURRICANE® Metal Shake ASTM E1592 Certifications</a></Styled.h3>
+          <h4 sx={{ color: `primary` }}>Texas Department of Insurance</h4>
+          <ul sx={{ color: `secondary` }}>
+            <li><a sx={{ color: `primary`, textDecoration: `underline`}} href="https://www.tdi.texas.gov/company/roofing-discounts.html#metal" target="_blank">UL 2218 Class IV</a></li>
+            <li><a sx={{ color: `primary`, textDecoration: `underline` }} href="https://www.tdi.texas.gov/wind/prod/rc/rc593.pdf" target="_blank">ASTM E1592</a></li>
+          </ul>
+          <h4 sx={{ color: `primary` }}>Other Specs</h4>
+          <ul sx={{ color: `secondary` }}>
+            <li>ASTM A792</li>
+            <li>ASTM B117</li>
+            <li>ASTM G155</li>
+          </ul>
+          <h4 sx={{ color: `primary` }}>Florida Building Code</h4>
+          <ul sx={{ color: `secondary` }}>
+            <li>UL 580 Class 90</li>
+            <li>UL 1897</li>
+            <li>Florida Building Code Approved #FL38136</li>
+          </ul>
         </Section>"
       </div>
     </Layout>
