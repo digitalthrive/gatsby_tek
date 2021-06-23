@@ -1,4 +1,0 @@
----
-title: HURRICANE SHAKE ESTIMATE SHEET
-file: /uploads/HURRICANE-SHAKE®-ESTIMATING-SHEET.pdf
----
