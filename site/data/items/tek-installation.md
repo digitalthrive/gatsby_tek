@@ -1,5 +1,5 @@
 ---
 title: Metal Shake Installation Manual
-file: /uploads/Hurricane Shake Installation Manual.pdf
+file: /uploads/Hurricane%20Shake%20Installation%20Manual.pdf
 ---
 
