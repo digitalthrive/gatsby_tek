@@ -205,45 +205,105 @@ const dealers = cold(({ data }) => {
 
   let MetalShakeStats = () => {
     return (
-      <table
-        sx={{
-          width: `100%`,
-          border: `2px solid`,
-          borderColor: `primary`,
-          borderCollapse: `collapse`,
-          textAlign: `center`,
-          margin: `5% 0`,
-          overflowX: `scroll`,
-        }}
-      >
-        <thead>
-          <tr>
-            <th
-              colSpan="2"
-              sx={{
-                bg: `text`,
-                borderBottom: `2px solid`,
-                borderColor: `primary`,
-                padding: `1%`,
-                bg: `primary`,
-              }}
-            >
-              <Styled.h3
+      <>
+        <table
+          sx={{
+            width: `100%`,
+            border: `2px solid`,
+            borderColor: `primary`,
+            borderCollapse: `collapse`,
+            textAlign: `center`,
+            margin: `5% 0`,
+            overflowX: `scroll`,
+          }}
+        >
+          <thead>
+            <tr>
+              <th
+                colSpan="2"
                 sx={{
-                  color: 'text',
-                  margin: `0`,
-                  padding: `0`,
-                  fontSize: ['2', '2', '2', '3', '3'],
+                  bg: `text`,
+                  borderBottom: `2px solid`,
+                  borderColor: `primary`,
+                  padding: `1%`,
+                  bg: `primary`,
                 }}
               >
-                HURRICANE® Metal Shake
-              </Styled.h3>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td
+                <Styled.h3
+                  sx={{
+                    color: 'text',
+                    margin: `0`,
+                    padding: `0`,
+                    fontSize: ['2', '2', '2', '3', '3'],
+                  }}
+                >
+                  HURRICANE® Metal Shake
+                </Styled.h3>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fdf4f1`,
+                  color: `secondary`,
+                }}
+              >
+                Minimum roof pitch
+              </td>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fdf4f1`,
+                  color: `secondary`,
+                }}
+              >
+                3:12
+              </td>
+            </tr>
+            <tr>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fff`,
+                  color: `secondary`,
+                }}
+              >
+                Panel size
+              </td>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fff`,
+                  color: `secondary`,
+                }}
+              >
+                52-1/2” X 16-1/2”
+              </td>
+            </tr>
+            <tr
               sx={{
                 borderLeft: `2px solid`,
                 borderRight: `2px solid`,
@@ -255,200 +315,237 @@ const dealers = cold(({ data }) => {
                 color: `secondary`,
               }}
             >
-              Minimum roof pitch
-            </td>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fdf4f1`,
-                color: `secondary`,
-              }}
-            >
-              3:12
-            </td>
-          </tr>
-          <tr>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fff`,
-                color: `secondary`,
-              }}
-            >
-              Panel size
-            </td>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fff`,
-                color: `secondary`,
-              }}
-            >
-              52-1/2” X 16-1/2”
-            </td>
-          </tr>
-          <tr
-            sx={{
-              borderLeft: `2px solid`,
-              borderRight: `2px solid`,
-              borderTop: `2px solid`,
-              borderBottom: `none`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#fdf4f1`,
-              color: `secondary`,
-            }}
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fdf4f1`,
+                  color: `secondary`,
+                }}
+              >
+                Installed exposure
+              </td>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fdf4f1`,
+                  color: `secondary`,
+                }}
+              >
+                50-3/4” X 14-1/2”
+              </td>
+            </tr>
+            <tr>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fff`,
+                  color: `secondary`,
+                }}
+              >
+                Panels per square
+              </td>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fff`,
+                  color: `secondary`,
+                }}
+              >
+                20
+              </td>
+            </tr>
+            <tr>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fdf4f1`,
+                  color: `secondary`,
+                }}
+              >
+                Installed Weight
+              </td>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fdf4f1`,
+                  color: `secondary`,
+                }}
+              >
+                145.5 lbs/sq
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <Styled.h3 sx={{ textAlign: 'center' }}>
+          <a
+            href="https://www.tdi.texas.gov/company/roofing-discounts.html#metal"
+            sx={{ color: 'gray' }}
           >
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fdf4f1`,
-                color: `secondary`,
-              }}
+            Certifications
+          </a>
+        </Styled.h3>
+        <h4 sx={{ color: `primary` }}>Texas Department of Insurance</h4>
+        <ul sx={{ color: `secondary` }}>
+          <li>
+            <a
+              sx={{ color: `primary`, textDecoration: `underline` }}
+              href="https://www.tdi.texas.gov/company/roofing-discounts.html#metal"
+              target="_blank"
             >
-              Installed exposure
-            </td>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fdf4f1`,
-                color: `secondary`,
-              }}
+              UL 2218 Class IV
+            </a>
+          </li>
+          <li>
+            <a
+              sx={{ color: `primary`, textDecoration: `underline` }}
+              href="https://www.tdi.texas.gov/wind/prod/rc/rc593.pdf"
+              target="_blank"
             >
-              50-3/4” X 14-1/2”
-            </td>
-          </tr>
-          <tr>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fff`,
-                color: `secondary`,
-              }}
-            >
-              Panels per square
-            </td>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fff`,
-                color: `secondary`,
-              }}
-            >
-              20
-            </td>
-          </tr>
-          <tr>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fdf4f1`,
-                color: `secondary`,
-              }}
-            >
-              Installed Weight
-            </td>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fdf4f1`,
-                color: `secondary`,
-              }}
-            >
-              145.5 lbs/sq
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              ASTM E1592
+            </a>
+          </li>
+        </ul>
+        <h4 sx={{ color: `primary` }}>Other Specs</h4>
+        <ul sx={{ color: `secondary` }}>
+          <li>ASTM A792</li>
+          <li>ASTM B117</li>
+          <li>ASTM G155</li>
+        </ul>
+      </>
     )
   }
 
   let MetalShakeXTStats = () => {
     return (
-      <table
-        sx={{
-          width: `100%`,
-          border: `2px solid`,
-          borderColor: `primary`,
-          borderCollapse: `collapse`,
-          textAlign: `center`,
-          margin: `5% 0`,
-          overflowX: `scroll`,
-        }}
-      >
-        <thead>
-          <tr>
-            <th
-              colSpan="2"
-              sx={{
-                bg: `text`,
-                borderBottom: `2px solid`,
-                borderColor: `primary`,
-                padding: `1%`,
-                bg: `primary`,
-              }}
-            >
-              <Styled.h3
+      <>
+        <table
+          sx={{
+            width: `100%`,
+            border: `2px solid`,
+            borderColor: `primary`,
+            borderCollapse: `collapse`,
+            textAlign: `center`,
+            margin: `5% 0`,
+            overflowX: `scroll`,
+          }}
+        >
+          <thead>
+            <tr>
+              <th
+                colSpan="2"
                 sx={{
-                  color: 'text',
-                  margin: `0`,
-                  padding: `0`,
-                  fontSize: ['2', '2', '2', '3', '3'],
+                  bg: `text`,
+                  borderBottom: `2px solid`,
+                  borderColor: `primary`,
+                  padding: `1%`,
+                  bg: `primary`,
                 }}
               >
-                HURRICANE® Metal Shake Pro
-              </Styled.h3>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td
+                <Styled.h3
+                  sx={{
+                    color: 'text',
+                    margin: `0`,
+                    padding: `0`,
+                    fontSize: ['2', '2', '2', '3', '3'],
+                  }}
+                >
+                  HURRICANE® Metal Shake Pro
+                </Styled.h3>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fdf4f1`,
+                  color: `secondary`,
+                }}
+              >
+                Minimum roof pitch
+              </td>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fdf4f1`,
+                  color: `secondary`,
+                }}
+              >
+                3:12
+              </td>
+            </tr>
+            <tr>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fff`,
+                  color: `secondary`,
+                }}
+              >
+                Panel size
+              </td>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fff`,
+                  color: `secondary`,
+                }}
+              >
+                50-1/2” X 14-1/2”
+              </td>
+            </tr>
+            <tr
               sx={{
                 borderLeft: `2px solid`,
                 borderRight: `2px solid`,
@@ -460,156 +557,139 @@ const dealers = cold(({ data }) => {
                 color: `secondary`,
               }}
             >
-              Minimum roof pitch
-            </td>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fdf4f1`,
-                color: `secondary`,
-              }}
-            >
-              3:12
-            </td>
-          </tr>
-          <tr>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fff`,
-                color: `secondary`,
-              }}
-            >
-              Panel size
-            </td>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fff`,
-                color: `secondary`,
-              }}
-            >
-              50-1/2” X 14-1/2”
-            </td>
-          </tr>
-          <tr
-            sx={{
-              borderLeft: `2px solid`,
-              borderRight: `2px solid`,
-              borderTop: `2px solid`,
-              borderBottom: `none`,
-              borderColor: `primary`,
-              borderCollapse: `collapse`,
-              backgroundColor: `#fdf4f1`,
-              color: `secondary`,
-            }}
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fdf4f1`,
+                  color: `secondary`,
+                }}
+              >
+                Installed exposure
+              </td>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fdf4f1`,
+                  color: `secondary`,
+                }}
+              >
+                48-3/4” X 13-1/2”
+              </td>
+            </tr>
+            <tr>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fff`,
+                  color: `secondary`,
+                }}
+              >
+                Panels per square
+              </td>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fff`,
+                  color: `secondary`,
+                }}
+              >
+                23
+              </td>
+            </tr>
+            <tr>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fdf4f1`,
+                  color: `secondary`,
+                }}
+              >
+                Installed Weight
+              </td>
+              <td
+                sx={{
+                  borderLeft: `2px solid`,
+                  borderRight: `2px solid`,
+                  borderTop: `2px solid`,
+                  borderBottom: `none`,
+                  borderColor: `primary`,
+                  borderCollapse: `collapse`,
+                  backgroundColor: `#fdf4f1`,
+                  color: `secondary`,
+                }}
+              >
+                145.5 lbs/sq
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <Styled.h3 sx={{ textAlign: 'center' }}>
+          <a
+            href="https://www.tdi.texas.gov/wind/prod/rc/rc593.pdf"
+            sx={{ color: 'gray' }}
           >
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fdf4f1`,
-                color: `secondary`,
-              }}
+            Certifications
+          </a>
+        </Styled.h3>
+        <h4 sx={{ color: `primary` }}>Texas Department of Insurance</h4>
+        <ul sx={{ color: `secondary` }}>
+          <li>
+            <a
+              sx={{ color: `primary`, textDecoration: `underline` }}
+              href="https://www.tdi.texas.gov/company/roofing-discounts.html#metal"
+              target="_blank"
             >
-              Installed exposure
-            </td>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fdf4f1`,
-                color: `secondary`,
-              }}
+              UL 2218 Class IV
+            </a>
+          </li>
+          <li>
+            <a
+              sx={{ color: `primary`, textDecoration: `underline` }}
+              href="https://www.tdi.texas.gov/wind/prod/rc/rc593.pdf"
+              target="_blank"
             >
-              48-3/4” X 13-1/2”
-            </td>
-          </tr>
-          <tr>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fff`,
-                color: `secondary`,
-              }}
-            >
-              Panels per square
-            </td>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fff`,
-                color: `secondary`,
-              }}
-            >
-              23
-            </td>
-          </tr>
-          <tr>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fdf4f1`,
-                color: `secondary`,
-              }}
-            >
-              Installed Weight
-            </td>
-            <td
-              sx={{
-                borderLeft: `2px solid`,
-                borderRight: `2px solid`,
-                borderTop: `2px solid`,
-                borderBottom: `none`,
-                borderColor: `primary`,
-                borderCollapse: `collapse`,
-                backgroundColor: `#fdf4f1`,
-                color: `secondary`,
-              }}
-            >
-              145.5 lbs/sq
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              ASTM E1592
+            </a>
+          </li>
+        </ul>
+        <h4 sx={{ color: `primary` }}>Other Specs</h4>
+        <ul sx={{ color: `secondary` }}>
+          <li>ASTM A792</li>
+          <li>ASTM B117</li>
+          <li>ASTM G155</li>
+        </ul>
+        <h4 sx={{ color: `primary` }}>Florida Building Code</h4>
+        <ul sx={{ color: `secondary` }}>
+          <li>UL 580 Class 90</li>
+          <li>UL 1897</li>
+          <li>Florida Building Code Approved #FL38136</li>
+        </ul>
+      </>
     )
   }
 
@@ -748,9 +828,7 @@ const dealers = cold(({ data }) => {
           </Styled.h2>
           <Styled.p sx={{ color: `grey` }}>{sectionTwo[0].node.text2}</Styled.p>
           <Styled.p sx={{ color: `grey` }}>{sectionTwo[0].node.text3}</Styled.p>
-          <iframe src="https://forms.monday.com/forms/embed/c91f166614911f27d00392326237ce90?r=use1" width="100%" height="500" style={{display: "block", margin: "auto", border: "0", boxShadow: "5px 5px 56px 0px rgba(0,0,0,0.25)"}}></iframe>
         </Section>
-
       </div>
 
       <div
@@ -862,37 +940,7 @@ const dealers = cold(({ data }) => {
             )}
           </div>
           {internalSection === 0 ? <MetalShakeStats /> : <MetalShakeXTStats />}
-          <Styled.h3 sx={{textAlign: "center"}}><a href="https://www.tdi.texas.gov/company/roofing-discounts.html#metal" sx={{color: "gray"}}>HURRICANE® Metal Shake UL 2218 Certifications</a></Styled.h3>
-          <h4 sx={{ color: `primary` }}>Texas Department of Insurance</h4>
-          <ul sx={{ color: `secondary` }}>
-            <li><a sx={{ color: `primary`, textDecoration: `underline`}} href="https://www.tdi.texas.gov/company/roofing-discounts.html#metal" target="_blank">UL 2218 Class IV</a></li>
-            <li><a sx={{ color: `primary`, textDecoration: `underline` }} href="https://www.tdi.texas.gov/wind/prod/rc/rc593.pdf" target="_blank">ASTM E1592</a></li>
-          </ul>
-          <h4 sx={{ color: `primary` }}>Other Specs</h4>
-          <ul sx={{ color: `secondary` }}>
-            <li>ASTM A792</li>
-            <li>ASTM B117</li>
-            <li>ASTM G155</li>
-          </ul>
-          <Styled.h3 sx={{textAlign: "center"}}><a href="https://www.tdi.texas.gov/wind/prod/rc/rc593.pdf" sx={{color: "gray"}}>HURRICANE® Metal Shake ASTM E1592 Certifications</a></Styled.h3>
-          <h4 sx={{ color: `primary` }}>Texas Department of Insurance</h4>
-          <ul sx={{ color: `secondary` }}>
-            <li><a sx={{ color: `primary`, textDecoration: `underline`}} href="https://www.tdi.texas.gov/company/roofing-discounts.html#metal" target="_blank">UL 2218 Class IV</a></li>
-            <li><a sx={{ color: `primary`, textDecoration: `underline` }} href="https://www.tdi.texas.gov/wind/prod/rc/rc593.pdf" target="_blank">ASTM E1592</a></li>
-          </ul>
-          <h4 sx={{ color: `primary` }}>Other Specs</h4>
-          <ul sx={{ color: `secondary` }}>
-            <li>ASTM A792</li>
-            <li>ASTM B117</li>
-            <li>ASTM G155</li>
-          </ul>
-          <h4 sx={{ color: `primary` }}>Florida Building Code</h4>
-          <ul sx={{ color: `secondary` }}>
-            <li>UL 580 Class 90</li>
-            <li>UL 1897</li>
-            <li>Florida Building Code Approved #FL38136</li>
-          </ul>
-        </Section>"
+        </Section>
       </div>
     </Layout>
   )
