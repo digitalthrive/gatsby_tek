@@ -11,8 +11,8 @@ import hipcap_1 from '../components/images/hip-cap-1.jpg'
 import hipcap_2 from '../components/images/hip-cap-2.jpg'
 import hipcap_3 from '../components/images/hip-cap-3.jpg'
 import hipcap_4 from '../components/images/hip-cap-4.jpg'
-import hipflash_1 from '../components/images/hip-flash-1.jpg'
-import hipflash_2 from '../components/images/hip-flash-2.jpg'
+import hipflash_1 from '../components/images/hip-flash-new-2.jpg'
+import hipflash_2 from '../components/images/hip-flash-new-3.jpg'
 
 const installs = ({ data }) => {
   const sections = data.allSection.edges

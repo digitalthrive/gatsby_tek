@@ -478,7 +478,7 @@ export const query = graphql`
         }
       }
     }
-    quoteImage: file(relativePath: { regex: "images/installers-on-roof*/" }) {
+    quoteImage: file(relativePath: { regex: "images/testimonial-image*/" }) {
       childImageSharp {
         fluid(maxHeight: 800, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
