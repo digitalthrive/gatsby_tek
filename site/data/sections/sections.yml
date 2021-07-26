@@ -54,7 +54,7 @@
   sidetext: ''
   videoSrcURL: ''
   image: ../images/hurricane-pro-logo.png
-  image2: ../images/multilayer-technology-graphic.png
+  image2: ../images/interlocking-technology-graphic.png
   page: home
   section: 4
 
@@ -158,7 +158,7 @@
   sidetext: null
   videoSrcURL: null
   image: ../images/hurricane-pro-logo.png
-  image2: ../images/multilayer-technology-graphic.png
+  image2: ../images/interlocking-technology-graphic.png
   page: products
   section: 3
 
@@ -328,8 +328,8 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/installers-on-roof.jpg
-  image2: ../images/installs-header.jpg
+  image: ../images/testimonial-image.jpg
+  image2: ../images/installs-header-2.jpg
   page: installs
   section: 1
 
@@ -357,8 +357,8 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/installers-on-roof.jpg
-  image2: ../images/installs-header.jpg
+  image: ../images/testimonial-image.jpg
+  image2: ../images/installs-header-2.jpg
   page: installs
   section: 1
 
