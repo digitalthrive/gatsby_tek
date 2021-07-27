@@ -11,8 +11,8 @@ import hipcap_1 from '../components/images/hip-cap-1.jpg'
 import hipcap_2 from '../components/images/hip-flash-new-2.jpg'
 import hipcap_3 from '../components/images/hip-flash-new-3.jpg'
 import hipcap_4 from '../components/images/hip-flash-new-4.jpg'
+import hipcap_5 from '../components/images/hip-flash-new-5.jpg'
 import hipflash_1 from '../components/images/hip-flash-1.jpg'
-import hipflash_2 from '../components/images/hip-flash-2.jpg'
 
 const installs = ({ data }) => {
   const sections = data.allSection.edges
@@ -439,7 +439,7 @@ const installs = ({ data }) => {
               >
                 <img
                   alt="hipflash2"
-                  src={hipflash_2}
+                  src={hipcap_5}
                   sx={{
                     padding: ['0', '0', '0 5% 0 0', '0 5% 0 0', '0 5% 0 0'],
                     boxSizing: `border-box`,
