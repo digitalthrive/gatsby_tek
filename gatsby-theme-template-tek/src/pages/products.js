@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { graphql } from 'gatsby'
 import { cold } from 'react-hot-loader'
 import { Helmet } from 'react-helmet'
@@ -15,6 +15,7 @@ import MobileProductSelector from '../components/mobileproductselector'
 import MobileDiagram from '../components/mobilediagram'
 import arrowDown from '../components/icons/arrow-down.png'
 import tekVideo from '../assets/TEKDiagram.mp4'
+import tekProVideo from '../assets/TEKDiagramShakePro.mp4'
 
 const products = cold(({ data, location }) => {
   const { state = {} } = location
@@ -103,7 +104,20 @@ const products = cold(({ data, location }) => {
                   color: `text`,
                 },
               }}
-              onClick={() => setFirstSection(index)}
+              onClick={() => {
+                setFirstSection(index)
+                // This is to manually unmount the previous video from the DOM
+                // https://stackoverflow.com/questions/3258587/how-to-properly-unload-destroy-a-video-element
+                let video;
+                if (index === 1) {
+                  video = document.getElementById('tekVideo');
+                } else {
+                  video = document.getElementById('tekProVideo');
+                }
+                video.pause();
+                video.removeAttribute('src');
+                video.load();
+              }}
             >
               <Styled.h3
                 sx={{
@@ -255,20 +269,44 @@ const products = cold(({ data, location }) => {
           onEnter={() => {
             videoElemPlay()
           }}
+          onLeave={() => {
+            console.log('leave!')
+          }}
         />
         <div>
-          <video
-            ref={videoElem}
-            playsinline
-            muted
-            sx={{
-              width: `100%`,
-              margin: `0 auto`,
-              display: `block`,
-            }}
-          >
-            <source src={tekVideo} type="video/mp4" />
-          </video>
+          {firstSection === 0 ? (
+            <div>
+              <video
+                id="tekVideo"
+                ref={videoElem}
+                playsinline
+                muted
+                sx={{
+                  width: `100%`,
+                  margin: `0 auto`,
+                  display: `block`,
+                }}
+              >
+                <source src={tekVideo} type="video/mp4" />
+              </video>
+            </div>
+          ) : (
+            <div>
+              <video
+                id="tekProVideo"
+                ref={videoElem}
+                playsinline
+                muted
+                sx={{
+                  width: `100%`,
+                  margin: `0 auto`,
+                  display: `block`,
+                }}
+              >
+                <source src={tekProVideo} type="video/mp4" />
+              </video>
+            </div>
+          )}
         </div>
       </div>
       <div
@@ -437,6 +475,7 @@ export const query = graphql`
           text4
           text5
           buttonText
+          videoSrcURL
           image {
             childImageSharp {
               fluid(maxHeight: 800, quality: 100) {

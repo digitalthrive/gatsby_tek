@@ -248,7 +248,8 @@ const footer = cold(() => {
               Contact us today to find out how you can take advantage of this
               transformation in the industry.
               <br />
-              Copyright © 2019 TEK Industries. All rights reserved.
+              Copyright © {new Date().getFullYear()} TEK Industries. All rights
+              reserved.
             </Styled.p>
           </div>
         </div>

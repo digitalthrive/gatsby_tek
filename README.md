@@ -7,8 +7,9 @@ WD Jam Theme - Full Site - Tek Roofing
 
 There are two separate repositories for this project:
 
-- One at digitalthrive/gatsby_tek. This is not a fork, just a separate copy of the site.
-- One that is under the client's Github account https://github.com/cthiebaud0718/tek_roofing_site, which is the repo connected to Netlify. This is the repo which, if changed, will trigger site rebuilds as outlined below.
+- One at digitalthrive/gatsby_tek. This is not a fork, just a separate copy of the site. The [development site](https://compassionate-goldstine-98d45b.netlify.app/) deploys from the master branch of this repo. 
+- One that is under the client's Github account at https://github.com/cthiebaud0718/tek_roofing_site, which is the repo connected to Netlify. This is the repo which, if changed, will trigger site rebuilds as outlined below.
+- The credentials for cthiebaud0718 on Github are stored in Bitwarden. There may be 2-factor authentication required, which sends an email to iteam@warrendouglas.com.
 
 # CMS / Content Editing Instructions
 

@@ -48,13 +48,13 @@
   text2: The Most exceptional metal roof in the industry.
   text3: ''
   text4: ''
-  text5: For severe weather regions, HURRICANE® Metal Shake Pro is the perfect solution. It has additional fasteners per panel, and each fastener designed with higher corrosion-resistance coating. Hurricane Shake has a 2-pound density foam insert made from a CNC Machine. HURRICANE® Metal Shake passed with the highest rating for both uplift and impact testing.
+  text5: For severe weather regions, HURRICANE® Metal Shake Pro is the perfect solution. It has additional fasteners per panel, and each fastener designed with higher corrosion-resistance coating. Hurricane Shake has a 2-pound density foam insert made from a CNC Machine. HURRICANE® Metal Shake passed the Florida Building Code Approval FL#38136 with the highest rating for both uplift and impact testing.
   buttonText: MORE
   buttonText2: ''
   sidetext: ''
   videoSrcURL: ''
   image: ../images/hurricane-pro-logo.png
-  image2: ../images/multilayer-technology-graphic.png
+  image2: ../images/interlocking-technology-graphic.png
   page: home
   section: 4
 
@@ -158,7 +158,7 @@
   sidetext: null
   videoSrcURL: null
   image: ../images/hurricane-pro-logo.png
-  image2: ../images/multilayer-technology-graphic.png
+  image2: ../images/interlocking-technology-graphic.png
   page: products
   section: 3
 
@@ -306,8 +306,8 @@
 
 - text: null
   text2: null
-  text3: HURRICANE METAL SHAKE TESTING RESULTS
-  text4: HURRICANE ® METAL SHAKE PRO TESTING RESULTS
+  text3: HURRICANE METAL SHAKE
+  text4: HURRICANE ® METAL SHAKE PRO
   text5: null
   buttonText: null
   buttonText2: null
@@ -328,8 +328,8 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/installers-on-roof.jpg
-  image2: ../images/installs-header.jpg
+  image: ../images/testimonial-image.jpg
+  image2: ../images/installs-header-2.jpg
   page: installs
   section: 1
 
@@ -357,8 +357,8 @@
   buttonText2: null
   sidetext: null
   videoSrcURL: null
-  image: ../images/installers-on-roof.jpg
-  image2: ../images/installs-header.jpg
+  image: ../images/testimonial-image.jpg
+  image2: ../images/installs-header-2.jpg
   page: installs
   section: 1
 
