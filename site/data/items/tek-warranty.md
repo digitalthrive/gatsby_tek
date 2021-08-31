@@ -1,4 +1,5 @@
 ---
 title: TEK WARRANTY
-file: /uploads/hurricane-shake®-warranty.pdf
+file: /uploads/TEK Warranty.pdf
 ---
+

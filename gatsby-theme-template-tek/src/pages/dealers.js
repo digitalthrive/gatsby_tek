@@ -10,7 +10,7 @@ import Section from '../components/section'
 import ButtonV2 from '../components/button-v2'
 import downloadIcon from '../components/icons/download-icon.png'
 import metalShakeImg from '../components/images/tek-panel-sketch.jpg'
-import metalShakeXTImg from '../components/images/tek-panel-xt-sketch.png'
+import metalShakeXTImg from '../components/images/pro-spec-diagram.png'
 
 const dealers = cold(({ data }) => {
   const sections = data.allSection.edges
