@@ -419,11 +419,11 @@ const products = cold(({ data, location }) => {
               Foam Insulation inserts for increased R-value and walkability.
             </li>
             <li>Will self ventilate using built in 3/8" air space.</li>
-            <li>Super strong solid steel 26 gauge core.</li>
+            <li>Super strong solid steel 28 gauge core.</li>
             <li>Corrosion resistant aluminum zinc coating..</li>
             <li>Rock coated exterior for superior weather resistance</li>
             <li>CAT-5 Wind resistance.</li>
-            <li>Can withstand baseball size hail</li>
+            <li>Can withstand 2 inch size hail</li>
             <li>
               Interlocking Technology hides fasteners for a sleek, premium
               appearance.
