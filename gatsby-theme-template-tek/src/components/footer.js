@@ -62,21 +62,18 @@ const footer = cold(() => {
           display: `inline-block`,
           marginRight: `10%`,
           ':after': { display: `none` },
+          ':last-child': { marginRight: `0` },
         }}
       >
-       
-
-       {index === 3 ? (
-        <a target='_blank' href={file} sx={{ color: 'text' }}>
-          {link.linktext}
-        </a>
-       ):(
-        <Link to={link.link} sx={{ color: 'text' }}>
-        {link.linktext}
-        </Link>
-       )}
-
-
+        {index === 3 ? (
+          <a target="_blank" href={file} sx={{ color: 'text' }}>
+            {link.linktext}
+          </a>
+        ) : (
+          <Link to={link.link} sx={{ color: 'text' }}>
+            {link.linktext}
+          </Link>
+        )}
       </Styled.li>
     )
   })
