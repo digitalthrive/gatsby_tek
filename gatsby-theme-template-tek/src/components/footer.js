@@ -5,6 +5,7 @@ import { Styled, jsx, Footer } from 'theme-ui'
 import Img from 'gatsby-image'
 import { FaFacebookF } from 'react-icons/fa'
 import { FaYoutube } from 'react-icons/fa'
+import file from './pdf/salesandconditions.pdf'
 
 const footer = cold(() => {
   const data = useStaticQuery(
@@ -49,7 +50,7 @@ const footer = cold(() => {
     `
   )
 
-  let links = data.allSection.edges[0].node.links.map((link) => {
+  let links = data.allSection.edges[0].node.links.map((link, index) => {
     return (
       <Styled.li
         key={link.linktext}
@@ -61,11 +62,18 @@ const footer = cold(() => {
           display: `inline-block`,
           marginRight: `10%`,
           ':after': { display: `none` },
+          ':last-child': { marginRight: `0` },
         }}
       >
-        <Link to={link.link} sx={{ color: 'text' }}>
-          {link.linktext}
-        </Link>
+        {index === 3 ? (
+          <a target="_blank" href={file} sx={{ color: 'text' }}>
+            {link.linktext}
+          </a>
+        ) : (
+          <Link to={link.link} sx={{ color: 'text' }}>
+            {link.linktext}
+          </Link>
+        )}
       </Styled.li>
     )
   })
