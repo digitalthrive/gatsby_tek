@@ -439,6 +439,7 @@ const dealers = cold(({ data }) => {
         <ul sx={{ color: `secondary` }}>
           <li>ASTM A792</li>
           <li>ASTM B117</li>
+          <li>ASTM E108</li>
           <li>ASTM G155</li>
         </ul>
       </>
@@ -681,6 +682,7 @@ const dealers = cold(({ data }) => {
         <ul sx={{ color: `secondary` }}>
           <li>ASTM A792</li>
           <li>ASTM B117</li>
+          <li>ASTM E108</li>
           <li>ASTM G155</li>
         </ul>
         <h4 sx={{ color: `primary` }}>Florida Building Code</h4>
