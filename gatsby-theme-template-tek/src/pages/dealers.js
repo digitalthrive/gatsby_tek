@@ -441,6 +441,7 @@ const dealers = cold(({ data }) => {
           <li>ASTM B117</li>
           <li>ASTM E108</li>
           <li>ASTM G155</li>
+          <li><a href={'https://bpdirectory.intertek.com/pages/DLP_SearchDetail.aspx?SpecID=65038'}>CCRR-0443</a></li>
         </ul>
       </>
     )
@@ -684,6 +685,7 @@ const dealers = cold(({ data }) => {
           <li>ASTM B117</li>
           <li>ASTM E108</li>
           <li>ASTM G155</li>
+          <li><a href={'https://bpdirectory.intertek.com/pages/DLP_SearchDetail.aspx?SpecID=65038'}>CCRR-0443</a></li>
         </ul>
         <h4 sx={{ color: `primary` }}>Florida Building Code</h4>
         <ul sx={{ color: `secondary` }}>
