@@ -6,28 +6,28 @@
 p.p1 {
     margin: 0.0px 0.0px 0.0px 0.0px;
     text-align: center;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #000000;
     
 }
 
 p.p2 {
     margin: 0.0px 0.0px 0.0px 0.0px;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #000000;
     min-height: 12.0px
 }
 
 p.p3 {
     margin: 0.0px 0.0px 0.0px 0.0px;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #000000
 }
 
 p.p4 {
     margin: 0.0px 0.0px 0.0px 0.0px;
     text-align: justify;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #000000;
     min-height: 12.0px
 }
@@ -35,14 +35,14 @@ p.p4 {
 p.p5 {
     margin: 0.0px 0.0px 0.0px 0.0px;
     text-align: justify;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #000000
 }
 
 p.p6 {
     margin: 0.0px 0.0px 0.0px 0.0px;
     text-align: justify;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #000000;
     background-color: #ffffff;
     
@@ -50,21 +50,21 @@ p.p6 {
 
 p.p7 {
     margin: 0.0px 0.0px 8.0px 0.0px;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #000000
 }
 
 p.p8 {
     margin: 0.0px 0.0px 6.0px 0.0px;
     text-align: justify;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #000000
 }
 
 p.p10 {
     margin: 0.0px 0.0px 0.0px 36.0px;
     text-align: justify;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #1a1d1e;
     /* background-color: #22ff06; */
     min-height: 12.0px
@@ -72,7 +72,7 @@ p.p10 {
 
 p.p11 {
     margin: 0.0px 0.0px 0.0px 0.0px;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #000000;
     /* background-color: #22ff06; */
     min-height: 12.0px
@@ -81,7 +81,7 @@ p.p11 {
 p.p12 {
     margin: 0.0px 0.0px 0.0px 18.0px;
     text-align: justify;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #000000;
     min-height: 12.0px;
 
@@ -90,14 +90,14 @@ p.p12 {
 li.li5 {
     margin: 0.0px 0.0px 0.0px 0.0px;
     text-align: justify;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #000000
 }
 
 li.li9 {
     margin: 0.0px 0.0px 0.0px 0.0px;
     text-align: justify;
-    font: 11.0px 'Times New Roman';
+    font: 11.0px;
     color: #1a1d1e
 
 }
