@@ -126,3 +126,10 @@ span.s5 {
 ul.ul1 {
     list-style-type: disc
 }
+
+.container-privacy p, .container-privacy li{
+    font-size: 20px;
+    line-height: 1.45;
+    font-family: Kannada Sangam MN,system-ui,sans-serif;
+    color: grey;
+}
