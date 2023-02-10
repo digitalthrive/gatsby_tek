@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import Section from '../components/section'
 import { Helmet } from 'react-helmet'
-
+import { Styled, jsx } from 'theme-ui'
 
 import "../components/privacy-policy.css";
 
@@ -26,10 +26,16 @@ const privacyPolicy = () =>{
             </Helmet>
 
         <Section>
+       
             <div className='container-privacy'>
-            <p className="p1"><span className="s1"><strong>TEK Industries, LLC Online Privacy Policy</strong></span></p>
+            <Styled.h2
+                sx={{ fontSize: ['8', '8', '8', '9', '9'], color: 'primary' }}
+                >
+                TEK Industries, LLC Online Privacy Policy
+            </Styled.h2>
+            {/* <p className="p1"><span className="s1"><strong>TEK Industries, LLC Online Privacy Policy</strong></span></p> */}
             <p className="p2"><br/></p>
-            <p className="p3"><strong>Last Updated:</strong><span className="Apple-converted-space">&nbsp;&nbsp;</span>February 4, 2023</p>
+            <p className="p3"><strong>Last Updated:</strong><span className="Apple-converted-space">&nbsp;&nbsp;</span>February 10, 2023</p>
             <p className="p2"><br/></p>
             <p className="p3">This Online Privacy Policy (&ldquo;<strong>Policy</strong>&rdquo;) describes how TEK Industries, LLC (&ldquo;<strong>we</strong>&rdquo;, &ldquo;<strong>us</strong>&rdquo;, or &ldquo;<strong>our</strong>&rdquo;) collects, uses, and discloses the personal information that we obtain through <a href="https://www.tekroofingsystems.com/"><span className="s2">tekroofingsystems.com</span></a> (&ldquo;<strong>Website</strong>&rdquo;). This Policy does not apply to other sites or online services that we maintain, and do not link to this Policy.</p>
             <p className="p4"><br/></p>
