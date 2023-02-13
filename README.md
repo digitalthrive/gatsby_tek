@@ -43,3 +43,6 @@ yarn install</br>
 yarn workspace site develop (to develop)</br>
 yarn workspace site build (to generate static folder)</br>
 Primary content for site stored in /site/data foler
+
+## To Do
+Update node to later version and test
