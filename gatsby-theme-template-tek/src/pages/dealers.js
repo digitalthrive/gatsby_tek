@@ -927,7 +927,6 @@ const dealers = cold(({ data }) => {
                   marginTop: `20px`,
                   maxWidth: `90%`,
                 }}
-                alt="panel sketch"
               />
             ) : (
               <img
@@ -939,7 +938,6 @@ const dealers = cold(({ data }) => {
                   marginTop: `20px`,
                   maxWidth: `90%`,
                 }}
-                alt="panel sketch"
               />
             )}
           </div>

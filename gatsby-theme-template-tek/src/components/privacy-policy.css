@@ -1,0 +1,141 @@
+
+.container-privacy{
+    padding: 50px 0;
+}
+.css-16wzivs{
+    color: #d23a00 !important;
+}
+.css-10e2lvs{
+    margin-right: 3% !important;
+}
+
+p.p1 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    text-align: center;
+    font: 11.0px;
+    
+    
+}
+
+p.p2 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    font: 11.0px;
+    
+    min-height: 12.0px
+}
+
+p.p3 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    font: 11.0px;
+    color: #000000
+}
+
+p.p4 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    text-align: justify;
+    font: 11.0px;
+    
+    min-height: 12.0px
+}
+
+p.p5 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    text-align: justify;
+    font: 11.0px;
+    
+}
+
+p.p6 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    text-align: justify;
+    font: 11.0px;
+    
+    background-color: #ffffff;
+    
+}
+
+p.p7 {
+    margin: 0.0px 0.0px 8.0px 0.0px;
+    font: 11.0px;
+    
+}
+
+p.p8 {
+    margin: 0.0px 0.0px 6.0px 0.0px;
+    text-align: justify;
+    font: 11.0px;
+    
+}
+
+p.p10 {
+    margin: 0.0px 0.0px 0.0px 36.0px;
+    text-align: justify;
+    font: 11.0px;
+    /* color: #1a1d1e; */
+    /* background-color: #22ff06; */
+    min-height: 12.0px
+}
+
+p.p11 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    font: 11.0px;
+    
+    /* background-color: #22ff06; */
+    min-height: 12.0px
+}
+
+p.p12 {
+    margin: 0.0px 0.0px 0.0px 18.0px;
+    text-align: justify;
+    font: 11.0px;
+    
+    min-height: 12.0px;
+
+}
+
+li.li5 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    text-align: justify;
+    font: 11.0px;
+    
+}
+
+li.li9 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    text-align: justify;
+    font: 11.0px;
+    /* color: #1a1d1e */
+
+}
+
+span.s1 {
+    text-decoration: underline
+}
+
+span.s2 {
+    text-decoration: underline;
+    color: #0b4cb4
+}
+
+span.s3 {
+    /* color: #202122 */
+}
+
+span.s4 {
+    font: 11.0px Symbol
+}
+
+span.s5 {
+    background-color: #ffffff
+}
+
+ul.ul1 {
+    list-style-type: disc
+}
+
+.container-privacy p, .container-privacy li{
+    font-size: 20px;
+    line-height: 1.45;
+    font-family: Kannada Sangam MN,system-ui,sans-serif;
+    color: grey;
+}

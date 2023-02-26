@@ -130,6 +130,23 @@ const footer = cold(() => {
               sx={{ margin: ['5% 0 5% 0', '5% 0 5% 0', '5% 0 5% 0', '0', '0'] }}
             >
               {links}
+              {/* <Styled.li
+                key={""}
+                sx={{
+                  color: `text`,
+                  listStyleType: `none`,
+                  fontSize: `25px`,
+                  fontFamily: `heading`,
+                  display: `inline-block`,
+                  marginRight: `10%`,
+                  ':after': { display: `none` },
+                  ':last-child': { marginRight: `0` },
+                }}
+              >
+              <Link to={"/privacy-policy"} sx={{ color: 'text' }}>
+                Privacy Policy
+              </Link>
+              </Styled.li> */}
             </Styled.ul>
           </div>
           <div
